@@ -1,0 +1,5208 @@
+PatientID,VisitID,AgeGroup,MedicalEvent,VisitFrequency
+P0001,V00001,Young,Asthma,2
+P0001,V00001,Young,Inhaler,2
+P0001,V00002,Young,Asthma,2
+P0001,V00002,Young,Inhaler,2
+P0002,V00003,Adult,Asthma,3
+P0002,V00003,Adult,Inhaler,3
+P0002,V00003,Adult,Allergy,3
+P0002,V00004,Adult,Asthma,3
+P0002,V00004,Adult,Inhaler,3
+P0002,V00004,Adult,Steroid,3
+P0002,V00005,Adult,Asthma,3
+P0002,V00005,Adult,Inhaler,3
+P0003,V00006,Adult,Hypertension,1
+P0004,V00007,Young,Routine Checkup,1
+P0005,V00008,Young,Asthma,2
+P0005,V00008,Young,Inhaler,2
+P0005,V00009,Young,Asthma,2
+P0005,V00009,Young,Inhaler,2
+P0006,V00010,Adult,Routine Checkup,4
+P0006,V00011,Adult,Routine Checkup,4
+P0006,V00012,Adult,Routine Checkup,4
+P0006,V00013,Adult,Routine Checkup,4
+P0007,V00014,Adult,Routine Checkup,1
+P0008,V00015,Adult,Routine Checkup,1
+P0009,V00016,Young,Diabetes,2
+P0009,V00016,Young,Metformin,2
+P0009,V00016,Young,Hypertension,2
+P0009,V00016,Young,Lisinopril,2
+P0009,V00017,Young,Diabetes,2
+P0009,V00017,Young,Metformin,2
+P0009,V00017,Young,Hypertension,2
+P0010,V00018,Adult,Routine Checkup,3
+P0010,V00019,Adult,Routine Checkup,3
+P0010,V00020,Adult,Routine Checkup,3
+P0011,V00021,Senior,Diabetes,3
+P0011,V00021,Senior,Metformin,3
+P0011,V00021,Senior,Heart Disease,3
+P0011,V00021,Senior,Statin,3
+P0011,V00021,Senior,Allergy,3
+P0011,V00022,Senior,Diabetes,3
+P0011,V00022,Senior,Metformin,3
+P0011,V00022,Senior,Heart Disease,3
+P0011,V00022,Senior,Statin,3
+P0011,V00022,Senior,Beta Blocker,3
+P0011,V00023,Senior,Diabetes,3
+P0011,V00023,Senior,Metformin,3
+P0011,V00023,Senior,Heart Disease,3
+P0011,V00023,Senior,Statin,3
+P0011,V00023,Senior,Beta Blocker,3
+P0012,V00024,Senior,Diabetes,3
+P0012,V00024,Senior,Metformin,3
+P0012,V00024,Senior,Hypertension,3
+P0012,V00024,Senior,Lisinopril,3
+P0012,V00024,Senior,Heart Disease,3
+P0012,V00024,Senior,Statin,3
+P0012,V00024,Senior,Beta Blocker,3
+P0012,V00025,Senior,Diabetes,3
+P0012,V00025,Senior,Hypertension,3
+P0012,V00025,Senior,Lisinopril,3
+P0012,V00025,Senior,Heart Disease,3
+P0012,V00025,Senior,Statin,3
+P0012,V00025,Senior,Beta Blocker,3
+P0012,V00026,Senior,Diabetes,3
+P0012,V00026,Senior,Metformin,3
+P0012,V00026,Senior,Hypertension,3
+P0012,V00026,Senior,Lisinopril,3
+P0012,V00026,Senior,Heart Disease,3
+P0012,V00026,Senior,Statin,3
+P0012,V00026,Senior,Beta Blocker,3
+P0013,V00027,Senior,Routine Checkup,3
+P0013,V00028,Senior,Routine Checkup,3
+P0013,V00029,Senior,Routine Checkup,3
+P0014,V00030,Adult,Hypertension,2
+P0014,V00031,Adult,Hypertension,2
+P0015,V00032,Senior,Diabetes,2
+P0015,V00032,Senior,Metformin,2
+P0015,V00032,Senior,Hypertension,2
+P0015,V00032,Senior,Lisinopril,2
+P0015,V00033,Senior,Diabetes,2
+P0015,V00033,Senior,Metformin,2
+P0015,V00033,Senior,Hypertension,2
+P0015,V00033,Senior,Lisinopril,2
+P0016,V00034,Adult,Routine Checkup,2
+P0016,V00035,Adult,Routine Checkup,2
+P0017,V00036,Adult,Hypertension,1
+P0018,V00037,Adult,Asthma,1
+P0018,V00037,Adult,Inhaler,1
+P0019,V00038,Young,Routine Checkup,2
+P0019,V00039,Young,Allergy,2
+P0020,V00040,Young,Routine Checkup,1
+P0021,V00041,Young,Routine Checkup,2
+P0021,V00042,Young,Routine Checkup,2
+P0022,V00043,Adult,Hypertension,3
+P0022,V00043,Adult,Lisinopril,3
+P0022,V00043,Adult,Kidney Disease,3
+P0022,V00044,Adult,Hypertension,3
+P0022,V00044,Adult,Lisinopril,3
+P0022,V00045,Adult,Hypertension,3
+P0022,V00045,Adult,Lisinopril,3
+P0023,V00046,Adult,Routine Checkup,4
+P0023,V00047,Adult,Routine Checkup,4
+P0023,V00048,Adult,Routine Checkup,4
+P0023,V00049,Adult,Routine Checkup,4
+P0024,V00050,Senior,Hypertension,1
+P0024,V00050,Senior,Lisinopril,1
+P0024,V00050,Senior,Asthma,1
+P0024,V00050,Senior,Inhaler,1
+P0024,V00050,Senior,Kidney Disease,1
+P0025,V00051,Young,Routine Checkup,3
+P0025,V00052,Young,Routine Checkup,3
+P0025,V00053,Young,Routine Checkup,3
+P0026,V00054,Senior,Hypertension,2
+P0026,V00054,Senior,Lisinopril,2
+P0026,V00054,Senior,Heart Disease,2
+P0026,V00054,Senior,Statin,2
+P0026,V00054,Senior,Beta Blocker,2
+P0026,V00055,Senior,Hypertension,2
+P0026,V00055,Senior,Lisinopril,2
+P0026,V00055,Senior,Heart Disease,2
+P0026,V00055,Senior,Statin,2
+P0026,V00055,Senior,Beta Blocker,2
+P0027,V00056,Young,Hypertension,2
+P0027,V00056,Young,Lisinopril,2
+P0027,V00056,Young,Asthma,2
+P0027,V00056,Young,Inhaler,2
+P0027,V00057,Young,Hypertension,2
+P0027,V00057,Young,Lisinopril,2
+P0027,V00057,Young,Asthma,2
+P0027,V00057,Young,Inhaler,2
+P0028,V00058,Senior,Routine Checkup,1
+P0029,V00059,Young,Routine Checkup,3
+P0029,V00060,Young,Routine Checkup,3
+P0029,V00061,Young,Routine Checkup,3
+P0030,V00062,Senior,Hypertension,2
+P0030,V00062,Senior,Lisinopril,2
+P0030,V00063,Senior,Hypertension,2
+P0031,V00064,Adult,Routine Checkup,1
+P0032,V00065,Adult,Routine Checkup,1
+P0033,V00066,Senior,Heart Disease,2
+P0033,V00066,Senior,Statin,2
+P0033,V00066,Senior,Beta Blocker,2
+P0033,V00067,Senior,Heart Disease,2
+P0033,V00067,Senior,Statin,2
+P0033,V00067,Senior,Beta Blocker,2
+P0033,V00067,Senior,Kidney Disease,2
+P0034,V00068,Adult,Allergy,1
+P0035,V00069,Young,Hypertension,2
+P0035,V00069,Young,Lisinopril,2
+P0035,V00069,Young,Allergy,2
+P0035,V00070,Young,Hypertension,2
+P0035,V00070,Young,Allergy,2
+P0036,V00071,Young,Allergy,2
+P0036,V00072,Young,Routine Checkup,2
+P0037,V00073,Senior,Heart Disease,1
+P0037,V00073,Senior,Statin,1
+P0038,V00074,Senior,Diabetes,3
+P0038,V00074,Senior,Metformin,3
+P0038,V00074,Senior,Hypertension,3
+P0038,V00074,Senior,Lisinopril,3
+P0038,V00074,Senior,Allergy,3
+P0038,V00075,Senior,Diabetes,3
+P0038,V00075,Senior,Metformin,3
+P0038,V00075,Senior,Hypertension,3
+P0038,V00075,Senior,Lisinopril,3
+P0038,V00075,Senior,Kidney Disease,3
+P0038,V00076,Senior,Diabetes,3
+P0038,V00076,Senior,Metformin,3
+P0038,V00076,Senior,Hypertension,3
+P0038,V00076,Senior,Lisinopril,3
+P0039,V00077,Senior,Diabetes,3
+P0039,V00077,Senior,Hypertension,3
+P0039,V00077,Senior,Lisinopril,3
+P0039,V00078,Senior,Diabetes,3
+P0039,V00078,Senior,Metformin,3
+P0039,V00078,Senior,Hypertension,3
+P0039,V00078,Senior,Lisinopril,3
+P0039,V00079,Senior,Diabetes,3
+P0039,V00079,Senior,Metformin,3
+P0039,V00079,Senior,Hypertension,3
+P0039,V00079,Senior,Lisinopril,3
+P0040,V00080,Senior,Hypertension,1
+P0041,V00081,Senior,Asthma,4
+P0041,V00081,Senior,Inhaler,4
+P0041,V00082,Senior,Asthma,4
+P0041,V00082,Senior,Inhaler,4
+P0041,V00083,Senior,Asthma,4
+P0041,V00083,Senior,Inhaler,4
+P0041,V00083,Senior,Steroid,4
+P0041,V00084,Senior,Asthma,4
+P0041,V00084,Senior,Inhaler,4
+P0042,V00085,Young,Routine Checkup,4
+P0042,V00086,Young,Routine Checkup,4
+P0042,V00087,Young,Routine Checkup,4
+P0042,V00088,Young,Routine Checkup,4
+P0043,V00089,Senior,Heart Disease,3
+P0043,V00089,Senior,Statin,3
+P0043,V00089,Senior,Beta Blocker,3
+P0043,V00090,Senior,Heart Disease,3
+P0043,V00090,Senior,Statin,3
+P0043,V00090,Senior,Beta Blocker,3
+P0043,V00091,Senior,Heart Disease,3
+P0043,V00091,Senior,Statin,3
+P0043,V00091,Senior,Beta Blocker,3
+P0044,V00092,Senior,Asthma,1
+P0044,V00092,Senior,Inhaler,1
+P0045,V00093,Young,Diabetes,1
+P0045,V00093,Young,Hypertension,1
+P0045,V00093,Young,Allergy,1
+P0046,V00094,Adult,Asthma,4
+P0046,V00094,Adult,Inhaler,4
+P0046,V00095,Adult,Asthma,4
+P0046,V00095,Adult,Inhaler,4
+P0046,V00096,Adult,Asthma,4
+P0046,V00096,Adult,Inhaler,4
+P0046,V00096,Adult,Steroid,4
+P0046,V00097,Adult,Asthma,4
+P0046,V00097,Adult,Inhaler,4
+P0046,V00097,Adult,Steroid,4
+P0047,V00098,Adult,Routine Checkup,2
+P0047,V00099,Adult,Allergy,2
+P0048,V00100,Senior,Diabetes,2
+P0048,V00100,Senior,Hypertension,2
+P0048,V00100,Senior,Lisinopril,2
+P0048,V00100,Senior,Allergy,2
+P0048,V00101,Senior,Diabetes,2
+P0048,V00101,Senior,Metformin,2
+P0048,V00101,Senior,Hypertension,2
+P0048,V00101,Senior,Lisinopril,2
+P0048,V00101,Senior,Allergy,2
+P0049,V00102,Adult,Routine Checkup,2
+P0049,V00103,Adult,Routine Checkup,2
+P0050,V00104,Adult,Diabetes,3
+P0050,V00104,Adult,Metformin,3
+P0050,V00104,Adult,Hypertension,3
+P0050,V00104,Adult,Asthma,3
+P0050,V00104,Adult,Inhaler,3
+P0050,V00105,Adult,Diabetes,3
+P0050,V00105,Adult,Hypertension,3
+P0050,V00105,Adult,Lisinopril,3
+P0050,V00105,Adult,Asthma,3
+P0050,V00105,Adult,Inhaler,3
+P0050,V00105,Adult,Steroid,3
+P0050,V00106,Adult,Diabetes,3
+P0050,V00106,Adult,Metformin,3
+P0050,V00106,Adult,Hypertension,3
+P0050,V00106,Adult,Lisinopril,3
+P0050,V00106,Adult,Asthma,3
+P0050,V00106,Adult,Inhaler,3
+P0050,V00106,Adult,Steroid,3
+P0051,V00107,Senior,Hypertension,4
+P0051,V00107,Senior,Lisinopril,4
+P0051,V00108,Senior,Hypertension,4
+P0051,V00109,Senior,Hypertension,4
+P0051,V00109,Senior,Lisinopril,4
+P0051,V00110,Senior,Hypertension,4
+P0052,V00111,Senior,Routine Checkup,4
+P0052,V00112,Senior,Routine Checkup,4
+P0052,V00113,Senior,Routine Checkup,4
+P0052,V00114,Senior,Routine Checkup,4
+P0053,V00115,Young,Diabetes,1
+P0053,V00115,Young,Hypertension,1
+P0053,V00115,Young,Lisinopril,1
+P0053,V00115,Young,Heart Disease,1
+P0053,V00115,Young,Statin,1
+P0054,V00116,Senior,Asthma,1
+P0054,V00116,Senior,Inhaler,1
+P0055,V00117,Senior,Hypertension,2
+P0055,V00117,Senior,Lisinopril,2
+P0055,V00117,Senior,Asthma,2
+P0055,V00117,Senior,Inhaler,2
+P0055,V00117,Senior,Heart Disease,2
+P0055,V00117,Senior,Statin,2
+P0055,V00117,Senior,Allergy,2
+P0055,V00118,Senior,Hypertension,2
+P0055,V00118,Senior,Asthma,2
+P0055,V00118,Senior,Inhaler,2
+P0055,V00118,Senior,Heart Disease,2
+P0055,V00118,Senior,Statin,2
+P0055,V00118,Senior,Beta Blocker,2
+P0055,V00118,Senior,Allergy,2
+P0056,V00119,Senior,Routine Checkup,4
+P0056,V00120,Senior,Routine Checkup,4
+P0056,V00121,Senior,Routine Checkup,4
+P0056,V00122,Senior,Allergy,4
+P0057,V00123,Young,Routine Checkup,3
+P0057,V00124,Young,Routine Checkup,3
+P0057,V00125,Young,Allergy,3
+P0058,V00126,Senior,Hypertension,4
+P0058,V00126,Senior,Lisinopril,4
+P0058,V00126,Senior,Allergy,4
+P0058,V00127,Senior,Hypertension,4
+P0058,V00127,Senior,Lisinopril,4
+P0058,V00128,Senior,Hypertension,4
+P0058,V00128,Senior,Lisinopril,4
+P0058,V00129,Senior,Hypertension,4
+P0058,V00129,Senior,Lisinopril,4
+P0059,V00130,Senior,Routine Checkup,2
+P0059,V00131,Senior,Allergy,2
+P0060,V00132,Senior,Allergy,3
+P0060,V00133,Senior,Allergy,3
+P0060,V00134,Senior,Kidney Disease,3
+P0061,V00135,Senior,Heart Disease,4
+P0061,V00135,Senior,Statin,4
+P0061,V00135,Senior,Beta Blocker,4
+P0061,V00136,Senior,Heart Disease,4
+P0061,V00136,Senior,Statin,4
+P0061,V00136,Senior,Beta Blocker,4
+P0061,V00137,Senior,Heart Disease,4
+P0061,V00137,Senior,Statin,4
+P0061,V00138,Senior,Heart Disease,4
+P0061,V00138,Senior,Statin,4
+P0061,V00138,Senior,Beta Blocker,4
+P0062,V00139,Senior,Routine Checkup,3
+P0062,V00140,Senior,Routine Checkup,3
+P0062,V00141,Senior,Allergy,3
+P0063,V00142,Adult,Routine Checkup,1
+P0064,V00143,Young,Routine Checkup,4
+P0064,V00144,Young,Routine Checkup,4
+P0064,V00145,Young,Allergy,4
+P0064,V00146,Young,Routine Checkup,4
+P0065,V00147,Young,Routine Checkup,2
+P0065,V00148,Young,Allergy,2
+P0066,V00149,Young,Routine Checkup,3
+P0066,V00150,Young,Routine Checkup,3
+P0066,V00151,Young,Routine Checkup,3
+P0067,V00152,Young,Routine Checkup,3
+P0067,V00153,Young,Routine Checkup,3
+P0067,V00154,Young,Routine Checkup,3
+P0068,V00155,Adult,Hypertension,4
+P0068,V00155,Adult,Lisinopril,4
+P0068,V00156,Adult,Hypertension,4
+P0068,V00156,Adult,Lisinopril,4
+P0068,V00157,Adult,Hypertension,4
+P0068,V00157,Adult,Lisinopril,4
+P0068,V00157,Adult,Allergy,4
+P0068,V00158,Adult,Hypertension,4
+P0068,V00158,Adult,Lisinopril,4
+P0069,V00159,Senior,Hypertension,1
+P0070,V00160,Young,Routine Checkup,1
+P0071,V00161,Adult,Asthma,4
+P0071,V00161,Adult,Inhaler,4
+P0071,V00161,Adult,Steroid,4
+P0071,V00161,Adult,Allergy,4
+P0071,V00162,Adult,Asthma,4
+P0071,V00162,Adult,Inhaler,4
+P0071,V00162,Adult,Steroid,4
+P0071,V00163,Adult,Asthma,4
+P0071,V00163,Adult,Inhaler,4
+P0071,V00163,Adult,Steroid,4
+P0071,V00164,Adult,Asthma,4
+P0071,V00164,Adult,Inhaler,4
+P0072,V00165,Senior,Hypertension,1
+P0072,V00165,Senior,Asthma,1
+P0072,V00165,Senior,Inhaler,1
+P0072,V00165,Senior,Steroid,1
+P0072,V00165,Senior,Heart Disease,1
+P0072,V00165,Senior,Statin,1
+P0072,V00165,Senior,Beta Blocker,1
+P0072,V00165,Senior,Allergy,1
+P0073,V00166,Young,Hypertension,1
+P0073,V00166,Young,Lisinopril,1
+P0073,V00166,Young,Allergy,1
+P0074,V00167,Senior,Routine Checkup,3
+P0074,V00168,Senior,Routine Checkup,3
+P0074,V00169,Senior,Routine Checkup,3
+P0075,V00170,Senior,Hypertension,4
+P0075,V00171,Senior,Hypertension,4
+P0075,V00171,Senior,Lisinopril,4
+P0075,V00172,Senior,Hypertension,4
+P0075,V00172,Senior,Lisinopril,4
+P0075,V00172,Senior,Allergy,4
+P0075,V00173,Senior,Hypertension,4
+P0075,V00173,Senior,Allergy,4
+P0076,V00174,Young,Diabetes,2
+P0076,V00174,Young,Metformin,2
+P0076,V00174,Young,Hypertension,2
+P0076,V00175,Young,Diabetes,2
+P0076,V00175,Young,Metformin,2
+P0076,V00175,Young,Hypertension,2
+P0076,V00175,Young,Allergy,2
+P0077,V00176,Senior,Diabetes,1
+P0077,V00176,Senior,Metformin,1
+P0077,V00176,Senior,Hypertension,1
+P0077,V00176,Senior,Lisinopril,1
+P0077,V00176,Senior,Asthma,1
+P0077,V00176,Senior,Inhaler,1
+P0078,V00177,Senior,Hypertension,2
+P0078,V00177,Senior,Heart Disease,2
+P0078,V00177,Senior,Statin,2
+P0078,V00178,Senior,Hypertension,2
+P0078,V00178,Senior,Heart Disease,2
+P0078,V00178,Senior,Statin,2
+P0079,V00179,Young,Routine Checkup,4
+P0079,V00180,Young,Routine Checkup,4
+P0079,V00181,Young,Allergy,4
+P0079,V00182,Young,Routine Checkup,4
+P0080,V00183,Adult,Routine Checkup,2
+P0080,V00184,Adult,Routine Checkup,2
+P0081,V00185,Young,Asthma,1
+P0081,V00185,Young,Inhaler,1
+P0082,V00186,Adult,Routine Checkup,1
+P0083,V00187,Senior,Hypertension,2
+P0083,V00187,Senior,Asthma,2
+P0083,V00187,Senior,Inhaler,2
+P0083,V00188,Senior,Hypertension,2
+P0083,V00188,Senior,Lisinopril,2
+P0083,V00188,Senior,Asthma,2
+P0083,V00188,Senior,Inhaler,2
+P0083,V00188,Senior,Steroid,2
+P0083,V00188,Senior,Allergy,2
+P0084,V00189,Adult,Hypertension,2
+P0084,V00189,Adult,Lisinopril,2
+P0084,V00190,Adult,Hypertension,2
+P0085,V00191,Young,Routine Checkup,4
+P0085,V00192,Young,Routine Checkup,4
+P0085,V00193,Young,Routine Checkup,4
+P0085,V00194,Young,Routine Checkup,4
+P0086,V00195,Adult,Routine Checkup,3
+P0086,V00196,Adult,Routine Checkup,3
+P0086,V00197,Adult,Routine Checkup,3
+P0087,V00198,Senior,Diabetes,2
+P0087,V00198,Senior,Metformin,2
+P0087,V00198,Senior,Hypertension,2
+P0087,V00198,Senior,Lisinopril,2
+P0087,V00198,Senior,Asthma,2
+P0087,V00198,Senior,Inhaler,2
+P0087,V00199,Senior,Diabetes,2
+P0087,V00199,Senior,Metformin,2
+P0087,V00199,Senior,Hypertension,2
+P0087,V00199,Senior,Lisinopril,2
+P0087,V00199,Senior,Asthma,2
+P0087,V00199,Senior,Inhaler,2
+P0088,V00200,Young,Asthma,1
+P0088,V00200,Young,Inhaler,1
+P0088,V00200,Young,Allergy,1
+P0089,V00201,Adult,Routine Checkup,4
+P0089,V00202,Adult,Routine Checkup,4
+P0089,V00203,Adult,Routine Checkup,4
+P0089,V00204,Adult,Routine Checkup,4
+P0090,V00205,Senior,Hypertension,1
+P0090,V00205,Senior,Lisinopril,1
+P0090,V00205,Senior,Allergy,1
+P0091,V00206,Young,Routine Checkup,4
+P0091,V00207,Young,Routine Checkup,4
+P0091,V00208,Young,Kidney Disease,4
+P0091,V00209,Young,Routine Checkup,4
+P0092,V00210,Senior,Routine Checkup,2
+P0092,V00211,Senior,Allergy,2
+P0093,V00212,Adult,Routine Checkup,4
+P0093,V00213,Adult,Routine Checkup,4
+P0093,V00214,Adult,Allergy,4
+P0093,V00215,Adult,Routine Checkup,4
+P0094,V00216,Senior,Diabetes,2
+P0094,V00216,Senior,Metformin,2
+P0094,V00216,Senior,Hypertension,2
+P0094,V00217,Senior,Diabetes,2
+P0094,V00217,Senior,Hypertension,2
+P0094,V00217,Senior,Lisinopril,2
+P0095,V00218,Senior,Diabetes,1
+P0095,V00218,Senior,Metformin,1
+P0095,V00218,Senior,Hypertension,1
+P0095,V00218,Senior,Lisinopril,1
+P0095,V00218,Senior,Asthma,1
+P0095,V00218,Senior,Inhaler,1
+P0096,V00219,Adult,Hypertension,4
+P0096,V00219,Adult,Lisinopril,4
+P0096,V00219,Adult,Allergy,4
+P0096,V00220,Adult,Hypertension,4
+P0096,V00220,Adult,Lisinopril,4
+P0096,V00221,Adult,Hypertension,4
+P0096,V00221,Adult,Lisinopril,4
+P0096,V00221,Adult,Kidney Disease,4
+P0096,V00222,Adult,Hypertension,4
+P0097,V00223,Senior,Hypertension,3
+P0097,V00223,Senior,Lisinopril,3
+P0097,V00223,Senior,Heart Disease,3
+P0097,V00223,Senior,Statin,3
+P0097,V00224,Senior,Hypertension,3
+P0097,V00224,Senior,Lisinopril,3
+P0097,V00224,Senior,Heart Disease,3
+P0097,V00224,Senior,Statin,3
+P0097,V00224,Senior,Beta Blocker,3
+P0097,V00225,Senior,Hypertension,3
+P0097,V00225,Senior,Lisinopril,3
+P0097,V00225,Senior,Heart Disease,3
+P0097,V00225,Senior,Statin,3
+P0098,V00226,Adult,Routine Checkup,1
+P0099,V00227,Adult,Routine Checkup,2
+P0099,V00228,Adult,Routine Checkup,2
+P0100,V00229,Young,Hypertension,2
+P0100,V00230,Young,Hypertension,2
+P0100,V00230,Young,Lisinopril,2
+P0101,V00231,Young,Routine Checkup,1
+P0102,V00232,Adult,Routine Checkup,1
+P0103,V00233,Adult,Hypertension,3
+P0103,V00234,Adult,Hypertension,3
+P0103,V00234,Adult,Allergy,3
+P0103,V00235,Adult,Hypertension,3
+P0103,V00235,Adult,Lisinopril,3
+P0104,V00236,Senior,Routine Checkup,4
+P0104,V00237,Senior,Routine Checkup,4
+P0104,V00238,Senior,Routine Checkup,4
+P0104,V00239,Senior,Allergy,4
+P0105,V00240,Senior,Diabetes,3
+P0105,V00240,Senior,Metformin,3
+P0105,V00240,Senior,Hypertension,3
+P0105,V00240,Senior,Lisinopril,3
+P0105,V00241,Senior,Diabetes,3
+P0105,V00241,Senior,Metformin,3
+P0105,V00241,Senior,Hypertension,3
+P0105,V00242,Senior,Diabetes,3
+P0105,V00242,Senior,Metformin,3
+P0105,V00242,Senior,Hypertension,3
+P0106,V00243,Young,Asthma,3
+P0106,V00243,Young,Inhaler,3
+P0106,V00244,Young,Asthma,3
+P0106,V00244,Young,Inhaler,3
+P0106,V00244,Young,Steroid,3
+P0106,V00245,Young,Asthma,3
+P0106,V00245,Young,Inhaler,3
+P0106,V00245,Young,Steroid,3
+P0107,V00246,Young,Asthma,1
+P0107,V00246,Young,Inhaler,1
+P0107,V00246,Young,Steroid,1
+P0108,V00247,Senior,Diabetes,4
+P0108,V00247,Senior,Metformin,4
+P0108,V00247,Senior,Hypertension,4
+P0108,V00247,Senior,Lisinopril,4
+P0108,V00247,Senior,Kidney Disease,4
+P0108,V00248,Senior,Diabetes,4
+P0108,V00248,Senior,Metformin,4
+P0108,V00248,Senior,Hypertension,4
+P0108,V00248,Senior,Lisinopril,4
+P0108,V00248,Senior,Kidney Disease,4
+P0108,V00249,Senior,Diabetes,4
+P0108,V00249,Senior,Metformin,4
+P0108,V00249,Senior,Hypertension,4
+P0108,V00249,Senior,Lisinopril,4
+P0108,V00250,Senior,Diabetes,4
+P0108,V00250,Senior,Metformin,4
+P0108,V00250,Senior,Hypertension,4
+P0108,V00250,Senior,Lisinopril,4
+P0109,V00251,Young,Routine Checkup,3
+P0109,V00252,Young,Allergy,3
+P0109,V00253,Young,Routine Checkup,3
+P0110,V00254,Young,Hypertension,1
+P0110,V00254,Young,Allergy,1
+P0111,V00255,Senior,Diabetes,3
+P0111,V00255,Senior,Metformin,3
+P0111,V00256,Senior,Diabetes,3
+P0111,V00256,Senior,Metformin,3
+P0111,V00257,Senior,Diabetes,3
+P0111,V00257,Senior,Metformin,3
+P0111,V00257,Senior,Allergy,3
+P0112,V00258,Senior,Diabetes,4
+P0112,V00258,Senior,Metformin,4
+P0112,V00258,Senior,Hypertension,4
+P0112,V00258,Senior,Allergy,4
+P0112,V00259,Senior,Diabetes,4
+P0112,V00259,Senior,Metformin,4
+P0112,V00259,Senior,Hypertension,4
+P0112,V00259,Senior,Allergy,4
+P0112,V00260,Senior,Diabetes,4
+P0112,V00260,Senior,Hypertension,4
+P0112,V00260,Senior,Lisinopril,4
+P0112,V00261,Senior,Diabetes,4
+P0112,V00261,Senior,Hypertension,4
+P0112,V00261,Senior,Lisinopril,4
+P0113,V00262,Senior,Hypertension,1
+P0114,V00263,Adult,Routine Checkup,3
+P0114,V00264,Adult,Allergy,3
+P0114,V00265,Adult,Routine Checkup,3
+P0115,V00266,Young,Routine Checkup,2
+P0115,V00267,Young,Routine Checkup,2
+P0116,V00268,Adult,Heart Disease,1
+P0116,V00268,Adult,Statin,1
+P0116,V00268,Adult,Beta Blocker,1
+P0117,V00269,Adult,Asthma,2
+P0117,V00269,Adult,Inhaler,2
+P0117,V00269,Adult,Steroid,2
+P0117,V00269,Adult,Kidney Disease,2
+P0117,V00270,Adult,Asthma,2
+P0117,V00270,Adult,Inhaler,2
+P0118,V00271,Young,Routine Checkup,2
+P0118,V00272,Young,Allergy,2
+P0119,V00273,Young,Asthma,1
+P0119,V00273,Young,Inhaler,1
+P0119,V00273,Young,Steroid,1
+P0120,V00274,Senior,Hypertension,3
+P0120,V00274,Senior,Lisinopril,3
+P0120,V00274,Senior,Allergy,3
+P0120,V00275,Senior,Hypertension,3
+P0120,V00276,Senior,Hypertension,3
+P0120,V00276,Senior,Lisinopril,3
+P0120,V00276,Senior,Allergy,3
+P0121,V00277,Young,Hypertension,3
+P0121,V00277,Young,Lisinopril,3
+P0121,V00277,Young,Kidney Disease,3
+P0121,V00278,Young,Hypertension,3
+P0121,V00279,Young,Hypertension,3
+P0121,V00279,Young,Lisinopril,3
+P0122,V00280,Senior,Heart Disease,3
+P0122,V00280,Senior,Statin,3
+P0122,V00280,Senior,Beta Blocker,3
+P0122,V00281,Senior,Heart Disease,3
+P0122,V00281,Senior,Statin,3
+P0122,V00281,Senior,Beta Blocker,3
+P0122,V00282,Senior,Heart Disease,3
+P0122,V00282,Senior,Statin,3
+P0122,V00282,Senior,Beta Blocker,3
+P0123,V00283,Adult,Diabetes,2
+P0123,V00283,Adult,Metformin,2
+P0123,V00283,Adult,Hypertension,2
+P0123,V00283,Adult,Lisinopril,2
+P0123,V00283,Adult,Allergy,2
+P0123,V00284,Adult,Diabetes,2
+P0123,V00284,Adult,Metformin,2
+P0123,V00284,Adult,Hypertension,2
+P0123,V00284,Adult,Lisinopril,2
+P0124,V00285,Young,Routine Checkup,4
+P0124,V00286,Young,Routine Checkup,4
+P0124,V00287,Young,Routine Checkup,4
+P0124,V00288,Young,Routine Checkup,4
+P0125,V00289,Adult,Routine Checkup,2
+P0125,V00290,Adult,Routine Checkup,2
+P0126,V00291,Senior,Diabetes,4
+P0126,V00292,Senior,Diabetes,4
+P0126,V00292,Senior,Metformin,4
+P0126,V00293,Senior,Diabetes,4
+P0126,V00294,Senior,Diabetes,4
+P0126,V00294,Senior,Metformin,4
+P0126,V00294,Senior,Allergy,4
+P0127,V00295,Senior,Heart Disease,4
+P0127,V00295,Senior,Statin,4
+P0127,V00295,Senior,Beta Blocker,4
+P0127,V00296,Senior,Heart Disease,4
+P0127,V00296,Senior,Statin,4
+P0127,V00296,Senior,Beta Blocker,4
+P0127,V00297,Senior,Heart Disease,4
+P0127,V00297,Senior,Statin,4
+P0127,V00297,Senior,Beta Blocker,4
+P0127,V00298,Senior,Heart Disease,4
+P0127,V00298,Senior,Statin,4
+P0127,V00298,Senior,Beta Blocker,4
+P0128,V00299,Senior,Diabetes,1
+P0128,V00299,Senior,Metformin,1
+P0129,V00300,Adult,Asthma,1
+P0129,V00300,Adult,Inhaler,1
+P0130,V00301,Senior,Hypertension,1
+P0130,V00301,Senior,Lisinopril,1
+P0130,V00301,Senior,Heart Disease,1
+P0130,V00301,Senior,Statin,1
+P0130,V00301,Senior,Beta Blocker,1
+P0131,V00302,Senior,Allergy,1
+P0132,V00303,Senior,Diabetes,2
+P0132,V00303,Senior,Metformin,2
+P0132,V00303,Senior,Hypertension,2
+P0132,V00303,Senior,Lisinopril,2
+P0132,V00304,Senior,Diabetes,2
+P0132,V00304,Senior,Hypertension,2
+P0133,V00305,Senior,Diabetes,4
+P0133,V00305,Senior,Metformin,4
+P0133,V00306,Senior,Diabetes,4
+P0133,V00306,Senior,Metformin,4
+P0133,V00307,Senior,Diabetes,4
+P0133,V00307,Senior,Metformin,4
+P0133,V00308,Senior,Diabetes,4
+P0133,V00308,Senior,Metformin,4
+P0134,V00309,Senior,Hypertension,1
+P0134,V00309,Senior,Lisinopril,1
+P0135,V00310,Senior,Allergy,4
+P0135,V00311,Senior,Routine Checkup,4
+P0135,V00312,Senior,Routine Checkup,4
+P0135,V00313,Senior,Allergy,4
+P0136,V00314,Adult,Allergy,2
+P0136,V00315,Adult,Allergy,2
+P0137,V00316,Young,Routine Checkup,1
+P0138,V00317,Adult,Hypertension,3
+P0138,V00317,Adult,Lisinopril,3
+P0138,V00318,Adult,Hypertension,3
+P0138,V00318,Adult,Lisinopril,3
+P0138,V00319,Adult,Hypertension,3
+P0138,V00319,Adult,Lisinopril,3
+P0138,V00319,Adult,Allergy,3
+P0139,V00320,Adult,Asthma,1
+P0139,V00320,Adult,Inhaler,1
+P0139,V00320,Adult,Steroid,1
+P0139,V00320,Adult,Allergy,1
+P0140,V00321,Adult,Hypertension,4
+P0140,V00321,Adult,Lisinopril,4
+P0140,V00322,Adult,Hypertension,4
+P0140,V00322,Adult,Lisinopril,4
+P0140,V00323,Adult,Hypertension,4
+P0140,V00324,Adult,Hypertension,4
+P0140,V00324,Adult,Allergy,4
+P0141,V00325,Senior,Allergy,4
+P0141,V00325,Senior,Kidney Disease,4
+P0141,V00326,Senior,Routine Checkup,4
+P0141,V00327,Senior,Routine Checkup,4
+P0141,V00328,Senior,Routine Checkup,4
+P0142,V00329,Adult,Routine Checkup,3
+P0142,V00330,Adult,Routine Checkup,3
+P0142,V00331,Adult,Routine Checkup,3
+P0143,V00332,Senior,Allergy,3
+P0143,V00333,Senior,Routine Checkup,3
+P0143,V00334,Senior,Routine Checkup,3
+P0144,V00335,Young,Routine Checkup,2
+P0144,V00336,Young,Routine Checkup,2
+P0145,V00337,Adult,Diabetes,3
+P0145,V00337,Adult,Hypertension,3
+P0145,V00338,Adult,Diabetes,3
+P0145,V00338,Adult,Metformin,3
+P0145,V00338,Adult,Hypertension,3
+P0145,V00339,Adult,Diabetes,3
+P0145,V00339,Adult,Metformin,3
+P0145,V00339,Adult,Hypertension,3
+P0145,V00339,Adult,Lisinopril,3
+P0146,V00340,Senior,Routine Checkup,3
+P0146,V00341,Senior,Routine Checkup,3
+P0146,V00342,Senior,Routine Checkup,3
+P0147,V00343,Senior,Heart Disease,1
+P0147,V00343,Senior,Statin,1
+P0147,V00343,Senior,Beta Blocker,1
+P0148,V00344,Young,Routine Checkup,1
+P0149,V00345,Senior,Asthma,3
+P0149,V00345,Senior,Inhaler,3
+P0149,V00345,Senior,Steroid,3
+P0149,V00345,Senior,Allergy,3
+P0149,V00346,Senior,Asthma,3
+P0149,V00346,Senior,Inhaler,3
+P0149,V00347,Senior,Asthma,3
+P0149,V00347,Senior,Inhaler,3
+P0149,V00347,Senior,Steroid,3
+P0149,V00347,Senior,Allergy,3
+P0150,V00348,Adult,Diabetes,4
+P0150,V00348,Adult,Metformin,4
+P0150,V00349,Adult,Diabetes,4
+P0150,V00350,Adult,Diabetes,4
+P0150,V00350,Adult,Metformin,4
+P0150,V00350,Adult,Allergy,4
+P0150,V00351,Adult,Diabetes,4
+P0150,V00351,Adult,Metformin,4
+P0151,V00352,Adult,Hypertension,4
+P0151,V00353,Adult,Hypertension,4
+P0151,V00354,Adult,Hypertension,4
+P0151,V00355,Adult,Hypertension,4
+P0152,V00356,Young,Diabetes,1
+P0152,V00356,Young,Metformin,1
+P0152,V00356,Young,Hypertension,1
+P0153,V00357,Senior,Kidney Disease,3
+P0153,V00358,Senior,Routine Checkup,3
+P0153,V00359,Senior,Allergy,3
+P0154,V00360,Young,Heart Disease,1
+P0154,V00360,Young,Statin,1
+P0154,V00360,Young,Beta Blocker,1
+P0155,V00361,Young,Diabetes,2
+P0155,V00361,Young,Metformin,2
+P0155,V00361,Young,Allergy,2
+P0155,V00362,Young,Diabetes,2
+P0155,V00362,Young,Metformin,2
+P0155,V00362,Young,Allergy,2
+P0156,V00363,Young,Diabetes,3
+P0156,V00363,Young,Hypertension,3
+P0156,V00364,Young,Diabetes,3
+P0156,V00364,Young,Hypertension,3
+P0156,V00364,Young,Lisinopril,3
+P0156,V00365,Young,Diabetes,3
+P0156,V00365,Young,Metformin,3
+P0156,V00365,Young,Hypertension,3
+P0156,V00365,Young,Lisinopril,3
+P0157,V00366,Adult,Allergy,2
+P0157,V00367,Adult,Routine Checkup,2
+P0158,V00368,Young,Asthma,4
+P0158,V00368,Young,Inhaler,4
+P0158,V00369,Young,Asthma,4
+P0158,V00369,Young,Inhaler,4
+P0158,V00369,Young,Steroid,4
+P0158,V00369,Young,Allergy,4
+P0158,V00370,Young,Asthma,4
+P0158,V00370,Young,Inhaler,4
+P0158,V00371,Young,Asthma,4
+P0158,V00371,Young,Inhaler,4
+P0158,V00371,Young,Steroid,4
+P0159,V00372,Senior,Heart Disease,1
+P0159,V00372,Senior,Statin,1
+P0159,V00372,Senior,Beta Blocker,1
+P0160,V00373,Senior,Diabetes,4
+P0160,V00373,Senior,Metformin,4
+P0160,V00374,Senior,Diabetes,4
+P0160,V00374,Senior,Metformin,4
+P0160,V00375,Senior,Diabetes,4
+P0160,V00375,Senior,Metformin,4
+P0160,V00376,Senior,Diabetes,4
+P0160,V00376,Senior,Metformin,4
+P0161,V00377,Senior,Heart Disease,4
+P0161,V00377,Senior,Statin,4
+P0161,V00377,Senior,Beta Blocker,4
+P0161,V00377,Senior,Kidney Disease,4
+P0161,V00378,Senior,Heart Disease,4
+P0161,V00378,Senior,Statin,4
+P0161,V00378,Senior,Beta Blocker,4
+P0161,V00379,Senior,Heart Disease,4
+P0161,V00379,Senior,Statin,4
+P0161,V00379,Senior,Beta Blocker,4
+P0161,V00380,Senior,Heart Disease,4
+P0161,V00380,Senior,Statin,4
+P0161,V00380,Senior,Beta Blocker,4
+P0162,V00381,Adult,Asthma,2
+P0162,V00381,Adult,Inhaler,2
+P0162,V00381,Adult,Steroid,2
+P0162,V00382,Adult,Asthma,2
+P0162,V00382,Adult,Inhaler,2
+P0162,V00382,Adult,Steroid,2
+P0163,V00383,Adult,Routine Checkup,3
+P0163,V00384,Adult,Routine Checkup,3
+P0163,V00385,Adult,Routine Checkup,3
+P0164,V00386,Young,Hypertension,3
+P0164,V00386,Young,Lisinopril,3
+P0164,V00386,Young,Heart Disease,3
+P0164,V00386,Young,Statin,3
+P0164,V00386,Young,Beta Blocker,3
+P0164,V00387,Young,Hypertension,3
+P0164,V00387,Young,Heart Disease,3
+P0164,V00387,Young,Statin,3
+P0164,V00387,Young,Beta Blocker,3
+P0164,V00387,Young,Allergy,3
+P0164,V00388,Young,Hypertension,3
+P0164,V00388,Young,Heart Disease,3
+P0164,V00388,Young,Statin,3
+P0165,V00389,Senior,Diabetes,2
+P0165,V00389,Senior,Metformin,2
+P0165,V00389,Senior,Hypertension,2
+P0165,V00389,Senior,Lisinopril,2
+P0165,V00390,Senior,Diabetes,2
+P0165,V00390,Senior,Metformin,2
+P0165,V00390,Senior,Hypertension,2
+P0166,V00391,Young,Routine Checkup,4
+P0166,V00392,Young,Allergy,4
+P0166,V00393,Young,Routine Checkup,4
+P0166,V00394,Young,Allergy,4
+P0167,V00395,Senior,Routine Checkup,4
+P0167,V00396,Senior,Routine Checkup,4
+P0167,V00397,Senior,Routine Checkup,4
+P0167,V00398,Senior,Allergy,4
+P0168,V00399,Young,Routine Checkup,4
+P0168,V00400,Young,Routine Checkup,4
+P0168,V00401,Young,Routine Checkup,4
+P0168,V00402,Young,Allergy,4
+P0168,V00402,Young,Kidney Disease,4
+P0169,V00403,Senior,Diabetes,4
+P0169,V00403,Senior,Metformin,4
+P0169,V00403,Senior,Hypertension,4
+P0169,V00404,Senior,Diabetes,4
+P0169,V00404,Senior,Metformin,4
+P0169,V00404,Senior,Hypertension,4
+P0169,V00404,Senior,Allergy,4
+P0169,V00405,Senior,Diabetes,4
+P0169,V00405,Senior,Metformin,4
+P0169,V00405,Senior,Hypertension,4
+P0169,V00406,Senior,Diabetes,4
+P0169,V00406,Senior,Metformin,4
+P0169,V00406,Senior,Hypertension,4
+P0169,V00406,Senior,Lisinopril,4
+P0170,V00407,Adult,Hypertension,1
+P0170,V00407,Adult,Lisinopril,1
+P0171,V00408,Adult,Allergy,3
+P0171,V00409,Adult,Routine Checkup,3
+P0171,V00410,Adult,Allergy,3
+P0172,V00411,Young,Routine Checkup,2
+P0172,V00412,Young,Routine Checkup,2
+P0173,V00413,Senior,Diabetes,4
+P0173,V00413,Senior,Metformin,4
+P0173,V00413,Senior,Hypertension,4
+P0173,V00414,Senior,Diabetes,4
+P0173,V00414,Senior,Hypertension,4
+P0173,V00415,Senior,Diabetes,4
+P0173,V00415,Senior,Metformin,4
+P0173,V00415,Senior,Hypertension,4
+P0173,V00415,Senior,Lisinopril,4
+P0173,V00415,Senior,Allergy,4
+P0173,V00416,Senior,Diabetes,4
+P0173,V00416,Senior,Metformin,4
+P0173,V00416,Senior,Hypertension,4
+P0173,V00416,Senior,Lisinopril,4
+P0174,V00417,Young,Routine Checkup,2
+P0174,V00418,Young,Kidney Disease,2
+P0175,V00419,Senior,Routine Checkup,4
+P0175,V00420,Senior,Routine Checkup,4
+P0175,V00421,Senior,Routine Checkup,4
+P0175,V00422,Senior,Routine Checkup,4
+P0176,V00423,Senior,Diabetes,3
+P0176,V00423,Senior,Metformin,3
+P0176,V00423,Senior,Hypertension,3
+P0176,V00423,Senior,Lisinopril,3
+P0176,V00423,Senior,Asthma,3
+P0176,V00423,Senior,Inhaler,3
+P0176,V00423,Senior,Kidney Disease,3
+P0176,V00424,Senior,Diabetes,3
+P0176,V00424,Senior,Metformin,3
+P0176,V00424,Senior,Hypertension,3
+P0176,V00424,Senior,Lisinopril,3
+P0176,V00424,Senior,Asthma,3
+P0176,V00424,Senior,Inhaler,3
+P0176,V00425,Senior,Diabetes,3
+P0176,V00425,Senior,Hypertension,3
+P0176,V00425,Senior,Asthma,3
+P0176,V00425,Senior,Inhaler,3
+P0176,V00425,Senior,Kidney Disease,3
+P0177,V00426,Young,Allergy,3
+P0177,V00427,Young,Routine Checkup,3
+P0177,V00428,Young,Routine Checkup,3
+P0178,V00429,Senior,Diabetes,2
+P0178,V00429,Senior,Heart Disease,2
+P0178,V00429,Senior,Statin,2
+P0178,V00429,Senior,Beta Blocker,2
+P0178,V00430,Senior,Diabetes,2
+P0178,V00430,Senior,Metformin,2
+P0178,V00430,Senior,Heart Disease,2
+P0178,V00430,Senior,Statin,2
+P0178,V00430,Senior,Beta Blocker,2
+P0179,V00431,Adult,Diabetes,4
+P0179,V00431,Adult,Metformin,4
+P0179,V00431,Adult,Hypertension,4
+P0179,V00431,Adult,Lisinopril,4
+P0179,V00431,Adult,Allergy,4
+P0179,V00432,Adult,Diabetes,4
+P0179,V00432,Adult,Metformin,4
+P0179,V00432,Adult,Hypertension,4
+P0179,V00432,Adult,Lisinopril,4
+P0179,V00433,Adult,Diabetes,4
+P0179,V00433,Adult,Hypertension,4
+P0179,V00433,Adult,Lisinopril,4
+P0179,V00434,Adult,Diabetes,4
+P0179,V00434,Adult,Metformin,4
+P0179,V00434,Adult,Hypertension,4
+P0179,V00434,Adult,Lisinopril,4
+P0180,V00435,Young,Routine Checkup,3
+P0180,V00436,Young,Routine Checkup,3
+P0180,V00437,Young,Routine Checkup,3
+P0181,V00438,Senior,Heart Disease,1
+P0181,V00438,Senior,Statin,1
+P0181,V00438,Senior,Beta Blocker,1
+P0182,V00439,Senior,Routine Checkup,4
+P0182,V00440,Senior,Allergy,4
+P0182,V00441,Senior,Routine Checkup,4
+P0182,V00442,Senior,Routine Checkup,4
+P0183,V00443,Senior,Diabetes,1
+P0183,V00443,Senior,Metformin,1
+P0184,V00444,Adult,Routine Checkup,1
+P0185,V00445,Adult,Routine Checkup,1
+P0186,V00446,Senior,Allergy,4
+P0186,V00447,Senior,Routine Checkup,4
+P0186,V00448,Senior,Routine Checkup,4
+P0186,V00449,Senior,Routine Checkup,4
+P0187,V00450,Adult,Asthma,3
+P0187,V00450,Adult,Inhaler,3
+P0187,V00451,Adult,Asthma,3
+P0187,V00451,Adult,Inhaler,3
+P0187,V00451,Adult,Steroid,3
+P0187,V00452,Adult,Asthma,3
+P0187,V00452,Adult,Inhaler,3
+P0188,V00453,Young,Hypertension,4
+P0188,V00453,Young,Asthma,4
+P0188,V00453,Young,Inhaler,4
+P0188,V00453,Young,Allergy,4
+P0188,V00454,Young,Hypertension,4
+P0188,V00454,Young,Lisinopril,4
+P0188,V00454,Young,Asthma,4
+P0188,V00454,Young,Inhaler,4
+P0188,V00455,Young,Hypertension,4
+P0188,V00455,Young,Lisinopril,4
+P0188,V00455,Young,Asthma,4
+P0188,V00455,Young,Inhaler,4
+P0188,V00456,Young,Hypertension,4
+P0188,V00456,Young,Asthma,4
+P0188,V00456,Young,Inhaler,4
+P0189,V00457,Senior,Allergy,1
+P0190,V00458,Senior,Diabetes,4
+P0190,V00458,Senior,Hypertension,4
+P0190,V00459,Senior,Diabetes,4
+P0190,V00459,Senior,Metformin,4
+P0190,V00459,Senior,Hypertension,4
+P0190,V00459,Senior,Lisinopril,4
+P0190,V00460,Senior,Diabetes,4
+P0190,V00460,Senior,Metformin,4
+P0190,V00460,Senior,Hypertension,4
+P0190,V00460,Senior,Lisinopril,4
+P0190,V00461,Senior,Diabetes,4
+P0190,V00461,Senior,Metformin,4
+P0190,V00461,Senior,Hypertension,4
+P0191,V00462,Adult,Hypertension,2
+P0191,V00462,Adult,Lisinopril,2
+P0191,V00462,Adult,Heart Disease,2
+P0191,V00462,Adult,Statin,2
+P0191,V00463,Adult,Hypertension,2
+P0191,V00463,Adult,Lisinopril,2
+P0191,V00463,Adult,Heart Disease,2
+P0191,V00463,Adult,Statin,2
+P0191,V00463,Adult,Allergy,2
+P0192,V00464,Adult,Hypertension,4
+P0192,V00465,Adult,Hypertension,4
+P0192,V00466,Adult,Hypertension,4
+P0192,V00467,Adult,Hypertension,4
+P0193,V00468,Senior,Hypertension,1
+P0193,V00468,Senior,Heart Disease,1
+P0193,V00468,Senior,Statin,1
+P0194,V00469,Young,Routine Checkup,2
+P0194,V00470,Young,Routine Checkup,2
+P0195,V00471,Adult,Routine Checkup,1
+P0196,V00472,Adult,Routine Checkup,1
+P0197,V00473,Senior,Routine Checkup,4
+P0197,V00474,Senior,Allergy,4
+P0197,V00475,Senior,Routine Checkup,4
+P0197,V00476,Senior,Routine Checkup,4
+P0198,V00477,Senior,Hypertension,3
+P0198,V00477,Senior,Lisinopril,3
+P0198,V00478,Senior,Hypertension,3
+P0198,V00478,Senior,Allergy,3
+P0198,V00479,Senior,Hypertension,3
+P0198,V00479,Senior,Lisinopril,3
+P0199,V00480,Young,Routine Checkup,3
+P0199,V00481,Young,Routine Checkup,3
+P0199,V00482,Young,Routine Checkup,3
+P0200,V00483,Senior,Heart Disease,4
+P0200,V00483,Senior,Statin,4
+P0200,V00483,Senior,Beta Blocker,4
+P0200,V00484,Senior,Heart Disease,4
+P0200,V00484,Senior,Statin,4
+P0200,V00484,Senior,Beta Blocker,4
+P0200,V00485,Senior,Heart Disease,4
+P0200,V00485,Senior,Statin,4
+P0200,V00485,Senior,Beta Blocker,4
+P0200,V00486,Senior,Heart Disease,4
+P0200,V00486,Senior,Statin,4
+P0200,V00486,Senior,Allergy,4
+P0201,V00487,Senior,Asthma,3
+P0201,V00487,Senior,Inhaler,3
+P0201,V00487,Senior,Allergy,3
+P0201,V00488,Senior,Asthma,3
+P0201,V00488,Senior,Inhaler,3
+P0201,V00488,Senior,Steroid,3
+P0201,V00488,Senior,Allergy,3
+P0201,V00489,Senior,Asthma,3
+P0201,V00489,Senior,Inhaler,3
+P0201,V00489,Senior,Kidney Disease,3
+P0202,V00490,Adult,Routine Checkup,1
+P0203,V00491,Senior,Heart Disease,1
+P0203,V00491,Senior,Statin,1
+P0203,V00491,Senior,Beta Blocker,1
+P0204,V00492,Young,Asthma,2
+P0204,V00492,Young,Inhaler,2
+P0204,V00492,Young,Steroid,2
+P0204,V00493,Young,Asthma,2
+P0204,V00493,Young,Inhaler,2
+P0205,V00494,Adult,Heart Disease,3
+P0205,V00494,Adult,Statin,3
+P0205,V00494,Adult,Beta Blocker,3
+P0205,V00494,Adult,Allergy,3
+P0205,V00495,Adult,Heart Disease,3
+P0205,V00495,Adult,Statin,3
+P0205,V00496,Adult,Heart Disease,3
+P0205,V00496,Adult,Statin,3
+P0205,V00496,Adult,Allergy,3
+P0206,V00497,Adult,Hypertension,2
+P0206,V00498,Adult,Hypertension,2
+P0207,V00499,Adult,Diabetes,1
+P0207,V00499,Adult,Metformin,1
+P0208,V00500,Young,Routine Checkup,3
+P0208,V00501,Young,Routine Checkup,3
+P0208,V00502,Young,Allergy,3
+P0209,V00503,Young,Hypertension,4
+P0209,V00504,Young,Hypertension,4
+P0209,V00504,Young,Lisinopril,4
+P0209,V00505,Young,Hypertension,4
+P0209,V00506,Young,Hypertension,4
+P0209,V00506,Young,Lisinopril,4
+P0210,V00507,Senior,Hypertension,2
+P0210,V00507,Senior,Heart Disease,2
+P0210,V00507,Senior,Statin,2
+P0210,V00507,Senior,Beta Blocker,2
+P0210,V00508,Senior,Hypertension,2
+P0210,V00508,Senior,Lisinopril,2
+P0210,V00508,Senior,Heart Disease,2
+P0210,V00508,Senior,Statin,2
+P0210,V00508,Senior,Beta Blocker,2
+P0210,V00508,Senior,Allergy,2
+P0211,V00509,Young,Diabetes,2
+P0211,V00509,Young,Allergy,2
+P0211,V00510,Young,Diabetes,2
+P0211,V00510,Young,Metformin,2
+P0212,V00511,Adult,Kidney Disease,2
+P0212,V00512,Adult,Kidney Disease,2
+P0213,V00513,Young,Allergy,3
+P0213,V00514,Young,Routine Checkup,3
+P0213,V00515,Young,Allergy,3
+P0214,V00516,Adult,Routine Checkup,3
+P0214,V00517,Adult,Allergy,3
+P0214,V00518,Adult,Routine Checkup,3
+P0215,V00519,Senior,Hypertension,4
+P0215,V00520,Senior,Hypertension,4
+P0215,V00521,Senior,Hypertension,4
+P0215,V00521,Senior,Lisinopril,4
+P0215,V00522,Senior,Hypertension,4
+P0215,V00522,Senior,Lisinopril,4
+P0216,V00523,Adult,Routine Checkup,2
+P0216,V00524,Adult,Routine Checkup,2
+P0217,V00525,Senior,Diabetes,3
+P0217,V00525,Senior,Metformin,3
+P0217,V00525,Senior,Hypertension,3
+P0217,V00525,Senior,Lisinopril,3
+P0217,V00525,Senior,Heart Disease,3
+P0217,V00525,Senior,Statin,3
+P0217,V00525,Senior,Allergy,3
+P0217,V00526,Senior,Diabetes,3
+P0217,V00526,Senior,Metformin,3
+P0217,V00526,Senior,Hypertension,3
+P0217,V00526,Senior,Lisinopril,3
+P0217,V00526,Senior,Heart Disease,3
+P0217,V00526,Senior,Statin,3
+P0217,V00526,Senior,Beta Blocker,3
+P0217,V00527,Senior,Diabetes,3
+P0217,V00527,Senior,Metformin,3
+P0217,V00527,Senior,Hypertension,3
+P0217,V00527,Senior,Heart Disease,3
+P0217,V00527,Senior,Statin,3
+P0217,V00527,Senior,Beta Blocker,3
+P0218,V00528,Adult,Asthma,4
+P0218,V00528,Adult,Inhaler,4
+P0218,V00528,Adult,Steroid,4
+P0218,V00529,Adult,Asthma,4
+P0218,V00529,Adult,Inhaler,4
+P0218,V00529,Adult,Steroid,4
+P0218,V00530,Adult,Asthma,4
+P0218,V00530,Adult,Inhaler,4
+P0218,V00530,Adult,Steroid,4
+P0218,V00531,Adult,Asthma,4
+P0218,V00531,Adult,Inhaler,4
+P0219,V00532,Adult,Asthma,3
+P0219,V00532,Adult,Inhaler,3
+P0219,V00533,Adult,Asthma,3
+P0219,V00533,Adult,Inhaler,3
+P0219,V00533,Adult,Allergy,3
+P0219,V00534,Adult,Asthma,3
+P0219,V00534,Adult,Inhaler,3
+P0220,V00535,Adult,Routine Checkup,3
+P0220,V00536,Adult,Routine Checkup,3
+P0220,V00537,Adult,Routine Checkup,3
+P0221,V00538,Senior,Routine Checkup,1
+P0222,V00539,Senior,Hypertension,1
+P0222,V00539,Senior,Lisinopril,1
+P0223,V00540,Adult,Routine Checkup,1
+P0224,V00541,Young,Diabetes,3
+P0224,V00541,Young,Hypertension,3
+P0224,V00542,Young,Diabetes,3
+P0224,V00542,Young,Metformin,3
+P0224,V00542,Young,Hypertension,3
+P0224,V00542,Young,Lisinopril,3
+P0224,V00543,Young,Diabetes,3
+P0224,V00543,Young,Metformin,3
+P0224,V00543,Young,Hypertension,3
+P0224,V00543,Young,Lisinopril,3
+P0224,V00543,Young,Allergy,3
+P0225,V00544,Senior,Asthma,1
+P0225,V00544,Senior,Inhaler,1
+P0225,V00544,Senior,Steroid,1
+P0225,V00544,Senior,Heart Disease,1
+P0225,V00544,Senior,Statin,1
+P0225,V00544,Senior,Beta Blocker,1
+P0226,V00545,Young,Allergy,4
+P0226,V00546,Young,Routine Checkup,4
+P0226,V00547,Young,Routine Checkup,4
+P0226,V00548,Young,Routine Checkup,4
+P0227,V00549,Senior,Heart Disease,2
+P0227,V00549,Senior,Statin,2
+P0227,V00549,Senior,Beta Blocker,2
+P0227,V00550,Senior,Heart Disease,2
+P0227,V00550,Senior,Statin,2
+P0227,V00550,Senior,Beta Blocker,2
+P0228,V00551,Adult,Routine Checkup,1
+P0229,V00552,Adult,Routine Checkup,4
+P0229,V00553,Adult,Routine Checkup,4
+P0229,V00554,Adult,Routine Checkup,4
+P0229,V00555,Adult,Routine Checkup,4
+P0230,V00556,Senior,Heart Disease,4
+P0230,V00556,Senior,Statin,4
+P0230,V00556,Senior,Beta Blocker,4
+P0230,V00556,Senior,Allergy,4
+P0230,V00557,Senior,Heart Disease,4
+P0230,V00557,Senior,Statin,4
+P0230,V00558,Senior,Heart Disease,4
+P0230,V00558,Senior,Statin,4
+P0230,V00559,Senior,Heart Disease,4
+P0230,V00559,Senior,Statin,4
+P0231,V00560,Adult,Routine Checkup,3
+P0231,V00561,Adult,Routine Checkup,3
+P0231,V00562,Adult,Allergy,3
+P0232,V00563,Senior,Heart Disease,4
+P0232,V00563,Senior,Statin,4
+P0232,V00563,Senior,Allergy,4
+P0232,V00564,Senior,Heart Disease,4
+P0232,V00564,Senior,Statin,4
+P0232,V00564,Senior,Beta Blocker,4
+P0232,V00565,Senior,Heart Disease,4
+P0232,V00565,Senior,Statin,4
+P0232,V00566,Senior,Heart Disease,4
+P0232,V00566,Senior,Statin,4
+P0233,V00567,Senior,Routine Checkup,3
+P0233,V00568,Senior,Routine Checkup,3
+P0233,V00569,Senior,Routine Checkup,3
+P0234,V00570,Young,Hypertension,2
+P0234,V00570,Young,Lisinopril,2
+P0234,V00571,Young,Hypertension,2
+P0234,V00571,Young,Lisinopril,2
+P0235,V00572,Young,Routine Checkup,2
+P0235,V00573,Young,Routine Checkup,2
+P0236,V00574,Senior,Routine Checkup,2
+P0236,V00575,Senior,Kidney Disease,2
+P0237,V00576,Adult,Routine Checkup,4
+P0237,V00577,Adult,Routine Checkup,4
+P0237,V00578,Adult,Routine Checkup,4
+P0237,V00579,Adult,Routine Checkup,4
+P0238,V00580,Senior,Hypertension,4
+P0238,V00581,Senior,Hypertension,4
+P0238,V00581,Senior,Lisinopril,4
+P0238,V00582,Senior,Hypertension,4
+P0238,V00582,Senior,Lisinopril,4
+P0238,V00583,Senior,Hypertension,4
+P0239,V00584,Senior,Heart Disease,2
+P0239,V00584,Senior,Statin,2
+P0239,V00584,Senior,Beta Blocker,2
+P0239,V00584,Senior,Kidney Disease,2
+P0239,V00585,Senior,Heart Disease,2
+P0239,V00585,Senior,Statin,2
+P0239,V00585,Senior,Beta Blocker,2
+P0240,V00586,Adult,Routine Checkup,1
+P0241,V00587,Adult,Routine Checkup,1
+P0242,V00588,Adult,Routine Checkup,3
+P0242,V00589,Adult,Routine Checkup,3
+P0242,V00590,Adult,Routine Checkup,3
+P0243,V00591,Adult,Routine Checkup,2
+P0243,V00592,Adult,Kidney Disease,2
+P0244,V00593,Young,Routine Checkup,3
+P0244,V00594,Young,Routine Checkup,3
+P0244,V00595,Young,Allergy,3
+P0245,V00596,Young,Allergy,1
+P0246,V00597,Young,Routine Checkup,4
+P0246,V00598,Young,Routine Checkup,4
+P0246,V00599,Young,Routine Checkup,4
+P0246,V00600,Young,Routine Checkup,4
+P0247,V00601,Young,Kidney Disease,1
+P0248,V00602,Adult,Allergy,1
+P0249,V00603,Young,Asthma,4
+P0249,V00603,Young,Inhaler,4
+P0249,V00603,Young,Steroid,4
+P0249,V00604,Young,Asthma,4
+P0249,V00604,Young,Inhaler,4
+P0249,V00605,Young,Asthma,4
+P0249,V00605,Young,Inhaler,4
+P0249,V00605,Young,Steroid,4
+P0249,V00605,Young,Allergy,4
+P0249,V00606,Young,Asthma,4
+P0249,V00606,Young,Inhaler,4
+P0249,V00606,Young,Steroid,4
+P0249,V00606,Young,Allergy,4
+P0250,V00607,Senior,Allergy,1
+P0251,V00608,Young,Routine Checkup,1
+P0252,V00609,Young,Allergy,3
+P0252,V00610,Young,Allergy,3
+P0252,V00611,Young,Routine Checkup,3
+P0253,V00612,Young,Diabetes,4
+P0253,V00612,Young,Metformin,4
+P0253,V00612,Young,Hypertension,4
+P0253,V00613,Young,Diabetes,4
+P0253,V00613,Young,Metformin,4
+P0253,V00613,Young,Hypertension,4
+P0253,V00613,Young,Lisinopril,4
+P0253,V00614,Young,Diabetes,4
+P0253,V00614,Young,Metformin,4
+P0253,V00614,Young,Hypertension,4
+P0253,V00615,Young,Diabetes,4
+P0253,V00615,Young,Hypertension,4
+P0253,V00615,Young,Allergy,4
+P0254,V00616,Adult,Diabetes,1
+P0254,V00616,Adult,Metformin,1
+P0254,V00616,Adult,Hypertension,1
+P0254,V00616,Adult,Lisinopril,1
+P0255,V00617,Adult,Diabetes,1
+P0255,V00617,Adult,Metformin,1
+P0255,V00617,Adult,Hypertension,1
+P0255,V00617,Adult,Heart Disease,1
+P0255,V00617,Adult,Statin,1
+P0255,V00617,Adult,Beta Blocker,1
+P0255,V00617,Adult,Allergy,1
+P0256,V00618,Adult,Hypertension,3
+P0256,V00618,Adult,Allergy,3
+P0256,V00619,Adult,Hypertension,3
+P0256,V00619,Adult,Lisinopril,3
+P0256,V00620,Adult,Hypertension,3
+P0257,V00621,Senior,Routine Checkup,1
+P0258,V00622,Adult,Allergy,3
+P0258,V00623,Adult,Routine Checkup,3
+P0258,V00624,Adult,Routine Checkup,3
+P0259,V00625,Senior,Diabetes,3
+P0259,V00625,Senior,Hypertension,3
+P0259,V00625,Senior,Lisinopril,3
+P0259,V00625,Senior,Kidney Disease,3
+P0259,V00626,Senior,Diabetes,3
+P0259,V00626,Senior,Hypertension,3
+P0259,V00626,Senior,Allergy,3
+P0259,V00627,Senior,Diabetes,3
+P0259,V00627,Senior,Hypertension,3
+P0259,V00627,Senior,Lisinopril,3
+P0260,V00628,Young,Diabetes,1
+P0261,V00629,Adult,Routine Checkup,1
+P0262,V00630,Senior,Diabetes,3
+P0262,V00630,Senior,Metformin,3
+P0262,V00630,Senior,Hypertension,3
+P0262,V00630,Senior,Lisinopril,3
+P0262,V00631,Senior,Diabetes,3
+P0262,V00631,Senior,Hypertension,3
+P0262,V00631,Senior,Lisinopril,3
+P0262,V00632,Senior,Diabetes,3
+P0262,V00632,Senior,Hypertension,3
+P0262,V00632,Senior,Lisinopril,3
+P0263,V00633,Senior,Heart Disease,1
+P0263,V00633,Senior,Statin,1
+P0263,V00633,Senior,Beta Blocker,1
+P0264,V00634,Senior,Hypertension,1
+P0264,V00634,Senior,Lisinopril,1
+P0264,V00634,Senior,Allergy,1
+P0265,V00635,Adult,Diabetes,1
+P0265,V00635,Adult,Hypertension,1
+P0265,V00635,Adult,Lisinopril,1
+P0266,V00636,Senior,Routine Checkup,1
+P0267,V00637,Adult,Hypertension,3
+P0267,V00637,Adult,Allergy,3
+P0267,V00638,Adult,Hypertension,3
+P0267,V00638,Adult,Allergy,3
+P0267,V00639,Adult,Hypertension,3
+P0268,V00640,Senior,Diabetes,2
+P0268,V00640,Senior,Asthma,2
+P0268,V00640,Senior,Inhaler,2
+P0268,V00640,Senior,Steroid,2
+P0268,V00641,Senior,Diabetes,2
+P0268,V00641,Senior,Metformin,2
+P0268,V00641,Senior,Asthma,2
+P0268,V00641,Senior,Inhaler,2
+P0269,V00642,Senior,Asthma,2
+P0269,V00642,Senior,Inhaler,2
+P0269,V00642,Senior,Steroid,2
+P0269,V00642,Senior,Kidney Disease,2
+P0269,V00643,Senior,Asthma,2
+P0269,V00643,Senior,Inhaler,2
+P0270,V00644,Senior,Routine Checkup,1
+P0271,V00645,Young,Routine Checkup,3
+P0271,V00646,Young,Routine Checkup,3
+P0271,V00647,Young,Routine Checkup,3
+P0272,V00648,Senior,Heart Disease,4
+P0272,V00648,Senior,Statin,4
+P0272,V00648,Senior,Beta Blocker,4
+P0272,V00649,Senior,Heart Disease,4
+P0272,V00649,Senior,Statin,4
+P0272,V00649,Senior,Beta Blocker,4
+P0272,V00650,Senior,Heart Disease,4
+P0272,V00650,Senior,Statin,4
+P0272,V00651,Senior,Heart Disease,4
+P0272,V00651,Senior,Statin,4
+P0272,V00651,Senior,Beta Blocker,4
+P0273,V00652,Senior,Routine Checkup,2
+P0273,V00653,Senior,Allergy,2
+P0274,V00654,Senior,Heart Disease,2
+P0274,V00654,Senior,Statin,2
+P0274,V00654,Senior,Beta Blocker,2
+P0274,V00655,Senior,Heart Disease,2
+P0274,V00655,Senior,Statin,2
+P0274,V00655,Senior,Beta Blocker,2
+P0275,V00656,Senior,Diabetes,1
+P0275,V00656,Senior,Metformin,1
+P0275,V00656,Senior,Hypertension,1
+P0275,V00656,Senior,Kidney Disease,1
+P0276,V00657,Young,Routine Checkup,1
+P0277,V00658,Young,Hypertension,4
+P0277,V00658,Young,Allergy,4
+P0277,V00659,Young,Hypertension,4
+P0277,V00659,Young,Lisinopril,4
+P0277,V00660,Young,Hypertension,4
+P0277,V00660,Young,Lisinopril,4
+P0277,V00661,Young,Hypertension,4
+P0278,V00662,Adult,Hypertension,3
+P0278,V00662,Adult,Lisinopril,3
+P0278,V00663,Adult,Hypertension,3
+P0278,V00663,Adult,Lisinopril,3
+P0278,V00664,Adult,Hypertension,3
+P0279,V00665,Young,Diabetes,1
+P0279,V00665,Young,Metformin,1
+P0279,V00665,Young,Hypertension,1
+P0279,V00665,Young,Lisinopril,1
+P0279,V00665,Young,Allergy,1
+P0280,V00666,Adult,Routine Checkup,2
+P0280,V00667,Adult,Allergy,2
+P0281,V00668,Senior,Diabetes,1
+P0281,V00668,Senior,Metformin,1
+P0281,V00668,Senior,Hypertension,1
+P0281,V00668,Senior,Lisinopril,1
+P0282,V00669,Adult,Hypertension,2
+P0282,V00670,Adult,Hypertension,2
+P0282,V00670,Adult,Lisinopril,2
+P0282,V00670,Adult,Kidney Disease,2
+P0283,V00671,Young,Diabetes,3
+P0283,V00671,Young,Metformin,3
+P0283,V00671,Young,Hypertension,3
+P0283,V00671,Young,Allergy,3
+P0283,V00672,Young,Diabetes,3
+P0283,V00672,Young,Metformin,3
+P0283,V00672,Young,Hypertension,3
+P0283,V00672,Young,Lisinopril,3
+P0283,V00672,Young,Allergy,3
+P0283,V00673,Young,Diabetes,3
+P0283,V00673,Young,Metformin,3
+P0283,V00673,Young,Hypertension,3
+P0283,V00673,Young,Lisinopril,3
+P0283,V00673,Young,Allergy,3
+P0284,V00674,Senior,Routine Checkup,1
+P0285,V00675,Adult,Hypertension,1
+P0285,V00675,Adult,Lisinopril,1
+P0286,V00676,Young,Routine Checkup,1
+P0287,V00677,Young,Routine Checkup,2
+P0287,V00678,Young,Routine Checkup,2
+P0288,V00679,Senior,Diabetes,3
+P0288,V00679,Senior,Metformin,3
+P0288,V00679,Senior,Hypertension,3
+P0288,V00679,Senior,Lisinopril,3
+P0288,V00680,Senior,Diabetes,3
+P0288,V00680,Senior,Metformin,3
+P0288,V00680,Senior,Hypertension,3
+P0288,V00680,Senior,Lisinopril,3
+P0288,V00681,Senior,Diabetes,3
+P0288,V00681,Senior,Metformin,3
+P0288,V00681,Senior,Hypertension,3
+P0289,V00682,Young,Allergy,4
+P0289,V00683,Young,Routine Checkup,4
+P0289,V00684,Young,Routine Checkup,4
+P0289,V00685,Young,Routine Checkup,4
+P0290,V00686,Young,Routine Checkup,3
+P0290,V00687,Young,Routine Checkup,3
+P0290,V00688,Young,Routine Checkup,3
+P0291,V00689,Senior,Diabetes,4
+P0291,V00689,Senior,Metformin,4
+P0291,V00689,Senior,Hypertension,4
+P0291,V00689,Senior,Lisinopril,4
+P0291,V00689,Senior,Kidney Disease,4
+P0291,V00690,Senior,Diabetes,4
+P0291,V00690,Senior,Metformin,4
+P0291,V00690,Senior,Hypertension,4
+P0291,V00691,Senior,Diabetes,4
+P0291,V00691,Senior,Metformin,4
+P0291,V00691,Senior,Hypertension,4
+P0291,V00692,Senior,Diabetes,4
+P0291,V00692,Senior,Hypertension,4
+P0292,V00693,Senior,Heart Disease,4
+P0292,V00693,Senior,Statin,4
+P0292,V00693,Senior,Beta Blocker,4
+P0292,V00693,Senior,Allergy,4
+P0292,V00694,Senior,Heart Disease,4
+P0292,V00694,Senior,Statin,4
+P0292,V00694,Senior,Beta Blocker,4
+P0292,V00695,Senior,Heart Disease,4
+P0292,V00695,Senior,Statin,4
+P0292,V00695,Senior,Beta Blocker,4
+P0292,V00695,Senior,Allergy,4
+P0292,V00696,Senior,Heart Disease,4
+P0292,V00696,Senior,Statin,4
+P0292,V00696,Senior,Beta Blocker,4
+P0293,V00697,Senior,Diabetes,1
+P0293,V00697,Senior,Metformin,1
+P0293,V00697,Senior,Hypertension,1
+P0293,V00697,Senior,Lisinopril,1
+P0293,V00697,Senior,Allergy,1
+P0294,V00698,Young,Hypertension,1
+P0294,V00698,Young,Lisinopril,1
+P0294,V00698,Young,Asthma,1
+P0294,V00698,Young,Inhaler,1
+P0295,V00699,Senior,Diabetes,4
+P0295,V00699,Senior,Hypertension,4
+P0295,V00699,Senior,Lisinopril,4
+P0295,V00699,Senior,Kidney Disease,4
+P0295,V00700,Senior,Diabetes,4
+P0295,V00700,Senior,Hypertension,4
+P0295,V00701,Senior,Diabetes,4
+P0295,V00701,Senior,Metformin,4
+P0295,V00701,Senior,Hypertension,4
+P0295,V00702,Senior,Diabetes,4
+P0295,V00702,Senior,Hypertension,4
+P0295,V00702,Senior,Lisinopril,4
+P0295,V00702,Senior,Kidney Disease,4
+P0296,V00703,Adult,Hypertension,3
+P0296,V00704,Adult,Hypertension,3
+P0296,V00704,Adult,Lisinopril,3
+P0296,V00705,Adult,Hypertension,3
+P0297,V00706,Senior,Heart Disease,4
+P0297,V00706,Senior,Statin,4
+P0297,V00706,Senior,Beta Blocker,4
+P0297,V00706,Senior,Allergy,4
+P0297,V00707,Senior,Heart Disease,4
+P0297,V00707,Senior,Statin,4
+P0297,V00707,Senior,Beta Blocker,4
+P0297,V00708,Senior,Heart Disease,4
+P0297,V00708,Senior,Statin,4
+P0297,V00708,Senior,Beta Blocker,4
+P0297,V00708,Senior,Allergy,4
+P0297,V00709,Senior,Heart Disease,4
+P0297,V00709,Senior,Statin,4
+P0297,V00709,Senior,Beta Blocker,4
+P0297,V00709,Senior,Allergy,4
+P0298,V00710,Senior,Diabetes,4
+P0298,V00710,Senior,Metformin,4
+P0298,V00710,Senior,Hypertension,4
+P0298,V00710,Senior,Lisinopril,4
+P0298,V00710,Senior,Allergy,4
+P0298,V00711,Senior,Diabetes,4
+P0298,V00711,Senior,Metformin,4
+P0298,V00711,Senior,Hypertension,4
+P0298,V00712,Senior,Diabetes,4
+P0298,V00712,Senior,Metformin,4
+P0298,V00712,Senior,Hypertension,4
+P0298,V00712,Senior,Lisinopril,4
+P0298,V00712,Senior,Allergy,4
+P0298,V00713,Senior,Diabetes,4
+P0298,V00713,Senior,Metformin,4
+P0298,V00713,Senior,Hypertension,4
+P0298,V00713,Senior,Lisinopril,4
+P0299,V00714,Senior,Diabetes,2
+P0299,V00714,Senior,Metformin,2
+P0299,V00714,Senior,Hypertension,2
+P0299,V00714,Senior,Heart Disease,2
+P0299,V00714,Senior,Statin,2
+P0299,V00714,Senior,Beta Blocker,2
+P0299,V00715,Senior,Diabetes,2
+P0299,V00715,Senior,Metformin,2
+P0299,V00715,Senior,Hypertension,2
+P0299,V00715,Senior,Lisinopril,2
+P0299,V00715,Senior,Heart Disease,2
+P0299,V00715,Senior,Statin,2
+P0299,V00715,Senior,Beta Blocker,2
+P0300,V00716,Young,Routine Checkup,4
+P0300,V00717,Young,Routine Checkup,4
+P0300,V00718,Young,Routine Checkup,4
+P0300,V00719,Young,Allergy,4
+P0301,V00720,Senior,Hypertension,1
+P0301,V00720,Senior,Asthma,1
+P0301,V00720,Senior,Inhaler,1
+P0301,V00720,Senior,Heart Disease,1
+P0301,V00720,Senior,Statin,1
+P0301,V00720,Senior,Beta Blocker,1
+P0302,V00721,Adult,Asthma,3
+P0302,V00721,Adult,Inhaler,3
+P0302,V00721,Adult,Steroid,3
+P0302,V00721,Adult,Heart Disease,3
+P0302,V00721,Adult,Statin,3
+P0302,V00721,Adult,Allergy,3
+P0302,V00722,Adult,Asthma,3
+P0302,V00722,Adult,Inhaler,3
+P0302,V00722,Adult,Steroid,3
+P0302,V00722,Adult,Heart Disease,3
+P0302,V00722,Adult,Statin,3
+P0302,V00722,Adult,Beta Blocker,3
+P0302,V00723,Adult,Asthma,3
+P0302,V00723,Adult,Inhaler,3
+P0302,V00723,Adult,Steroid,3
+P0302,V00723,Adult,Heart Disease,3
+P0302,V00723,Adult,Statin,3
+P0302,V00723,Adult,Beta Blocker,3
+P0303,V00724,Young,Diabetes,4
+P0303,V00724,Young,Metformin,4
+P0303,V00724,Young,Hypertension,4
+P0303,V00724,Young,Lisinopril,4
+P0303,V00725,Young,Diabetes,4
+P0303,V00725,Young,Hypertension,4
+P0303,V00726,Young,Diabetes,4
+P0303,V00726,Young,Metformin,4
+P0303,V00726,Young,Hypertension,4
+P0303,V00727,Young,Diabetes,4
+P0303,V00727,Young,Hypertension,4
+P0303,V00727,Young,Lisinopril,4
+P0304,V00728,Adult,Asthma,1
+P0304,V00728,Adult,Inhaler,1
+P0305,V00729,Adult,Routine Checkup,3
+P0305,V00730,Adult,Routine Checkup,3
+P0305,V00731,Adult,Allergy,3
+P0306,V00732,Adult,Routine Checkup,2
+P0306,V00733,Adult,Routine Checkup,2
+P0307,V00734,Adult,Allergy,1
+P0308,V00735,Adult,Hypertension,2
+P0308,V00735,Adult,Lisinopril,2
+P0308,V00736,Adult,Hypertension,2
+P0308,V00736,Adult,Lisinopril,2
+P0309,V00737,Senior,Routine Checkup,4
+P0309,V00738,Senior,Kidney Disease,4
+P0309,V00739,Senior,Routine Checkup,4
+P0309,V00740,Senior,Routine Checkup,4
+P0310,V00741,Young,Routine Checkup,1
+P0311,V00742,Senior,Allergy,2
+P0311,V00743,Senior,Routine Checkup,2
+P0312,V00744,Young,Routine Checkup,4
+P0312,V00745,Young,Routine Checkup,4
+P0312,V00746,Young,Routine Checkup,4
+P0312,V00747,Young,Routine Checkup,4
+P0313,V00748,Young,Hypertension,3
+P0313,V00748,Young,Lisinopril,3
+P0313,V00749,Young,Hypertension,3
+P0313,V00749,Young,Allergy,3
+P0313,V00750,Young,Hypertension,3
+P0313,V00750,Young,Lisinopril,3
+P0314,V00751,Senior,Asthma,1
+P0314,V00751,Senior,Inhaler,1
+P0314,V00751,Senior,Steroid,1
+P0314,V00751,Senior,Allergy,1
+P0315,V00752,Senior,Diabetes,1
+P0315,V00752,Senior,Hypertension,1
+P0315,V00752,Senior,Heart Disease,1
+P0315,V00752,Senior,Statin,1
+P0315,V00752,Senior,Beta Blocker,1
+P0316,V00753,Adult,Routine Checkup,4
+P0316,V00754,Adult,Allergy,4
+P0316,V00755,Adult,Allergy,4
+P0316,V00756,Adult,Routine Checkup,4
+P0317,V00757,Young,Routine Checkup,3
+P0317,V00758,Young,Routine Checkup,3
+P0317,V00759,Young,Routine Checkup,3
+P0318,V00760,Adult,Hypertension,2
+P0318,V00761,Adult,Hypertension,2
+P0319,V00762,Senior,Routine Checkup,1
+P0320,V00763,Senior,Heart Disease,4
+P0320,V00763,Senior,Statin,4
+P0320,V00763,Senior,Beta Blocker,4
+P0320,V00764,Senior,Heart Disease,4
+P0320,V00764,Senior,Statin,4
+P0320,V00764,Senior,Beta Blocker,4
+P0320,V00765,Senior,Heart Disease,4
+P0320,V00765,Senior,Statin,4
+P0320,V00765,Senior,Beta Blocker,4
+P0320,V00765,Senior,Allergy,4
+P0320,V00766,Senior,Heart Disease,4
+P0320,V00766,Senior,Statin,4
+P0320,V00766,Senior,Beta Blocker,4
+P0321,V00767,Senior,Routine Checkup,2
+P0321,V00768,Senior,Routine Checkup,2
+P0322,V00769,Young,Routine Checkup,2
+P0322,V00770,Young,Routine Checkup,2
+P0323,V00771,Adult,Hypertension,3
+P0323,V00771,Adult,Lisinopril,3
+P0323,V00771,Adult,Asthma,3
+P0323,V00771,Adult,Inhaler,3
+P0323,V00771,Adult,Heart Disease,3
+P0323,V00771,Adult,Statin,3
+P0323,V00772,Adult,Hypertension,3
+P0323,V00772,Adult,Asthma,3
+P0323,V00772,Adult,Inhaler,3
+P0323,V00772,Adult,Heart Disease,3
+P0323,V00772,Adult,Statin,3
+P0323,V00772,Adult,Beta Blocker,3
+P0323,V00773,Adult,Hypertension,3
+P0323,V00773,Adult,Lisinopril,3
+P0323,V00773,Adult,Asthma,3
+P0323,V00773,Adult,Inhaler,3
+P0323,V00773,Adult,Heart Disease,3
+P0323,V00773,Adult,Statin,3
+P0324,V00774,Senior,Routine Checkup,2
+P0324,V00775,Senior,Routine Checkup,2
+P0325,V00776,Senior,Routine Checkup,1
+P0326,V00777,Senior,Routine Checkup,3
+P0326,V00778,Senior,Kidney Disease,3
+P0326,V00779,Senior,Routine Checkup,3
+P0327,V00780,Adult,Routine Checkup,1
+P0328,V00781,Senior,Diabetes,4
+P0328,V00782,Senior,Diabetes,4
+P0328,V00783,Senior,Diabetes,4
+P0328,V00783,Senior,Metformin,4
+P0328,V00783,Senior,Allergy,4
+P0328,V00784,Senior,Diabetes,4
+P0329,V00785,Young,Hypertension,1
+P0329,V00785,Young,Allergy,1
+P0330,V00786,Senior,Heart Disease,1
+P0330,V00786,Senior,Statin,1
+P0331,V00787,Senior,Diabetes,1
+P0331,V00787,Senior,Metformin,1
+P0331,V00787,Senior,Hypertension,1
+P0331,V00787,Senior,Lisinopril,1
+P0332,V00788,Adult,Routine Checkup,4
+P0332,V00789,Adult,Routine Checkup,4
+P0332,V00790,Adult,Routine Checkup,4
+P0332,V00791,Adult,Kidney Disease,4
+P0333,V00792,Adult,Routine Checkup,1
+P0334,V00793,Senior,Diabetes,2
+P0334,V00793,Senior,Metformin,2
+P0334,V00793,Senior,Hypertension,2
+P0334,V00793,Senior,Lisinopril,2
+P0334,V00793,Senior,Heart Disease,2
+P0334,V00793,Senior,Statin,2
+P0334,V00793,Senior,Beta Blocker,2
+P0334,V00794,Senior,Diabetes,2
+P0334,V00794,Senior,Metformin,2
+P0334,V00794,Senior,Hypertension,2
+P0334,V00794,Senior,Heart Disease,2
+P0334,V00794,Senior,Statin,2
+P0335,V00795,Senior,Hypertension,2
+P0335,V00796,Senior,Hypertension,2
+P0335,V00796,Senior,Lisinopril,2
+P0335,V00796,Senior,Kidney Disease,2
+P0336,V00797,Senior,Diabetes,2
+P0336,V00797,Senior,Hypertension,2
+P0336,V00797,Senior,Lisinopril,2
+P0336,V00798,Senior,Diabetes,2
+P0336,V00798,Senior,Metformin,2
+P0336,V00798,Senior,Hypertension,2
+P0336,V00798,Senior,Lisinopril,2
+P0337,V00799,Young,Asthma,4
+P0337,V00799,Young,Inhaler,4
+P0337,V00799,Young,Steroid,4
+P0337,V00800,Young,Asthma,4
+P0337,V00800,Young,Inhaler,4
+P0337,V00800,Young,Steroid,4
+P0337,V00801,Young,Asthma,4
+P0337,V00801,Young,Inhaler,4
+P0337,V00801,Young,Steroid,4
+P0337,V00801,Young,Allergy,4
+P0337,V00802,Young,Asthma,4
+P0337,V00802,Young,Inhaler,4
+P0338,V00803,Young,Diabetes,3
+P0338,V00803,Young,Metformin,3
+P0338,V00803,Young,Hypertension,3
+P0338,V00803,Young,Lisinopril,3
+P0338,V00804,Young,Diabetes,3
+P0338,V00804,Young,Metformin,3
+P0338,V00804,Young,Hypertension,3
+P0338,V00804,Young,Lisinopril,3
+P0338,V00805,Young,Diabetes,3
+P0338,V00805,Young,Metformin,3
+P0338,V00805,Young,Hypertension,3
+P0339,V00806,Senior,Diabetes,2
+P0339,V00807,Senior,Diabetes,2
+P0339,V00807,Senior,Metformin,2
+P0340,V00808,Young,Asthma,4
+P0340,V00808,Young,Inhaler,4
+P0340,V00809,Young,Asthma,4
+P0340,V00809,Young,Inhaler,4
+P0340,V00809,Young,Steroid,4
+P0340,V00810,Young,Asthma,4
+P0340,V00810,Young,Inhaler,4
+P0340,V00811,Young,Asthma,4
+P0340,V00811,Young,Inhaler,4
+P0341,V00812,Adult,Diabetes,3
+P0341,V00812,Adult,Hypertension,3
+P0341,V00812,Adult,Asthma,3
+P0341,V00812,Adult,Inhaler,3
+P0341,V00813,Adult,Diabetes,3
+P0341,V00813,Adult,Hypertension,3
+P0341,V00813,Adult,Lisinopril,3
+P0341,V00813,Adult,Asthma,3
+P0341,V00813,Adult,Inhaler,3
+P0341,V00814,Adult,Diabetes,3
+P0341,V00814,Adult,Hypertension,3
+P0341,V00814,Adult,Lisinopril,3
+P0341,V00814,Adult,Asthma,3
+P0341,V00814,Adult,Inhaler,3
+P0341,V00814,Adult,Allergy,3
+P0342,V00815,Adult,Routine Checkup,3
+P0342,V00816,Adult,Routine Checkup,3
+P0342,V00817,Adult,Routine Checkup,3
+P0343,V00818,Young,Diabetes,4
+P0343,V00818,Young,Hypertension,4
+P0343,V00819,Young,Diabetes,4
+P0343,V00819,Young,Metformin,4
+P0343,V00819,Young,Hypertension,4
+P0343,V00820,Young,Diabetes,4
+P0343,V00820,Young,Metformin,4
+P0343,V00820,Young,Hypertension,4
+P0343,V00820,Young,Lisinopril,4
+P0343,V00821,Young,Diabetes,4
+P0343,V00821,Young,Hypertension,4
+P0343,V00821,Young,Lisinopril,4
+P0344,V00822,Adult,Allergy,1
+P0345,V00823,Adult,Allergy,1
+P0346,V00824,Adult,Routine Checkup,2
+P0346,V00825,Adult,Routine Checkup,2
+P0347,V00826,Adult,Diabetes,3
+P0347,V00826,Adult,Hypertension,3
+P0347,V00826,Adult,Lisinopril,3
+P0347,V00826,Adult,Asthma,3
+P0347,V00826,Adult,Inhaler,3
+P0347,V00827,Adult,Diabetes,3
+P0347,V00827,Adult,Metformin,3
+P0347,V00827,Adult,Hypertension,3
+P0347,V00827,Adult,Asthma,3
+P0347,V00827,Adult,Inhaler,3
+P0347,V00827,Adult,Kidney Disease,3
+P0347,V00828,Adult,Diabetes,3
+P0347,V00828,Adult,Metformin,3
+P0347,V00828,Adult,Hypertension,3
+P0347,V00828,Adult,Lisinopril,3
+P0347,V00828,Adult,Asthma,3
+P0347,V00828,Adult,Inhaler,3
+P0347,V00828,Adult,Steroid,3
+P0348,V00829,Young,Allergy,1
+P0349,V00830,Senior,Diabetes,2
+P0349,V00830,Senior,Metformin,2
+P0349,V00830,Senior,Hypertension,2
+P0349,V00831,Senior,Diabetes,2
+P0349,V00831,Senior,Metformin,2
+P0349,V00831,Senior,Hypertension,2
+P0349,V00831,Senior,Lisinopril,2
+P0350,V00832,Senior,Hypertension,3
+P0350,V00832,Senior,Lisinopril,3
+P0350,V00832,Senior,Heart Disease,3
+P0350,V00832,Senior,Statin,3
+P0350,V00832,Senior,Beta Blocker,3
+P0350,V00833,Senior,Hypertension,3
+P0350,V00833,Senior,Lisinopril,3
+P0350,V00833,Senior,Heart Disease,3
+P0350,V00833,Senior,Statin,3
+P0350,V00833,Senior,Beta Blocker,3
+P0350,V00833,Senior,Allergy,3
+P0350,V00833,Senior,Kidney Disease,3
+P0350,V00834,Senior,Hypertension,3
+P0350,V00834,Senior,Heart Disease,3
+P0350,V00834,Senior,Statin,3
+P0350,V00834,Senior,Beta Blocker,3
+P0350,V00834,Senior,Allergy,3
+P0351,V00835,Adult,Routine Checkup,1
+P0352,V00836,Senior,Diabetes,2
+P0352,V00836,Senior,Metformin,2
+P0352,V00836,Senior,Hypertension,2
+P0352,V00836,Senior,Lisinopril,2
+P0352,V00837,Senior,Diabetes,2
+P0352,V00837,Senior,Metformin,2
+P0352,V00837,Senior,Hypertension,2
+P0353,V00838,Senior,Routine Checkup,4
+P0353,V00839,Senior,Routine Checkup,4
+P0353,V00840,Senior,Kidney Disease,4
+P0353,V00841,Senior,Kidney Disease,4
+P0354,V00842,Senior,Routine Checkup,2
+P0354,V00843,Senior,Allergy,2
+P0355,V00844,Young,Allergy,2
+P0355,V00844,Young,Kidney Disease,2
+P0355,V00845,Young,Routine Checkup,2
+P0356,V00846,Young,Hypertension,4
+P0356,V00846,Young,Allergy,4
+P0356,V00847,Young,Hypertension,4
+P0356,V00847,Young,Lisinopril,4
+P0356,V00848,Young,Hypertension,4
+P0356,V00849,Young,Hypertension,4
+P0356,V00849,Young,Lisinopril,4
+P0356,V00849,Young,Allergy,4
+P0357,V00850,Adult,Hypertension,3
+P0357,V00851,Adult,Hypertension,3
+P0357,V00851,Adult,Lisinopril,3
+P0357,V00852,Adult,Hypertension,3
+P0357,V00852,Adult,Lisinopril,3
+P0357,V00852,Adult,Allergy,3
+P0358,V00853,Adult,Asthma,4
+P0358,V00853,Adult,Inhaler,4
+P0358,V00853,Adult,Steroid,4
+P0358,V00853,Adult,Allergy,4
+P0358,V00854,Adult,Asthma,4
+P0358,V00854,Adult,Inhaler,4
+P0358,V00854,Adult,Steroid,4
+P0358,V00855,Adult,Asthma,4
+P0358,V00855,Adult,Inhaler,4
+P0358,V00856,Adult,Asthma,4
+P0358,V00856,Adult,Inhaler,4
+P0358,V00856,Adult,Allergy,4
+P0359,V00857,Senior,Routine Checkup,1
+P0360,V00858,Senior,Allergy,4
+P0360,V00859,Senior,Routine Checkup,4
+P0360,V00860,Senior,Routine Checkup,4
+P0360,V00861,Senior,Routine Checkup,4
+P0361,V00862,Senior,Routine Checkup,4
+P0361,V00863,Senior,Routine Checkup,4
+P0361,V00864,Senior,Routine Checkup,4
+P0361,V00865,Senior,Routine Checkup,4
+P0362,V00866,Senior,Diabetes,1
+P0362,V00866,Senior,Metformin,1
+P0362,V00866,Senior,Hypertension,1
+P0362,V00866,Senior,Lisinopril,1
+P0363,V00867,Young,Routine Checkup,1
+P0364,V00868,Young,Allergy,1
+P0365,V00869,Senior,Asthma,2
+P0365,V00869,Senior,Inhaler,2
+P0365,V00870,Senior,Asthma,2
+P0365,V00870,Senior,Inhaler,2
+P0365,V00870,Senior,Steroid,2
+P0366,V00871,Young,Allergy,2
+P0366,V00872,Young,Routine Checkup,2
+P0367,V00873,Senior,Hypertension,1
+P0367,V00873,Senior,Lisinopril,1
+P0367,V00873,Senior,Asthma,1
+P0367,V00873,Senior,Inhaler,1
+P0368,V00874,Young,Allergy,2
+P0368,V00874,Young,Kidney Disease,2
+P0368,V00875,Young,Routine Checkup,2
+P0369,V00876,Adult,Routine Checkup,4
+P0369,V00877,Adult,Kidney Disease,4
+P0369,V00878,Adult,Routine Checkup,4
+P0369,V00879,Adult,Routine Checkup,4
+P0370,V00880,Senior,Routine Checkup,2
+P0370,V00881,Senior,Routine Checkup,2
+P0371,V00882,Senior,Heart Disease,1
+P0371,V00882,Senior,Statin,1
+P0371,V00882,Senior,Beta Blocker,1
+P0372,V00883,Young,Diabetes,3
+P0372,V00883,Young,Metformin,3
+P0372,V00883,Young,Kidney Disease,3
+P0372,V00884,Young,Diabetes,3
+P0372,V00884,Young,Metformin,3
+P0372,V00885,Young,Diabetes,3
+P0373,V00886,Young,Allergy,3
+P0373,V00887,Young,Routine Checkup,3
+P0373,V00888,Young,Routine Checkup,3
+P0374,V00889,Senior,Routine Checkup,3
+P0374,V00890,Senior,Routine Checkup,3
+P0374,V00891,Senior,Routine Checkup,3
+P0375,V00892,Young,Asthma,4
+P0375,V00892,Young,Inhaler,4
+P0375,V00892,Young,Allergy,4
+P0375,V00893,Young,Asthma,4
+P0375,V00893,Young,Inhaler,4
+P0375,V00893,Young,Steroid,4
+P0375,V00894,Young,Asthma,4
+P0375,V00894,Young,Inhaler,4
+P0375,V00895,Young,Asthma,4
+P0375,V00895,Young,Inhaler,4
+P0376,V00896,Senior,Heart Disease,2
+P0376,V00896,Senior,Statin,2
+P0376,V00896,Senior,Beta Blocker,2
+P0376,V00897,Senior,Heart Disease,2
+P0376,V00897,Senior,Statin,2
+P0377,V00898,Young,Heart Disease,3
+P0377,V00898,Young,Statin,3
+P0377,V00899,Young,Heart Disease,3
+P0377,V00899,Young,Statin,3
+P0377,V00899,Young,Beta Blocker,3
+P0377,V00900,Young,Heart Disease,3
+P0377,V00900,Young,Statin,3
+P0377,V00900,Young,Beta Blocker,3
+P0378,V00901,Adult,Diabetes,2
+P0378,V00901,Adult,Metformin,2
+P0378,V00901,Adult,Asthma,2
+P0378,V00901,Adult,Inhaler,2
+P0378,V00901,Adult,Steroid,2
+P0378,V00902,Adult,Diabetes,2
+P0378,V00902,Adult,Metformin,2
+P0378,V00902,Adult,Asthma,2
+P0378,V00902,Adult,Inhaler,2
+P0378,V00902,Adult,Steroid,2
+P0378,V00902,Adult,Allergy,2
+P0379,V00903,Young,Asthma,1
+P0379,V00903,Young,Inhaler,1
+P0380,V00904,Senior,Routine Checkup,3
+P0380,V00905,Senior,Routine Checkup,3
+P0380,V00906,Senior,Routine Checkup,3
+P0381,V00907,Young,Hypertension,2
+P0381,V00907,Young,Asthma,2
+P0381,V00907,Young,Inhaler,2
+P0381,V00907,Young,Steroid,2
+P0381,V00908,Young,Hypertension,2
+P0381,V00908,Young,Lisinopril,2
+P0381,V00908,Young,Asthma,2
+P0381,V00908,Young,Inhaler,2
+P0382,V00909,Young,Asthma,1
+P0382,V00909,Young,Inhaler,1
+P0383,V00910,Senior,Hypertension,1
+P0383,V00910,Senior,Heart Disease,1
+P0383,V00910,Senior,Statin,1
+P0383,V00910,Senior,Beta Blocker,1
+P0384,V00911,Senior,Asthma,2
+P0384,V00911,Senior,Inhaler,2
+P0384,V00911,Senior,Steroid,2
+P0384,V00912,Senior,Asthma,2
+P0384,V00912,Senior,Inhaler,2
+P0385,V00913,Young,Routine Checkup,1
+P0386,V00914,Adult,Hypertension,2
+P0386,V00914,Adult,Asthma,2
+P0386,V00914,Adult,Inhaler,2
+P0386,V00914,Adult,Steroid,2
+P0386,V00915,Adult,Hypertension,2
+P0386,V00915,Adult,Lisinopril,2
+P0386,V00915,Adult,Asthma,2
+P0386,V00915,Adult,Inhaler,2
+P0386,V00915,Adult,Steroid,2
+P0387,V00916,Adult,Hypertension,4
+P0387,V00916,Adult,Lisinopril,4
+P0387,V00917,Adult,Hypertension,4
+P0387,V00917,Adult,Lisinopril,4
+P0387,V00917,Adult,Allergy,4
+P0387,V00918,Adult,Hypertension,4
+P0387,V00919,Adult,Hypertension,4
+P0387,V00919,Adult,Lisinopril,4
+P0388,V00920,Senior,Routine Checkup,2
+P0388,V00921,Senior,Routine Checkup,2
+P0389,V00922,Senior,Asthma,1
+P0389,V00922,Senior,Inhaler,1
+P0389,V00922,Senior,Steroid,1
+P0390,V00923,Adult,Asthma,3
+P0390,V00923,Adult,Inhaler,3
+P0390,V00923,Adult,Allergy,3
+P0390,V00924,Adult,Asthma,3
+P0390,V00924,Adult,Inhaler,3
+P0390,V00924,Adult,Kidney Disease,3
+P0390,V00925,Adult,Asthma,3
+P0390,V00925,Adult,Inhaler,3
+P0391,V00926,Senior,Hypertension,4
+P0391,V00926,Senior,Lisinopril,4
+P0391,V00926,Senior,Allergy,4
+P0391,V00927,Senior,Hypertension,4
+P0391,V00927,Senior,Lisinopril,4
+P0391,V00928,Senior,Hypertension,4
+P0391,V00929,Senior,Hypertension,4
+P0392,V00930,Senior,Routine Checkup,4
+P0392,V00931,Senior,Routine Checkup,4
+P0392,V00932,Senior,Routine Checkup,4
+P0392,V00933,Senior,Allergy,4
+P0393,V00934,Young,Routine Checkup,4
+P0393,V00935,Young,Kidney Disease,4
+P0393,V00936,Young,Routine Checkup,4
+P0393,V00937,Young,Kidney Disease,4
+P0394,V00938,Senior,Hypertension,3
+P0394,V00938,Senior,Lisinopril,3
+P0394,V00938,Senior,Heart Disease,3
+P0394,V00938,Senior,Statin,3
+P0394,V00938,Senior,Beta Blocker,3
+P0394,V00939,Senior,Hypertension,3
+P0394,V00939,Senior,Lisinopril,3
+P0394,V00939,Senior,Heart Disease,3
+P0394,V00939,Senior,Statin,3
+P0394,V00939,Senior,Beta Blocker,3
+P0394,V00940,Senior,Hypertension,3
+P0394,V00940,Senior,Lisinopril,3
+P0394,V00940,Senior,Heart Disease,3
+P0394,V00940,Senior,Statin,3
+P0394,V00940,Senior,Beta Blocker,3
+P0395,V00941,Senior,Asthma,2
+P0395,V00941,Senior,Inhaler,2
+P0395,V00941,Senior,Steroid,2
+P0395,V00941,Senior,Allergy,2
+P0395,V00942,Senior,Asthma,2
+P0395,V00942,Senior,Inhaler,2
+P0396,V00943,Senior,Routine Checkup,3
+P0396,V00944,Senior,Routine Checkup,3
+P0396,V00945,Senior,Routine Checkup,3
+P0397,V00946,Adult,Diabetes,3
+P0397,V00946,Adult,Metformin,3
+P0397,V00946,Adult,Hypertension,3
+P0397,V00946,Adult,Allergy,3
+P0397,V00947,Adult,Diabetes,3
+P0397,V00947,Adult,Metformin,3
+P0397,V00947,Adult,Hypertension,3
+P0397,V00947,Adult,Lisinopril,3
+P0397,V00948,Adult,Diabetes,3
+P0397,V00948,Adult,Metformin,3
+P0397,V00948,Adult,Hypertension,3
+P0397,V00948,Adult,Allergy,3
+P0398,V00949,Adult,Asthma,4
+P0398,V00949,Adult,Inhaler,4
+P0398,V00949,Adult,Steroid,4
+P0398,V00950,Adult,Asthma,4
+P0398,V00950,Adult,Inhaler,4
+P0398,V00950,Adult,Steroid,4
+P0398,V00950,Adult,Allergy,4
+P0398,V00951,Adult,Asthma,4
+P0398,V00951,Adult,Inhaler,4
+P0398,V00952,Adult,Asthma,4
+P0398,V00952,Adult,Inhaler,4
+P0398,V00952,Adult,Steroid,4
+P0399,V00953,Senior,Heart Disease,4
+P0399,V00953,Senior,Statin,4
+P0399,V00954,Senior,Heart Disease,4
+P0399,V00954,Senior,Statin,4
+P0399,V00954,Senior,Beta Blocker,4
+P0399,V00955,Senior,Heart Disease,4
+P0399,V00955,Senior,Statin,4
+P0399,V00956,Senior,Heart Disease,4
+P0399,V00956,Senior,Statin,4
+P0400,V00957,Adult,Hypertension,4
+P0400,V00958,Adult,Hypertension,4
+P0400,V00958,Adult,Lisinopril,4
+P0400,V00958,Adult,Kidney Disease,4
+P0400,V00959,Adult,Hypertension,4
+P0400,V00960,Adult,Hypertension,4
+P0401,V00961,Senior,Routine Checkup,3
+P0401,V00962,Senior,Routine Checkup,3
+P0401,V00963,Senior,Allergy,3
+P0402,V00964,Young,Asthma,1
+P0402,V00964,Young,Inhaler,1
+P0402,V00964,Young,Steroid,1
+P0403,V00965,Young,Routine Checkup,3
+P0403,V00966,Young,Routine Checkup,3
+P0403,V00967,Young,Routine Checkup,3
+P0404,V00968,Adult,Routine Checkup,1
+P0405,V00969,Senior,Hypertension,3
+P0405,V00969,Senior,Asthma,3
+P0405,V00969,Senior,Inhaler,3
+P0405,V00969,Senior,Heart Disease,3
+P0405,V00969,Senior,Statin,3
+P0405,V00969,Senior,Beta Blocker,3
+P0405,V00970,Senior,Hypertension,3
+P0405,V00970,Senior,Asthma,3
+P0405,V00970,Senior,Inhaler,3
+P0405,V00970,Senior,Steroid,3
+P0405,V00970,Senior,Heart Disease,3
+P0405,V00970,Senior,Statin,3
+P0405,V00970,Senior,Allergy,3
+P0405,V00971,Senior,Hypertension,3
+P0405,V00971,Senior,Lisinopril,3
+P0405,V00971,Senior,Asthma,3
+P0405,V00971,Senior,Inhaler,3
+P0405,V00971,Senior,Steroid,3
+P0405,V00971,Senior,Heart Disease,3
+P0405,V00971,Senior,Statin,3
+P0405,V00971,Senior,Beta Blocker,3
+P0405,V00971,Senior,Allergy,3
+P0406,V00972,Young,Routine Checkup,3
+P0406,V00973,Young,Routine Checkup,3
+P0406,V00974,Young,Routine Checkup,3
+P0407,V00975,Senior,Routine Checkup,2
+P0407,V00976,Senior,Routine Checkup,2
+P0408,V00977,Adult,Routine Checkup,2
+P0408,V00978,Adult,Routine Checkup,2
+P0409,V00979,Adult,Hypertension,3
+P0409,V00979,Adult,Lisinopril,3
+P0409,V00980,Adult,Hypertension,3
+P0409,V00981,Adult,Hypertension,3
+P0409,V00981,Adult,Lisinopril,3
+P0410,V00982,Senior,Heart Disease,2
+P0410,V00982,Senior,Statin,2
+P0410,V00982,Senior,Beta Blocker,2
+P0410,V00983,Senior,Heart Disease,2
+P0410,V00983,Senior,Statin,2
+P0410,V00983,Senior,Beta Blocker,2
+P0411,V00984,Senior,Diabetes,1
+P0411,V00984,Senior,Metformin,1
+P0411,V00984,Senior,Hypertension,1
+P0411,V00984,Senior,Lisinopril,1
+P0411,V00984,Senior,Heart Disease,1
+P0411,V00984,Senior,Statin,1
+P0411,V00984,Senior,Allergy,1
+P0412,V00985,Adult,Routine Checkup,1
+P0413,V00986,Senior,Diabetes,1
+P0413,V00986,Senior,Hypertension,1
+P0413,V00986,Senior,Allergy,1
+P0414,V00987,Senior,Hypertension,4
+P0414,V00987,Senior,Lisinopril,4
+P0414,V00987,Senior,Kidney Disease,4
+P0414,V00988,Senior,Hypertension,4
+P0414,V00989,Senior,Hypertension,4
+P0414,V00990,Senior,Hypertension,4
+P0415,V00991,Adult,Hypertension,1
+P0415,V00991,Adult,Lisinopril,1
+P0416,V00992,Young,Routine Checkup,2
+P0416,V00993,Young,Allergy,2
+P0417,V00994,Senior,Routine Checkup,1
+P0418,V00995,Adult,Allergy,2
+P0418,V00996,Adult,Routine Checkup,2
+P0419,V00997,Adult,Routine Checkup,1
+P0420,V00998,Senior,Asthma,2
+P0420,V00998,Senior,Inhaler,2
+P0420,V00998,Senior,Steroid,2
+P0420,V00998,Senior,Allergy,2
+P0420,V00999,Senior,Asthma,2
+P0420,V00999,Senior,Inhaler,2
+P0420,V00999,Senior,Allergy,2
+P0421,V01000,Adult,Asthma,3
+P0421,V01000,Adult,Inhaler,3
+P0421,V01001,Adult,Asthma,3
+P0421,V01001,Adult,Inhaler,3
+P0421,V01001,Adult,Steroid,3
+P0421,V01002,Adult,Asthma,3
+P0421,V01002,Adult,Inhaler,3
+P0422,V01003,Young,Hypertension,4
+P0422,V01003,Young,Lisinopril,4
+P0422,V01003,Young,Asthma,4
+P0422,V01003,Young,Inhaler,4
+P0422,V01004,Young,Hypertension,4
+P0422,V01004,Young,Asthma,4
+P0422,V01004,Young,Inhaler,4
+P0422,V01005,Young,Hypertension,4
+P0422,V01005,Young,Lisinopril,4
+P0422,V01005,Young,Asthma,4
+P0422,V01005,Young,Inhaler,4
+P0422,V01006,Young,Hypertension,4
+P0422,V01006,Young,Asthma,4
+P0422,V01006,Young,Inhaler,4
+P0423,V01007,Senior,Diabetes,3
+P0423,V01007,Senior,Metformin,3
+P0423,V01007,Senior,Hypertension,3
+P0423,V01007,Senior,Lisinopril,3
+P0423,V01008,Senior,Diabetes,3
+P0423,V01008,Senior,Metformin,3
+P0423,V01008,Senior,Hypertension,3
+P0423,V01009,Senior,Diabetes,3
+P0423,V01009,Senior,Metformin,3
+P0423,V01009,Senior,Hypertension,3
+P0423,V01009,Senior,Lisinopril,3
+P0423,V01009,Senior,Allergy,3
+P0424,V01010,Adult,Routine Checkup,1
+P0425,V01011,Senior,Heart Disease,2
+P0425,V01011,Senior,Statin,2
+P0425,V01011,Senior,Beta Blocker,2
+P0425,V01011,Senior,Allergy,2
+P0425,V01012,Senior,Heart Disease,2
+P0425,V01012,Senior,Statin,2
+P0426,V01013,Young,Kidney Disease,3
+P0426,V01014,Young,Routine Checkup,3
+P0426,V01015,Young,Routine Checkup,3
+P0427,V01016,Senior,Routine Checkup,2
+P0427,V01017,Senior,Routine Checkup,2
+P0428,V01018,Senior,Routine Checkup,4
+P0428,V01019,Senior,Routine Checkup,4
+P0428,V01020,Senior,Routine Checkup,4
+P0428,V01021,Senior,Routine Checkup,4
+P0429,V01022,Adult,Routine Checkup,4
+P0429,V01023,Adult,Allergy,4
+P0429,V01024,Adult,Routine Checkup,4
+P0429,V01025,Adult,Routine Checkup,4
+P0430,V01026,Young,Allergy,2
+P0430,V01027,Young,Routine Checkup,2
+P0431,V01028,Young,Routine Checkup,4
+P0431,V01029,Young,Routine Checkup,4
+P0431,V01030,Young,Routine Checkup,4
+P0431,V01031,Young,Routine Checkup,4
+P0432,V01032,Senior,Routine Checkup,3
+P0432,V01033,Senior,Routine Checkup,3
+P0432,V01034,Senior,Routine Checkup,3
+P0433,V01035,Young,Hypertension,1
+P0433,V01035,Young,Lisinopril,1
+P0434,V01036,Adult,Hypertension,2
+P0434,V01036,Adult,Lisinopril,2
+P0434,V01036,Adult,Asthma,2
+P0434,V01036,Adult,Inhaler,2
+P0434,V01036,Adult,Steroid,2
+P0434,V01036,Adult,Allergy,2
+P0434,V01037,Adult,Hypertension,2
+P0434,V01037,Adult,Asthma,2
+P0434,V01037,Adult,Inhaler,2
+P0434,V01037,Adult,Steroid,2
+P0435,V01038,Young,Routine Checkup,3
+P0435,V01039,Young,Routine Checkup,3
+P0435,V01040,Young,Routine Checkup,3
+P0436,V01041,Senior,Routine Checkup,2
+P0436,V01042,Senior,Routine Checkup,2
+P0437,V01043,Young,Hypertension,4
+P0437,V01043,Young,Lisinopril,4
+P0437,V01044,Young,Hypertension,4
+P0437,V01044,Young,Lisinopril,4
+P0437,V01045,Young,Hypertension,4
+P0437,V01045,Young,Lisinopril,4
+P0437,V01046,Young,Hypertension,4
+P0438,V01047,Senior,Diabetes,4
+P0438,V01047,Senior,Metformin,4
+P0438,V01047,Senior,Heart Disease,4
+P0438,V01047,Senior,Statin,4
+P0438,V01047,Senior,Beta Blocker,4
+P0438,V01048,Senior,Diabetes,4
+P0438,V01048,Senior,Metformin,4
+P0438,V01048,Senior,Heart Disease,4
+P0438,V01048,Senior,Statin,4
+P0438,V01048,Senior,Beta Blocker,4
+P0438,V01048,Senior,Allergy,4
+P0438,V01049,Senior,Diabetes,4
+P0438,V01049,Senior,Metformin,4
+P0438,V01049,Senior,Heart Disease,4
+P0438,V01049,Senior,Statin,4
+P0438,V01049,Senior,Beta Blocker,4
+P0438,V01050,Senior,Diabetes,4
+P0438,V01050,Senior,Metformin,4
+P0438,V01050,Senior,Heart Disease,4
+P0438,V01050,Senior,Statin,4
+P0438,V01050,Senior,Beta Blocker,4
+P0439,V01051,Adult,Routine Checkup,2
+P0439,V01052,Adult,Routine Checkup,2
+P0440,V01053,Senior,Asthma,2
+P0440,V01053,Senior,Inhaler,2
+P0440,V01053,Senior,Steroid,2
+P0440,V01053,Senior,Heart Disease,2
+P0440,V01053,Senior,Statin,2
+P0440,V01053,Senior,Beta Blocker,2
+P0440,V01054,Senior,Asthma,2
+P0440,V01054,Senior,Inhaler,2
+P0440,V01054,Senior,Heart Disease,2
+P0440,V01054,Senior,Statin,2
+P0440,V01054,Senior,Beta Blocker,2
+P0441,V01055,Young,Kidney Disease,2
+P0441,V01056,Young,Allergy,2
+P0442,V01057,Adult,Routine Checkup,1
+P0443,V01058,Adult,Routine Checkup,1
+P0444,V01059,Senior,Kidney Disease,4
+P0444,V01060,Senior,Routine Checkup,4
+P0444,V01061,Senior,Routine Checkup,4
+P0444,V01062,Senior,Routine Checkup,4
+P0445,V01063,Adult,Routine Checkup,2
+P0445,V01064,Adult,Routine Checkup,2
+P0446,V01065,Adult,Routine Checkup,2
+P0446,V01066,Adult,Allergy,2
+P0447,V01067,Senior,Routine Checkup,4
+P0447,V01068,Senior,Routine Checkup,4
+P0447,V01069,Senior,Routine Checkup,4
+P0447,V01070,Senior,Routine Checkup,4
+P0448,V01071,Young,Hypertension,3
+P0448,V01071,Young,Lisinopril,3
+P0448,V01071,Young,Asthma,3
+P0448,V01071,Young,Inhaler,3
+P0448,V01071,Young,Steroid,3
+P0448,V01072,Young,Hypertension,3
+P0448,V01072,Young,Lisinopril,3
+P0448,V01072,Young,Asthma,3
+P0448,V01072,Young,Inhaler,3
+P0448,V01072,Young,Allergy,3
+P0448,V01073,Young,Hypertension,3
+P0448,V01073,Young,Lisinopril,3
+P0448,V01073,Young,Asthma,3
+P0448,V01073,Young,Inhaler,3
+P0448,V01073,Young,Allergy,3
+P0449,V01074,Adult,Hypertension,3
+P0449,V01074,Adult,Lisinopril,3
+P0449,V01075,Adult,Hypertension,3
+P0449,V01075,Adult,Allergy,3
+P0449,V01076,Adult,Hypertension,3
+P0449,V01076,Adult,Lisinopril,3
+P0450,V01077,Young,Routine Checkup,1
+P0451,V01078,Senior,Routine Checkup,1
+P0452,V01079,Senior,Routine Checkup,4
+P0452,V01080,Senior,Routine Checkup,4
+P0452,V01081,Senior,Routine Checkup,4
+P0452,V01082,Senior,Routine Checkup,4
+P0453,V01083,Senior,Heart Disease,2
+P0453,V01083,Senior,Statin,2
+P0453,V01083,Senior,Beta Blocker,2
+P0453,V01083,Senior,Allergy,2
+P0453,V01084,Senior,Heart Disease,2
+P0453,V01084,Senior,Statin,2
+P0453,V01084,Senior,Beta Blocker,2
+P0453,V01084,Senior,Allergy,2
+P0454,V01085,Senior,Routine Checkup,3
+P0454,V01086,Senior,Routine Checkup,3
+P0454,V01087,Senior,Routine Checkup,3
+P0455,V01088,Adult,Allergy,4
+P0455,V01089,Adult,Routine Checkup,4
+P0455,V01090,Adult,Routine Checkup,4
+P0455,V01091,Adult,Routine Checkup,4
+P0456,V01092,Adult,Routine Checkup,4
+P0456,V01093,Adult,Allergy,4
+P0456,V01094,Adult,Routine Checkup,4
+P0456,V01095,Adult,Routine Checkup,4
+P0457,V01096,Senior,Routine Checkup,3
+P0457,V01097,Senior,Routine Checkup,3
+P0457,V01098,Senior,Routine Checkup,3
+P0458,V01099,Senior,Routine Checkup,2
+P0458,V01100,Senior,Routine Checkup,2
+P0459,V01101,Young,Allergy,4
+P0459,V01102,Young,Routine Checkup,4
+P0459,V01103,Young,Kidney Disease,4
+P0459,V01104,Young,Routine Checkup,4
+P0460,V01105,Adult,Diabetes,1
+P0460,V01105,Adult,Heart Disease,1
+P0460,V01105,Adult,Statin,1
+P0460,V01105,Adult,Beta Blocker,1
+P0461,V01106,Senior,Routine Checkup,1
+P0462,V01107,Young,Asthma,2
+P0462,V01107,Young,Inhaler,2
+P0462,V01108,Young,Asthma,2
+P0462,V01108,Young,Inhaler,2
+P0462,V01108,Young,Steroid,2
+P0463,V01109,Adult,Routine Checkup,4
+P0463,V01110,Adult,Routine Checkup,4
+P0463,V01111,Adult,Allergy,4
+P0463,V01112,Adult,Kidney Disease,4
+P0464,V01113,Senior,Asthma,2
+P0464,V01113,Senior,Inhaler,2
+P0464,V01114,Senior,Asthma,2
+P0464,V01114,Senior,Inhaler,2
+P0465,V01115,Young,Routine Checkup,3
+P0465,V01116,Young,Routine Checkup,3
+P0465,V01117,Young,Routine Checkup,3
+P0466,V01118,Adult,Allergy,1
+P0467,V01119,Senior,Routine Checkup,2
+P0467,V01120,Senior,Routine Checkup,2
+P0468,V01121,Young,Allergy,1
+P0469,V01122,Young,Heart Disease,4
+P0469,V01122,Young,Statin,4
+P0469,V01123,Young,Heart Disease,4
+P0469,V01123,Young,Statin,4
+P0469,V01123,Young,Beta Blocker,4
+P0469,V01124,Young,Heart Disease,4
+P0469,V01124,Young,Statin,4
+P0469,V01124,Young,Beta Blocker,4
+P0469,V01124,Young,Allergy,4
+P0469,V01125,Young,Heart Disease,4
+P0469,V01125,Young,Statin,4
+P0469,V01125,Young,Beta Blocker,4
+P0469,V01125,Young,Allergy,4
+P0470,V01126,Adult,Routine Checkup,1
+P0471,V01127,Senior,Diabetes,1
+P0471,V01127,Senior,Metformin,1
+P0471,V01127,Senior,Hypertension,1
+P0471,V01127,Senior,Lisinopril,1
+P0471,V01127,Senior,Allergy,1
+P0472,V01128,Adult,Routine Checkup,3
+P0472,V01129,Adult,Routine Checkup,3
+P0472,V01130,Adult,Routine Checkup,3
+P0473,V01131,Senior,Hypertension,4
+P0473,V01131,Senior,Heart Disease,4
+P0473,V01131,Senior,Statin,4
+P0473,V01131,Senior,Beta Blocker,4
+P0473,V01132,Senior,Hypertension,4
+P0473,V01132,Senior,Heart Disease,4
+P0473,V01132,Senior,Statin,4
+P0473,V01132,Senior,Allergy,4
+P0473,V01133,Senior,Hypertension,4
+P0473,V01133,Senior,Lisinopril,4
+P0473,V01133,Senior,Heart Disease,4
+P0473,V01133,Senior,Statin,4
+P0473,V01133,Senior,Beta Blocker,4
+P0473,V01134,Senior,Hypertension,4
+P0473,V01134,Senior,Lisinopril,4
+P0473,V01134,Senior,Heart Disease,4
+P0473,V01134,Senior,Statin,4
+P0473,V01134,Senior,Beta Blocker,4
+P0474,V01135,Senior,Hypertension,3
+P0474,V01135,Senior,Lisinopril,3
+P0474,V01136,Senior,Hypertension,3
+P0474,V01137,Senior,Hypertension,3
+P0474,V01137,Senior,Lisinopril,3
+P0474,V01137,Senior,Allergy,3
+P0475,V01138,Senior,Kidney Disease,3
+P0475,V01139,Senior,Allergy,3
+P0475,V01140,Senior,Routine Checkup,3
+P0476,V01141,Adult,Diabetes,2
+P0476,V01141,Adult,Metformin,2
+P0476,V01141,Adult,Hypertension,2
+P0476,V01141,Adult,Kidney Disease,2
+P0476,V01142,Adult,Diabetes,2
+P0476,V01142,Adult,Metformin,2
+P0476,V01142,Adult,Hypertension,2
+P0476,V01142,Adult,Lisinopril,2
+P0477,V01143,Adult,Routine Checkup,1
+P0478,V01144,Young,Routine Checkup,2
+P0478,V01145,Young,Routine Checkup,2
+P0479,V01146,Adult,Diabetes,2
+P0479,V01146,Adult,Metformin,2
+P0479,V01146,Adult,Hypertension,2
+P0479,V01146,Adult,Lisinopril,2
+P0479,V01147,Adult,Diabetes,2
+P0479,V01147,Adult,Metformin,2
+P0479,V01147,Adult,Hypertension,2
+P0479,V01147,Adult,Allergy,2
+P0480,V01148,Adult,Routine Checkup,3
+P0480,V01149,Adult,Routine Checkup,3
+P0480,V01150,Adult,Routine Checkup,3
+P0481,V01151,Adult,Routine Checkup,4
+P0481,V01152,Adult,Routine Checkup,4
+P0481,V01153,Adult,Allergy,4
+P0481,V01154,Adult,Allergy,4
+P0482,V01155,Senior,Routine Checkup,2
+P0482,V01156,Senior,Allergy,2
+P0483,V01157,Adult,Hypertension,2
+P0483,V01157,Adult,Lisinopril,2
+P0483,V01158,Adult,Hypertension,2
+P0483,V01158,Adult,Lisinopril,2
+P0484,V01159,Adult,Allergy,1
+P0485,V01160,Senior,Hypertension,3
+P0485,V01160,Senior,Lisinopril,3
+P0485,V01160,Senior,Heart Disease,3
+P0485,V01160,Senior,Statin,3
+P0485,V01160,Senior,Beta Blocker,3
+P0485,V01161,Senior,Hypertension,3
+P0485,V01161,Senior,Lisinopril,3
+P0485,V01161,Senior,Heart Disease,3
+P0485,V01161,Senior,Statin,3
+P0485,V01161,Senior,Beta Blocker,3
+P0485,V01161,Senior,Allergy,3
+P0485,V01162,Senior,Hypertension,3
+P0485,V01162,Senior,Lisinopril,3
+P0485,V01162,Senior,Heart Disease,3
+P0485,V01162,Senior,Statin,3
+P0485,V01162,Senior,Kidney Disease,3
+P0486,V01163,Senior,Routine Checkup,4
+P0486,V01164,Senior,Kidney Disease,4
+P0486,V01165,Senior,Routine Checkup,4
+P0486,V01166,Senior,Allergy,4
+P0487,V01167,Adult,Asthma,2
+P0487,V01167,Adult,Inhaler,2
+P0487,V01168,Adult,Asthma,2
+P0487,V01168,Adult,Inhaler,2
+P0487,V01168,Adult,Steroid,2
+P0487,V01168,Adult,Kidney Disease,2
+P0488,V01169,Senior,Allergy,3
+P0488,V01170,Senior,Routine Checkup,3
+P0488,V01171,Senior,Routine Checkup,3
+P0489,V01172,Senior,Routine Checkup,3
+P0489,V01173,Senior,Routine Checkup,3
+P0489,V01174,Senior,Routine Checkup,3
+P0490,V01175,Senior,Routine Checkup,2
+P0490,V01176,Senior,Routine Checkup,2
+P0491,V01177,Senior,Diabetes,2
+P0491,V01177,Senior,Asthma,2
+P0491,V01177,Senior,Inhaler,2
+P0491,V01177,Senior,Steroid,2
+P0491,V01178,Senior,Diabetes,2
+P0491,V01178,Senior,Metformin,2
+P0491,V01178,Senior,Asthma,2
+P0491,V01178,Senior,Inhaler,2
+P0491,V01178,Senior,Steroid,2
+P0492,V01179,Senior,Heart Disease,3
+P0492,V01179,Senior,Statin,3
+P0492,V01179,Senior,Beta Blocker,3
+P0492,V01180,Senior,Heart Disease,3
+P0492,V01180,Senior,Statin,3
+P0492,V01181,Senior,Heart Disease,3
+P0492,V01181,Senior,Statin,3
+P0493,V01182,Young,Diabetes,2
+P0493,V01182,Young,Metformin,2
+P0493,V01182,Young,Hypertension,2
+P0493,V01182,Young,Allergy,2
+P0493,V01183,Young,Diabetes,2
+P0493,V01183,Young,Metformin,2
+P0493,V01183,Young,Hypertension,2
+P0493,V01183,Young,Lisinopril,2
+P0493,V01183,Young,Allergy,2
+P0494,V01184,Young,Diabetes,3
+P0494,V01184,Young,Metformin,3
+P0494,V01184,Young,Hypertension,3
+P0494,V01185,Young,Diabetes,3
+P0494,V01185,Young,Hypertension,3
+P0494,V01185,Young,Lisinopril,3
+P0494,V01185,Young,Allergy,3
+P0494,V01186,Young,Diabetes,3
+P0494,V01186,Young,Metformin,3
+P0494,V01186,Young,Hypertension,3
+P0494,V01186,Young,Lisinopril,3
+P0494,V01186,Young,Allergy,3
+P0495,V01187,Young,Diabetes,3
+P0495,V01187,Young,Hypertension,3
+P0495,V01188,Young,Diabetes,3
+P0495,V01188,Young,Metformin,3
+P0495,V01188,Young,Hypertension,3
+P0495,V01188,Young,Lisinopril,3
+P0495,V01189,Young,Diabetes,3
+P0495,V01189,Young,Metformin,3
+P0495,V01189,Young,Hypertension,3
+P0496,V01190,Senior,Hypertension,2
+P0496,V01190,Senior,Lisinopril,2
+P0496,V01190,Senior,Heart Disease,2
+P0496,V01190,Senior,Statin,2
+P0496,V01190,Senior,Beta Blocker,2
+P0496,V01191,Senior,Hypertension,2
+P0496,V01191,Senior,Lisinopril,2
+P0496,V01191,Senior,Heart Disease,2
+P0496,V01191,Senior,Statin,2
+P0496,V01191,Senior,Beta Blocker,2
+P0497,V01192,Senior,Routine Checkup,3
+P0497,V01193,Senior,Routine Checkup,3
+P0497,V01194,Senior,Allergy,3
+P0498,V01195,Young,Routine Checkup,1
+P0499,V01196,Senior,Hypertension,1
+P0500,V01197,Senior,Hypertension,2
+P0500,V01197,Senior,Lisinopril,2
+P0500,V01197,Senior,Kidney Disease,2
+P0500,V01198,Senior,Hypertension,2
+P0500,V01198,Senior,Lisinopril,2
+P0501,V01199,Adult,Routine Checkup,2
+P0501,V01200,Adult,Kidney Disease,2
+P0502,V01201,Senior,Heart Disease,1
+P0502,V01201,Senior,Statin,1
+P0502,V01201,Senior,Beta Blocker,1
+P0503,V01202,Senior,Diabetes,3
+P0503,V01202,Senior,Hypertension,3
+P0503,V01202,Senior,Lisinopril,3
+P0503,V01203,Senior,Diabetes,3
+P0503,V01203,Senior,Metformin,3
+P0503,V01203,Senior,Hypertension,3
+P0503,V01203,Senior,Lisinopril,3
+P0503,V01204,Senior,Diabetes,3
+P0503,V01204,Senior,Metformin,3
+P0503,V01204,Senior,Hypertension,3
+P0504,V01205,Young,Routine Checkup,2
+P0504,V01206,Young,Routine Checkup,2
+P0505,V01207,Adult,Hypertension,3
+P0505,V01207,Adult,Lisinopril,3
+P0505,V01208,Adult,Hypertension,3
+P0505,V01208,Adult,Lisinopril,3
+P0505,V01209,Adult,Hypertension,3
+P0506,V01210,Senior,Routine Checkup,4
+P0506,V01211,Senior,Routine Checkup,4
+P0506,V01212,Senior,Allergy,4
+P0506,V01213,Senior,Routine Checkup,4
+P0507,V01214,Senior,Heart Disease,1
+P0507,V01214,Senior,Statin,1
+P0507,V01214,Senior,Beta Blocker,1
+P0508,V01215,Adult,Allergy,2
+P0508,V01216,Adult,Routine Checkup,2
+P0509,V01217,Adult,Routine Checkup,1
+P0510,V01218,Young,Asthma,1
+P0510,V01218,Young,Inhaler,1
+P0511,V01219,Senior,Asthma,4
+P0511,V01219,Senior,Inhaler,4
+P0511,V01219,Senior,Heart Disease,4
+P0511,V01219,Senior,Statin,4
+P0511,V01219,Senior,Beta Blocker,4
+P0511,V01220,Senior,Asthma,4
+P0511,V01220,Senior,Inhaler,4
+P0511,V01220,Senior,Steroid,4
+P0511,V01220,Senior,Heart Disease,4
+P0511,V01220,Senior,Statin,4
+P0511,V01220,Senior,Beta Blocker,4
+P0511,V01220,Senior,Allergy,4
+P0511,V01221,Senior,Asthma,4
+P0511,V01221,Senior,Inhaler,4
+P0511,V01221,Senior,Steroid,4
+P0511,V01221,Senior,Heart Disease,4
+P0511,V01221,Senior,Statin,4
+P0511,V01222,Senior,Asthma,4
+P0511,V01222,Senior,Inhaler,4
+P0511,V01222,Senior,Heart Disease,4
+P0511,V01222,Senior,Statin,4
+P0511,V01222,Senior,Beta Blocker,4
+P0511,V01222,Senior,Allergy,4
+P0512,V01223,Senior,Diabetes,2
+P0512,V01223,Senior,Metformin,2
+P0512,V01223,Senior,Hypertension,2
+P0512,V01223,Senior,Lisinopril,2
+P0512,V01223,Senior,Allergy,2
+P0512,V01224,Senior,Diabetes,2
+P0512,V01224,Senior,Hypertension,2
+P0512,V01224,Senior,Lisinopril,2
+P0512,V01224,Senior,Allergy,2
+P0513,V01225,Young,Diabetes,2
+P0513,V01225,Young,Hypertension,2
+P0513,V01226,Young,Diabetes,2
+P0513,V01226,Young,Metformin,2
+P0513,V01226,Young,Hypertension,2
+P0514,V01227,Young,Routine Checkup,1
+P0515,V01228,Adult,Asthma,4
+P0515,V01228,Adult,Inhaler,4
+P0515,V01228,Adult,Steroid,4
+P0515,V01229,Adult,Asthma,4
+P0515,V01229,Adult,Inhaler,4
+P0515,V01230,Adult,Asthma,4
+P0515,V01230,Adult,Inhaler,4
+P0515,V01230,Adult,Allergy,4
+P0515,V01231,Adult,Asthma,4
+P0515,V01231,Adult,Inhaler,4
+P0515,V01231,Adult,Steroid,4
+P0516,V01232,Young,Routine Checkup,2
+P0516,V01233,Young,Routine Checkup,2
+P0517,V01234,Adult,Diabetes,4
+P0517,V01234,Adult,Metformin,4
+P0517,V01234,Adult,Hypertension,4
+P0517,V01235,Adult,Diabetes,4
+P0517,V01235,Adult,Metformin,4
+P0517,V01235,Adult,Hypertension,4
+P0517,V01235,Adult,Lisinopril,4
+P0517,V01236,Adult,Diabetes,4
+P0517,V01236,Adult,Metformin,4
+P0517,V01236,Adult,Hypertension,4
+P0517,V01237,Adult,Diabetes,4
+P0517,V01237,Adult,Metformin,4
+P0517,V01237,Adult,Hypertension,4
+P0517,V01237,Adult,Lisinopril,4
+P0518,V01238,Senior,Hypertension,2
+P0518,V01239,Senior,Hypertension,2
+P0519,V01240,Adult,Routine Checkup,2
+P0519,V01241,Adult,Kidney Disease,2
+P0520,V01242,Senior,Asthma,1
+P0520,V01242,Senior,Inhaler,1
+P0520,V01242,Senior,Heart Disease,1
+P0520,V01242,Senior,Statin,1
+P0520,V01242,Senior,Beta Blocker,1
+P0521,V01243,Senior,Asthma,1
+P0521,V01243,Senior,Inhaler,1
+P0521,V01243,Senior,Steroid,1
+P0521,V01243,Senior,Heart Disease,1
+P0521,V01243,Senior,Statin,1
+P0521,V01243,Senior,Beta Blocker,1
+P0522,V01244,Young,Routine Checkup,3
+P0522,V01245,Young,Kidney Disease,3
+P0522,V01246,Young,Routine Checkup,3
+P0523,V01247,Young,Hypertension,2
+P0523,V01247,Young,Lisinopril,2
+P0523,V01248,Young,Hypertension,2
+P0524,V01249,Senior,Diabetes,3
+P0524,V01249,Senior,Metformin,3
+P0524,V01249,Senior,Hypertension,3
+P0524,V01249,Senior,Lisinopril,3
+P0524,V01250,Senior,Diabetes,3
+P0524,V01250,Senior,Hypertension,3
+P0524,V01250,Senior,Lisinopril,3
+P0524,V01250,Senior,Allergy,3
+P0524,V01251,Senior,Diabetes,3
+P0524,V01251,Senior,Metformin,3
+P0524,V01251,Senior,Hypertension,3
+P0525,V01252,Adult,Hypertension,3
+P0525,V01253,Adult,Hypertension,3
+P0525,V01253,Adult,Lisinopril,3
+P0525,V01254,Adult,Hypertension,3
+P0526,V01255,Senior,Heart Disease,2
+P0526,V01255,Senior,Statin,2
+P0526,V01255,Senior,Beta Blocker,2
+P0526,V01256,Senior,Heart Disease,2
+P0526,V01256,Senior,Statin,2
+P0527,V01257,Adult,Routine Checkup,1
+P0528,V01258,Adult,Heart Disease,2
+P0528,V01258,Adult,Statin,2
+P0528,V01258,Adult,Allergy,2
+P0528,V01259,Adult,Heart Disease,2
+P0528,V01259,Adult,Statin,2
+P0528,V01259,Adult,Beta Blocker,2
+P0529,V01260,Senior,Asthma,3
+P0529,V01260,Senior,Inhaler,3
+P0529,V01260,Senior,Steroid,3
+P0529,V01261,Senior,Asthma,3
+P0529,V01261,Senior,Inhaler,3
+P0529,V01262,Senior,Asthma,3
+P0529,V01262,Senior,Inhaler,3
+P0529,V01262,Senior,Steroid,3
+P0530,V01263,Adult,Hypertension,3
+P0530,V01263,Adult,Lisinopril,3
+P0530,V01263,Adult,Kidney Disease,3
+P0530,V01264,Adult,Hypertension,3
+P0530,V01264,Adult,Lisinopril,3
+P0530,V01264,Adult,Allergy,3
+P0530,V01265,Adult,Hypertension,3
+P0530,V01265,Adult,Lisinopril,3
+P0531,V01266,Young,Routine Checkup,3
+P0531,V01267,Young,Routine Checkup,3
+P0531,V01268,Young,Allergy,3
+P0532,V01269,Young,Routine Checkup,2
+P0532,V01270,Young,Routine Checkup,2
+P0533,V01271,Senior,Diabetes,3
+P0533,V01271,Senior,Metformin,3
+P0533,V01271,Senior,Heart Disease,3
+P0533,V01271,Senior,Statin,3
+P0533,V01271,Senior,Beta Blocker,3
+P0533,V01272,Senior,Diabetes,3
+P0533,V01272,Senior,Heart Disease,3
+P0533,V01272,Senior,Statin,3
+P0533,V01272,Senior,Beta Blocker,3
+P0533,V01273,Senior,Diabetes,3
+P0533,V01273,Senior,Heart Disease,3
+P0533,V01273,Senior,Statin,3
+P0533,V01273,Senior,Beta Blocker,3
+P0534,V01274,Senior,Routine Checkup,4
+P0534,V01275,Senior,Routine Checkup,4
+P0534,V01276,Senior,Kidney Disease,4
+P0534,V01277,Senior,Routine Checkup,4
+P0535,V01278,Senior,Asthma,4
+P0535,V01278,Senior,Inhaler,4
+P0535,V01278,Senior,Heart Disease,4
+P0535,V01278,Senior,Statin,4
+P0535,V01279,Senior,Asthma,4
+P0535,V01279,Senior,Inhaler,4
+P0535,V01279,Senior,Heart Disease,4
+P0535,V01279,Senior,Statin,4
+P0535,V01279,Senior,Beta Blocker,4
+P0535,V01280,Senior,Asthma,4
+P0535,V01280,Senior,Inhaler,4
+P0535,V01280,Senior,Heart Disease,4
+P0535,V01280,Senior,Statin,4
+P0535,V01280,Senior,Beta Blocker,4
+P0535,V01281,Senior,Asthma,4
+P0535,V01281,Senior,Inhaler,4
+P0535,V01281,Senior,Heart Disease,4
+P0535,V01281,Senior,Statin,4
+P0535,V01281,Senior,Beta Blocker,4
+P0536,V01282,Adult,Hypertension,3
+P0536,V01282,Adult,Lisinopril,3
+P0536,V01283,Adult,Hypertension,3
+P0536,V01283,Adult,Lisinopril,3
+P0536,V01284,Adult,Hypertension,3
+P0536,V01284,Adult,Lisinopril,3
+P0536,V01284,Adult,Kidney Disease,3
+P0537,V01285,Senior,Routine Checkup,2
+P0537,V01286,Senior,Routine Checkup,2
+P0538,V01287,Senior,Routine Checkup,3
+P0538,V01288,Senior,Routine Checkup,3
+P0538,V01289,Senior,Routine Checkup,3
+P0539,V01290,Senior,Diabetes,1
+P0539,V01290,Senior,Metformin,1
+P0539,V01290,Senior,Hypertension,1
+P0539,V01290,Senior,Lisinopril,1
+P0540,V01291,Adult,Routine Checkup,3
+P0540,V01292,Adult,Routine Checkup,3
+P0540,V01293,Adult,Routine Checkup,3
+P0541,V01294,Senior,Routine Checkup,3
+P0541,V01295,Senior,Routine Checkup,3
+P0541,V01296,Senior,Routine Checkup,3
+P0542,V01297,Senior,Allergy,4
+P0542,V01298,Senior,Kidney Disease,4
+P0542,V01299,Senior,Routine Checkup,4
+P0542,V01300,Senior,Allergy,4
+P0543,V01301,Young,Hypertension,2
+P0543,V01301,Young,Lisinopril,2
+P0543,V01301,Young,Allergy,2
+P0543,V01302,Young,Hypertension,2
+P0543,V01302,Young,Lisinopril,2
+P0544,V01303,Adult,Asthma,4
+P0544,V01303,Adult,Inhaler,4
+P0544,V01303,Adult,Steroid,4
+P0544,V01303,Adult,Heart Disease,4
+P0544,V01303,Adult,Statin,4
+P0544,V01304,Adult,Asthma,4
+P0544,V01304,Adult,Inhaler,4
+P0544,V01304,Adult,Heart Disease,4
+P0544,V01304,Adult,Statin,4
+P0544,V01304,Adult,Beta Blocker,4
+P0544,V01305,Adult,Asthma,4
+P0544,V01305,Adult,Inhaler,4
+P0544,V01305,Adult,Heart Disease,4
+P0544,V01305,Adult,Statin,4
+P0544,V01305,Adult,Beta Blocker,4
+P0544,V01306,Adult,Asthma,4
+P0544,V01306,Adult,Inhaler,4
+P0544,V01306,Adult,Heart Disease,4
+P0544,V01306,Adult,Statin,4
+P0545,V01307,Senior,Diabetes,1
+P0545,V01307,Senior,Metformin,1
+P0545,V01307,Senior,Hypertension,1
+P0545,V01307,Senior,Lisinopril,1
+P0545,V01307,Senior,Heart Disease,1
+P0545,V01307,Senior,Statin,1
+P0545,V01307,Senior,Beta Blocker,1
+P0545,V01307,Senior,Kidney Disease,1
+P0546,V01308,Adult,Routine Checkup,1
+P0547,V01309,Adult,Routine Checkup,1
+P0548,V01310,Young,Hypertension,1
+P0548,V01310,Young,Lisinopril,1
+P0549,V01311,Adult,Hypertension,3
+P0549,V01311,Adult,Lisinopril,3
+P0549,V01312,Adult,Hypertension,3
+P0549,V01312,Adult,Lisinopril,3
+P0549,V01312,Adult,Allergy,3
+P0549,V01313,Adult,Hypertension,3
+P0549,V01313,Adult,Lisinopril,3
+P0550,V01314,Adult,Routine Checkup,4
+P0550,V01315,Adult,Allergy,4
+P0550,V01316,Adult,Allergy,4
+P0550,V01317,Adult,Allergy,4
+P0551,V01318,Senior,Routine Checkup,3
+P0551,V01319,Senior,Routine Checkup,3
+P0551,V01320,Senior,Routine Checkup,3
+P0552,V01321,Senior,Diabetes,1
+P0552,V01321,Senior,Metformin,1
+P0552,V01321,Senior,Hypertension,1
+P0552,V01321,Senior,Lisinopril,1
+P0553,V01322,Senior,Diabetes,4
+P0553,V01322,Senior,Metformin,4
+P0553,V01322,Senior,Hypertension,4
+P0553,V01322,Senior,Lisinopril,4
+P0553,V01323,Senior,Diabetes,4
+P0553,V01323,Senior,Hypertension,4
+P0553,V01323,Senior,Lisinopril,4
+P0553,V01323,Senior,Allergy,4
+P0553,V01324,Senior,Diabetes,4
+P0553,V01324,Senior,Metformin,4
+P0553,V01324,Senior,Hypertension,4
+P0553,V01324,Senior,Allergy,4
+P0553,V01325,Senior,Diabetes,4
+P0553,V01325,Senior,Metformin,4
+P0553,V01325,Senior,Hypertension,4
+P0553,V01325,Senior,Lisinopril,4
+P0554,V01326,Adult,Allergy,4
+P0554,V01327,Adult,Routine Checkup,4
+P0554,V01328,Adult,Routine Checkup,4
+P0554,V01329,Adult,Routine Checkup,4
+P0555,V01330,Senior,Routine Checkup,4
+P0555,V01331,Senior,Routine Checkup,4
+P0555,V01332,Senior,Kidney Disease,4
+P0555,V01333,Senior,Allergy,4
+P0556,V01334,Senior,Diabetes,2
+P0556,V01334,Senior,Metformin,2
+P0556,V01334,Senior,Hypertension,2
+P0556,V01335,Senior,Diabetes,2
+P0556,V01335,Senior,Hypertension,2
+P0556,V01335,Senior,Allergy,2
+P0557,V01336,Senior,Routine Checkup,2
+P0557,V01337,Senior,Routine Checkup,2
+P0558,V01338,Senior,Hypertension,3
+P0558,V01338,Senior,Lisinopril,3
+P0558,V01339,Senior,Hypertension,3
+P0558,V01340,Senior,Hypertension,3
+P0558,V01340,Senior,Lisinopril,3
+P0559,V01341,Senior,Diabetes,4
+P0559,V01342,Senior,Diabetes,4
+P0559,V01343,Senior,Diabetes,4
+P0559,V01343,Senior,Metformin,4
+P0559,V01343,Senior,Allergy,4
+P0559,V01344,Senior,Diabetes,4
+P0559,V01344,Senior,Metformin,4
+P0560,V01345,Adult,Allergy,3
+P0560,V01346,Adult,Routine Checkup,3
+P0560,V01347,Adult,Kidney Disease,3
+P0561,V01348,Adult,Hypertension,1
+P0561,V01348,Adult,Kidney Disease,1
+P0562,V01349,Senior,Diabetes,2
+P0562,V01349,Senior,Metformin,2
+P0562,V01349,Senior,Hypertension,2
+P0562,V01349,Senior,Lisinopril,2
+P0562,V01349,Senior,Heart Disease,2
+P0562,V01349,Senior,Statin,2
+P0562,V01349,Senior,Beta Blocker,2
+P0562,V01350,Senior,Diabetes,2
+P0562,V01350,Senior,Metformin,2
+P0562,V01350,Senior,Hypertension,2
+P0562,V01350,Senior,Heart Disease,2
+P0562,V01350,Senior,Statin,2
+P0562,V01350,Senior,Beta Blocker,2
+P0563,V01351,Senior,Diabetes,2
+P0563,V01351,Senior,Heart Disease,2
+P0563,V01351,Senior,Statin,2
+P0563,V01351,Senior,Beta Blocker,2
+P0563,V01352,Senior,Diabetes,2
+P0563,V01352,Senior,Metformin,2
+P0563,V01352,Senior,Heart Disease,2
+P0563,V01352,Senior,Statin,2
+P0563,V01352,Senior,Beta Blocker,2
+P0563,V01352,Senior,Allergy,2
+P0564,V01353,Young,Routine Checkup,2
+P0564,V01354,Young,Routine Checkup,2
+P0565,V01355,Senior,Hypertension,3
+P0565,V01355,Senior,Lisinopril,3
+P0565,V01356,Senior,Hypertension,3
+P0565,V01356,Senior,Lisinopril,3
+P0565,V01357,Senior,Hypertension,3
+P0565,V01357,Senior,Lisinopril,3
+P0565,V01357,Senior,Allergy,3
+P0566,V01358,Young,Diabetes,2
+P0566,V01358,Young,Metformin,2
+P0566,V01358,Young,Hypertension,2
+P0566,V01359,Young,Diabetes,2
+P0566,V01359,Young,Metformin,2
+P0566,V01359,Young,Hypertension,2
+P0567,V01360,Young,Routine Checkup,2
+P0567,V01361,Young,Routine Checkup,2
+P0568,V01362,Senior,Diabetes,4
+P0568,V01362,Senior,Metformin,4
+P0568,V01362,Senior,Hypertension,4
+P0568,V01362,Senior,Lisinopril,4
+P0568,V01363,Senior,Diabetes,4
+P0568,V01363,Senior,Metformin,4
+P0568,V01363,Senior,Hypertension,4
+P0568,V01364,Senior,Diabetes,4
+P0568,V01364,Senior,Hypertension,4
+P0568,V01364,Senior,Lisinopril,4
+P0568,V01365,Senior,Diabetes,4
+P0568,V01365,Senior,Metformin,4
+P0568,V01365,Senior,Hypertension,4
+P0568,V01365,Senior,Lisinopril,4
+P0569,V01366,Adult,Routine Checkup,4
+P0569,V01367,Adult,Routine Checkup,4
+P0569,V01368,Adult,Routine Checkup,4
+P0569,V01369,Adult,Routine Checkup,4
+P0570,V01370,Young,Hypertension,1
+P0570,V01370,Young,Asthma,1
+P0570,V01370,Young,Inhaler,1
+P0570,V01370,Young,Steroid,1
+P0571,V01371,Young,Asthma,1
+P0571,V01371,Young,Inhaler,1
+P0572,V01372,Adult,Routine Checkup,3
+P0572,V01373,Adult,Routine Checkup,3
+P0572,V01374,Adult,Routine Checkup,3
+P0573,V01375,Young,Routine Checkup,1
+P0574,V01376,Adult,Routine Checkup,1
+P0575,V01377,Senior,Diabetes,2
+P0575,V01378,Senior,Diabetes,2
+P0575,V01378,Senior,Metformin,2
+P0575,V01378,Senior,Kidney Disease,2
+P0576,V01379,Senior,Routine Checkup,4
+P0576,V01380,Senior,Routine Checkup,4
+P0576,V01381,Senior,Routine Checkup,4
+P0576,V01382,Senior,Routine Checkup,4
+P0577,V01383,Adult,Allergy,2
+P0577,V01384,Adult,Allergy,2
+P0578,V01385,Senior,Hypertension,2
+P0578,V01386,Senior,Hypertension,2
+P0579,V01387,Senior,Allergy,1
+P0580,V01388,Senior,Asthma,2
+P0580,V01388,Senior,Inhaler,2
+P0580,V01389,Senior,Asthma,2
+P0580,V01389,Senior,Inhaler,2
+P0580,V01389,Senior,Steroid,2
+P0581,V01390,Senior,Hypertension,1
+P0581,V01390,Senior,Lisinopril,1
+P0582,V01391,Senior,Routine Checkup,2
+P0582,V01392,Senior,Routine Checkup,2
+P0583,V01393,Adult,Routine Checkup,2
+P0583,V01394,Adult,Routine Checkup,2
+P0584,V01395,Young,Asthma,4
+P0584,V01395,Young,Inhaler,4
+P0584,V01395,Young,Heart Disease,4
+P0584,V01395,Young,Statin,4
+P0584,V01395,Young,Beta Blocker,4
+P0584,V01395,Young,Allergy,4
+P0584,V01396,Young,Asthma,4
+P0584,V01396,Young,Inhaler,4
+P0584,V01396,Young,Heart Disease,4
+P0584,V01396,Young,Statin,4
+P0584,V01397,Young,Asthma,4
+P0584,V01397,Young,Inhaler,4
+P0584,V01397,Young,Heart Disease,4
+P0584,V01397,Young,Statin,4
+P0584,V01397,Young,Allergy,4
+P0584,V01398,Young,Asthma,4
+P0584,V01398,Young,Inhaler,4
+P0584,V01398,Young,Heart Disease,4
+P0584,V01398,Young,Statin,4
+P0584,V01398,Young,Beta Blocker,4
+P0585,V01399,Senior,Routine Checkup,3
+P0585,V01400,Senior,Routine Checkup,3
+P0585,V01401,Senior,Routine Checkup,3
+P0586,V01402,Senior,Hypertension,2
+P0586,V01402,Senior,Lisinopril,2
+P0586,V01402,Senior,Heart Disease,2
+P0586,V01402,Senior,Statin,2
+P0586,V01402,Senior,Beta Blocker,2
+P0586,V01403,Senior,Hypertension,2
+P0586,V01403,Senior,Heart Disease,2
+P0586,V01403,Senior,Statin,2
+P0586,V01403,Senior,Beta Blocker,2
+P0586,V01403,Senior,Allergy,2
+P0587,V01404,Adult,Hypertension,4
+P0587,V01404,Adult,Heart Disease,4
+P0587,V01404,Adult,Statin,4
+P0587,V01404,Adult,Beta Blocker,4
+P0587,V01405,Adult,Hypertension,4
+P0587,V01405,Adult,Lisinopril,4
+P0587,V01405,Adult,Heart Disease,4
+P0587,V01405,Adult,Statin,4
+P0587,V01405,Adult,Beta Blocker,4
+P0587,V01405,Adult,Allergy,4
+P0587,V01406,Adult,Hypertension,4
+P0587,V01406,Adult,Lisinopril,4
+P0587,V01406,Adult,Heart Disease,4
+P0587,V01406,Adult,Statin,4
+P0587,V01406,Adult,Beta Blocker,4
+P0587,V01407,Adult,Hypertension,4
+P0587,V01407,Adult,Heart Disease,4
+P0587,V01407,Adult,Statin,4
+P0587,V01407,Adult,Beta Blocker,4
+P0588,V01408,Young,Routine Checkup,2
+P0588,V01409,Young,Routine Checkup,2
+P0589,V01410,Senior,Routine Checkup,4
+P0589,V01411,Senior,Allergy,4
+P0589,V01412,Senior,Routine Checkup,4
+P0589,V01413,Senior,Allergy,4
+P0590,V01414,Senior,Asthma,3
+P0590,V01414,Senior,Inhaler,3
+P0590,V01414,Senior,Kidney Disease,3
+P0590,V01415,Senior,Asthma,3
+P0590,V01415,Senior,Inhaler,3
+P0590,V01415,Senior,Kidney Disease,3
+P0590,V01416,Senior,Asthma,3
+P0590,V01416,Senior,Inhaler,3
+P0591,V01417,Adult,Hypertension,4
+P0591,V01417,Adult,Lisinopril,4
+P0591,V01417,Adult,Heart Disease,4
+P0591,V01417,Adult,Statin,4
+P0591,V01418,Adult,Hypertension,4
+P0591,V01418,Adult,Lisinopril,4
+P0591,V01418,Adult,Heart Disease,4
+P0591,V01418,Adult,Statin,4
+P0591,V01418,Adult,Beta Blocker,4
+P0591,V01419,Adult,Hypertension,4
+P0591,V01419,Adult,Heart Disease,4
+P0591,V01419,Adult,Statin,4
+P0591,V01419,Adult,Allergy,4
+P0591,V01419,Adult,Kidney Disease,4
+P0591,V01420,Adult,Hypertension,4
+P0591,V01420,Adult,Heart Disease,4
+P0591,V01420,Adult,Statin,4
+P0592,V01421,Senior,Asthma,4
+P0592,V01421,Senior,Inhaler,4
+P0592,V01421,Senior,Steroid,4
+P0592,V01421,Senior,Heart Disease,4
+P0592,V01421,Senior,Statin,4
+P0592,V01421,Senior,Beta Blocker,4
+P0592,V01422,Senior,Asthma,4
+P0592,V01422,Senior,Inhaler,4
+P0592,V01422,Senior,Heart Disease,4
+P0592,V01422,Senior,Statin,4
+P0592,V01422,Senior,Beta Blocker,4
+P0592,V01423,Senior,Asthma,4
+P0592,V01423,Senior,Inhaler,4
+P0592,V01423,Senior,Heart Disease,4
+P0592,V01423,Senior,Statin,4
+P0592,V01423,Senior,Beta Blocker,4
+P0592,V01424,Senior,Asthma,4
+P0592,V01424,Senior,Inhaler,4
+P0592,V01424,Senior,Heart Disease,4
+P0592,V01424,Senior,Statin,4
+P0592,V01424,Senior,Beta Blocker,4
+P0593,V01425,Adult,Asthma,2
+P0593,V01425,Adult,Inhaler,2
+P0593,V01425,Adult,Steroid,2
+P0593,V01426,Adult,Asthma,2
+P0593,V01426,Adult,Inhaler,2
+P0593,V01426,Adult,Steroid,2
+P0594,V01427,Senior,Heart Disease,2
+P0594,V01427,Senior,Statin,2
+P0594,V01427,Senior,Beta Blocker,2
+P0594,V01427,Senior,Allergy,2
+P0594,V01428,Senior,Heart Disease,2
+P0594,V01428,Senior,Statin,2
+P0595,V01429,Adult,Routine Checkup,2
+P0595,V01430,Adult,Kidney Disease,2
+P0596,V01431,Senior,Hypertension,2
+P0596,V01431,Senior,Lisinopril,2
+P0596,V01432,Senior,Hypertension,2
+P0596,V01432,Senior,Lisinopril,2
+P0597,V01433,Senior,Routine Checkup,3
+P0597,V01434,Senior,Routine Checkup,3
+P0597,V01435,Senior,Allergy,3
+P0598,V01436,Adult,Routine Checkup,1
+P0599,V01437,Senior,Heart Disease,4
+P0599,V01437,Senior,Statin,4
+P0599,V01438,Senior,Heart Disease,4
+P0599,V01438,Senior,Statin,4
+P0599,V01438,Senior,Beta Blocker,4
+P0599,V01439,Senior,Heart Disease,4
+P0599,V01439,Senior,Statin,4
+P0599,V01439,Senior,Beta Blocker,4
+P0599,V01440,Senior,Heart Disease,4
+P0599,V01440,Senior,Statin,4
+P0600,V01441,Young,Routine Checkup,4
+P0600,V01442,Young,Routine Checkup,4
+P0600,V01443,Young,Routine Checkup,4
+P0600,V01444,Young,Routine Checkup,4
+P0601,V01445,Young,Diabetes,3
+P0601,V01445,Young,Metformin,3
+P0601,V01446,Young,Diabetes,3
+P0601,V01446,Young,Allergy,3
+P0601,V01447,Young,Diabetes,3
+P0601,V01447,Young,Allergy,3
+P0602,V01448,Adult,Routine Checkup,4
+P0602,V01449,Adult,Routine Checkup,4
+P0602,V01450,Adult,Routine Checkup,4
+P0602,V01451,Adult,Allergy,4
+P0603,V01452,Senior,Diabetes,2
+P0603,V01452,Senior,Hypertension,2
+P0603,V01453,Senior,Diabetes,2
+P0603,V01453,Senior,Hypertension,2
+P0603,V01453,Senior,Lisinopril,2
+P0603,V01453,Senior,Allergy,2
+P0604,V01454,Senior,Diabetes,4
+P0604,V01454,Senior,Hypertension,4
+P0604,V01454,Senior,Lisinopril,4
+P0604,V01455,Senior,Diabetes,4
+P0604,V01455,Senior,Hypertension,4
+P0604,V01455,Senior,Lisinopril,4
+P0604,V01456,Senior,Diabetes,4
+P0604,V01456,Senior,Hypertension,4
+P0604,V01456,Senior,Lisinopril,4
+P0604,V01457,Senior,Diabetes,4
+P0604,V01457,Senior,Metformin,4
+P0604,V01457,Senior,Hypertension,4
+P0604,V01457,Senior,Lisinopril,4
+P0605,V01458,Senior,Routine Checkup,4
+P0605,V01459,Senior,Routine Checkup,4
+P0605,V01460,Senior,Routine Checkup,4
+P0605,V01461,Senior,Routine Checkup,4
+P0606,V01462,Young,Asthma,3
+P0606,V01462,Young,Inhaler,3
+P0606,V01463,Young,Asthma,3
+P0606,V01463,Young,Inhaler,3
+P0606,V01464,Young,Asthma,3
+P0606,V01464,Young,Inhaler,3
+P0607,V01465,Senior,Diabetes,2
+P0607,V01465,Senior,Heart Disease,2
+P0607,V01465,Senior,Statin,2
+P0607,V01466,Senior,Diabetes,2
+P0607,V01466,Senior,Heart Disease,2
+P0607,V01466,Senior,Statin,2
+P0607,V01466,Senior,Beta Blocker,2
+P0608,V01467,Adult,Routine Checkup,4
+P0608,V01468,Adult,Routine Checkup,4
+P0608,V01469,Adult,Routine Checkup,4
+P0608,V01470,Adult,Routine Checkup,4
+P0609,V01471,Adult,Hypertension,3
+P0609,V01471,Adult,Allergy,3
+P0609,V01472,Adult,Hypertension,3
+P0609,V01473,Adult,Hypertension,3
+P0610,V01474,Adult,Asthma,3
+P0610,V01474,Adult,Inhaler,3
+P0610,V01474,Adult,Allergy,3
+P0610,V01475,Adult,Asthma,3
+P0610,V01475,Adult,Inhaler,3
+P0610,V01475,Adult,Steroid,3
+P0610,V01476,Adult,Asthma,3
+P0610,V01476,Adult,Inhaler,3
+P0610,V01476,Adult,Allergy,3
+P0611,V01477,Adult,Routine Checkup,1
+P0612,V01478,Adult,Asthma,3
+P0612,V01478,Adult,Inhaler,3
+P0612,V01478,Adult,Steroid,3
+P0612,V01478,Adult,Allergy,3
+P0612,V01479,Adult,Asthma,3
+P0612,V01479,Adult,Inhaler,3
+P0612,V01480,Adult,Asthma,3
+P0612,V01480,Adult,Inhaler,3
+P0613,V01481,Young,Routine Checkup,2
+P0613,V01482,Young,Routine Checkup,2
+P0614,V01483,Senior,Hypertension,2
+P0614,V01483,Senior,Allergy,2
+P0614,V01484,Senior,Hypertension,2
+P0614,V01484,Senior,Lisinopril,2
+P0615,V01485,Senior,Heart Disease,4
+P0615,V01485,Senior,Statin,4
+P0615,V01485,Senior,Beta Blocker,4
+P0615,V01486,Senior,Heart Disease,4
+P0615,V01486,Senior,Statin,4
+P0615,V01486,Senior,Beta Blocker,4
+P0615,V01487,Senior,Heart Disease,4
+P0615,V01487,Senior,Statin,4
+P0615,V01487,Senior,Beta Blocker,4
+P0615,V01488,Senior,Heart Disease,4
+P0615,V01488,Senior,Statin,4
+P0615,V01488,Senior,Beta Blocker,4
+P0615,V01488,Senior,Allergy,4
+P0616,V01489,Adult,Routine Checkup,4
+P0616,V01490,Adult,Routine Checkup,4
+P0616,V01491,Adult,Routine Checkup,4
+P0616,V01492,Adult,Routine Checkup,4
+P0617,V01493,Young,Routine Checkup,3
+P0617,V01494,Young,Routine Checkup,3
+P0617,V01495,Young,Allergy,3
+P0618,V01496,Young,Heart Disease,2
+P0618,V01496,Young,Statin,2
+P0618,V01496,Young,Beta Blocker,2
+P0618,V01497,Young,Heart Disease,2
+P0618,V01497,Young,Statin,2
+P0618,V01497,Young,Beta Blocker,2
+P0619,V01498,Adult,Hypertension,1
+P0619,V01498,Adult,Lisinopril,1
+P0620,V01499,Senior,Hypertension,3
+P0620,V01499,Senior,Lisinopril,3
+P0620,V01500,Senior,Hypertension,3
+P0620,V01501,Senior,Hypertension,3
+P0621,V01502,Young,Heart Disease,4
+P0621,V01502,Young,Statin,4
+P0621,V01502,Young,Beta Blocker,4
+P0621,V01502,Young,Kidney Disease,4
+P0621,V01503,Young,Heart Disease,4
+P0621,V01503,Young,Statin,4
+P0621,V01503,Young,Beta Blocker,4
+P0621,V01504,Young,Heart Disease,4
+P0621,V01504,Young,Statin,4
+P0621,V01504,Young,Beta Blocker,4
+P0621,V01504,Young,Kidney Disease,4
+P0621,V01505,Young,Heart Disease,4
+P0621,V01505,Young,Statin,4
+P0621,V01505,Young,Beta Blocker,4
+P0622,V01506,Senior,Routine Checkup,3
+P0622,V01507,Senior,Routine Checkup,3
+P0622,V01508,Senior,Routine Checkup,3
+P0623,V01509,Senior,Heart Disease,1
+P0623,V01509,Senior,Statin,1
+P0623,V01509,Senior,Beta Blocker,1
+P0624,V01510,Senior,Diabetes,3
+P0624,V01510,Senior,Hypertension,3
+P0624,V01510,Senior,Lisinopril,3
+P0624,V01510,Senior,Allergy,3
+P0624,V01511,Senior,Diabetes,3
+P0624,V01511,Senior,Metformin,3
+P0624,V01511,Senior,Hypertension,3
+P0624,V01511,Senior,Lisinopril,3
+P0624,V01511,Senior,Allergy,3
+P0624,V01512,Senior,Diabetes,3
+P0624,V01512,Senior,Metformin,3
+P0624,V01512,Senior,Hypertension,3
+P0624,V01512,Senior,Lisinopril,3
+P0624,V01512,Senior,Allergy,3
+P0625,V01513,Adult,Kidney Disease,2
+P0625,V01514,Adult,Routine Checkup,2
+P0626,V01515,Senior,Diabetes,2
+P0626,V01515,Senior,Metformin,2
+P0626,V01515,Senior,Hypertension,2
+P0626,V01515,Senior,Allergy,2
+P0626,V01516,Senior,Diabetes,2
+P0626,V01516,Senior,Metformin,2
+P0626,V01516,Senior,Hypertension,2
+P0627,V01517,Young,Asthma,2
+P0627,V01517,Young,Inhaler,2
+P0627,V01517,Young,Steroid,2
+P0627,V01518,Young,Asthma,2
+P0627,V01518,Young,Inhaler,2
+P0628,V01519,Senior,Diabetes,2
+P0628,V01519,Senior,Metformin,2
+P0628,V01519,Senior,Hypertension,2
+P0628,V01519,Senior,Asthma,2
+P0628,V01519,Senior,Inhaler,2
+P0628,V01519,Senior,Heart Disease,2
+P0628,V01519,Senior,Statin,2
+P0628,V01519,Senior,Beta Blocker,2
+P0628,V01519,Senior,Allergy,2
+P0628,V01520,Senior,Diabetes,2
+P0628,V01520,Senior,Hypertension,2
+P0628,V01520,Senior,Asthma,2
+P0628,V01520,Senior,Inhaler,2
+P0628,V01520,Senior,Steroid,2
+P0628,V01520,Senior,Heart Disease,2
+P0628,V01520,Senior,Statin,2
+P0628,V01520,Senior,Beta Blocker,2
+P0629,V01521,Adult,Hypertension,3
+P0629,V01521,Adult,Lisinopril,3
+P0629,V01522,Adult,Hypertension,3
+P0629,V01522,Adult,Lisinopril,3
+P0629,V01523,Adult,Hypertension,3
+P0629,V01523,Adult,Allergy,3
+P0630,V01524,Young,Allergy,3
+P0630,V01525,Young,Routine Checkup,3
+P0630,V01526,Young,Routine Checkup,3
+P0631,V01527,Senior,Diabetes,1
+P0631,V01527,Senior,Hypertension,1
+P0631,V01527,Senior,Lisinopril,1
+P0631,V01527,Senior,Heart Disease,1
+P0631,V01527,Senior,Statin,1
+P0631,V01527,Senior,Beta Blocker,1
+P0632,V01528,Senior,Hypertension,3
+P0632,V01529,Senior,Hypertension,3
+P0632,V01529,Senior,Lisinopril,3
+P0632,V01530,Senior,Hypertension,3
+P0632,V01530,Senior,Lisinopril,3
+P0633,V01531,Senior,Diabetes,2
+P0633,V01531,Senior,Metformin,2
+P0633,V01532,Senior,Diabetes,2
+P0633,V01532,Senior,Metformin,2
+P0634,V01533,Young,Routine Checkup,1
+P0635,V01534,Adult,Hypertension,3
+P0635,V01534,Adult,Lisinopril,3
+P0635,V01535,Adult,Hypertension,3
+P0635,V01535,Adult,Allergy,3
+P0635,V01536,Adult,Hypertension,3
+P0636,V01537,Young,Routine Checkup,3
+P0636,V01538,Young,Routine Checkup,3
+P0636,V01539,Young,Routine Checkup,3
+P0637,V01540,Adult,Routine Checkup,2
+P0637,V01541,Adult,Routine Checkup,2
+P0638,V01542,Young,Hypertension,4
+P0638,V01542,Young,Allergy,4
+P0638,V01543,Young,Hypertension,4
+P0638,V01543,Young,Lisinopril,4
+P0638,V01544,Young,Hypertension,4
+P0638,V01545,Young,Hypertension,4
+P0638,V01545,Young,Lisinopril,4
+P0639,V01546,Adult,Diabetes,2
+P0639,V01546,Adult,Metformin,2
+P0639,V01546,Adult,Hypertension,2
+P0639,V01547,Adult,Diabetes,2
+P0639,V01547,Adult,Hypertension,2
+P0640,V01548,Adult,Routine Checkup,3
+P0640,V01549,Adult,Routine Checkup,3
+P0640,V01550,Adult,Routine Checkup,3
+P0641,V01551,Senior,Diabetes,4
+P0641,V01551,Senior,Metformin,4
+P0641,V01551,Senior,Hypertension,4
+P0641,V01551,Senior,Lisinopril,4
+P0641,V01552,Senior,Diabetes,4
+P0641,V01552,Senior,Metformin,4
+P0641,V01552,Senior,Hypertension,4
+P0641,V01552,Senior,Lisinopril,4
+P0641,V01552,Senior,Allergy,4
+P0641,V01553,Senior,Diabetes,4
+P0641,V01553,Senior,Metformin,4
+P0641,V01553,Senior,Hypertension,4
+P0641,V01554,Senior,Diabetes,4
+P0641,V01554,Senior,Metformin,4
+P0641,V01554,Senior,Hypertension,4
+P0641,V01554,Senior,Lisinopril,4
+P0642,V01555,Young,Hypertension,3
+P0642,V01555,Young,Lisinopril,3
+P0642,V01556,Young,Hypertension,3
+P0642,V01556,Young,Lisinopril,3
+P0642,V01557,Young,Hypertension,3
+P0642,V01557,Young,Lisinopril,3
+P0643,V01558,Senior,Routine Checkup,4
+P0643,V01559,Senior,Routine Checkup,4
+P0643,V01560,Senior,Routine Checkup,4
+P0643,V01561,Senior,Routine Checkup,4
+P0644,V01562,Adult,Routine Checkup,3
+P0644,V01563,Adult,Routine Checkup,3
+P0644,V01564,Adult,Routine Checkup,3
+P0645,V01565,Senior,Diabetes,1
+P0645,V01565,Senior,Metformin,1
+P0645,V01565,Senior,Hypertension,1
+P0645,V01565,Senior,Lisinopril,1
+P0646,V01566,Adult,Hypertension,1
+P0647,V01567,Senior,Diabetes,2
+P0647,V01567,Senior,Hypertension,2
+P0647,V01567,Senior,Heart Disease,2
+P0647,V01567,Senior,Statin,2
+P0647,V01567,Senior,Beta Blocker,2
+P0647,V01568,Senior,Diabetes,2
+P0647,V01568,Senior,Hypertension,2
+P0647,V01568,Senior,Heart Disease,2
+P0647,V01568,Senior,Statin,2
+P0647,V01568,Senior,Beta Blocker,2
+P0648,V01569,Adult,Routine Checkup,2
+P0648,V01570,Adult,Allergy,2
+P0649,V01571,Senior,Asthma,1
+P0649,V01571,Senior,Inhaler,1
+P0649,V01571,Senior,Allergy,1
+P0650,V01572,Adult,Allergy,1
+P0651,V01573,Senior,Asthma,1
+P0651,V01573,Senior,Inhaler,1
+P0651,V01573,Senior,Steroid,1
+P0651,V01573,Senior,Heart Disease,1
+P0651,V01573,Senior,Statin,1
+P0651,V01573,Senior,Allergy,1
+P0652,V01574,Adult,Routine Checkup,1
+P0653,V01575,Adult,Routine Checkup,2
+P0653,V01576,Adult,Routine Checkup,2
+P0654,V01577,Senior,Hypertension,2
+P0654,V01577,Senior,Lisinopril,2
+P0654,V01577,Senior,Asthma,2
+P0654,V01577,Senior,Inhaler,2
+P0654,V01577,Senior,Kidney Disease,2
+P0654,V01578,Senior,Hypertension,2
+P0654,V01578,Senior,Lisinopril,2
+P0654,V01578,Senior,Asthma,2
+P0654,V01578,Senior,Inhaler,2
+P0655,V01579,Senior,Routine Checkup,3
+P0655,V01580,Senior,Routine Checkup,3
+P0655,V01581,Senior,Allergy,3
+P0656,V01582,Adult,Hypertension,2
+P0656,V01583,Adult,Hypertension,2
+P0656,V01583,Adult,Lisinopril,2
+P0657,V01584,Young,Allergy,1
+P0658,V01585,Senior,Routine Checkup,1
+P0659,V01586,Adult,Diabetes,4
+P0659,V01586,Adult,Metformin,4
+P0659,V01586,Adult,Hypertension,4
+P0659,V01587,Adult,Diabetes,4
+P0659,V01587,Adult,Hypertension,4
+P0659,V01588,Adult,Diabetes,4
+P0659,V01588,Adult,Metformin,4
+P0659,V01588,Adult,Hypertension,4
+P0659,V01588,Adult,Allergy,4
+P0659,V01589,Adult,Diabetes,4
+P0659,V01589,Adult,Hypertension,4
+P0660,V01590,Adult,Routine Checkup,2
+P0660,V01591,Adult,Routine Checkup,2
+P0661,V01592,Young,Allergy,1
+P0662,V01593,Senior,Routine Checkup,1
+P0663,V01594,Adult,Routine Checkup,3
+P0663,V01595,Adult,Routine Checkup,3
+P0663,V01596,Adult,Routine Checkup,3
+P0664,V01597,Adult,Routine Checkup,3
+P0664,V01598,Adult,Allergy,3
+P0664,V01599,Adult,Routine Checkup,3
+P0665,V01600,Adult,Routine Checkup,1
+P0666,V01601,Adult,Routine Checkup,2
+P0666,V01602,Adult,Routine Checkup,2
+P0667,V01603,Adult,Asthma,4
+P0667,V01603,Adult,Inhaler,4
+P0667,V01604,Adult,Asthma,4
+P0667,V01604,Adult,Inhaler,4
+P0667,V01604,Adult,Steroid,4
+P0667,V01605,Adult,Asthma,4
+P0667,V01605,Adult,Inhaler,4
+P0667,V01605,Adult,Steroid,4
+P0667,V01606,Adult,Asthma,4
+P0667,V01606,Adult,Inhaler,4
+P0667,V01606,Adult,Steroid,4
+P0668,V01607,Young,Routine Checkup,2
+P0668,V01608,Young,Allergy,2
+P0669,V01609,Young,Hypertension,1
+P0669,V01609,Young,Allergy,1
+P0670,V01610,Senior,Allergy,2
+P0670,V01611,Senior,Routine Checkup,2
+P0671,V01612,Young,Diabetes,2
+P0671,V01612,Young,Metformin,2
+P0671,V01612,Young,Hypertension,2
+P0671,V01613,Young,Diabetes,2
+P0671,V01613,Young,Hypertension,2
+P0671,V01613,Young,Lisinopril,2
+P0671,V01613,Young,Allergy,2
+P0672,V01614,Senior,Diabetes,4
+P0672,V01614,Senior,Metformin,4
+P0672,V01615,Senior,Diabetes,4
+P0672,V01615,Senior,Metformin,4
+P0672,V01615,Senior,Kidney Disease,4
+P0672,V01616,Senior,Diabetes,4
+P0672,V01616,Senior,Metformin,4
+P0672,V01617,Senior,Diabetes,4
+P0672,V01617,Senior,Metformin,4
+P0673,V01618,Young,Asthma,2
+P0673,V01618,Young,Inhaler,2
+P0673,V01618,Young,Steroid,2
+P0673,V01619,Young,Asthma,2
+P0673,V01619,Young,Inhaler,2
+P0673,V01619,Young,Kidney Disease,2
+P0674,V01620,Adult,Routine Checkup,3
+P0674,V01621,Adult,Allergy,3
+P0674,V01622,Adult,Routine Checkup,3
+P0675,V01623,Adult,Routine Checkup,1
+P0676,V01624,Senior,Diabetes,3
+P0676,V01624,Senior,Metformin,3
+P0676,V01624,Senior,Hypertension,3
+P0676,V01624,Senior,Lisinopril,3
+P0676,V01624,Senior,Asthma,3
+P0676,V01624,Senior,Inhaler,3
+P0676,V01624,Senior,Steroid,3
+P0676,V01625,Senior,Diabetes,3
+P0676,V01625,Senior,Metformin,3
+P0676,V01625,Senior,Hypertension,3
+P0676,V01625,Senior,Lisinopril,3
+P0676,V01625,Senior,Asthma,3
+P0676,V01625,Senior,Inhaler,3
+P0676,V01625,Senior,Kidney Disease,3
+P0676,V01626,Senior,Diabetes,3
+P0676,V01626,Senior,Metformin,3
+P0676,V01626,Senior,Hypertension,3
+P0676,V01626,Senior,Lisinopril,3
+P0676,V01626,Senior,Asthma,3
+P0676,V01626,Senior,Inhaler,3
+P0677,V01627,Adult,Asthma,4
+P0677,V01627,Adult,Inhaler,4
+P0677,V01627,Adult,Steroid,4
+P0677,V01627,Adult,Allergy,4
+P0677,V01628,Adult,Asthma,4
+P0677,V01628,Adult,Inhaler,4
+P0677,V01629,Adult,Asthma,4
+P0677,V01629,Adult,Inhaler,4
+P0677,V01630,Adult,Asthma,4
+P0677,V01630,Adult,Inhaler,4
+P0677,V01630,Adult,Steroid,4
+P0678,V01631,Young,Routine Checkup,4
+P0678,V01632,Young,Routine Checkup,4
+P0678,V01633,Young,Routine Checkup,4
+P0678,V01634,Young,Routine Checkup,4
+P0679,V01635,Adult,Diabetes,1
+P0679,V01635,Adult,Hypertension,1
+P0679,V01635,Adult,Allergy,1
+P0680,V01636,Senior,Routine Checkup,3
+P0680,V01637,Senior,Routine Checkup,3
+P0680,V01638,Senior,Routine Checkup,3
+P0681,V01639,Adult,Kidney Disease,2
+P0681,V01640,Adult,Routine Checkup,2
+P0682,V01641,Senior,Heart Disease,2
+P0682,V01641,Senior,Statin,2
+P0682,V01641,Senior,Beta Blocker,2
+P0682,V01642,Senior,Heart Disease,2
+P0682,V01642,Senior,Statin,2
+P0682,V01642,Senior,Beta Blocker,2
+P0683,V01643,Senior,Asthma,3
+P0683,V01643,Senior,Inhaler,3
+P0683,V01643,Senior,Heart Disease,3
+P0683,V01643,Senior,Statin,3
+P0683,V01643,Senior,Beta Blocker,3
+P0683,V01644,Senior,Asthma,3
+P0683,V01644,Senior,Inhaler,3
+P0683,V01644,Senior,Steroid,3
+P0683,V01644,Senior,Heart Disease,3
+P0683,V01644,Senior,Statin,3
+P0683,V01645,Senior,Asthma,3
+P0683,V01645,Senior,Inhaler,3
+P0683,V01645,Senior,Steroid,3
+P0683,V01645,Senior,Heart Disease,3
+P0683,V01645,Senior,Statin,3
+P0683,V01645,Senior,Beta Blocker,3
+P0683,V01645,Senior,Kidney Disease,3
+P0684,V01646,Young,Hypertension,3
+P0684,V01647,Young,Hypertension,3
+P0684,V01648,Young,Hypertension,3
+P0684,V01648,Young,Lisinopril,3
+P0685,V01649,Senior,Diabetes,1
+P0685,V01649,Senior,Metformin,1
+P0685,V01649,Senior,Hypertension,1
+P0685,V01649,Senior,Heart Disease,1
+P0685,V01649,Senior,Statin,1
+P0685,V01649,Senior,Beta Blocker,1
+P0686,V01650,Senior,Asthma,4
+P0686,V01650,Senior,Inhaler,4
+P0686,V01650,Senior,Steroid,4
+P0686,V01651,Senior,Asthma,4
+P0686,V01651,Senior,Inhaler,4
+P0686,V01651,Senior,Steroid,4
+P0686,V01651,Senior,Allergy,4
+P0686,V01652,Senior,Asthma,4
+P0686,V01652,Senior,Inhaler,4
+P0686,V01652,Senior,Steroid,4
+P0686,V01652,Senior,Allergy,4
+P0686,V01653,Senior,Asthma,4
+P0686,V01653,Senior,Inhaler,4
+P0687,V01654,Young,Allergy,1
+P0688,V01655,Young,Routine Checkup,3
+P0688,V01656,Young,Routine Checkup,3
+P0688,V01657,Young,Routine Checkup,3
+P0689,V01658,Senior,Routine Checkup,2
+P0689,V01659,Senior,Routine Checkup,2
+P0690,V01660,Senior,Routine Checkup,4
+P0690,V01661,Senior,Routine Checkup,4
+P0690,V01662,Senior,Routine Checkup,4
+P0690,V01663,Senior,Routine Checkup,4
+P0691,V01664,Young,Routine Checkup,4
+P0691,V01665,Young,Routine Checkup,4
+P0691,V01666,Young,Routine Checkup,4
+P0691,V01667,Young,Routine Checkup,4
+P0692,V01668,Adult,Allergy,4
+P0692,V01669,Adult,Routine Checkup,4
+P0692,V01670,Adult,Routine Checkup,4
+P0692,V01671,Adult,Routine Checkup,4
+P0693,V01672,Senior,Hypertension,4
+P0693,V01672,Senior,Lisinopril,4
+P0693,V01673,Senior,Hypertension,4
+P0693,V01673,Senior,Lisinopril,4
+P0693,V01674,Senior,Hypertension,4
+P0693,V01674,Senior,Lisinopril,4
+P0693,V01675,Senior,Hypertension,4
+P0694,V01676,Adult,Asthma,2
+P0694,V01676,Adult,Inhaler,2
+P0694,V01677,Adult,Asthma,2
+P0694,V01677,Adult,Inhaler,2
+P0694,V01677,Adult,Steroid,2
+P0695,V01678,Adult,Asthma,2
+P0695,V01678,Adult,Inhaler,2
+P0695,V01678,Adult,Steroid,2
+P0695,V01679,Adult,Asthma,2
+P0695,V01679,Adult,Inhaler,2
+P0696,V01680,Young,Heart Disease,1
+P0696,V01680,Young,Statin,1
+P0696,V01680,Young,Beta Blocker,1
+P0697,V01681,Adult,Hypertension,1
+P0697,V01681,Adult,Allergy,1
+P0698,V01682,Young,Routine Checkup,3
+P0698,V01683,Young,Routine Checkup,3
+P0698,V01684,Young,Routine Checkup,3
+P0699,V01685,Senior,Heart Disease,4
+P0699,V01685,Senior,Statin,4
+P0699,V01685,Senior,Beta Blocker,4
+P0699,V01686,Senior,Heart Disease,4
+P0699,V01686,Senior,Statin,4
+P0699,V01687,Senior,Heart Disease,4
+P0699,V01687,Senior,Statin,4
+P0699,V01687,Senior,Allergy,4
+P0699,V01688,Senior,Heart Disease,4
+P0699,V01688,Senior,Statin,4
+P0699,V01688,Senior,Beta Blocker,4
+P0700,V01689,Young,Allergy,3
+P0700,V01689,Young,Kidney Disease,3
+P0700,V01690,Young,Allergy,3
+P0700,V01691,Young,Routine Checkup,3
+P0701,V01692,Young,Hypertension,2
+P0701,V01692,Young,Lisinopril,2
+P0701,V01692,Young,Heart Disease,2
+P0701,V01692,Young,Statin,2
+P0701,V01693,Young,Hypertension,2
+P0701,V01693,Young,Lisinopril,2
+P0701,V01693,Young,Heart Disease,2
+P0701,V01693,Young,Statin,2
+P0701,V01693,Young,Beta Blocker,2
+P0702,V01694,Senior,Allergy,3
+P0702,V01695,Senior,Routine Checkup,3
+P0702,V01696,Senior,Allergy,3
+P0703,V01697,Senior,Allergy,2
+P0703,V01698,Senior,Allergy,2
+P0704,V01699,Adult,Routine Checkup,1
+P0705,V01700,Adult,Hypertension,3
+P0705,V01700,Adult,Lisinopril,3
+P0705,V01700,Adult,Allergy,3
+P0705,V01701,Adult,Hypertension,3
+P0705,V01701,Adult,Lisinopril,3
+P0705,V01702,Adult,Hypertension,3
+P0705,V01702,Adult,Lisinopril,3
+P0705,V01702,Adult,Allergy,3
+P0706,V01703,Young,Routine Checkup,3
+P0706,V01704,Young,Routine Checkup,3
+P0706,V01705,Young,Routine Checkup,3
+P0707,V01706,Young,Heart Disease,1
+P0707,V01706,Young,Statin,1
+P0707,V01706,Young,Beta Blocker,1
+P0708,V01707,Young,Routine Checkup,3
+P0708,V01708,Young,Routine Checkup,3
+P0708,V01709,Young,Routine Checkup,3
+P0709,V01710,Adult,Routine Checkup,2
+P0709,V01711,Adult,Routine Checkup,2
+P0710,V01712,Senior,Diabetes,4
+P0710,V01712,Senior,Metformin,4
+P0710,V01712,Senior,Hypertension,4
+P0710,V01713,Senior,Diabetes,4
+P0710,V01713,Senior,Hypertension,4
+P0710,V01713,Senior,Lisinopril,4
+P0710,V01714,Senior,Diabetes,4
+P0710,V01714,Senior,Metformin,4
+P0710,V01714,Senior,Hypertension,4
+P0710,V01714,Senior,Lisinopril,4
+P0710,V01714,Senior,Kidney Disease,4
+P0710,V01715,Senior,Diabetes,4
+P0710,V01715,Senior,Metformin,4
+P0710,V01715,Senior,Hypertension,4
+P0710,V01715,Senior,Lisinopril,4
+P0711,V01716,Adult,Diabetes,4
+P0711,V01716,Adult,Hypertension,4
+P0711,V01716,Adult,Lisinopril,4
+P0711,V01717,Adult,Diabetes,4
+P0711,V01717,Adult,Metformin,4
+P0711,V01717,Adult,Hypertension,4
+P0711,V01717,Adult,Lisinopril,4
+P0711,V01718,Adult,Diabetes,4
+P0711,V01718,Adult,Metformin,4
+P0711,V01718,Adult,Hypertension,4
+P0711,V01719,Adult,Diabetes,4
+P0711,V01719,Adult,Hypertension,4
+P0711,V01719,Adult,Lisinopril,4
+P0711,V01719,Adult,Allergy,4
+P0712,V01720,Young,Diabetes,2
+P0712,V01720,Young,Metformin,2
+P0712,V01720,Young,Hypertension,2
+P0712,V01720,Young,Lisinopril,2
+P0712,V01720,Young,Allergy,2
+P0712,V01721,Young,Diabetes,2
+P0712,V01721,Young,Metformin,2
+P0712,V01721,Young,Hypertension,2
+P0712,V01721,Young,Lisinopril,2
+P0713,V01722,Young,Diabetes,4
+P0713,V01722,Young,Hypertension,4
+P0713,V01722,Young,Allergy,4
+P0713,V01723,Young,Diabetes,4
+P0713,V01723,Young,Metformin,4
+P0713,V01723,Young,Hypertension,4
+P0713,V01724,Young,Diabetes,4
+P0713,V01724,Young,Hypertension,4
+P0713,V01725,Young,Diabetes,4
+P0713,V01725,Young,Metformin,4
+P0713,V01725,Young,Hypertension,4
+P0713,V01725,Young,Lisinopril,4
+P0714,V01726,Senior,Heart Disease,4
+P0714,V01726,Senior,Statin,4
+P0714,V01726,Senior,Allergy,4
+P0714,V01727,Senior,Heart Disease,4
+P0714,V01727,Senior,Statin,4
+P0714,V01727,Senior,Beta Blocker,4
+P0714,V01728,Senior,Heart Disease,4
+P0714,V01728,Senior,Statin,4
+P0714,V01728,Senior,Allergy,4
+P0714,V01729,Senior,Heart Disease,4
+P0714,V01729,Senior,Statin,4
+P0714,V01729,Senior,Beta Blocker,4
+P0715,V01730,Senior,Asthma,1
+P0715,V01730,Senior,Inhaler,1
+P0716,V01731,Adult,Allergy,2
+P0716,V01732,Adult,Allergy,2
+P0717,V01733,Adult,Asthma,3
+P0717,V01733,Adult,Inhaler,3
+P0717,V01733,Adult,Steroid,3
+P0717,V01733,Adult,Allergy,3
+P0717,V01734,Adult,Asthma,3
+P0717,V01734,Adult,Inhaler,3
+P0717,V01734,Adult,Steroid,3
+P0717,V01735,Adult,Asthma,3
+P0717,V01735,Adult,Inhaler,3
+P0718,V01736,Senior,Asthma,1
+P0718,V01736,Senior,Inhaler,1
+P0718,V01736,Senior,Steroid,1
+P0718,V01736,Senior,Heart Disease,1
+P0718,V01736,Senior,Statin,1
+P0718,V01736,Senior,Beta Blocker,1
+P0719,V01737,Adult,Routine Checkup,3
+P0719,V01738,Adult,Allergy,3
+P0719,V01738,Adult,Kidney Disease,3
+P0719,V01739,Adult,Routine Checkup,3
+P0720,V01740,Senior,Asthma,4
+P0720,V01740,Senior,Inhaler,4
+P0720,V01740,Senior,Allergy,4
+P0720,V01740,Senior,Kidney Disease,4
+P0720,V01741,Senior,Asthma,4
+P0720,V01741,Senior,Inhaler,4
+P0720,V01742,Senior,Asthma,4
+P0720,V01742,Senior,Inhaler,4
+P0720,V01743,Senior,Asthma,4
+P0720,V01743,Senior,Inhaler,4
+P0721,V01744,Senior,Routine Checkup,4
+P0721,V01745,Senior,Routine Checkup,4
+P0721,V01746,Senior,Routine Checkup,4
+P0721,V01747,Senior,Routine Checkup,4
+P0722,V01748,Senior,Hypertension,4
+P0722,V01748,Senior,Lisinopril,4
+P0722,V01749,Senior,Hypertension,4
+P0722,V01750,Senior,Hypertension,4
+P0722,V01751,Senior,Hypertension,4
+P0722,V01751,Senior,Lisinopril,4
+P0723,V01752,Young,Asthma,3
+P0723,V01752,Young,Inhaler,3
+P0723,V01752,Young,Steroid,3
+P0723,V01753,Young,Asthma,3
+P0723,V01753,Young,Inhaler,3
+P0723,V01754,Young,Asthma,3
+P0723,V01754,Young,Inhaler,3
+P0724,V01755,Adult,Routine Checkup,1
+P0725,V01756,Senior,Routine Checkup,4
+P0725,V01757,Senior,Routine Checkup,4
+P0725,V01758,Senior,Routine Checkup,4
+P0725,V01759,Senior,Routine Checkup,4
+P0726,V01760,Adult,Routine Checkup,3
+P0726,V01761,Adult,Routine Checkup,3
+P0726,V01762,Adult,Routine Checkup,3
+P0727,V01763,Young,Allergy,1
+P0728,V01764,Senior,Asthma,3
+P0728,V01764,Senior,Inhaler,3
+P0728,V01764,Senior,Steroid,3
+P0728,V01765,Senior,Asthma,3
+P0728,V01765,Senior,Inhaler,3
+P0728,V01765,Senior,Allergy,3
+P0728,V01766,Senior,Asthma,3
+P0728,V01766,Senior,Inhaler,3
+P0728,V01766,Senior,Steroid,3
+P0729,V01767,Adult,Allergy,2
+P0729,V01768,Adult,Routine Checkup,2
+P0730,V01769,Adult,Routine Checkup,3
+P0730,V01770,Adult,Routine Checkup,3
+P0730,V01771,Adult,Allergy,3
+P0731,V01772,Adult,Heart Disease,2
+P0731,V01772,Adult,Statin,2
+P0731,V01772,Adult,Beta Blocker,2
+P0731,V01772,Adult,Allergy,2
+P0731,V01773,Adult,Heart Disease,2
+P0731,V01773,Adult,Statin,2
+P0731,V01773,Adult,Beta Blocker,2
+P0732,V01774,Adult,Asthma,2
+P0732,V01774,Adult,Inhaler,2
+P0732,V01774,Adult,Steroid,2
+P0732,V01775,Adult,Asthma,2
+P0732,V01775,Adult,Inhaler,2
+P0732,V01775,Adult,Allergy,2
+P0733,V01776,Adult,Routine Checkup,1
+P0734,V01777,Senior,Allergy,2
+P0734,V01777,Senior,Kidney Disease,2
+P0734,V01778,Senior,Routine Checkup,2
+P0735,V01779,Senior,Heart Disease,1
+P0735,V01779,Senior,Statin,1
+P0735,V01779,Senior,Beta Blocker,1
+P0736,V01780,Senior,Routine Checkup,3
+P0736,V01781,Senior,Routine Checkup,3
+P0736,V01782,Senior,Routine Checkup,3
+P0737,V01783,Senior,Diabetes,1
+P0737,V01783,Senior,Metformin,1
+P0737,V01783,Senior,Hypertension,1
+P0738,V01784,Senior,Routine Checkup,1
+P0739,V01785,Young,Routine Checkup,3
+P0739,V01786,Young,Routine Checkup,3
+P0739,V01787,Young,Routine Checkup,3
+P0740,V01788,Adult,Diabetes,4
+P0740,V01788,Adult,Hypertension,4
+P0740,V01788,Adult,Lisinopril,4
+P0740,V01788,Adult,Kidney Disease,4
+P0740,V01789,Adult,Diabetes,4
+P0740,V01789,Adult,Metformin,4
+P0740,V01789,Adult,Hypertension,4
+P0740,V01790,Adult,Diabetes,4
+P0740,V01790,Adult,Metformin,4
+P0740,V01790,Adult,Hypertension,4
+P0740,V01791,Adult,Diabetes,4
+P0740,V01791,Adult,Metformin,4
+P0740,V01791,Adult,Hypertension,4
+P0741,V01792,Senior,Routine Checkup,1
+P0742,V01793,Senior,Routine Checkup,1
+P0743,V01794,Senior,Routine Checkup,2
+P0743,V01795,Senior,Kidney Disease,2
+P0744,V01796,Senior,Diabetes,2
+P0744,V01796,Senior,Metformin,2
+P0744,V01796,Senior,Hypertension,2
+P0744,V01796,Senior,Heart Disease,2
+P0744,V01796,Senior,Statin,2
+P0744,V01796,Senior,Beta Blocker,2
+P0744,V01797,Senior,Diabetes,2
+P0744,V01797,Senior,Metformin,2
+P0744,V01797,Senior,Hypertension,2
+P0744,V01797,Senior,Heart Disease,2
+P0744,V01797,Senior,Statin,2
+P0744,V01797,Senior,Beta Blocker,2
+P0745,V01798,Young,Allergy,3
+P0745,V01799,Young,Routine Checkup,3
+P0745,V01800,Young,Allergy,3
+P0746,V01801,Young,Routine Checkup,1
+P0747,V01802,Adult,Routine Checkup,4
+P0747,V01803,Adult,Routine Checkup,4
+P0747,V01804,Adult,Allergy,4
+P0747,V01805,Adult,Routine Checkup,4
+P0748,V01806,Senior,Routine Checkup,4
+P0748,V01807,Senior,Routine Checkup,4
+P0748,V01808,Senior,Routine Checkup,4
+P0748,V01809,Senior,Routine Checkup,4
+P0749,V01810,Adult,Routine Checkup,1
+P0750,V01811,Senior,Diabetes,1
+P0750,V01811,Senior,Metformin,1
+P0750,V01811,Senior,Hypertension,1
+P0750,V01811,Senior,Lisinopril,1
+P0751,V01812,Senior,Hypertension,2
+P0751,V01812,Senior,Lisinopril,2
+P0751,V01813,Senior,Hypertension,2
+P0752,V01814,Senior,Diabetes,4
+P0752,V01814,Senior,Metformin,4
+P0752,V01814,Senior,Hypertension,4
+P0752,V01814,Senior,Heart Disease,4
+P0752,V01814,Senior,Statin,4
+P0752,V01814,Senior,Beta Blocker,4
+P0752,V01814,Senior,Allergy,4
+P0752,V01815,Senior,Diabetes,4
+P0752,V01815,Senior,Metformin,4
+P0752,V01815,Senior,Hypertension,4
+P0752,V01815,Senior,Lisinopril,4
+P0752,V01815,Senior,Heart Disease,4
+P0752,V01815,Senior,Statin,4
+P0752,V01815,Senior,Beta Blocker,4
+P0752,V01816,Senior,Diabetes,4
+P0752,V01816,Senior,Metformin,4
+P0752,V01816,Senior,Hypertension,4
+P0752,V01816,Senior,Lisinopril,4
+P0752,V01816,Senior,Heart Disease,4
+P0752,V01816,Senior,Statin,4
+P0752,V01817,Senior,Diabetes,4
+P0752,V01817,Senior,Metformin,4
+P0752,V01817,Senior,Hypertension,4
+P0752,V01817,Senior,Lisinopril,4
+P0752,V01817,Senior,Heart Disease,4
+P0752,V01817,Senior,Statin,4
+P0752,V01817,Senior,Beta Blocker,4
+P0753,V01818,Senior,Routine Checkup,2
+P0753,V01819,Senior,Kidney Disease,2
+P0754,V01820,Adult,Asthma,3
+P0754,V01820,Adult,Inhaler,3
+P0754,V01821,Adult,Asthma,3
+P0754,V01821,Adult,Inhaler,3
+P0754,V01821,Adult,Steroid,3
+P0754,V01822,Adult,Asthma,3
+P0754,V01822,Adult,Inhaler,3
+P0755,V01823,Adult,Routine Checkup,1
+P0756,V01824,Adult,Routine Checkup,3
+P0756,V01825,Adult,Routine Checkup,3
+P0756,V01826,Adult,Allergy,3
+P0757,V01827,Adult,Routine Checkup,2
+P0757,V01828,Adult,Routine Checkup,2
+P0758,V01829,Senior,Diabetes,1
+P0758,V01829,Senior,Metformin,1
+P0758,V01829,Senior,Hypertension,1
+P0758,V01829,Senior,Asthma,1
+P0758,V01829,Senior,Inhaler,1
+P0759,V01830,Young,Routine Checkup,2
+P0759,V01831,Young,Routine Checkup,2
+P0760,V01832,Adult,Hypertension,1
+P0760,V01832,Adult,Lisinopril,1
+P0761,V01833,Senior,Routine Checkup,2
+P0761,V01834,Senior,Routine Checkup,2
+P0762,V01835,Senior,Heart Disease,4
+P0762,V01835,Senior,Statin,4
+P0762,V01835,Senior,Beta Blocker,4
+P0762,V01835,Senior,Allergy,4
+P0762,V01836,Senior,Heart Disease,4
+P0762,V01836,Senior,Statin,4
+P0762,V01837,Senior,Heart Disease,4
+P0762,V01837,Senior,Statin,4
+P0762,V01838,Senior,Heart Disease,4
+P0762,V01838,Senior,Statin,4
+P0762,V01838,Senior,Beta Blocker,4
+P0763,V01839,Adult,Diabetes,2
+P0763,V01839,Adult,Hypertension,2
+P0763,V01840,Adult,Diabetes,2
+P0763,V01840,Adult,Metformin,2
+P0763,V01840,Adult,Hypertension,2
+P0763,V01840,Adult,Lisinopril,2
+P0763,V01840,Adult,Kidney Disease,2
+P0764,V01841,Adult,Routine Checkup,2
+P0764,V01842,Adult,Routine Checkup,2
+P0765,V01843,Adult,Routine Checkup,3
+P0765,V01844,Adult,Routine Checkup,3
+P0765,V01845,Adult,Routine Checkup,3
+P0766,V01846,Senior,Diabetes,1
+P0766,V01846,Senior,Metformin,1
+P0766,V01846,Senior,Hypertension,1
+P0766,V01846,Senior,Lisinopril,1
+P0766,V01846,Senior,Heart Disease,1
+P0766,V01846,Senior,Statin,1
+P0766,V01846,Senior,Beta Blocker,1
+P0767,V01847,Adult,Diabetes,1
+P0767,V01847,Adult,Hypertension,1
+P0768,V01848,Senior,Diabetes,3
+P0768,V01848,Senior,Metformin,3
+P0768,V01848,Senior,Hypertension,3
+P0768,V01848,Senior,Lisinopril,3
+P0768,V01848,Senior,Heart Disease,3
+P0768,V01848,Senior,Statin,3
+P0768,V01848,Senior,Beta Blocker,3
+P0768,V01849,Senior,Diabetes,3
+P0768,V01849,Senior,Metformin,3
+P0768,V01849,Senior,Hypertension,3
+P0768,V01849,Senior,Lisinopril,3
+P0768,V01849,Senior,Heart Disease,3
+P0768,V01849,Senior,Statin,3
+P0768,V01849,Senior,Beta Blocker,3
+P0768,V01849,Senior,Allergy,3
+P0768,V01850,Senior,Diabetes,3
+P0768,V01850,Senior,Metformin,3
+P0768,V01850,Senior,Hypertension,3
+P0768,V01850,Senior,Lisinopril,3
+P0768,V01850,Senior,Heart Disease,3
+P0768,V01850,Senior,Statin,3
+P0768,V01850,Senior,Beta Blocker,3
+P0769,V01851,Young,Diabetes,1
+P0769,V01851,Young,Metformin,1
+P0769,V01851,Young,Hypertension,1
+P0769,V01851,Young,Lisinopril,1
+P0770,V01852,Adult,Routine Checkup,3
+P0770,V01853,Adult,Routine Checkup,3
+P0770,V01854,Adult,Routine Checkup,3
+P0771,V01855,Adult,Routine Checkup,2
+P0771,V01856,Adult,Routine Checkup,2
+P0772,V01857,Young,Routine Checkup,2
+P0772,V01858,Young,Allergy,2
+P0773,V01859,Adult,Hypertension,1
+P0774,V01860,Senior,Diabetes,1
+P0774,V01860,Senior,Asthma,1
+P0774,V01860,Senior,Inhaler,1
+P0775,V01861,Senior,Routine Checkup,1
+P0776,V01862,Senior,Routine Checkup,4
+P0776,V01863,Senior,Routine Checkup,4
+P0776,V01864,Senior,Routine Checkup,4
+P0776,V01865,Senior,Routine Checkup,4
+P0777,V01866,Adult,Diabetes,2
+P0777,V01866,Adult,Metformin,2
+P0777,V01866,Adult,Hypertension,2
+P0777,V01866,Adult,Asthma,2
+P0777,V01866,Adult,Inhaler,2
+P0777,V01867,Adult,Diabetes,2
+P0777,V01867,Adult,Metformin,2
+P0777,V01867,Adult,Hypertension,2
+P0777,V01867,Adult,Asthma,2
+P0777,V01867,Adult,Inhaler,2
+P0778,V01868,Senior,Allergy,3
+P0778,V01869,Senior,Routine Checkup,3
+P0778,V01870,Senior,Routine Checkup,3
+P0779,V01871,Senior,Diabetes,4
+P0779,V01871,Senior,Metformin,4
+P0779,V01871,Senior,Hypertension,4
+P0779,V01871,Senior,Lisinopril,4
+P0779,V01872,Senior,Diabetes,4
+P0779,V01872,Senior,Metformin,4
+P0779,V01872,Senior,Hypertension,4
+P0779,V01872,Senior,Lisinopril,4
+P0779,V01873,Senior,Diabetes,4
+P0779,V01873,Senior,Metformin,4
+P0779,V01873,Senior,Hypertension,4
+P0779,V01874,Senior,Diabetes,4
+P0779,V01874,Senior,Hypertension,4
+P0780,V01875,Young,Hypertension,2
+P0780,V01875,Young,Lisinopril,2
+P0780,V01875,Young,Heart Disease,2
+P0780,V01875,Young,Statin,2
+P0780,V01875,Young,Beta Blocker,2
+P0780,V01876,Young,Hypertension,2
+P0780,V01876,Young,Lisinopril,2
+P0780,V01876,Young,Heart Disease,2
+P0780,V01876,Young,Statin,2
+P0780,V01876,Young,Beta Blocker,2
+P0780,V01876,Young,Allergy,2
+P0781,V01877,Adult,Routine Checkup,3
+P0781,V01878,Adult,Routine Checkup,3
+P0781,V01879,Adult,Routine Checkup,3
+P0782,V01880,Adult,Allergy,1
+P0783,V01881,Senior,Diabetes,1
+P0783,V01881,Senior,Metformin,1
+P0783,V01881,Senior,Hypertension,1
+P0783,V01881,Senior,Lisinopril,1
+P0784,V01882,Adult,Allergy,3
+P0784,V01883,Adult,Routine Checkup,3
+P0784,V01884,Adult,Routine Checkup,3
+P0785,V01885,Adult,Routine Checkup,4
+P0785,V01886,Adult,Routine Checkup,4
+P0785,V01887,Adult,Routine Checkup,4
+P0785,V01888,Adult,Routine Checkup,4
+P0786,V01889,Adult,Routine Checkup,2
+P0786,V01890,Adult,Routine Checkup,2
+P0787,V01891,Young,Diabetes,4
+P0787,V01891,Young,Metformin,4
+P0787,V01891,Young,Hypertension,4
+P0787,V01891,Young,Lisinopril,4
+P0787,V01891,Young,Allergy,4
+P0787,V01892,Young,Diabetes,4
+P0787,V01892,Young,Hypertension,4
+P0787,V01892,Young,Lisinopril,4
+P0787,V01893,Young,Diabetes,4
+P0787,V01893,Young,Metformin,4
+P0787,V01893,Young,Hypertension,4
+P0787,V01893,Young,Lisinopril,4
+P0787,V01894,Young,Diabetes,4
+P0787,V01894,Young,Hypertension,4
+P0787,V01894,Young,Lisinopril,4
+P0788,V01895,Adult,Hypertension,4
+P0788,V01895,Adult,Lisinopril,4
+P0788,V01896,Adult,Hypertension,4
+P0788,V01896,Adult,Lisinopril,4
+P0788,V01897,Adult,Hypertension,4
+P0788,V01897,Adult,Lisinopril,4
+P0788,V01897,Adult,Kidney Disease,4
+P0788,V01898,Adult,Hypertension,4
+P0788,V01898,Adult,Allergy,4
+P0789,V01899,Adult,Asthma,2
+P0789,V01899,Adult,Inhaler,2
+P0789,V01900,Adult,Asthma,2
+P0789,V01900,Adult,Inhaler,2
+P0790,V01901,Young,Hypertension,2
+P0790,V01901,Young,Lisinopril,2
+P0790,V01901,Young,Allergy,2
+P0790,V01902,Young,Hypertension,2
+P0791,V01903,Young,Hypertension,1
+P0792,V01904,Senior,Routine Checkup,3
+P0792,V01905,Senior,Allergy,3
+P0792,V01906,Senior,Allergy,3
+P0793,V01907,Adult,Asthma,4
+P0793,V01907,Adult,Inhaler,4
+P0793,V01907,Adult,Steroid,4
+P0793,V01908,Adult,Asthma,4
+P0793,V01908,Adult,Inhaler,4
+P0793,V01908,Adult,Steroid,4
+P0793,V01908,Adult,Allergy,4
+P0793,V01909,Adult,Asthma,4
+P0793,V01909,Adult,Inhaler,4
+P0793,V01910,Adult,Asthma,4
+P0793,V01910,Adult,Inhaler,4
+P0793,V01910,Adult,Steroid,4
+P0794,V01911,Young,Heart Disease,4
+P0794,V01911,Young,Statin,4
+P0794,V01911,Young,Beta Blocker,4
+P0794,V01912,Young,Heart Disease,4
+P0794,V01912,Young,Statin,4
+P0794,V01912,Young,Beta Blocker,4
+P0794,V01912,Young,Allergy,4
+P0794,V01913,Young,Heart Disease,4
+P0794,V01913,Young,Statin,4
+P0794,V01913,Young,Beta Blocker,4
+P0794,V01914,Young,Heart Disease,4
+P0794,V01914,Young,Statin,4
+P0794,V01914,Young,Beta Blocker,4
+P0795,V01915,Senior,Asthma,2
+P0795,V01915,Senior,Inhaler,2
+P0795,V01915,Senior,Steroid,2
+P0795,V01916,Senior,Asthma,2
+P0795,V01916,Senior,Inhaler,2
+P0795,V01916,Senior,Steroid,2
+P0795,V01916,Senior,Allergy,2
+P0796,V01917,Senior,Hypertension,2
+P0796,V01917,Senior,Lisinopril,2
+P0796,V01918,Senior,Hypertension,2
+P0796,V01918,Senior,Lisinopril,2
+P0797,V01919,Senior,Routine Checkup,4
+P0797,V01920,Senior,Routine Checkup,4
+P0797,V01921,Senior,Routine Checkup,4
+P0797,V01922,Senior,Routine Checkup,4
+P0798,V01923,Senior,Allergy,2
+P0798,V01924,Senior,Routine Checkup,2
+P0799,V01925,Senior,Diabetes,1
+P0799,V01925,Senior,Metformin,1
+P0799,V01925,Senior,Kidney Disease,1
+P0800,V01926,Adult,Routine Checkup,2
+P0800,V01927,Adult,Allergy,2
+P0801,V01928,Young,Routine Checkup,1
+P0802,V01929,Senior,Allergy,3
+P0802,V01930,Senior,Kidney Disease,3
+P0802,V01931,Senior,Routine Checkup,3
+P0803,V01932,Adult,Asthma,3
+P0803,V01932,Adult,Inhaler,3
+P0803,V01933,Adult,Asthma,3
+P0803,V01933,Adult,Inhaler,3
+P0803,V01933,Adult,Steroid,3
+P0803,V01933,Adult,Allergy,3
+P0803,V01934,Adult,Asthma,3
+P0803,V01934,Adult,Inhaler,3
+P0804,V01935,Adult,Hypertension,4
+P0804,V01935,Adult,Lisinopril,4
+P0804,V01936,Adult,Hypertension,4
+P0804,V01937,Adult,Hypertension,4
+P0804,V01937,Adult,Lisinopril,4
+P0804,V01937,Adult,Allergy,4
+P0804,V01938,Adult,Hypertension,4
+P0804,V01938,Adult,Lisinopril,4
+P0805,V01939,Adult,Routine Checkup,1
+P0806,V01940,Young,Asthma,4
+P0806,V01940,Young,Inhaler,4
+P0806,V01940,Young,Steroid,4
+P0806,V01941,Young,Asthma,4
+P0806,V01941,Young,Inhaler,4
+P0806,V01942,Young,Asthma,4
+P0806,V01942,Young,Inhaler,4
+P0806,V01942,Young,Allergy,4
+P0806,V01943,Young,Asthma,4
+P0806,V01943,Young,Inhaler,4
+P0806,V01943,Young,Steroid,4
+P0807,V01944,Young,Allergy,4
+P0807,V01945,Young,Routine Checkup,4
+P0807,V01946,Young,Allergy,4
+P0807,V01947,Young,Kidney Disease,4
+P0808,V01948,Senior,Diabetes,4
+P0808,V01948,Senior,Metformin,4
+P0808,V01948,Senior,Hypertension,4
+P0808,V01948,Senior,Lisinopril,4
+P0808,V01949,Senior,Diabetes,4
+P0808,V01949,Senior,Metformin,4
+P0808,V01949,Senior,Hypertension,4
+P0808,V01950,Senior,Diabetes,4
+P0808,V01950,Senior,Metformin,4
+P0808,V01950,Senior,Hypertension,4
+P0808,V01950,Senior,Lisinopril,4
+P0808,V01951,Senior,Diabetes,4
+P0808,V01951,Senior,Metformin,4
+P0808,V01951,Senior,Hypertension,4
+P0809,V01952,Senior,Hypertension,1
+P0809,V01952,Senior,Heart Disease,1
+P0809,V01952,Senior,Statin,1
+P0809,V01952,Senior,Beta Blocker,1
+P0809,V01952,Senior,Kidney Disease,1
+P0810,V01953,Senior,Asthma,1
+P0810,V01953,Senior,Inhaler,1
+P0810,V01953,Senior,Steroid,1
+P0810,V01953,Senior,Heart Disease,1
+P0810,V01953,Senior,Statin,1
+P0810,V01953,Senior,Beta Blocker,1
+P0810,V01953,Senior,Kidney Disease,1
+P0811,V01954,Adult,Routine Checkup,2
+P0811,V01955,Adult,Routine Checkup,2
+P0812,V01956,Senior,Asthma,3
+P0812,V01956,Senior,Inhaler,3
+P0812,V01956,Senior,Allergy,3
+P0812,V01957,Senior,Asthma,3
+P0812,V01957,Senior,Inhaler,3
+P0812,V01958,Senior,Asthma,3
+P0812,V01958,Senior,Inhaler,3
+P0813,V01959,Adult,Kidney Disease,3
+P0813,V01960,Adult,Routine Checkup,3
+P0813,V01961,Adult,Routine Checkup,3
+P0814,V01962,Senior,Hypertension,4
+P0814,V01962,Senior,Heart Disease,4
+P0814,V01962,Senior,Statin,4
+P0814,V01962,Senior,Beta Blocker,4
+P0814,V01962,Senior,Allergy,4
+P0814,V01963,Senior,Hypertension,4
+P0814,V01963,Senior,Lisinopril,4
+P0814,V01963,Senior,Heart Disease,4
+P0814,V01963,Senior,Statin,4
+P0814,V01963,Senior,Beta Blocker,4
+P0814,V01964,Senior,Hypertension,4
+P0814,V01964,Senior,Lisinopril,4
+P0814,V01964,Senior,Heart Disease,4
+P0814,V01964,Senior,Statin,4
+P0814,V01964,Senior,Beta Blocker,4
+P0814,V01965,Senior,Hypertension,4
+P0814,V01965,Senior,Lisinopril,4
+P0814,V01965,Senior,Heart Disease,4
+P0814,V01965,Senior,Statin,4
+P0814,V01965,Senior,Beta Blocker,4
+P0815,V01966,Adult,Allergy,2
+P0815,V01967,Adult,Routine Checkup,2
+P0816,V01968,Senior,Routine Checkup,2
+P0816,V01969,Senior,Allergy,2
+P0817,V01970,Adult,Diabetes,1
+P0817,V01970,Adult,Metformin,1
+P0817,V01970,Adult,Hypertension,1
+P0817,V01970,Adult,Lisinopril,1
+P0818,V01971,Adult,Diabetes,2
+P0818,V01971,Adult,Hypertension,2
+P0818,V01971,Adult,Lisinopril,2
+P0818,V01972,Adult,Diabetes,2
+P0818,V01972,Adult,Hypertension,2
+P0818,V01972,Adult,Lisinopril,2
+P0818,V01972,Adult,Allergy,2
+P0819,V01973,Senior,Hypertension,3
+P0819,V01974,Senior,Hypertension,3
+P0819,V01975,Senior,Hypertension,3
+P0819,V01975,Senior,Lisinopril,3
+P0820,V01976,Young,Routine Checkup,2
+P0820,V01977,Young,Routine Checkup,2
+P0821,V01978,Senior,Allergy,4
+P0821,V01979,Senior,Kidney Disease,4
+P0821,V01980,Senior,Allergy,4
+P0821,V01981,Senior,Routine Checkup,4
+P0822,V01982,Senior,Heart Disease,4
+P0822,V01982,Senior,Statin,4
+P0822,V01982,Senior,Beta Blocker,4
+P0822,V01983,Senior,Heart Disease,4
+P0822,V01983,Senior,Statin,4
+P0822,V01984,Senior,Heart Disease,4
+P0822,V01984,Senior,Statin,4
+P0822,V01985,Senior,Heart Disease,4
+P0822,V01985,Senior,Statin,4
+P0822,V01985,Senior,Beta Blocker,4
+P0823,V01986,Adult,Routine Checkup,1
+P0824,V01987,Adult,Hypertension,1
+P0824,V01987,Adult,Lisinopril,1
+P0825,V01988,Senior,Routine Checkup,4
+P0825,V01989,Senior,Allergy,4
+P0825,V01990,Senior,Routine Checkup,4
+P0825,V01991,Senior,Routine Checkup,4
+P0826,V01992,Senior,Heart Disease,2
+P0826,V01992,Senior,Statin,2
+P0826,V01992,Senior,Beta Blocker,2
+P0826,V01993,Senior,Heart Disease,2
+P0826,V01993,Senior,Statin,2
+P0826,V01993,Senior,Beta Blocker,2
+P0827,V01994,Adult,Routine Checkup,2
+P0827,V01995,Adult,Allergy,2
+P0828,V01996,Young,Routine Checkup,3
+P0828,V01997,Young,Routine Checkup,3
+P0828,V01998,Young,Routine Checkup,3
+P0829,V01999,Senior,Diabetes,4
+P0829,V01999,Senior,Metformin,4
+P0829,V01999,Senior,Hypertension,4
+P0829,V01999,Senior,Lisinopril,4
+P0829,V01999,Senior,Asthma,4
+P0829,V01999,Senior,Inhaler,4
+P0829,V01999,Senior,Steroid,4
+P0829,V01999,Senior,Allergy,4
+P0829,V02000,Senior,Diabetes,4
+P0829,V02000,Senior,Hypertension,4
+P0829,V02000,Senior,Lisinopril,4
+P0829,V02000,Senior,Asthma,4
+P0829,V02000,Senior,Inhaler,4
+P0829,V02000,Senior,Steroid,4
+P0829,V02001,Senior,Diabetes,4
+P0829,V02001,Senior,Hypertension,4
+P0829,V02001,Senior,Asthma,4
+P0829,V02001,Senior,Inhaler,4
+P0829,V02002,Senior,Diabetes,4
+P0829,V02002,Senior,Metformin,4
+P0829,V02002,Senior,Hypertension,4
+P0829,V02002,Senior,Lisinopril,4
+P0829,V02002,Senior,Asthma,4
+P0829,V02002,Senior,Inhaler,4
+P0829,V02002,Senior,Steroid,4
+P0829,V02002,Senior,Allergy,4
+P0830,V02003,Senior,Heart Disease,3
+P0830,V02003,Senior,Statin,3
+P0830,V02003,Senior,Beta Blocker,3
+P0830,V02004,Senior,Heart Disease,3
+P0830,V02004,Senior,Statin,3
+P0830,V02004,Senior,Beta Blocker,3
+P0830,V02005,Senior,Heart Disease,3
+P0830,V02005,Senior,Statin,3
+P0830,V02005,Senior,Beta Blocker,3
+P0830,V02005,Senior,Allergy,3
+P0831,V02006,Young,Routine Checkup,2
+P0831,V02007,Young,Routine Checkup,2
+P0832,V02008,Senior,Asthma,3
+P0832,V02008,Senior,Inhaler,3
+P0832,V02008,Senior,Steroid,3
+P0832,V02008,Senior,Allergy,3
+P0832,V02009,Senior,Asthma,3
+P0832,V02009,Senior,Inhaler,3
+P0832,V02009,Senior,Steroid,3
+P0832,V02010,Senior,Asthma,3
+P0832,V02010,Senior,Inhaler,3
+P0832,V02010,Senior,Allergy,3
+P0833,V02011,Young,Allergy,4
+P0833,V02011,Young,Kidney Disease,4
+P0833,V02012,Young,Routine Checkup,4
+P0833,V02013,Young,Routine Checkup,4
+P0833,V02014,Young,Routine Checkup,4
+P0834,V02015,Adult,Routine Checkup,4
+P0834,V02016,Adult,Routine Checkup,4
+P0834,V02017,Adult,Routine Checkup,4
+P0834,V02018,Adult,Routine Checkup,4
+P0835,V02019,Senior,Diabetes,1
+P0835,V02019,Senior,Metformin,1
+P0835,V02019,Senior,Hypertension,1
+P0835,V02019,Senior,Lisinopril,1
+P0836,V02020,Senior,Heart Disease,3
+P0836,V02020,Senior,Statin,3
+P0836,V02020,Senior,Beta Blocker,3
+P0836,V02020,Senior,Allergy,3
+P0836,V02021,Senior,Heart Disease,3
+P0836,V02021,Senior,Statin,3
+P0836,V02021,Senior,Beta Blocker,3
+P0836,V02021,Senior,Allergy,3
+P0836,V02022,Senior,Heart Disease,3
+P0836,V02022,Senior,Statin,3
+P0836,V02022,Senior,Beta Blocker,3
+P0836,V02022,Senior,Allergy,3
+P0837,V02023,Adult,Allergy,3
+P0837,V02024,Adult,Routine Checkup,3
+P0837,V02025,Adult,Routine Checkup,3
+P0838,V02026,Senior,Routine Checkup,2
+P0838,V02027,Senior,Routine Checkup,2
+P0839,V02028,Adult,Routine Checkup,2
+P0839,V02029,Adult,Allergy,2
+P0840,V02030,Adult,Routine Checkup,2
+P0840,V02031,Adult,Routine Checkup,2
+P0841,V02032,Senior,Hypertension,1
+P0841,V02032,Senior,Asthma,1
+P0841,V02032,Senior,Inhaler,1
+P0841,V02032,Senior,Heart Disease,1
+P0841,V02032,Senior,Statin,1
+P0841,V02032,Senior,Beta Blocker,1
+P0842,V02033,Senior,Diabetes,4
+P0842,V02033,Senior,Metformin,4
+P0842,V02033,Senior,Hypertension,4
+P0842,V02033,Senior,Lisinopril,4
+P0842,V02033,Senior,Heart Disease,4
+P0842,V02033,Senior,Statin,4
+P0842,V02033,Senior,Beta Blocker,4
+P0842,V02034,Senior,Diabetes,4
+P0842,V02034,Senior,Metformin,4
+P0842,V02034,Senior,Hypertension,4
+P0842,V02034,Senior,Lisinopril,4
+P0842,V02034,Senior,Heart Disease,4
+P0842,V02034,Senior,Statin,4
+P0842,V02034,Senior,Beta Blocker,4
+P0842,V02034,Senior,Allergy,4
+P0842,V02035,Senior,Diabetes,4
+P0842,V02035,Senior,Hypertension,4
+P0842,V02035,Senior,Heart Disease,4
+P0842,V02035,Senior,Statin,4
+P0842,V02035,Senior,Beta Blocker,4
+P0842,V02036,Senior,Diabetes,4
+P0842,V02036,Senior,Metformin,4
+P0842,V02036,Senior,Hypertension,4
+P0842,V02036,Senior,Lisinopril,4
+P0842,V02036,Senior,Heart Disease,4
+P0842,V02036,Senior,Statin,4
+P0842,V02036,Senior,Beta Blocker,4
+P0843,V02037,Senior,Routine Checkup,4
+P0843,V02038,Senior,Routine Checkup,4
+P0843,V02039,Senior,Allergy,4
+P0843,V02040,Senior,Routine Checkup,4
+P0844,V02041,Young,Routine Checkup,4
+P0844,V02042,Young,Routine Checkup,4
+P0844,V02043,Young,Routine Checkup,4
+P0844,V02044,Young,Allergy,4
+P0845,V02045,Adult,Heart Disease,3
+P0845,V02045,Adult,Statin,3
+P0845,V02045,Adult,Beta Blocker,3
+P0845,V02046,Adult,Heart Disease,3
+P0845,V02046,Adult,Statin,3
+P0845,V02046,Adult,Beta Blocker,3
+P0845,V02047,Adult,Heart Disease,3
+P0845,V02047,Adult,Statin,3
+P0845,V02047,Adult,Beta Blocker,3
+P0846,V02048,Adult,Routine Checkup,2
+P0846,V02049,Adult,Routine Checkup,2
+P0847,V02050,Senior,Routine Checkup,3
+P0847,V02051,Senior,Routine Checkup,3
+P0847,V02052,Senior,Routine Checkup,3
+P0848,V02053,Senior,Asthma,2
+P0848,V02053,Senior,Inhaler,2
+P0848,V02053,Senior,Heart Disease,2
+P0848,V02053,Senior,Statin,2
+P0848,V02054,Senior,Asthma,2
+P0848,V02054,Senior,Inhaler,2
+P0848,V02054,Senior,Heart Disease,2
+P0848,V02054,Senior,Statin,2
+P0848,V02054,Senior,Beta Blocker,2
+P0849,V02055,Senior,Diabetes,2
+P0849,V02055,Senior,Metformin,2
+P0849,V02055,Senior,Hypertension,2
+P0849,V02056,Senior,Diabetes,2
+P0849,V02056,Senior,Metformin,2
+P0849,V02056,Senior,Hypertension,2
+P0850,V02057,Adult,Allergy,4
+P0850,V02057,Adult,Kidney Disease,4
+P0850,V02058,Adult,Allergy,4
+P0850,V02059,Adult,Routine Checkup,4
+P0850,V02060,Adult,Routine Checkup,4
+P0851,V02061,Adult,Routine Checkup,3
+P0851,V02062,Adult,Routine Checkup,3
+P0851,V02063,Adult,Kidney Disease,3
+P0852,V02064,Senior,Diabetes,2
+P0852,V02064,Senior,Metformin,2
+P0852,V02064,Senior,Hypertension,2
+P0852,V02065,Senior,Diabetes,2
+P0852,V02065,Senior,Metformin,2
+P0852,V02065,Senior,Hypertension,2
+P0852,V02065,Senior,Lisinopril,2
+P0853,V02066,Senior,Diabetes,1
+P0853,V02066,Senior,Metformin,1
+P0853,V02066,Senior,Hypertension,1
+P0854,V02067,Young,Routine Checkup,1
+P0855,V02068,Young,Routine Checkup,3
+P0855,V02069,Young,Routine Checkup,3
+P0855,V02070,Young,Routine Checkup,3
+P0856,V02071,Young,Routine Checkup,2
+P0856,V02072,Young,Routine Checkup,2
+P0857,V02073,Senior,Diabetes,1
+P0857,V02073,Senior,Metformin,1
+P0857,V02073,Senior,Hypertension,1
+P0857,V02073,Senior,Lisinopril,1
+P0857,V02073,Senior,Heart Disease,1
+P0857,V02073,Senior,Statin,1
+P0858,V02074,Adult,Routine Checkup,4
+P0858,V02075,Adult,Routine Checkup,4
+P0858,V02076,Adult,Routine Checkup,4
+P0858,V02077,Adult,Allergy,4
+P0859,V02078,Senior,Routine Checkup,3
+P0859,V02079,Senior,Routine Checkup,3
+P0859,V02080,Senior,Routine Checkup,3
+P0860,V02081,Adult,Routine Checkup,3
+P0860,V02082,Adult,Routine Checkup,3
+P0860,V02083,Adult,Routine Checkup,3
+P0861,V02084,Senior,Hypertension,2
+P0861,V02084,Senior,Lisinopril,2
+P0861,V02085,Senior,Hypertension,2
+P0862,V02086,Young,Diabetes,3
+P0862,V02086,Young,Metformin,3
+P0862,V02086,Young,Hypertension,3
+P0862,V02086,Young,Lisinopril,3
+P0862,V02086,Young,Allergy,3
+P0862,V02087,Young,Diabetes,3
+P0862,V02087,Young,Metformin,3
+P0862,V02087,Young,Hypertension,3
+P0862,V02087,Young,Lisinopril,3
+P0862,V02088,Young,Diabetes,3
+P0862,V02088,Young,Hypertension,3
+P0862,V02088,Young,Lisinopril,3
+P0863,V02089,Young,Allergy,1
+P0864,V02090,Adult,Routine Checkup,2
+P0864,V02091,Adult,Allergy,2
+P0865,V02092,Senior,Routine Checkup,4
+P0865,V02093,Senior,Routine Checkup,4
+P0865,V02094,Senior,Routine Checkup,4
+P0865,V02095,Senior,Allergy,4
+P0865,V02095,Senior,Kidney Disease,4
+P0866,V02096,Adult,Routine Checkup,3
+P0866,V02097,Adult,Routine Checkup,3
+P0866,V02098,Adult,Routine Checkup,3
+P0867,V02099,Senior,Diabetes,2
+P0867,V02099,Senior,Metformin,2
+P0867,V02100,Senior,Diabetes,2
+P0867,V02100,Senior,Metformin,2
+P0868,V02101,Senior,Diabetes,1
+P0868,V02101,Senior,Metformin,1
+P0869,V02102,Young,Hypertension,4
+P0869,V02103,Young,Hypertension,4
+P0869,V02103,Young,Lisinopril,4
+P0869,V02104,Young,Hypertension,4
+P0869,V02105,Young,Hypertension,4
+P0869,V02105,Young,Lisinopril,4
+P0870,V02106,Adult,Asthma,2
+P0870,V02106,Adult,Inhaler,2
+P0870,V02106,Adult,Steroid,2
+P0870,V02106,Adult,Allergy,2
+P0870,V02107,Adult,Asthma,2
+P0870,V02107,Adult,Inhaler,2
+P0870,V02107,Adult,Steroid,2
+P0870,V02107,Adult,Allergy,2
+P0871,V02108,Adult,Hypertension,3
+P0871,V02108,Adult,Lisinopril,3
+P0871,V02108,Adult,Allergy,3
+P0871,V02109,Adult,Hypertension,3
+P0871,V02109,Adult,Lisinopril,3
+P0871,V02109,Adult,Allergy,3
+P0871,V02110,Adult,Hypertension,3
+P0871,V02110,Adult,Lisinopril,3
+P0872,V02111,Young,Hypertension,2
+P0872,V02111,Young,Lisinopril,2
+P0872,V02111,Young,Asthma,2
+P0872,V02111,Young,Inhaler,2
+P0872,V02112,Young,Hypertension,2
+P0872,V02112,Young,Lisinopril,2
+P0872,V02112,Young,Asthma,2
+P0872,V02112,Young,Inhaler,2
+P0872,V02112,Young,Steroid,2
+P0872,V02112,Young,Allergy,2
+P0873,V02113,Senior,Heart Disease,2
+P0873,V02113,Senior,Statin,2
+P0873,V02113,Senior,Beta Blocker,2
+P0873,V02114,Senior,Heart Disease,2
+P0873,V02114,Senior,Statin,2
+P0874,V02115,Senior,Diabetes,4
+P0874,V02115,Senior,Hypertension,4
+P0874,V02115,Senior,Lisinopril,4
+P0874,V02115,Senior,Asthma,4
+P0874,V02115,Senior,Inhaler,4
+P0874,V02115,Senior,Steroid,4
+P0874,V02116,Senior,Diabetes,4
+P0874,V02116,Senior,Metformin,4
+P0874,V02116,Senior,Hypertension,4
+P0874,V02116,Senior,Lisinopril,4
+P0874,V02116,Senior,Asthma,4
+P0874,V02116,Senior,Inhaler,4
+P0874,V02117,Senior,Diabetes,4
+P0874,V02117,Senior,Metformin,4
+P0874,V02117,Senior,Hypertension,4
+P0874,V02117,Senior,Lisinopril,4
+P0874,V02117,Senior,Asthma,4
+P0874,V02117,Senior,Inhaler,4
+P0874,V02118,Senior,Diabetes,4
+P0874,V02118,Senior,Metformin,4
+P0874,V02118,Senior,Hypertension,4
+P0874,V02118,Senior,Asthma,4
+P0874,V02118,Senior,Inhaler,4
+P0874,V02118,Senior,Steroid,4
+P0875,V02119,Adult,Diabetes,4
+P0875,V02119,Adult,Hypertension,4
+P0875,V02119,Adult,Lisinopril,4
+P0875,V02120,Adult,Diabetes,4
+P0875,V02120,Adult,Metformin,4
+P0875,V02120,Adult,Hypertension,4
+P0875,V02120,Adult,Lisinopril,4
+P0875,V02121,Adult,Diabetes,4
+P0875,V02121,Adult,Hypertension,4
+P0875,V02122,Adult,Diabetes,4
+P0875,V02122,Adult,Metformin,4
+P0875,V02122,Adult,Hypertension,4
+P0875,V02122,Adult,Lisinopril,4
+P0876,V02123,Adult,Routine Checkup,3
+P0876,V02124,Adult,Routine Checkup,3
+P0876,V02125,Adult,Kidney Disease,3
+P0877,V02126,Adult,Hypertension,4
+P0877,V02126,Adult,Lisinopril,4
+P0877,V02127,Adult,Hypertension,4
+P0877,V02127,Adult,Lisinopril,4
+P0877,V02128,Adult,Hypertension,4
+P0877,V02128,Adult,Lisinopril,4
+P0877,V02128,Adult,Kidney Disease,4
+P0877,V02129,Adult,Hypertension,4
+P0877,V02129,Adult,Lisinopril,4
+P0878,V02130,Senior,Routine Checkup,3
+P0878,V02131,Senior,Routine Checkup,3
+P0878,V02132,Senior,Routine Checkup,3
+P0879,V02133,Young,Allergy,4
+P0879,V02134,Young,Routine Checkup,4
+P0879,V02135,Young,Routine Checkup,4
+P0879,V02136,Young,Allergy,4
+P0880,V02137,Young,Routine Checkup,2
+P0880,V02138,Young,Allergy,2
+P0881,V02139,Senior,Hypertension,3
+P0881,V02139,Senior,Asthma,3
+P0881,V02139,Senior,Inhaler,3
+P0881,V02139,Senior,Steroid,3
+P0881,V02140,Senior,Hypertension,3
+P0881,V02140,Senior,Lisinopril,3
+P0881,V02140,Senior,Asthma,3
+P0881,V02140,Senior,Inhaler,3
+P0881,V02141,Senior,Hypertension,3
+P0881,V02141,Senior,Lisinopril,3
+P0881,V02141,Senior,Asthma,3
+P0881,V02141,Senior,Inhaler,3
+P0882,V02142,Senior,Hypertension,4
+P0882,V02143,Senior,Hypertension,4
+P0882,V02143,Senior,Lisinopril,4
+P0882,V02144,Senior,Hypertension,4
+P0882,V02144,Senior,Lisinopril,4
+P0882,V02145,Senior,Hypertension,4
+P0882,V02145,Senior,Allergy,4
+P0883,V02146,Senior,Routine Checkup,4
+P0883,V02147,Senior,Allergy,4
+P0883,V02148,Senior,Allergy,4
+P0883,V02149,Senior,Allergy,4
+P0884,V02150,Senior,Routine Checkup,2
+P0884,V02151,Senior,Allergy,2
+P0885,V02152,Senior,Diabetes,4
+P0885,V02152,Senior,Metformin,4
+P0885,V02153,Senior,Diabetes,4
+P0885,V02153,Senior,Metformin,4
+P0885,V02154,Senior,Diabetes,4
+P0885,V02154,Senior,Metformin,4
+P0885,V02155,Senior,Diabetes,4
+P0885,V02155,Senior,Metformin,4
+P0886,V02156,Adult,Hypertension,3
+P0886,V02156,Adult,Lisinopril,3
+P0886,V02157,Adult,Hypertension,3
+P0886,V02157,Adult,Allergy,3
+P0886,V02158,Adult,Hypertension,3
+P0887,V02159,Senior,Routine Checkup,1
+P0888,V02160,Senior,Routine Checkup,3
+P0888,V02161,Senior,Routine Checkup,3
+P0888,V02162,Senior,Routine Checkup,3
+P0889,V02163,Young,Diabetes,4
+P0889,V02163,Young,Metformin,4
+P0889,V02163,Young,Hypertension,4
+P0889,V02163,Young,Lisinopril,4
+P0889,V02163,Young,Allergy,4
+P0889,V02164,Young,Diabetes,4
+P0889,V02164,Young,Metformin,4
+P0889,V02164,Young,Hypertension,4
+P0889,V02164,Young,Allergy,4
+P0889,V02165,Young,Diabetes,4
+P0889,V02165,Young,Hypertension,4
+P0889,V02165,Young,Lisinopril,4
+P0889,V02166,Young,Diabetes,4
+P0889,V02166,Young,Metformin,4
+P0889,V02166,Young,Hypertension,4
+P0889,V02166,Young,Lisinopril,4
+P0890,V02167,Adult,Routine Checkup,2
+P0890,V02168,Adult,Routine Checkup,2
+P0891,V02169,Adult,Routine Checkup,1
+P0892,V02170,Adult,Hypertension,3
+P0892,V02170,Adult,Lisinopril,3
+P0892,V02171,Adult,Hypertension,3
+P0892,V02171,Adult,Lisinopril,3
+P0892,V02172,Adult,Hypertension,3
+P0892,V02172,Adult,Lisinopril,3
+P0893,V02173,Adult,Hypertension,2
+P0893,V02173,Adult,Allergy,2
+P0893,V02174,Adult,Hypertension,2
+P0893,V02174,Adult,Lisinopril,2
+P0894,V02175,Young,Routine Checkup,3
+P0894,V02176,Young,Routine Checkup,3
+P0894,V02177,Young,Allergy,3
+P0895,V02178,Young,Routine Checkup,3
+P0895,V02179,Young,Routine Checkup,3
+P0895,V02180,Young,Allergy,3
+P0896,V02181,Adult,Routine Checkup,1
+P0897,V02182,Senior,Routine Checkup,2
+P0897,V02183,Senior,Routine Checkup,2
+P0898,V02184,Adult,Routine Checkup,4
+P0898,V02185,Adult,Routine Checkup,4
+P0898,V02186,Adult,Allergy,4
+P0898,V02187,Adult,Routine Checkup,4
+P0899,V02188,Senior,Routine Checkup,3
+P0899,V02189,Senior,Routine Checkup,3
+P0899,V02190,Senior,Allergy,3
+P0900,V02191,Young,Hypertension,2
+P0900,V02191,Young,Lisinopril,2
+P0900,V02192,Young,Hypertension,2
+P0901,V02193,Adult,Routine Checkup,4
+P0901,V02194,Adult,Kidney Disease,4
+P0901,V02195,Adult,Allergy,4
+P0901,V02196,Adult,Kidney Disease,4
+P0902,V02197,Young,Routine Checkup,2
+P0902,V02198,Young,Allergy,2
+P0903,V02199,Senior,Routine Checkup,3
+P0903,V02200,Senior,Routine Checkup,3
+P0903,V02201,Senior,Kidney Disease,3
+P0904,V02202,Senior,Routine Checkup,1
+P0905,V02203,Senior,Diabetes,2
+P0905,V02203,Senior,Hypertension,2
+P0905,V02203,Senior,Allergy,2
+P0905,V02204,Senior,Diabetes,2
+P0905,V02204,Senior,Metformin,2
+P0905,V02204,Senior,Hypertension,2
+P0905,V02204,Senior,Allergy,2
+P0906,V02205,Adult,Asthma,1
+P0906,V02205,Adult,Inhaler,1
+P0906,V02205,Adult,Steroid,1
+P0907,V02206,Adult,Hypertension,3
+P0907,V02207,Adult,Hypertension,3
+P0907,V02207,Adult,Lisinopril,3
+P0907,V02207,Adult,Allergy,3
+P0907,V02208,Adult,Hypertension,3
+P0908,V02209,Young,Hypertension,4
+P0908,V02210,Young,Hypertension,4
+P0908,V02210,Young,Lisinopril,4
+P0908,V02211,Young,Hypertension,4
+P0908,V02212,Young,Hypertension,4
+P0908,V02212,Young,Lisinopril,4
+P0909,V02213,Senior,Routine Checkup,4
+P0909,V02214,Senior,Routine Checkup,4
+P0909,V02215,Senior,Routine Checkup,4
+P0909,V02216,Senior,Allergy,4
+P0910,V02217,Young,Asthma,1
+P0910,V02217,Young,Inhaler,1
+P0911,V02218,Young,Allergy,3
+P0911,V02219,Young,Routine Checkup,3
+P0911,V02220,Young,Routine Checkup,3
+P0912,V02221,Adult,Routine Checkup,4
+P0912,V02222,Adult,Allergy,4
+P0912,V02223,Adult,Allergy,4
+P0912,V02223,Adult,Kidney Disease,4
+P0912,V02224,Adult,Allergy,4
+P0913,V02225,Senior,Routine Checkup,4
+P0913,V02226,Senior,Routine Checkup,4
+P0913,V02227,Senior,Routine Checkup,4
+P0913,V02228,Senior,Routine Checkup,4
+P0914,V02229,Senior,Kidney Disease,1
+P0915,V02230,Adult,Hypertension,1
+P0915,V02230,Adult,Lisinopril,1
+P0915,V02230,Adult,Allergy,1
+P0916,V02231,Adult,Allergy,4
+P0916,V02232,Adult,Routine Checkup,4
+P0916,V02233,Adult,Routine Checkup,4
+P0916,V02234,Adult,Routine Checkup,4
+P0917,V02235,Adult,Hypertension,3
+P0917,V02235,Adult,Lisinopril,3
+P0917,V02235,Adult,Allergy,3
+P0917,V02236,Adult,Hypertension,3
+P0917,V02237,Adult,Hypertension,3
+P0917,V02237,Adult,Lisinopril,3
+P0918,V02238,Adult,Asthma,4
+P0918,V02238,Adult,Inhaler,4
+P0918,V02238,Adult,Steroid,4
+P0918,V02239,Adult,Asthma,4
+P0918,V02239,Adult,Inhaler,4
+P0918,V02240,Adult,Asthma,4
+P0918,V02240,Adult,Inhaler,4
+P0918,V02240,Adult,Steroid,4
+P0918,V02241,Adult,Asthma,4
+P0918,V02241,Adult,Inhaler,4
+P0918,V02241,Adult,Steroid,4
+P0919,V02242,Senior,Diabetes,4
+P0919,V02242,Senior,Metformin,4
+P0919,V02243,Senior,Diabetes,4
+P0919,V02243,Senior,Metformin,4
+P0919,V02244,Senior,Diabetes,4
+P0919,V02244,Senior,Metformin,4
+P0919,V02244,Senior,Allergy,4
+P0919,V02245,Senior,Diabetes,4
+P0919,V02245,Senior,Metformin,4
+P0920,V02246,Young,Routine Checkup,2
+P0920,V02247,Young,Allergy,2
+P0921,V02248,Senior,Diabetes,4
+P0921,V02248,Senior,Metformin,4
+P0921,V02248,Senior,Heart Disease,4
+P0921,V02248,Senior,Statin,4
+P0921,V02248,Senior,Beta Blocker,4
+P0921,V02249,Senior,Diabetes,4
+P0921,V02249,Senior,Metformin,4
+P0921,V02249,Senior,Heart Disease,4
+P0921,V02249,Senior,Statin,4
+P0921,V02249,Senior,Beta Blocker,4
+P0921,V02250,Senior,Diabetes,4
+P0921,V02250,Senior,Metformin,4
+P0921,V02250,Senior,Heart Disease,4
+P0921,V02250,Senior,Statin,4
+P0921,V02250,Senior,Beta Blocker,4
+P0921,V02251,Senior,Diabetes,4
+P0921,V02251,Senior,Metformin,4
+P0921,V02251,Senior,Heart Disease,4
+P0921,V02251,Senior,Statin,4
+P0921,V02251,Senior,Beta Blocker,4
+P0922,V02252,Senior,Routine Checkup,2
+P0922,V02253,Senior,Allergy,2
+P0923,V02254,Senior,Heart Disease,4
+P0923,V02254,Senior,Statin,4
+P0923,V02254,Senior,Beta Blocker,4
+P0923,V02255,Senior,Heart Disease,4
+P0923,V02255,Senior,Statin,4
+P0923,V02255,Senior,Beta Blocker,4
+P0923,V02255,Senior,Allergy,4
+P0923,V02256,Senior,Heart Disease,4
+P0923,V02256,Senior,Statin,4
+P0923,V02256,Senior,Beta Blocker,4
+P0923,V02257,Senior,Heart Disease,4
+P0923,V02257,Senior,Statin,4
+P0923,V02257,Senior,Beta Blocker,4
+P0924,V02258,Young,Hypertension,4
+P0924,V02258,Young,Lisinopril,4
+P0924,V02258,Young,Allergy,4
+P0924,V02259,Young,Hypertension,4
+P0924,V02260,Young,Hypertension,4
+P0924,V02261,Young,Hypertension,4
+P0925,V02262,Senior,Kidney Disease,2
+P0925,V02263,Senior,Routine Checkup,2
+P0926,V02264,Young,Allergy,3
+P0926,V02265,Young,Routine Checkup,3
+P0926,V02266,Young,Routine Checkup,3
+P0927,V02267,Adult,Diabetes,1
+P0927,V02267,Adult,Metformin,1
+P0927,V02267,Adult,Hypertension,1
+P0927,V02267,Adult,Allergy,1
+P0928,V02268,Young,Routine Checkup,3
+P0928,V02269,Young,Routine Checkup,3
+P0928,V02270,Young,Routine Checkup,3
+P0929,V02271,Senior,Routine Checkup,4
+P0929,V02272,Senior,Routine Checkup,4
+P0929,V02273,Senior,Routine Checkup,4
+P0929,V02274,Senior,Routine Checkup,4
+P0930,V02275,Young,Allergy,4
+P0930,V02276,Young,Allergy,4
+P0930,V02277,Young,Routine Checkup,4
+P0930,V02278,Young,Allergy,4
+P0931,V02279,Senior,Allergy,1
+P0932,V02280,Adult,Allergy,1
+P0933,V02281,Senior,Routine Checkup,2
+P0933,V02282,Senior,Allergy,2
+P0933,V02282,Senior,Kidney Disease,2
+P0934,V02283,Adult,Hypertension,2
+P0934,V02284,Adult,Hypertension,2
+P0934,V02284,Adult,Lisinopril,2
+P0935,V02285,Senior,Diabetes,1
+P0935,V02285,Senior,Hypertension,1
+P0935,V02285,Senior,Lisinopril,1
+P0936,V02286,Senior,Allergy,3
+P0936,V02287,Senior,Routine Checkup,3
+P0936,V02288,Senior,Allergy,3
+P0937,V02289,Adult,Asthma,1
+P0937,V02289,Adult,Inhaler,1
+P0937,V02289,Adult,Steroid,1
+P0937,V02289,Adult,Allergy,1
+P0938,V02290,Adult,Allergy,3
+P0938,V02291,Adult,Allergy,3
+P0938,V02292,Adult,Allergy,3
+P0939,V02293,Adult,Hypertension,4
+P0939,V02293,Adult,Allergy,4
+P0939,V02294,Adult,Hypertension,4
+P0939,V02294,Adult,Lisinopril,4
+P0939,V02295,Adult,Hypertension,4
+P0939,V02295,Adult,Lisinopril,4
+P0939,V02296,Adult,Hypertension,4
+P0939,V02296,Adult,Lisinopril,4
+P0939,V02296,Adult,Kidney Disease,4
+P0940,V02297,Young,Hypertension,3
+P0940,V02297,Young,Allergy,3
+P0940,V02298,Young,Hypertension,3
+P0940,V02298,Young,Lisinopril,3
+P0940,V02298,Young,Allergy,3
+P0940,V02299,Young,Hypertension,3
+P0940,V02299,Young,Kidney Disease,3
+P0941,V02300,Senior,Diabetes,1
+P0941,V02300,Senior,Metformin,1
+P0941,V02300,Senior,Hypertension,1
+P0941,V02300,Senior,Lisinopril,1
+P0941,V02300,Senior,Heart Disease,1
+P0941,V02300,Senior,Statin,1
+P0941,V02300,Senior,Beta Blocker,1
+P0942,V02301,Young,Heart Disease,1
+P0942,V02301,Young,Statin,1
+P0942,V02301,Young,Beta Blocker,1
+P0943,V02302,Senior,Routine Checkup,2
+P0943,V02303,Senior,Allergy,2
+P0944,V02304,Young,Routine Checkup,1
+P0945,V02305,Adult,Routine Checkup,3
+P0945,V02306,Adult,Allergy,3
+P0945,V02307,Adult,Routine Checkup,3
+P0946,V02308,Senior,Diabetes,3
+P0946,V02308,Senior,Metformin,3
+P0946,V02308,Senior,Hypertension,3
+P0946,V02308,Senior,Asthma,3
+P0946,V02308,Senior,Inhaler,3
+P0946,V02308,Senior,Steroid,3
+P0946,V02309,Senior,Diabetes,3
+P0946,V02309,Senior,Metformin,3
+P0946,V02309,Senior,Hypertension,3
+P0946,V02309,Senior,Lisinopril,3
+P0946,V02309,Senior,Asthma,3
+P0946,V02309,Senior,Inhaler,3
+P0946,V02310,Senior,Diabetes,3
+P0946,V02310,Senior,Hypertension,3
+P0946,V02310,Senior,Lisinopril,3
+P0946,V02310,Senior,Asthma,3
+P0946,V02310,Senior,Inhaler,3
+P0946,V02310,Senior,Steroid,3
+P0946,V02310,Senior,Allergy,3
+P0947,V02311,Senior,Asthma,3
+P0947,V02311,Senior,Inhaler,3
+P0947,V02311,Senior,Heart Disease,3
+P0947,V02311,Senior,Statin,3
+P0947,V02311,Senior,Beta Blocker,3
+P0947,V02311,Senior,Allergy,3
+P0947,V02312,Senior,Asthma,3
+P0947,V02312,Senior,Inhaler,3
+P0947,V02312,Senior,Steroid,3
+P0947,V02312,Senior,Heart Disease,3
+P0947,V02312,Senior,Statin,3
+P0947,V02312,Senior,Beta Blocker,3
+P0947,V02313,Senior,Asthma,3
+P0947,V02313,Senior,Inhaler,3
+P0947,V02313,Senior,Heart Disease,3
+P0947,V02313,Senior,Statin,3
+P0947,V02313,Senior,Beta Blocker,3
+P0948,V02314,Adult,Routine Checkup,1
+P0949,V02315,Adult,Routine Checkup,3
+P0949,V02316,Adult,Allergy,3
+P0949,V02317,Adult,Routine Checkup,3
+P0950,V02318,Senior,Kidney Disease,1
+P0951,V02319,Senior,Routine Checkup,2
+P0951,V02320,Senior,Allergy,2
+P0952,V02321,Senior,Routine Checkup,3
+P0952,V02322,Senior,Routine Checkup,3
+P0952,V02323,Senior,Routine Checkup,3
+P0953,V02324,Senior,Diabetes,3
+P0953,V02324,Senior,Metformin,3
+P0953,V02325,Senior,Diabetes,3
+P0953,V02326,Senior,Diabetes,3
+P0954,V02327,Senior,Hypertension,2
+P0954,V02327,Senior,Lisinopril,2
+P0954,V02328,Senior,Hypertension,2
+P0955,V02329,Young,Routine Checkup,2
+P0955,V02330,Young,Routine Checkup,2
+P0956,V02331,Young,Allergy,4
+P0956,V02332,Young,Routine Checkup,4
+P0956,V02333,Young,Routine Checkup,4
+P0956,V02334,Young,Routine Checkup,4
+P0957,V02335,Senior,Hypertension,1
+P0957,V02335,Senior,Lisinopril,1
+P0957,V02335,Senior,Heart Disease,1
+P0957,V02335,Senior,Statin,1
+P0957,V02335,Senior,Beta Blocker,1
+P0958,V02336,Senior,Routine Checkup,2
+P0958,V02337,Senior,Routine Checkup,2
+P0959,V02338,Senior,Diabetes,2
+P0959,V02338,Senior,Hypertension,2
+P0959,V02338,Senior,Lisinopril,2
+P0959,V02338,Senior,Allergy,2
+P0959,V02339,Senior,Diabetes,2
+P0959,V02339,Senior,Hypertension,2
+P0960,V02340,Senior,Allergy,2
+P0960,V02341,Senior,Routine Checkup,2
+P0961,V02342,Adult,Hypertension,3
+P0961,V02342,Adult,Allergy,3
+P0961,V02343,Adult,Hypertension,3
+P0961,V02343,Adult,Lisinopril,3
+P0961,V02344,Adult,Hypertension,3
+P0961,V02344,Adult,Lisinopril,3
+P0962,V02345,Young,Asthma,1
+P0962,V02345,Young,Inhaler,1
+P0962,V02345,Young,Steroid,1
+P0963,V02346,Adult,Routine Checkup,4
+P0963,V02347,Adult,Routine Checkup,4
+P0963,V02348,Adult,Allergy,4
+P0963,V02349,Adult,Routine Checkup,4
+P0964,V02350,Adult,Allergy,3
+P0964,V02351,Adult,Allergy,3
+P0964,V02352,Adult,Routine Checkup,3
+P0965,V02353,Senior,Heart Disease,2
+P0965,V02353,Senior,Statin,2
+P0965,V02354,Senior,Heart Disease,2
+P0965,V02354,Senior,Statin,2
+P0966,V02355,Senior,Routine Checkup,1
+P0967,V02356,Adult,Routine Checkup,1
+P0968,V02357,Adult,Routine Checkup,2
+P0968,V02358,Adult,Routine Checkup,2
+P0969,V02359,Senior,Diabetes,2
+P0969,V02359,Senior,Metformin,2
+P0969,V02359,Senior,Allergy,2
+P0969,V02360,Senior,Diabetes,2
+P0969,V02360,Senior,Metformin,2
+P0970,V02361,Adult,Routine Checkup,1
+P0971,V02362,Adult,Hypertension,4
+P0971,V02362,Adult,Lisinopril,4
+P0971,V02362,Adult,Asthma,4
+P0971,V02362,Adult,Inhaler,4
+P0971,V02362,Adult,Steroid,4
+P0971,V02363,Adult,Hypertension,4
+P0971,V02363,Adult,Lisinopril,4
+P0971,V02363,Adult,Asthma,4
+P0971,V02363,Adult,Inhaler,4
+P0971,V02364,Adult,Hypertension,4
+P0971,V02364,Adult,Lisinopril,4
+P0971,V02364,Adult,Asthma,4
+P0971,V02364,Adult,Inhaler,4
+P0971,V02364,Adult,Allergy,4
+P0971,V02365,Adult,Hypertension,4
+P0971,V02365,Adult,Lisinopril,4
+P0971,V02365,Adult,Asthma,4
+P0971,V02365,Adult,Inhaler,4
+P0971,V02365,Adult,Steroid,4
+P0972,V02366,Adult,Diabetes,1
+P0972,V02366,Adult,Metformin,1
+P0972,V02366,Adult,Hypertension,1
+P0973,V02367,Adult,Hypertension,1
+P0973,V02367,Adult,Lisinopril,1
+P0974,V02368,Adult,Asthma,2
+P0974,V02368,Adult,Inhaler,2
+P0974,V02368,Adult,Steroid,2
+P0974,V02368,Adult,Allergy,2
+P0974,V02369,Adult,Asthma,2
+P0974,V02369,Adult,Inhaler,2
+P0975,V02370,Senior,Diabetes,2
+P0975,V02370,Senior,Metformin,2
+P0975,V02370,Senior,Hypertension,2
+P0975,V02370,Senior,Heart Disease,2
+P0975,V02370,Senior,Statin,2
+P0975,V02371,Senior,Diabetes,2
+P0975,V02371,Senior,Metformin,2
+P0975,V02371,Senior,Hypertension,2
+P0975,V02371,Senior,Lisinopril,2
+P0975,V02371,Senior,Heart Disease,2
+P0975,V02371,Senior,Statin,2
+P0975,V02371,Senior,Beta Blocker,2
+P0976,V02372,Young,Asthma,1
+P0976,V02372,Young,Inhaler,1
+P0977,V02373,Senior,Routine Checkup,1
+P0978,V02374,Senior,Routine Checkup,4
+P0978,V02375,Senior,Allergy,4
+P0978,V02376,Senior,Allergy,4
+P0978,V02377,Senior,Routine Checkup,4
+P0979,V02378,Young,Diabetes,1
+P0979,V02378,Young,Hypertension,1
+P0980,V02379,Young,Routine Checkup,2
+P0980,V02380,Young,Routine Checkup,2
+P0981,V02381,Adult,Hypertension,3
+P0981,V02381,Adult,Kidney Disease,3
+P0981,V02382,Adult,Hypertension,3
+P0981,V02382,Adult,Lisinopril,3
+P0981,V02383,Adult,Hypertension,3
+P0981,V02383,Adult,Lisinopril,3
+P0982,V02384,Young,Routine Checkup,4
+P0982,V02385,Young,Allergy,4
+P0982,V02386,Young,Routine Checkup,4
+P0982,V02387,Young,Routine Checkup,4
+P0983,V02388,Adult,Routine Checkup,4
+P0983,V02389,Adult,Routine Checkup,4
+P0983,V02390,Adult,Routine Checkup,4
+P0983,V02391,Adult,Routine Checkup,4
+P0984,V02392,Senior,Diabetes,4
+P0984,V02392,Senior,Asthma,4
+P0984,V02392,Senior,Inhaler,4
+P0984,V02392,Senior,Steroid,4
+P0984,V02393,Senior,Diabetes,4
+P0984,V02393,Senior,Metformin,4
+P0984,V02393,Senior,Asthma,4
+P0984,V02393,Senior,Inhaler,4
+P0984,V02393,Senior,Allergy,4
+P0984,V02394,Senior,Diabetes,4
+P0984,V02394,Senior,Metformin,4
+P0984,V02394,Senior,Asthma,4
+P0984,V02394,Senior,Inhaler,4
+P0984,V02394,Senior,Allergy,4
+P0984,V02395,Senior,Diabetes,4
+P0984,V02395,Senior,Metformin,4
+P0984,V02395,Senior,Asthma,4
+P0984,V02395,Senior,Inhaler,4
+P0985,V02396,Senior,Heart Disease,3
+P0985,V02396,Senior,Statin,3
+P0985,V02396,Senior,Beta Blocker,3
+P0985,V02397,Senior,Heart Disease,3
+P0985,V02397,Senior,Statin,3
+P0985,V02397,Senior,Beta Blocker,3
+P0985,V02398,Senior,Heart Disease,3
+P0985,V02398,Senior,Statin,3
+P0985,V02398,Senior,Beta Blocker,3
+P0985,V02398,Senior,Allergy,3
+P0986,V02399,Adult,Hypertension,4
+P0986,V02399,Adult,Lisinopril,4
+P0986,V02400,Adult,Hypertension,4
+P0986,V02400,Adult,Allergy,4
+P0986,V02401,Adult,Hypertension,4
+P0986,V02402,Adult,Hypertension,4
+P0986,V02402,Adult,Lisinopril,4
+P0986,V02402,Adult,Allergy,4
+P0987,V02403,Senior,Allergy,1
+P0988,V02404,Adult,Hypertension,2
+P0988,V02405,Adult,Hypertension,2
+P0988,V02405,Adult,Lisinopril,2
+P0988,V02405,Adult,Allergy,2
+P0989,V02406,Adult,Diabetes,4
+P0989,V02406,Adult,Hypertension,4
+P0989,V02407,Adult,Diabetes,4
+P0989,V02407,Adult,Metformin,4
+P0989,V02407,Adult,Hypertension,4
+P0989,V02407,Adult,Lisinopril,4
+P0989,V02408,Adult,Diabetes,4
+P0989,V02408,Adult,Metformin,4
+P0989,V02408,Adult,Hypertension,4
+P0989,V02408,Adult,Lisinopril,4
+P0989,V02409,Adult,Diabetes,4
+P0989,V02409,Adult,Hypertension,4
+P0990,V02410,Senior,Hypertension,4
+P0990,V02410,Senior,Heart Disease,4
+P0990,V02410,Senior,Statin,4
+P0990,V02410,Senior,Beta Blocker,4
+P0990,V02411,Senior,Hypertension,4
+P0990,V02411,Senior,Lisinopril,4
+P0990,V02411,Senior,Heart Disease,4
+P0990,V02411,Senior,Statin,4
+P0990,V02411,Senior,Allergy,4
+P0990,V02412,Senior,Hypertension,4
+P0990,V02412,Senior,Lisinopril,4
+P0990,V02412,Senior,Heart Disease,4
+P0990,V02412,Senior,Statin,4
+P0990,V02413,Senior,Hypertension,4
+P0990,V02413,Senior,Lisinopril,4
+P0990,V02413,Senior,Heart Disease,4
+P0990,V02413,Senior,Statin,4
+P0990,V02413,Senior,Beta Blocker,4
+P0991,V02414,Senior,Routine Checkup,4
+P0991,V02415,Senior,Routine Checkup,4
+P0991,V02416,Senior,Routine Checkup,4
+P0991,V02417,Senior,Allergy,4
+P0992,V02418,Adult,Routine Checkup,1
+P0993,V02419,Young,Routine Checkup,2
+P0993,V02420,Young,Routine Checkup,2
+P0994,V02421,Senior,Routine Checkup,3
+P0994,V02422,Senior,Routine Checkup,3
+P0994,V02423,Senior,Routine Checkup,3
+P0995,V02424,Young,Routine Checkup,2
+P0995,V02425,Young,Routine Checkup,2
+P0996,V02426,Senior,Allergy,4
+P0996,V02427,Senior,Routine Checkup,4
+P0996,V02428,Senior,Routine Checkup,4
+P0996,V02429,Senior,Routine Checkup,4
+P0997,V02430,Senior,Diabetes,4
+P0997,V02430,Senior,Heart Disease,4
+P0997,V02430,Senior,Statin,4
+P0997,V02430,Senior,Beta Blocker,4
+P0997,V02430,Senior,Allergy,4
+P0997,V02431,Senior,Diabetes,4
+P0997,V02431,Senior,Metformin,4
+P0997,V02431,Senior,Heart Disease,4
+P0997,V02431,Senior,Statin,4
+P0997,V02431,Senior,Beta Blocker,4
+P0997,V02431,Senior,Allergy,4
+P0997,V02432,Senior,Diabetes,4
+P0997,V02432,Senior,Heart Disease,4
+P0997,V02432,Senior,Statin,4
+P0997,V02432,Senior,Beta Blocker,4
+P0997,V02433,Senior,Diabetes,4
+P0997,V02433,Senior,Heart Disease,4
+P0997,V02433,Senior,Statin,4
+P0997,V02433,Senior,Beta Blocker,4
+P0998,V02434,Senior,Diabetes,1
+P0998,V02434,Senior,Metformin,1
+P0998,V02434,Senior,Hypertension,1
+P0999,V02435,Adult,Routine Checkup,2
+P0999,V02436,Adult,Allergy,2
+P0999,V02436,Adult,Kidney Disease,2
+P1000,V02437,Adult,Hypertension,4
+P1000,V02437,Adult,Lisinopril,4
+P1000,V02438,Adult,Hypertension,4
+P1000,V02438,Adult,Lisinopril,4
+P1000,V02439,Adult,Hypertension,4
+P1000,V02439,Adult,Lisinopril,4
+P1000,V02440,Adult,Hypertension,4
+P1000,V02440,Adult,Lisinopril,4
