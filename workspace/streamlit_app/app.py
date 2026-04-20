@@ -239,25 +239,27 @@ with col1:
     </div>
     """)
     
-    st_html("""
-    <div class="glass-card">
-        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 15px;">
-            <h3 style="margin:0;">Data Exploration & Visualization</h3>
-            <span style="font-size:12px; color:#0f172a; font-weight:600; background:#f8fafc; padding:4px 10px; border-radius:15px; border:1px solid #e2e8f0; cursor:pointer;">View All</span>
-        </div>
-        <div style="display:flex; gap:10px; overflow-x:auto;">
-            <div style="flex:1; text-align:center; background:#fff; padding:15px 5px; border-radius:15px; box-shadow:0 2px 10px rgba(0,0,0,0.05); border:1px solid #f1f5f9;">
-                <div style="font-size:32px; margin-bottom:5px;">👨‍⚕️</div>
-                <div style="font-size:12px; font-weight:700; color:#0f172a;">Dr. Daniel Lewis</div>
-                <div style="font-size:10px; color:#64748b;">Oncologist</div>
-                <div style="font-size:9px; font-weight:600; color:#0f172a; margin-top:5px; background:#f1f5f9; border-radius:10px; display:inline-block; padding:2px 6px;">Exp. 25 yrs</div>
-            </div>
-            <div style="flex:1; text-align:center; background:#fff; padding:15px 5px; border-radius:15px; box-shadow:0 2px 10px rgba(0,0,0,0.05); border:1px solid #f1f5f9;">
-                <div style="font-size:32px; margin-bottom:5px;">👩‍⚕️</div>
-                <div style="font-size:12px; font-weight:700; color:#0f172a;">Dr. Grace Walker</div>
-                <div style="font-size:10px; color:#64748b;">Cardiologist</div>
-                <div style="font-size:9px; font-weight:600; color:#0f172a; margin-top:5px; background:#f1f5f9; border-radius:10px; display:inline-block; padding:2px 6px;">Exp. 5 yrs</div>
-            </div>
+    import base64
+    modal_img_path = os.path.join(base_path, "visualizations", "demographic_patterns.png")
+    try:
+        with open(modal_img_path, "rb") as img_file:
+            encoded_modal_img = base64.b64encode(img_file.read()).decode("utf-8")
+        modal_img_src = f"data:image/png;base64,{encoded_modal_img}"
+    except FileNotFoundError:
+        modal_img_src = ""
+
+    st_html(f"""
+    <!-- 3D Anchor Button -->
+    <div onclick="document.getElementById('demoModal').style.display='flex'" class="glass-card" style="cursor: pointer; text-align: center; padding: 30px 20px; transition: transform 0.3s ease, box-shadow 0.3s ease; transform-style: preserve-3d; perspective: 1000px; border: 1px solid rgba(255,255,255,0.6);" onmouseover="this.style.transform='scale(1.03) translateY(-5px)'; this.style.boxShadow='0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)'" onmouseout="this.style.transform='scale(1) translateY(0)'; this.style.boxShadow='0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)'">
+        <div style="font-size: 42px; margin-bottom: 15px; transform: translateZ(20px);">👥</div>
+        <h3 style="margin:0; font-size:18px; font-weight: 700; color: #0f172a; transform: translateZ(10px);">Top Demographic Comorbidity Patterns</h3>
+        <div style="margin-top:12px; display:inline-block; font-size:12px; color:#fff; background:#0f172a; padding:6px 16px; border-radius:20px; font-weight: 600; transform: translateZ(5px);">Click to View Analytics</div>
+    </div>
+
+    <!-- Modal Overlay -->
+    <div id="demoModal" style="display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(255, 255, 255, 0.2); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); z-index: 999999; align-items: center; justify-content: center; cursor: pointer;" onclick="this.style.display='none'">
+        <div style="position: relative; max-width: 90%; max-height: 90%; display:flex; flex-direction:column; align-items:center;">
+            <img src="{modal_img_src}" style="max-width: 100%; max-height: 85vh; border-radius: 20px; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); object-fit: contain; background: transparent;">
         </div>
     </div>
     """)
