@@ -239,15 +239,6 @@ with col1:
     </div>
     """)
     
-    import base64
-    modal_img_path = os.path.join(base_path, "visualizations", "demographic_patterns.jpg")
-    try:
-        with open(modal_img_path, "rb") as img_file:
-            encoded_modal_img = base64.b64encode(img_file.read()).decode("utf-8")
-        modal_img_src = f"data:image/jpeg;base64,{encoded_modal_img}"
-    except FileNotFoundError:
-        modal_img_src = ""
-
     st_html(f"""
     <!-- 3D Anchor Button -->
     <div id="demoBtn" class="glass-card" style="cursor: pointer; text-align: center; padding: 15px; transition: transform 0.3s ease, box-shadow 0.3s ease; transform-style: preserve-3d; perspective: 1000px; border: 1px solid rgba(255,255,255,0.6);">
@@ -257,8 +248,83 @@ with col1:
 
     <!-- Modal Overlay -->
     <div id="demoModal" style="display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(255, 255, 255, 0.2); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); z-index: 999999; align-items: center; justify-content: center; cursor: pointer;">
-        <div style="position: relative; max-width: 90%; max-height: 90%; display:flex; flex-direction:column; align-items:center;">
-            <img src="{modal_img_src}" style="max-width: 100%; max-height: 85vh; border-radius: 20px; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); object-fit: contain; background: transparent;">
+        <div style="background: rgba(255, 255, 255, 0.95); box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); border-radius: 16px; padding: 25px; width: 650px; max-width: 90%; cursor: default; position: relative;" onclick="event.stopPropagation();">
+            
+            <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #e2e8f0; padding-bottom: 15px;">
+                <h2 style="margin: 0; font-size: 20px; font-weight: 700; color: #0f172a;">Top Demographic Comorbidity Patterns</h2>
+                <div style="font-size: 24px;">🧍‍♂️</div>
+            </div>
+
+            <table style="width: 100%; border-collapse: collapse; margin-top: 15px; font-family: 'Inter', sans-serif;">
+                <tr style="background: #475569; color: white;">
+                    <th style="padding: 10px; text-align: left; border-top-left-radius: 8px; font-size: 13px;">Rule</th>
+                    <th style="padding: 10px; text-align: left; font-size: 13px;">Meaning</th>
+                    <th style="padding: 10px; text-align: left; border-top-right-radius: 8px; font-size: 13px;">Lift</th>
+                </tr>
+                <tr style="background: #f8fafc; border-bottom: 1px solid #e2e8f0;">
+                    <td style="padding: 10px; color: #0f172a; font-weight: 500; font-size: 12px;">🩸 Blood Type A+ &rarr; Hypertension</td>
+                    <td style="padding: 10px; color: #334155; font-size: 12px;">Seniors with Type A+ are higher risk [cite: 112]</td>
+                    <td style="padding: 10px; color: #334155; font-size: 12px;">Lift: 1.62 <br><span style="font-size:10px; color:#64748b;">[cite: 177, 163]</span></td>
+                </tr>
+                <tr style="background: #ffffff; border-bottom: 1px solid #e2e8f0;">
+                    <td style="padding: 10px; color: #0f172a; font-weight: 500; font-size: 12px;">👴 Weight &gt; 90kg &rarr; Diabetes</td>
+                    <td style="padding: 10px; color: #334155; font-size: 12px;">Weight is a key progression indicator [cite: 60]</td>
+                    <td style="padding: 10px; color: #334155; font-size: 12px;">Lift: 1.45 <br><span style="font-size:10px; color:#64748b;">[cite: 170]</span></td>
+                </tr>
+                <tr style="background: #f8fafc; border-bottom: 1px solid #e2e8f0;">
+                    <td style="padding: 10px; color: #0f172a; font-weight: 500; font-size: 12px;">👨‍🦳 {{Age &gt; 60, Diabetes}} &rarr; Hypertension</td>
+                    <td style="padding: 10px; color: #334155; font-size: 12px;">{{Age &gt; 60, Diabetes}} pattern with hypertension [cite: 62]</td>
+                    <td style="padding: 10px; color: #334155; font-size: 12px;">Lift: 1.37 <br><span style="font-size:10px; color:#64748b;">[cite: 161, 163]</span></td>
+                </tr>
+            </table>
+
+            <div style="display: flex; gap: 20px; margin-top: 20px; align-items: stretch;">
+                <!-- SVG Flowchart -->
+                <div style="flex: 2; position: relative; height: 180px; background: #f1f5f9; border-radius: 8px; border: 1px solid #e2e8f0; overflow: hidden;">
+                    <svg width="100%" height="100%" style="position: absolute; top:0; left:0; z-index: 1;">
+                        <defs>
+                            <marker id="arrowhead" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+                                <polygon points="0 0, 6 3, 0 6" fill="#94a3b8" />
+                            </marker>
+                        </defs>
+                        <!-- Age to Diabetes -->
+                        <line x1="80" y1="90" x2="220" y2="40" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrowhead)" />
+                        <!-- Age to Hypertension -->
+                        <line x1="80" y1="90" x2="220" y2="90" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrowhead)" />
+                        <!-- Diabetes to Hypertension -->
+                        <line x1="260" y1="55" x2="260" y2="75" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrowhead)" />
+                        <!-- Hypertension to Statin -->
+                        <path d="M 230 105 C 200 120, 200 135, 230 145" stroke="#94a3b8" stroke-width="2" fill="none" marker-end="url(#arrowhead)" />
+                        
+                        <!-- Labels -->
+                        <text x="140" y="55" fill="#475569" font-size="10" font-family="Inter" font-weight="600" transform="rotate(-18 140 55)">lift = 0.88</text>
+                        <text x="140" y="85" fill="#475569" font-size="10" font-family="Inter" font-weight="600">lift = 0.37</text>
+                        <text x="265" y="70" fill="#475569" font-size="10" font-family="Inter" font-weight="600">lift: 1.45</text>
+                    </svg>
+                    
+                    <!-- Nodes -->
+                    <div style="position: absolute; top: 75px; left: 15px; background: #3b82f6; color: white; padding: 6px 12px; border-radius: 20px; font-size: 11px; font-weight: 600; z-index: 2; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);">Age &gt; 60</div>
+                    <div style="position: absolute; top: 25px; left: 220px; background: #3b82f6; color: white; padding: 6px 12px; border-radius: 20px; font-size: 11px; font-weight: 600; z-index: 2; width: 80px; text-align: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);">Diabetes</div>
+                    <div style="position: absolute; top: 75px; left: 220px; background: #3b82f6; color: white; padding: 6px 12px; border-radius: 20px; font-size: 11px; font-weight: 600; z-index: 2; width: 80px; text-align: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);">Hypertension</div>
+                    <div style="position: absolute; top: 135px; left: 235px; background: #3b82f6; color: white; padding: 6px 12px; border-radius: 20px; font-size: 11px; font-weight: 600; z-index: 2; width: 50px; text-align: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);">Statin</div>
+                </div>
+
+                <!-- Key Rule Summary -->
+                <div style="flex: 1; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 15px; display: flex; flex-direction: column; justify-content: center;">
+                    <div style="font-weight: 700; font-size: 12px; color: #0f172a; margin-bottom: 8px;">Key Rule summary</div>
+                    <ul style="margin: 0; padding-left: 15px; font-size: 10px; color: #334155; line-height: 1.6;">
+                        <li>Lift &gt; 1, Strong relationship;</li>
+                        <li>Lift = 1, Coincidence;</li>
+                        <li>Lift &lt; 1, Negative.</li>
+                    </ul>
+                    <div style="margin-top: 10px; font-size: 10px; color: #64748b;">[cite: 33, 110-111]</div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 25px;">
+                <button id="closeDemoModalBtn" style="background: #0f172a; color: #fff; border: none; padding: 8px 30px; border-radius: 20px; font-weight: 600; cursor: pointer; font-family: 'Inter', sans-serif; font-size: 13px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">Done</button>
+            </div>
+            
         </div>
     </div>
     """)
@@ -270,6 +336,7 @@ with col1:
             function bindEvents() {
                 const btn = parentDoc.getElementById('demoBtn');
                 const modal = parentDoc.getElementById('demoModal');
+                const closeBtn = parentDoc.getElementById('closeDemoModalBtn');
                 
                 if (btn && modal && !btn.dataset.bound) {
                     btn.dataset.bound = 'true';
@@ -291,6 +358,12 @@ with col1:
                     modal.addEventListener('click', function() {
                         modal.style.display = 'none';
                     });
+                    
+                    if (closeBtn) {
+                        closeBtn.addEventListener('click', function(e) {
+                            modal.style.display = 'none';
+                        });
+                    }
                 } else if (!btn || !modal) {
                     setTimeout(bindEvents, 500);
                 }
