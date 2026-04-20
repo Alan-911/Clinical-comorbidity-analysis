@@ -1,246 +1,378 @@
 import streamlit as st
 import pandas as pd
-import networkx as nx
-import matplotlib.pyplot as plt
+from pyvis.network import Network
+import streamlit.components.v1 as components
 import os
-import time
+import base64
 
 st.set_page_config(
-    page_title="Clinical Comorbidity Dashboard",
-    page_icon="🏥",
+    page_title="Carelink • Comorbidity Dashboard",
+    page_icon="☁️",
     layout="wide",
-    initial_sidebar_state="expanded"
+    initial_sidebar_state="collapsed"
 )
 
-# --- Custom CSS for High-End UI ---
-st.markdown("""
+# --- Helper to encode local image for background ---
+def get_base64_of_bin_file(bin_file):
+    with open(bin_file, 'rb') as f:
+        data = f.read()
+    return base64.b64encode(data).decode()
+
+base_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+img_path = os.path.join(base_path, "visualizations", "anatomical_model.png")
+try:
+    bg_img_b64 = get_base64_of_bin_file(img_path)
+    bg_style = f"""
+    .bg-image {{
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 90vh;
+        z-index: 0;
+        opacity: 0.9;
+        pointer-events: none;
+    }}
+    """
+    bg_html = f'<img src="data:image/png;base64,{bg_img_b64}" class="bg-image">'
+except Exception:
+    bg_style = ""
+    bg_html = ""
+
+# --- CSS Styling (Cloud Design) ---
+st.markdown(f"""
     <style>
-    /* Global Styling */
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
     
-    html, body, [class*="css"] {
+    /* Hide Streamlit default UI */
+    #MainMenu {{visibility: hidden;}}
+    footer {{visibility: hidden;}}
+    header {{visibility: hidden;}}
+    .block-container {{
+        padding-top: 1rem;
+        padding-bottom: 0rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        max-width: 100%;
+        position: relative;
+        z-index: 1;
+    }}
+    
+    html, body, [class*="css"] {{
         font-family: 'Inter', sans-serif;
-    }
+        color: #1f2937;
+    }}
     
-    .main {
-        background-color: #0d1117;
-        color: #c9d1d9;
-    }
+    /* Light Theme Cloud Background with Grid */
+    .stApp {{
+        background-color: #f8fafc;
+        background-image: 
+            linear-gradient(to right, #e2e8f0 1px, transparent 1px),
+            linear-gradient(to bottom, #e2e8f0 1px, transparent 1px);
+        background-size: 40px 40px;
+    }}
+    
+    {bg_style}
 
-    /* Cards */
-    .metric-card {
-        background: linear-gradient(145deg, #161b22, #0d1117);
-        border-radius: 12px;
-        padding: 24px;
-        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-        border: 1px solid #30363d;
-        text-align: center;
-        transition: transform 0.3s ease;
-    }
-    .metric-card:hover {
-        transform: translateY(-5px);
-        border-color: #58a6ff;
-    }
-    .metric-title {
-        font-size: 14px;
-        color: #8b949e;
-        text-transform: uppercase;
-        letter-spacing: 1.5px;
-        margin-bottom: 8px;
-    }
-    .metric-value {
-        font-size: 32px;
-        font-weight: 700;
-        color: #58a6ff;
-    }
-    
-    /* Headers */
-    h1, h2, h3 {
-        background: -webkit-linear-gradient(#58a6ff, #1f6feb);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+    /* Top Navbar */
+    .navbar {{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 40px;
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(15px);
+        border-radius: 100px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.05);
         margin-bottom: 20px;
-    }
+        z-index: 10;
+        position: relative;
+    }}
+    .navbar-brand {{
+        font-size: 20px;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }}
+    .navbar-links {{
+        display: flex;
+        gap: 15px;
+    }}
+    .nav-btn {{
+        padding: 10px 20px;
+        border-radius: 50px;
+        font-weight: 600;
+        font-size: 14px;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        background: transparent;
+        color: #475569;
+        border: none;
+    }}
+    .nav-btn.active {{
+        background: #0f172a;
+        color: white;
+    }}
+
+    /* Glassmorphism Cards */
+    .glass-card {{
+        background: rgba(255, 255, 255, 0.85);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        border-radius: 20px;
+        padding: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        margin-bottom: 20px;
+        position: relative;
+        z-index: 2;
+    }}
     
-    /* Dataframe styling */
-    .stDataFrame {
-        border-radius: 10px !important;
-        overflow: hidden !important;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.2) !important;
-    }
+    h3 {{
+        font-size: 18px;
+        font-weight: 600;
+        color: #0f172a;
+        margin-bottom: 15px;
+        margin-top: 0;
+    }}
     
-    /* Divider */
-    hr {
-        border-color: #30363d;
-        margin: 30px 0;
-    }
+    /* Vitals */
+    .vitals-row {{ display: flex; gap: 15px; margin-bottom: 20px; }}
+    .vital-card {{ flex: 1; padding: 15px; border-radius: 15px; background: #fff; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }}
+    .vital-label {{ font-size: 12px; color: #64748b; font-weight: 600; }}
+    .vital-value {{ font-size: 24px; font-weight: 700; color: #0f172a; }}
+    
+    /* Timeline */
+    .timeline-item {{ margin-bottom: 15px; padding-left: 15px; border-left: 2px solid #e2e8f0; position: relative; }}
+    .timeline-item::before {{
+        content: ''; position: absolute; left: -6px; top: 0; width: 10px; height: 10px;
+        border-radius: 50%; background: #3b82f6;
+    }}
+    .timeline-time {{ font-size: 12px; color: #94a3b8; font-weight: 600; }}
+    .timeline-title {{ font-size: 14px; font-weight: 600; color: #0f172a; margin: 2px 0; }}
+    .timeline-desc {{ font-size: 12px; color: #64748b; }}
+    
+    /* Metric blocks */
+    .metric-block {{ text-align: center; }}
+    .metric-block .val {{ font-size: 28px; font-weight: 700; color: #0f172a; }}
+    .metric-block .lbl {{ font-size: 12px; color: #64748b; font-weight: 600; }}
+    
+    /* Selectbox styling override */
+    .stSelectbox > div > div {{
+        background-color: white;
+        border-radius: 12px;
+        border: 1px solid #cbd5e1;
+    }}
     </style>
+""", unsafe_allow_html=True)
+
+# Inject Background Image
+if bg_html:
+    st.markdown(bg_html, unsafe_allow_html=True)
+
+# --- Top Navigation ---
+st.markdown("""
+<div class="navbar">
+    <div class="navbar-brand">
+        <span style="font-size: 24px;">⚕️</span> Carelink <span style="color:#94a3b8; font-weight:400;">• Comorbidity & Treatment</span>
+    </div>
+    <div class="navbar-links">
+        <button class="nav-btn active">Dashboard</button>
+        <button class="nav-btn">Appointments</button>
+        <button class="nav-btn">Schedule</button>
+        <button class="nav-btn">Labs Results</button>
+    </div>
+    <div style="display:flex; align-items:center; gap:10px;">
+        <div style="width:35px; height:35px; border-radius:50%; background:#e2e8f0; display:flex; align-items:center; justify-content:center;">👤</div>
+    </div>
+</div>
 """, unsafe_allow_html=True)
 
 # --- Data Loading ---
 @st.cache_data
 def load_data():
-    base_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-    
     try:
         rules_df = pd.read_csv(os.path.join(base_path, "outputs", "association_rules.csv"))
-        itemsets_df = pd.read_csv(os.path.join(base_path, "outputs", "frequent_itemsets.csv"))
-        return rules_df, itemsets_df
+        return rules_df
     except FileNotFoundError:
-        return None, None
+        return None
 
-rules_df, itemsets_df = load_data()
+rules_df = load_data()
 
-# --- Sidebar UI ---
-with st.sidebar:
-    st.image("https://cdn-icons-png.flaticon.com/512/2966/2966486.png", width=100)
-    st.markdown("## 🏥 System Controls")
-    st.markdown("Analyze comorbidity and treatment associations from synthetic EHR data.")
+# --- 3 Column Layout ---
+col1, col2, col3 = st.columns([1, 1.2, 1.2], gap="large")
+
+# === LEFT COLUMN: Context ===
+with col1:
+    # Care Schedule Widget
+    st.markdown("""
+    <div class="glass-card">
+        <div style="display:flex; justify-content:space-between; align-items:center;">
+            <h3>Care Schedule</h3>
+            <span style="font-size:12px; color:#64748b; background:#f1f5f9; padding:5px 10px; border-radius:20px;">September 2025 ⌄</span>
+        </div>
+        <div style="margin-top:20px;">
+            <div class="timeline-item">
+                <div class="timeline-time">13:00</div>
+                <div class="timeline-title">Blood Pressure Check</div>
+                <div class="timeline-desc">Measure BP at rest if > 140/90 mmHg.</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-time">15:30</div>
+                <div class="timeline-title">Dr. John Smith Consultation</div>
+                <div class="timeline-desc">Video Call (Prepare last 3 BP readings)</div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-time">19:00</div>
+                <div class="timeline-title">Symptom Log</div>
+                <div class="timeline-desc">Pain in the right hypochondrium.</div>
+            </div>
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
     
-    st.markdown("---")
+    # Data Exploration Widget
+    st.markdown("""
+    <div class="glass-card">
+        <div style="display:flex; justify-content:space-between; align-items:center;">
+            <h3>Data Exploration & Visualization</h3>
+            <span style="font-size:12px; color:#0f172a; font-weight:600; cursor:pointer;">View All</span>
+        </div>
+        <div style="display:flex; gap:10px; margin-top:15px; overflow-x:auto;">
+            <div style="min-width:120px; text-align:center; background:#fff; padding:15px; border-radius:15px; box-shadow:0 2px 10px rgba(0,0,0,0.05);">
+                <div style="font-size:30px; margin-bottom:5px;">👨‍⚕️</div>
+                <div style="font-size:12px; font-weight:700;">Dr. Daniel Lewis</div>
+                <div style="font-size:10px; color:#64748b;">Oncologist</div>
+            </div>
+            <div style="min-width:120px; text-align:center; background:#fff; padding:15px; border-radius:15px; box-shadow:0 2px 10px rgba(0,0,0,0.05);">
+                <div style="font-size:30px; margin-bottom:5px;">👩‍⚕️</div>
+                <div style="font-size:12px; font-weight:700;">Dr. Grace Walker</div>
+                <div style="font-size:10px; color:#64748b;">Cardiologist</div>
+            </div>
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
+
+# === MIDDLE COLUMN: Nothing (Leave empty so 3D model shows through) ===
+with col2:
+    st.markdown("<div style='height: 80vh;'></div>", unsafe_allow_html=True)
+
+# === RIGHT COLUMN: AI Analytics ===
+with col3:
+    # Vitals Row
+    st.markdown("""
+    <div class="vitals-row">
+        <div class="vital-card">
+            <div style="display:flex; justify-content:space-between;">
+                <div>
+                    <div class="vital-label">Heart rate</div>
+                    <div class="vital-value">80-90 <span style="font-size:14px; color:#64748b;">bpm</span></div>
+                </div>
+                <div style="color:#ef4444;">❤️</div>
+            </div>
+            <div style="height:30px; width:100%; border-bottom:2px solid #ef4444; margin-top:10px;"></div>
+        </div>
+        <div class="vital-card">
+            <div style="display:flex; justify-content:space-between;">
+                <div>
+                    <div class="vital-label">Brain activity</div>
+                    <div class="vital-value">90-150 <span style="font-size:14px; color:#64748b;">Hz</span></div>
+                </div>
+                <div style="color:#eab308;">🧠</div>
+            </div>
+            <div style="height:30px; width:100%; border-bottom:2px solid #eab308; margin-top:10px;"></div>
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
+
+    # Interactive Network Graph via PyVis
+    st.markdown('<div class="glass-card" style="padding: 10px;">', unsafe_allow_html=True)
+    st.markdown('<h3 style="padding-left:10px; padding-top:10px;">Diagnosis & Treatment Rule Network</h3>', unsafe_allow_html=True)
     
     if rules_df is not None:
-        # Extract unique diseases/treatments from rules to populate dropdown
+        # Extract unique for dropdowns
         all_items = set()
         for antecedents in rules_df['antecedents']:
             items = str(antecedents).replace("frozenset({", "").replace("})", "").replace("'", "").split(", ")
             all_items.update([i.strip() for i in items])
-        
         all_items = sorted(list(all_items))
         
-        selected_primary = st.selectbox(
-            "Select Primary Condition / Treatment:",
-            ["All"] + all_items
-        )
+        # We will render the graph in HTML
+        net = Network(height="300px", width="100%", bgcolor="white", font_color="#1f2937", directed=True)
+        # Use physics to make it look like the reference
+        net.force_atlas_2based()
         
-        min_lift_filter = st.slider("Minimum Lift Threshold:", 1.0, 10.0, 1.5, 0.5)
-        min_conf_filter = st.slider("Minimum Confidence:", 0.5, 1.0, 0.6, 0.05)
-    else:
-        st.error("Data not found. Please run the data mining script first.")
-        st.stop()
+        top_rules = rules_df.nlargest(15, 'lift')
         
-    st.markdown("---")
-    st.markdown("**Algorithm:** FP-Growth & Apriori")
-    st.markdown("**Metric Focus:** Lift & Confidence")
-
-# --- Main UI ---
-st.title("Discovery of Comorbidity and Treatment Patterns")
-st.markdown("### Real-time Association Rule Mining Dashboard")
-
-# Filter logic
-if selected_primary == "All":
-    filtered_rules = rules_df[
-        (rules_df['lift'] >= min_lift_filter) & 
-        (rules_df['confidence'] >= min_conf_filter)
-    ]
-else:
-    # Check if selected item is in antecedents
-    filtered_rules = rules_df[
-        (rules_df['antecedents'].str.contains(selected_primary)) &
-        (rules_df['lift'] >= min_lift_filter) & 
-        (rules_df['confidence'] >= min_conf_filter)
-    ]
-
-# Metrics Row
-col1, col2, col3 = st.columns(3)
-with col1:
-    st.markdown(f"""
-        <div class="metric-card">
-            <div class="metric-title">Rules Discovered</div>
-            <div class="metric-value">{len(filtered_rules)}</div>
-        </div>
-    """, unsafe_allow_html=True)
-with col2:
-    avg_conf = filtered_rules['confidence'].mean() if not filtered_rules.empty else 0
-    st.markdown(f"""
-        <div class="metric-card">
-            <div class="metric-title">Avg Confidence</div>
-            <div class="metric-value">{avg_conf:.2f}</div>
-        </div>
-    """, unsafe_allow_html=True)
-with col3:
-    max_lift = filtered_rules['lift'].max() if not filtered_rules.empty else 0
-    st.markdown(f"""
-        <div class="metric-card">
-            <div class="metric-title">Max Lift</div>
-            <div class="metric-value">{max_lift:.2f}</div>
-        </div>
-    """, unsafe_allow_html=True)
-
-st.markdown("<hr>", unsafe_allow_html=True)
-
-# Visuals and Tables
-tab1, tab2, tab3 = st.tabs(["📊 Network Visualization", "📋 Top Association Rules", "📦 Frequent Itemsets"])
-
-with tab1:
-    st.markdown("### Comorbidity Network")
-    st.markdown("This interactive graph shows relationships where **Node A** strongly implies **Node B**.")
-    
-    if len(filtered_rules) > 0:
-        # Generate dynamic network graph for filtered data
-        G = nx.DiGraph()
-        top_plot_rules = filtered_rules.nlargest(15, 'lift')
-        
-        for _, row in top_plot_rules.iterrows():
+        for _, row in top_rules.iterrows():
             ant_str = str(row['antecedents']).replace("frozenset({", "").replace("})", "").replace("'", "")
             con_str = str(row['consequents']).replace("frozenset({", "").replace("})", "").replace("'", "")
-            
             ants = [a.strip() for a in ant_str.split(',')]
             cons = [c.strip() for c in con_str.split(',')]
             
             for a in ants:
+                # Add node logic: dark blue for conditions, lighter blue for treatments (simplified)
+                a_color = "#0f172a" if "Disease" in a or a in ["Diabetes", "Hypertension", "Asthma"] else "#3b82f6"
+                net.add_node(a, a, title=a, color=a_color, shape="dot", size=15)
                 for c in cons:
-                    G.add_edge(a, c, weight=row['lift'])
-                    
-        fig, ax = plt.subplots(figsize=(10, 6))
-        fig.patch.set_facecolor('#0d1117')
-        ax.set_facecolor('#0d1117')
+                    c_color = "#0f172a" if "Disease" in c or c in ["Diabetes", "Hypertension", "Asthma"] else "#3b82f6"
+                    net.add_node(c, c, title=c, color=c_color, shape="dot", size=15)
+                    # Edge color based on lift
+                    net.add_edge(a, c, title=f"Support: {row['support']:.2f}\nConf: {row['confidence']:.2f}\nLift: {row['lift']:.2f}", value=row['lift'], color="#94a3b8")
         
-        pos = nx.spring_layout(G, k=0.8, seed=42)
-        
-        nx.draw_networkx_nodes(G, pos, node_size=1500, node_color='#58a6ff', alpha=0.9, edgecolors='#1f6feb', ax=ax)
-        
-        edges = G.edges()
-        weights = [G[u][v]['weight'] for u,v in edges]
-        max_w = max(weights) if weights else 1
-        thickness = [(w/max_w)*4 for w in weights]
-        
-        nx.draw_networkx_edges(G, pos, edge_color='#8b949e', width=thickness, arrowsize=20, arrowstyle='->', ax=ax)
-        
-        labels = {node: node for node in G.nodes()}
-        nx.draw_networkx_labels(G, pos, labels, font_size=10, font_weight='bold', font_color='white', ax=ax)
-        
-        plt.axis('off')
-        st.pyplot(fig)
+        # Save and read pyvis html
+        net_path = os.path.join(base_path, "visualizations", "pyvis_graph.html")
+        net.save_graph(net_path)
+        with open(net_path, 'r', encoding='utf-8') as f:
+            html_data = f.read()
+        components.html(html_data, height=310)
     else:
-        st.warning("No rules match the current filters. Please adjust the sliders or select a different condition.")
-
-with tab2:
-    st.markdown("### Top Association Rules")
-    if not filtered_rules.empty:
-        display_cols = ['rule_string', 'support', 'confidence', 'lift']
-        display_df = filtered_rules[display_cols].copy()
-        display_df.columns = ['Rule (Antecedent → Consequent)', 'Support', 'Confidence', 'Lift']
-        display_df['Support'] = display_df['Support'].apply(lambda x: f"{x:.4f}")
-        display_df['Confidence'] = display_df['Confidence'].apply(lambda x: f"{x:.4f}")
-        display_df['Lift'] = display_df['Lift'].apply(lambda x: f"{x:.4f}")
+        st.error("No rule data available.")
+        all_items = []
         
-        st.dataframe(display_df, use_container_width=True, height=400)
-    else:
-        st.info("Adjust filters to see rules.")
-
-with tab3:
-    st.markdown("### Frequent Pattern Itemsets")
-    if selected_primary == "All":
-        filtered_itemsets = itemsets_df
-    else:
-        filtered_itemsets = itemsets_df[itemsets_df['itemsets_string'].str.contains(selected_primary)]
-        
-    display_item_df = filtered_itemsets[['itemsets_string', 'support']].sort_values(by='support', ascending=False)
-    display_item_df.columns = ['Itemset', 'Support']
-    display_item_df['Support'] = display_item_df['Support'].apply(lambda x: f"{x:.4f}")
+    st.markdown('</div>', unsafe_allow_html=True)
     
-    st.dataframe(display_item_df, use_container_width=True, height=400)
+    # Bottom Row: Pattern Selection & Algorithm Comparison
+    st.markdown('<div style="display:flex; gap:15px;">', unsafe_allow_html=True)
+    
+    # Pattern Selection
+    st.markdown('<div class="glass-card" style="flex:1;">', unsafe_allow_html=True)
+    st.markdown("<h3>Pattern Selection</h3>", unsafe_allow_html=True)
+    selected_primary = st.selectbox("Primary Diagnosis", ["(e.g., Asthma)"] + all_items)
+    selected_secondary = st.selectbox("Secondary Condition", ["(e.g., Hypertension)"] + all_items)
+    st.markdown("""
+        <button style="width:100%; padding:10px; background:#0f172a; color:white; border:none; border-radius:10px; font-weight:600; margin-top:10px; cursor:pointer;">
+            Done
+        </button>
+    """, unsafe_allow_html=True)
+    st.markdown('</div>', unsafe_allow_html=True)
+    
+    # Algorithm Comparison
+    st.markdown('<div class="glass-card" style="flex:1;">', unsafe_allow_html=True)
+    st.markdown("""
+    <div style="display:flex; justify-content:space-between; align-items:center;">
+        <h3>Algorithm Comparison</h3>
+    </div>
+    <div style="display:flex; justify-content:space-between; margin-top:10px;">
+        <div class="metric-block">
+            <div class="lbl">Apriori Runtime</div>
+            <div class="val">0.008s</div>
+        </div>
+        <div class="metric-block">
+            <div class="lbl">FP-Growth Runtime</div>
+            <div class="val">0.010s</div>
+        </div>
+    </div>
+    <div style="margin-top:15px; border-top:1px solid #e2e8f0; padding-top:10px; text-align:center;">
+        <div class="lbl">Number of Patterns Discovered</div>
+        <div class="val" style="color:#3b82f6;">144</div>
+    </div>
+    <button style="width:100%; padding:10px; background:white; color:#0f172a; border:1px solid #cbd5e1; border-radius:10px; font-weight:600; margin-top:15px; cursor:pointer;">
+        View Details
+    </button>
+    """, unsafe_allow_html=True)
+    st.markdown('</div>', unsafe_allow_html=True)
+    
+    st.markdown('</div>', unsafe_allow_html=True)
 
-st.markdown("<hr>", unsafe_allow_html=True)
-st.markdown("🏥 **Data Source**: Synthetically generated clinical records mimicking real-world comorbidity dynamics. | Built with **Streamlit** & **FP-Growth**.")
