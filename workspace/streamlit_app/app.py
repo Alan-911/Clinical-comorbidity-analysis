@@ -391,15 +391,12 @@ with col3:
         <div class="glass-card" style="padding: 15px; margin-bottom: 20px;">
             <div style="display:flex; justify-content:space-between; align-items:flex-start;">
                 <div style="flex:1;">
-                    <h3 style="margin-bottom:5px;">Diagnosis & Treatment Rule Network</h3>
+                    <h2 style="margin-bottom:15px; font-weight:700; font-size:24px;">Concept 2 - The Comorbidity Heatmap & Graph Hybrid</h2>
                 </div>
             </div>
-            
-            <div style="display:flex; justify-content:space-between; align-items:center; border-top: 1px solid #e2e8f0; padding-top:10px; margin-top:5px;">
-                <div style="font-size: 10px; color: #0f172a; font-weight: 600;">Edge Color → Strength (Lift) <br><span style="color:#64748b; font-weight:400;">Thickness</span></div>
-                <div style="font-size: 10px; color: #0f172a; font-weight: 600; text-align:right;">Node Color → Event Type <br><span style="color:#64748b; font-weight:400;">(Diagnosis, Medication)</span></div>
-            </div>
         """)
+
+        net_col1, net_col2 = st.columns([1, 1.2], gap="large")
 
         filtered_rules = rules_df.copy() if rules_df is not None else None
         if filtered_rules is not None:
@@ -408,35 +405,134 @@ with col3:
             if secondary_diag != "All":
                 filtered_rules = filtered_rules[filtered_rules['consequents'].str.contains(secondary_diag)]
 
-        if filtered_rules is not None and len(filtered_rules) > 0:
-            net = Network(height="260px", width="100%", bgcolor="transparent", font_color="#0f172a", directed=True)
-            net.force_atlas_2based(spring_length=80, spring_strength=0.08, overlap=0)
-            
-            top_rules = filtered_rules.nlargest(15, 'lift')
-            
-            for _, row in top_rules.iterrows():
-                ant_str = str(row['antecedents']).replace("frozenset({", "").replace("})", "").replace("'", "")
-                con_str = str(row['consequents']).replace("frozenset({", "").replace("})", "").replace("'", "")
-                ants = [a.strip() for a in ant_str.split(',')]
-                cons = [c.strip() for c in con_str.split(',')]
+        with net_col1:
+            if filtered_rules is not None and len(filtered_rules) > 0:
+                net = Network(height="260px", width="100%", bgcolor="transparent", font_color="#0f172a", directed=True)
+                net.force_atlas_2based(spring_length=80, spring_strength=0.08, overlap=0)
                 
-                for a in ants:
-                    a_color = "#0f172a" if "Disease" in a or a in ["Diabetes", "Hypertension", "Asthma"] else "#3b82f6"
-                    net.add_node(a, a, title=a, color=a_color, shape="ellipse", size=20, font={"color": "white", "size":12, "face":"Inter", "strokeWidth":0})
-                    for c in cons:
-                        c_color = "#0f172a" if "Disease" in c or c in ["Diabetes", "Hypertension", "Asthma"] else "#3b82f6"
-                        net.add_node(c, c, title=c, color=c_color, shape="ellipse", size=20, font={"color": "white", "size":12, "face":"Inter", "strokeWidth":0})
-                        
-                        edge_label = f"Support: {row['support']:.2f}\nConfidence: {row['confidence']:.2f}\nLift: {row['lift']:.2f}"
-                        net.add_edge(a, c, title=edge_label, value=row['lift'], color="#64748b", font={"size":8, "align":"middle"})
+                top_rules = filtered_rules.nlargest(15, 'lift')
+                
+                for _, row in top_rules.iterrows():
+                    ant_str = str(row['antecedents']).replace("frozenset({", "").replace("})", "").replace("'", "")
+                    con_str = str(row['consequents']).replace("frozenset({", "").replace("})", "").replace("'", "")
+                    ants = [a.strip() for a in ant_str.split(',')]
+                    cons = [c.strip() for c in con_str.split(',')]
+                    
+                    for a in ants:
+                        a_color = "#ef4444" if "Disease" in a or a in ["Diabetes", "Hypertension", "Asthma", "Diagnosis"] else "#f97316" if a in ["Statin", "Lisinopril", "Metformin", "Beta Blocker", "Treatment"] else "#3b82f6"
+                        net.add_node(a, a, title=a, color=a_color, shape="ellipse", size=20, font={"color": "white", "size":12, "face":"Inter", "strokeWidth":0})
+                        for c in cons:
+                            c_color = "#ef4444" if "Disease" in c or c in ["Diabetes", "Hypertension", "Asthma", "Diagnosis"] else "#f97316" if c in ["Statin", "Lisinopril", "Metformin", "Beta Blocker", "Treatment"] else "#3b82f6"
+                            net.add_node(c, c, title=c, color=c_color, shape="ellipse", size=20, font={"color": "white", "size":12, "face":"Inter", "strokeWidth":0})
+                            
+                            edge_label = f"Support: {row['support']:.2f}\\nConfidence: {row['confidence']:.2f}\\nLift: {row['lift']:.2f}"
+                            net.add_edge(a, c, title=edge_label, value=row['lift'], color="#1e293b", font={"size":8, "align":"middle"})
+                
+                net_path = os.path.join(base_path, "visualizations", "pyvis_graph.html")
+                net.save_graph(net_path)
+                with open(net_path, 'r', encoding='utf-8') as f:
+                    html_data = f.read()
+                html_data = html_data.replace('background-color: transparent;', 'background-color: transparent;')
+                components.html(html_data, height=270)
+            else:
+                st.info("No matching rules found.")
             
-            net_path = os.path.join(base_path, "visualizations", "pyvis_graph.html")
-            net.save_graph(net_path)
-            with open(net_path, 'r', encoding='utf-8') as f:
-                html_data = f.read()
-            html_data = html_data.replace('background-color: transparent;', 'background-color: transparent;')
-            components.html(html_data, height=270)
-        else:
-            st.info("No matching rules found. Please adjust the Pattern Selection.")
-            
+            # Legend
+            st_html("""
+            <div style="display:flex; flex-direction:column; gap:5px; margin-top: 10px;">
+                <div style="display:flex; align-items:center; gap:8px;"><div style="width:16px; height:16px; border-radius:50%; background:#3b82f6;"></div><span style="font-size:14px; font-weight:600;">Legend</span></div>
+                <div style="display:flex; align-items:center; gap:8px;"><div style="width:16px; height:16px; border-radius:50%; background:#f97316;"></div><span style="font-size:14px; font-weight:600;">Treatment</span></div>
+                <div style="display:flex; align-items:center; gap:8px;"><div style="width:16px; height:16px; border-radius:50%; background:#ef4444;"></div><span style="font-size:14px; font-weight:600;">Diagnosis</span></div>
+            </div>
+            """)
+
+        with net_col2:
+            if filtered_rules is not None and len(filtered_rules) > 0:
+                top_rules = filtered_rules.nlargest(6, 'lift').copy()
+                
+                # Format rule strings
+                def format_rule(ant, con):
+                    a_str = str(ant).replace("frozenset({", "").replace("})", "").replace("'", "")
+                    c_str = str(con).replace("frozenset({", "").replace("})", "").replace("'", "")
+                    return f"{a_str} + {c_str}"
+                
+                top_rules['Metric Matrix ⬍'] = top_rules.apply(lambda x: format_rule(x['antecedents'], x['consequents']), axis=1)
+                top_rules = top_rules.rename(columns={'support': 'Support ⬍', 'confidence': 'Confidence ⬍'})
+                df_display = top_rules[['Metric Matrix ⬍', 'Support ⬍', 'Confidence ⬍']].reset_index(drop=True)
+                
+                # HTML Table for Heatmap
+                table_html = "<table style='width:100%; border-collapse: collapse; font-size:14px;'>"
+                table_html += "<tr><th style='text-align:left; font-size:18px; padding-bottom:5px;'>Metric Matrix ⬍</th><th style='text-align:center; font-size:18px; padding-bottom:5px;'>Support ⬍</th><th style='text-align:center; font-size:18px; padding-bottom:5px;'>Confidence ⬍</th></tr>"
+                table_html += "<tr><th style='border-top:1px solid #e2e8f0; border-bottom:1px solid #e2e8f0; padding:5px 0;'></th><th style='border-top:1px solid #e2e8f0; border-bottom:1px solid #e2e8f0; padding:5px 0; font-weight:normal;'>Support ⬍</th><th style='border-top:1px solid #e2e8f0; border-bottom:1px solid #e2e8f0; padding:5px 0; font-weight:normal;'>Confidence ⬍</th></tr>"
+                
+                import matplotlib
+                import matplotlib.pyplot as plt
+                import matplotlib.colors as mcolors
+                
+                cmap_sup = plt.get_cmap('Blues')
+                cmap_conf = plt.get_cmap('Reds')
+                
+                for _, row in df_display.iterrows():
+                    sup_val = row['Support ⬍']
+                    conf_val = row['Confidence ⬍']
+                    
+                    # Normalize colors (min 0, max 1) for a visual guess based on typical association rule values
+                    sup_norm = min(1.0, max(0.2, sup_val / 0.4))
+                    conf_norm = min(1.0, max(0.2, conf_val / 1.0))
+                    
+                    bg_sup = mcolors.to_hex(cmap_sup(sup_norm))
+                    bg_conf = mcolors.to_hex(cmap_conf(conf_norm))
+                    
+                    tc_sup = "#ffffff" if sup_norm > 0.5 else "#000000"
+                    tc_conf = "#ffffff" if conf_norm > 0.5 else "#000000"
+                    
+                    table_html += f"<tr>"
+                    table_html += f"<td style='padding:5px 0;'>{row['Metric Matrix ⬍']}</td>"
+                    table_html += f"<td style='background-color:{bg_sup}; color:{tc_sup}; text-align:center; padding:5px 0;'>{sup_val:.2f}</td>"
+                    table_html += f"<td style='background-color:{bg_conf}; color:{tc_conf}; text-align:center; padding:5px 0;'>{conf_val:.2f}</td>"
+                    table_html += "</tr>"
+                
+                table_html += "</table>"
+                
+                st_html(table_html)
+                
+                # Histograms and gradients below
+                st_html("""
+                <div style="display:flex; justify-content:space-around; margin-top:15px; padding: 0 10px;">
+                    <div style="text-align:center; width:45%;">
+                        <div style="display:flex; align-items:flex-end; justify-content:center; gap:2px; height:25px; margin-bottom:2px;">
+                            <div style="width:6px; height:5px; background:#93c5fd;"></div>
+                            <div style="width:6px; height:12px; background:#60a5fa;"></div>
+                            <div style="width:6px; height:8px; background:#3b82f6;"></div>
+                            <div style="width:6px; height:20px; background:#2563eb;"></div>
+                            <div style="width:6px; height:25px; background:#1d4ed8;"></div>
+                            <div style="width:6px; height:15px; background:#1e40af;"></div>
+                            <div style="width:6px; height:10px; background:#1e3a8a;"></div>
+                        </div>
+                        <div style="width:100%; height:10px; background:linear-gradient(to right, #eff6ff, #1d4ed8); margin-bottom:5px;"></div>
+                        <div style="display:flex; justify-content:space-between; font-size:12px; font-weight:600;"><span>0</span><span style="color:#ffffff;">Support</span><span>1</span></div>
+                    </div>
+                    <div style="text-align:center; width:45%;">
+                        <div style="display:flex; align-items:flex-end; justify-content:center; gap:2px; height:25px; margin-bottom:2px;">
+                            <div style="width:6px; height:3px; background:#fca5a5;"></div>
+                            <div style="width:6px; height:6px; background:#f87171;"></div>
+                            <div style="width:6px; height:18px; background:#ef4444;"></div>
+                            <div style="width:6px; height:22px; background:#dc2626;"></div>
+                            <div style="width:6px; height:12px; background:#b91c1c;"></div>
+                            <div style="width:6px; height:8px; background:#991b1b;"></div>
+                            <div style="width:6px; height:5px; background:#7f1d1d;"></div>
+                        </div>
+                        <div style="width:100%; height:10px; background:linear-gradient(to right, #fef2f2, #b91c1c); margin-bottom:5px;"></div>
+                        <div style="display:flex; justify-content:space-between; font-size:12px; font-weight:600;"><span>0</span><span style="color:#ffffff;">Confidence</span><span>1</span></div>
+                    </div>
+                </div>
+                
+                <div style="margin-top: 20px;">
+                    <div style="font-weight:700; font-size:14px; margin-bottom:5px;">Apriori vs. FP-Growth</div>
+                    <div style="font-size:11px; color:#475569; line-height:1.4;">
+                        Apriori uses a breadth-first search and candidate generation, which can be computationally expensive on large clinical datasets. FP-Growth uses an FP-tree structure to mine frequent patterns directly without candidate generation, adjusting efficiently to large transaction volumes while uncovering similar confidence limits.
+                    </div>
+                </div>
+                """)
+
         st_html('</div>')
