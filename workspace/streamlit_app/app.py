@@ -250,19 +250,55 @@ with col1:
 
     st_html(f"""
     <!-- 3D Anchor Button -->
-    <div onclick="document.getElementById('demoModal').style.display='flex'" class="glass-card" style="cursor: pointer; text-align: center; padding: 30px 20px; transition: transform 0.3s ease, box-shadow 0.3s ease; transform-style: preserve-3d; perspective: 1000px; border: 1px solid rgba(255,255,255,0.6);" onmouseover="this.style.transform='scale(1.03) translateY(-5px)'; this.style.boxShadow='0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)'" onmouseout="this.style.transform='scale(1) translateY(0)'; this.style.boxShadow='0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)'">
-        <div style="font-size: 42px; margin-bottom: 15px; transform: translateZ(20px);">👥</div>
-        <h3 style="margin:0; font-size:18px; font-weight: 700; color: #0f172a; transform: translateZ(10px);">Top Demographic Comorbidity Patterns</h3>
-        <div style="margin-top:12px; display:inline-block; font-size:12px; color:#fff; background:#0f172a; padding:6px 16px; border-radius:20px; font-weight: 600; transform: translateZ(5px);">Click to View Analytics</div>
+    <div id="demoBtn" class="glass-card" style="cursor: pointer; text-align: center; padding: 15px; transition: transform 0.3s ease, box-shadow 0.3s ease; transform-style: preserve-3d; perspective: 1000px; border: 1px solid rgba(255,255,255,0.6);">
+        <h3 style="margin:0; font-size:16px; font-weight: 700; color: #0f172a; transform: translateZ(10px);">Top Demographic Comorbidity Patterns</h3>
+        <div style="margin-top:8px; display:inline-block; font-size:11px; color:#fff; background:#0f172a; padding:4px 12px; border-radius:15px; font-weight: 600; transform: translateZ(5px);">Click to View Analytics</div>
     </div>
 
     <!-- Modal Overlay -->
-    <div id="demoModal" style="display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(255, 255, 255, 0.2); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); z-index: 999999; align-items: center; justify-content: center; cursor: pointer;" onclick="this.style.display='none'">
+    <div id="demoModal" style="display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(255, 255, 255, 0.2); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); z-index: 999999; align-items: center; justify-content: center; cursor: pointer;">
         <div style="position: relative; max-width: 90%; max-height: 90%; display:flex; flex-direction:column; align-items:center;">
             <img src="{modal_img_src}" style="max-width: 100%; max-height: 85vh; border-radius: 20px; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); object-fit: contain; background: transparent;">
         </div>
     </div>
     """)
+    
+    components.html("""
+        <script>
+            const parentDoc = window.parent.document;
+            
+            function bindEvents() {
+                const btn = parentDoc.getElementById('demoBtn');
+                const modal = parentDoc.getElementById('demoModal');
+                
+                if (btn && modal && !btn.dataset.bound) {
+                    btn.dataset.bound = 'true';
+                    
+                    btn.addEventListener('mouseenter', function() {
+                        this.style.transform = 'scale(1.03) translateY(-5px)';
+                        this.style.boxShadow = '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)';
+                    });
+                    
+                    btn.addEventListener('mouseleave', function() {
+                        this.style.transform = 'scale(1) translateY(0)';
+                        this.style.boxShadow = '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)';
+                    });
+                    
+                    btn.addEventListener('click', function() {
+                        modal.style.display = 'flex';
+                    });
+                    
+                    modal.addEventListener('click', function() {
+                        modal.style.display = 'none';
+                    });
+                } else if (!btn || !modal) {
+                    setTimeout(bindEvents, 500);
+                }
+            }
+            
+            bindEvents();
+        </script>
+    """, height=0, width=0)
 
 # === MIDDLE COLUMN: Transparent buffer ===
 with col2:
