@@ -11,7 +11,7 @@ from mlxtend.preprocessing import TransactionEncoder
 from mlxtend.frequent_patterns import apriori, fpgrowth, association_rules
 
 st.set_page_config(
-    page_title="Carelink • Comorbidity Dashboard",
+    page_title="Comorbidity Dashboard",
     page_icon="☁️",
     layout="wide",
     initial_sidebar_state="collapsed"
@@ -134,7 +134,7 @@ if bg_html:
 st_html("""
 <div class="navbar">
     <div class="navbar-brand">
-        <span style="font-size: 24px;">⚕️</span> Carelink <span style="color:#94a3b8; font-weight:400; font-size:16px; margin-left:5px;">• Comorbidity & Treatment Patterns</span>
+        <span style="font-size: 24px;">⚕️</span> <span style="color:#0f172a; font-weight:700; font-size:20px; margin-left:5px;">Comorbidity & Treatment Patterns</span>
     </div>
     <div class="navbar-links">
         <button class="nav-btn active">Dashboard</button>
@@ -746,7 +746,7 @@ with col3:
             # --- 3. Unified Layout ---
             unified_html = f"""
             <div class="glass-card" style="padding: 15px; margin-bottom: 20px;">
-                <h2 style="margin-bottom:15px; font-weight:700; font-size:20px;">Concept 2 - The Comorbidity Heatmap & Graph Hybrid</h2>
+                <h2 style="margin-bottom:15px; font-weight:700; font-size:20px;">The Comorbidity Heatmap & Graph Hybrid</h2>
                 <div style="display:flex; gap: 20px; align-items: flex-start;">
                     
                     <!-- Left Column -->
