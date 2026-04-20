@@ -462,8 +462,13 @@ with col3:
                     
                     <!-- Left Column -->
                     <div style="flex: 1;">
-                        <div style="width:100%; height:220px; display:flex; align-items:center; justify-content:center; background:#ffffff; border-radius:8px; border:1px solid #e2e8f0; overflow:hidden;">
+                        <div style="width:100%; height:220px; display:flex; align-items:center; justify-content:center; overflow:hidden;">
                             <img src="{img_src}" style="width:100%; height:100%; object-fit:contain; mix-blend-mode: multiply;" alt="Diagnosis & Treatment Rule Network">
+                        </div>
+                        <div style="display:flex; flex-direction:column; gap:6px; margin-top: 25px;">
+                            <div style="display:flex; align-items:center; gap:8px;"><div style="width:14px; height:14px; border-radius:50%; background:#3b82f6;"></div><span style="font-size:12px; font-weight:600; color:#0f172a;">Legend</span></div>
+                            <div style="display:flex; align-items:center; gap:8px;"><div style="width:14px; height:14px; border-radius:50%; background:#f97316;"></div><span style="font-size:12px; font-weight:600; color:#475569;">Treatment</span></div>
+                            <div style="display:flex; align-items:center; gap:8px;"><div style="width:14px; height:14px; border-radius:50%; background:#ef4444;"></div><span style="font-size:12px; font-weight:600; color:#475569;">Diagnosis</span></div>
                         </div>
                     </div>
                     
