@@ -427,7 +427,7 @@ with col3:
             srcdoc_content = html.escape(html_data)
 
             # --- 2. Metric Matrix ---
-            top_matrix_rules = filtered_rules.nlargest(6, 'lift').copy()
+            top_matrix_rules = filtered_rules.nlargest(5, 'lift').copy()
             def format_rule(ant, con):
                 a_str = str(ant).replace("frozenset({", "").replace("})", "").replace("'", "")
                 c_str = str(con).replace("frozenset({", "").replace("})", "").replace("'", "")
@@ -435,9 +435,9 @@ with col3:
             top_matrix_rules['Metric Matrix ⬍'] = top_matrix_rules.apply(lambda x: format_rule(x['antecedents'], x['consequents']), axis=1)
             df_display = top_matrix_rules[['Metric Matrix ⬍', 'support', 'confidence']].reset_index(drop=True)
             
-            table_html = "<table style='width:100%; border-collapse: collapse; font-size:14px;'>"
-            table_html += "<tr><th style='text-align:left; font-size:18px; padding-bottom:5px;'>Metric Matrix ⬍</th><th style='text-align:center; font-size:18px; padding-bottom:5px;'>Support ⬍</th><th style='text-align:center; font-size:18px; padding-bottom:5px;'>Confidence ⬍</th></tr>"
-            table_html += "<tr><th style='border-top:1px solid #e2e8f0; border-bottom:1px solid #e2e8f0; padding:5px 0;'></th><th style='border-top:1px solid #e2e8f0; border-bottom:1px solid #e2e8f0; padding:5px 0; font-weight:normal;'>Support ⬍</th><th style='border-top:1px solid #e2e8f0; border-bottom:1px solid #e2e8f0; padding:5px 0; font-weight:normal;'>Confidence ⬍</th></tr>"
+            table_html = "<table style='width:100%; border-collapse: collapse; font-size:12px;'>"
+            table_html += "<tr><th style='text-align:left; font-size:14px; padding-bottom:3px;'>Metric Matrix ⬍</th><th style='text-align:center; font-size:14px; padding-bottom:3px;'>Support ⬍</th><th style='text-align:center; font-size:14px; padding-bottom:3px;'>Confidence ⬍</th></tr>"
+            table_html += "<tr><th style='border-top:1px solid #e2e8f0; border-bottom:1px solid #e2e8f0; padding:3px 0;'></th><th style='border-top:1px solid #e2e8f0; border-bottom:1px solid #e2e8f0; padding:3px 0; font-weight:normal;'>Support ⬍</th><th style='border-top:1px solid #e2e8f0; border-bottom:1px solid #e2e8f0; padding:3px 0; font-weight:normal;'>Confidence ⬍</th></tr>"
             
             import matplotlib.pyplot as plt
             import matplotlib.colors as mcolors
@@ -455,30 +455,30 @@ with col3:
                 tc_conf = "#ffffff" if conf_norm > 0.5 else "#000000"
                 
                 table_html += f"<tr>"
-                table_html += f"<td style='padding:5px 0;'>{row['Metric Matrix ⬍']}</td>"
-                table_html += f"<td style='background-color:{bg_sup}; color:{tc_sup}; text-align:center; padding:5px 0;'>{sup_val:.2f}</td>"
-                table_html += f"<td style='background-color:{bg_conf}; color:{tc_conf}; text-align:center; padding:5px 0;'>{conf_val:.2f}</td>"
+                table_html += f"<td style='padding:3px 0;'>{row['Metric Matrix ⬍']}</td>"
+                table_html += f"<td style='background-color:{bg_sup}; color:{tc_sup}; text-align:center; padding:3px 0;'>{sup_val:.2f}</td>"
+                table_html += f"<td style='background-color:{bg_conf}; color:{tc_conf}; text-align:center; padding:3px 0;'>{conf_val:.2f}</td>"
                 table_html += "</tr>"
             table_html += "</table>"
             
             # --- 3. Unified Layout ---
             unified_html = f"""
-            <div class="glass-card" style="padding: 20px; margin-bottom: 20px;">
-                <h2 style="margin-bottom:20px; font-weight:700; font-size:24px;">Concept 2 - The Comorbidity Heatmap & Graph Hybrid</h2>
-                <div style="display:flex; gap: 30px; align-items: flex-start;">
+            <div class="glass-card" style="padding: 15px; margin-bottom: 20px;">
+                <h2 style="margin-bottom:15px; font-weight:700; font-size:20px;">Concept 2 - The Comorbidity Heatmap & Graph Hybrid</h2>
+                <div style="display:flex; gap: 20px; align-items: flex-start;">
                     
                     <!-- Left Column -->
                     <div style="flex: 1;">
-                        <div style="position:relative; width:100%; height:260px; border-radius:8px; overflow:hidden; border:1px solid #e2e8f0;" onclick="this.querySelector('iframe').style.pointerEvents='auto'; this.querySelector('.overlay').style.display='none';">
+                        <div style="position:relative; width:100%; height:220px; border-radius:8px; overflow:hidden; border:1px solid #e2e8f0;" onclick="this.querySelector('iframe').style.pointerEvents='auto'; this.querySelector('.overlay').style.display='none';">
                             <div class="overlay" style="position:absolute; top:0; left:0; width:100%; height:100%; z-index:10; background:rgba(255,255,255,0.01); cursor:pointer; display:flex; align-items:center; justify-content:center;">
-                                <div style="background:rgba(15,23,42,0.7); color:white; padding:8px 15px; border-radius:20px; font-size:12px; font-weight:600; box-shadow:0 4px 6px rgba(0,0,0,0.1);">Click to Interact</div>
+                                <div style="background:rgba(15,23,42,0.7); color:white; padding:6px 12px; border-radius:20px; font-size:11px; font-weight:600; box-shadow:0 4px 6px rgba(0,0,0,0.1);">Click to Interact</div>
                             </div>
                             <iframe srcdoc="{srcdoc_content}" style="width:100%; height:100%; border:none; pointer-events:none;"></iframe>
                         </div>
-                        <div style="display:flex; flex-direction:column; gap:8px; margin-top: 15px;">
-                            <div style="display:flex; align-items:center; gap:10px;"><div style="width:16px; height:16px; border-radius:50%; background:#3b82f6;"></div><span style="font-size:14px; font-weight:600; color:#0f172a;">Legend</span></div>
-                            <div style="display:flex; align-items:center; gap:10px;"><div style="width:16px; height:16px; border-radius:50%; background:#f97316;"></div><span style="font-size:14px; font-weight:600; color:#475569;">Treatment</span></div>
-                            <div style="display:flex; align-items:center; gap:10px;"><div style="width:16px; height:16px; border-radius:50%; background:#ef4444;"></div><span style="font-size:14px; font-weight:600; color:#475569;">Diagnosis</span></div>
+                        <div style="display:flex; flex-direction:column; gap:6px; margin-top: 10px;">
+                            <div style="display:flex; align-items:center; gap:8px;"><div style="width:14px; height:14px; border-radius:50%; background:#3b82f6;"></div><span style="font-size:12px; font-weight:600; color:#0f172a;">Legend</span></div>
+                            <div style="display:flex; align-items:center; gap:8px;"><div style="width:14px; height:14px; border-radius:50%; background:#f97316;"></div><span style="font-size:12px; font-weight:600; color:#475569;">Treatment</span></div>
+                            <div style="display:flex; align-items:center; gap:8px;"><div style="width:14px; height:14px; border-radius:50%; background:#ef4444;"></div><span style="font-size:12px; font-weight:600; color:#475569;">Diagnosis</span></div>
                         </div>
                     </div>
                     
@@ -486,38 +486,38 @@ with col3:
                     <div style="flex: 1.2;">
                         {table_html}
                         
-                        <div style="display:flex; justify-content:space-around; margin-top:20px; padding: 0 10px;">
+                        <div style="display:flex; justify-content:space-around; margin-top:10px; padding: 0 10px;">
                             <div style="text-align:center; width:45%;">
-                                <div style="display:flex; align-items:flex-end; justify-content:center; gap:2px; height:25px; margin-bottom:4px;">
-                                    <div style="width:6px; height:5px; background:#93c5fd; border-radius:1px;"></div>
-                                    <div style="width:6px; height:12px; background:#60a5fa; border-radius:1px;"></div>
-                                    <div style="width:6px; height:8px; background:#3b82f6; border-radius:1px;"></div>
-                                    <div style="width:6px; height:20px; background:#2563eb; border-radius:1px;"></div>
-                                    <div style="width:6px; height:25px; background:#1d4ed8; border-radius:1px;"></div>
-                                    <div style="width:6px; height:15px; background:#1e40af; border-radius:1px;"></div>
-                                    <div style="width:6px; height:10px; background:#1e3a8a; border-radius:1px;"></div>
+                                <div style="display:flex; align-items:flex-end; justify-content:center; gap:2px; height:20px; margin-bottom:4px;">
+                                    <div style="width:5px; height:4px; background:#93c5fd; border-radius:1px;"></div>
+                                    <div style="width:5px; height:10px; background:#60a5fa; border-radius:1px;"></div>
+                                    <div style="width:5px; height:6px; background:#3b82f6; border-radius:1px;"></div>
+                                    <div style="width:5px; height:16px; background:#2563eb; border-radius:1px;"></div>
+                                    <div style="width:5px; height:20px; background:#1d4ed8; border-radius:1px;"></div>
+                                    <div style="width:5px; height:12px; background:#1e40af; border-radius:1px;"></div>
+                                    <div style="width:5px; height:8px; background:#1e3a8a; border-radius:1px;"></div>
                                 </div>
-                                <div style="width:100%; height:10px; background:linear-gradient(to right, #eff6ff, #1d4ed8); border-radius:5px; margin-bottom:5px;"></div>
-                                <div style="display:flex; justify-content:space-between; font-size:12px; font-weight:600; color:#0f172a;"><span>0</span><span style="color:#64748b;">Support</span><span>1</span></div>
+                                <div style="width:100%; height:8px; background:linear-gradient(to right, #eff6ff, #1d4ed8); border-radius:4px; margin-bottom:4px;"></div>
+                                <div style="display:flex; justify-content:space-between; font-size:11px; font-weight:600; color:#0f172a;"><span>0</span><span style="color:#64748b;">Support</span><span>1</span></div>
                             </div>
                             <div style="text-align:center; width:45%;">
-                                <div style="display:flex; align-items:flex-end; justify-content:center; gap:2px; height:25px; margin-bottom:4px;">
-                                    <div style="width:6px; height:3px; background:#fca5a5; border-radius:1px;"></div>
-                                    <div style="width:6px; height:6px; background:#f87171; border-radius:1px;"></div>
-                                    <div style="width:6px; height:18px; background:#ef4444; border-radius:1px;"></div>
-                                    <div style="width:6px; height:22px; background:#dc2626; border-radius:1px;"></div>
-                                    <div style="width:6px; height:12px; background:#b91c1c; border-radius:1px;"></div>
-                                    <div style="width:6px; height:8px; background:#991b1b; border-radius:1px;"></div>
-                                    <div style="width:6px; height:5px; background:#7f1d1d; border-radius:1px;"></div>
+                                <div style="display:flex; align-items:flex-end; justify-content:center; gap:2px; height:20px; margin-bottom:4px;">
+                                    <div style="width:5px; height:2px; background:#fca5a5; border-radius:1px;"></div>
+                                    <div style="width:5px; height:5px; background:#f87171; border-radius:1px;"></div>
+                                    <div style="width:5px; height:14px; background:#ef4444; border-radius:1px;"></div>
+                                    <div style="width:5px; height:18px; background:#dc2626; border-radius:1px;"></div>
+                                    <div style="width:5px; height:10px; background:#b91c1c; border-radius:1px;"></div>
+                                    <div style="width:5px; height:6px; background:#991b1b; border-radius:1px;"></div>
+                                    <div style="width:5px; height:4px; background:#7f1d1d; border-radius:1px;"></div>
                                 </div>
-                                <div style="width:100%; height:10px; background:linear-gradient(to right, #fef2f2, #b91c1c); border-radius:5px; margin-bottom:5px;"></div>
-                                <div style="display:flex; justify-content:space-between; font-size:12px; font-weight:600; color:#0f172a;"><span>0</span><span style="color:#64748b;">Confidence</span><span>1</span></div>
+                                <div style="width:100%; height:8px; background:linear-gradient(to right, #fef2f2, #b91c1c); border-radius:4px; margin-bottom:4px;"></div>
+                                <div style="display:flex; justify-content:space-between; font-size:11px; font-weight:600; color:#0f172a;"><span>0</span><span style="color:#64748b;">Confidence</span><span>1</span></div>
                             </div>
                         </div>
                         
-                        <div style="margin-top: 25px;">
-                            <div style="font-weight:700; font-size:14px; margin-bottom:5px; color:#0f172a;">Apriori vs. FP-Growth</div>
-                            <div style="font-size:12px; color:#475569; line-height:1.5;">
+                        <div style="margin-top: 15px;">
+                            <div style="font-weight:700; font-size:13px; margin-bottom:3px; color:#0f172a;">Apriori vs. FP-Growth</div>
+                            <div style="font-size:11px; color:#475569; line-height:1.4;">
                                 Apriori uses a breadth-first search and candidate generation, which can be computationally expensive on large clinical datasets. FP-Growth uses an FP-tree structure to mine frequent patterns directly without candidate generation, adjusting efficiently to large transaction volumes while uncovering similar confidence limits.
                             </div>
                         </div>
