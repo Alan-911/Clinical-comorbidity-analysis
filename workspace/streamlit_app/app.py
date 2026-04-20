@@ -245,6 +245,11 @@ with col1:
         <h3 style="margin:0; font-size:16px; font-weight: 700; color: #0f172a; transform: translateZ(10px);">Top Demographic Comorbidity Patterns</h3>
         <div style="margin-top:8px; display:inline-block; font-size:11px; color:#fff; background:#0f172a; padding:4px 12px; border-radius:15px; font-weight: 600; transform: translateZ(5px);">Click to View Analytics</div>
     </div>
+    <!-- Advisory Panel Anchor Button -->
+    <div id="advisoryBtn" class="glass-card" style="cursor: pointer; text-align: center; padding: 15px; margin-top: 15px; transition: transform 0.3s ease, box-shadow 0.3s ease; transform-style: preserve-3d; perspective: 1000px; border: 1px solid rgba(255,255,255,0.6);">
+        <h3 style="margin:0; font-size:16px; font-weight: 700; color: #0f172a; transform: translateZ(10px);">Private Multi-Disciplinary Consult</h3>
+        <div style="margin-top:8px; display:inline-block; font-size:11px; color:#fff; background:#0f172a; padding:4px 12px; border-radius:15px; font-weight: 600; transform: translateZ(5px);">Click to View Panel</div>
+    </div>
 
     <!-- Modal Overlay -->
     <div id="demoModal" style="display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(255, 255, 255, 0.2); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); z-index: 999999; align-items: center; justify-content: center; cursor: pointer;">
@@ -327,6 +332,166 @@ with col1:
             
         </div>
     </div>
+
+    <!-- Advisory Modal Overlay -->
+    <div id="advisoryModal" style="display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: rgba(255, 255, 255, 0.2); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); z-index: 999999; align-items: center; justify-content: center; cursor: pointer;">
+        <div style="width:100%; max-width: 1100px; max-height: 90vh; display: flex; flex-direction: column; background: #ffffff; border-radius: 12px; overflow: hidden; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25); border: 1px solid #e2e8f0; font-family: 'Inter', sans-serif; cursor: default;" onclick="event.stopPropagation();">
+            <!-- Header -->
+            <div style="background: #1e293b; color: white; padding: 15px 20px; font-size: 18px; font-weight: 700; border-top-left-radius: 12px; border-top-right-radius: 12px; display: flex; justify-content: space-between; align-items: center;">
+                <div>Private Multi-Disciplinary Consult</div>
+                <div id="closeAdvisoryTopBtn" style="cursor: pointer; font-size: 24px; line-height: 1;">&times;</div>
+            </div>
+            
+            <!-- 2 Column Layout -->
+            <div style="display: flex; height: 550px;">
+                
+                <!-- Left: Doctors List -->
+                <div style="flex: 1; border-right: 1px solid #e2e8f0; background: #f8fafc; overflow-y: auto;">
+                    <!-- Doctor Item 1 -->
+                    <div style="display: flex; align-items: center; padding: 15px 20px; border-bottom: 1px solid #e2e8f0;">
+                        <div style="position: relative; margin-right: 15px;">
+                            <img src="https://ui-avatars.com/api/?name=Ben+Carter&background=64748b&color=fff&rounded=true&size=50" style="width: 50px; height: 50px; border-radius: 50%;">
+                            <div style="position: absolute; bottom: 0; right: 0; width: 14px; height: 14px; background: #22c55e; border: 2px solid #fff; border-radius: 50%;"></div>
+                        </div>
+                        <div>
+                            <div style="font-weight: 700; font-size: 15px; color: #0f172a;">Dr. Ben Carter</div>
+                            <div style="font-size: 13px; color: #475569;">(Endocrinologist)</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Doctor Item 2 -->
+                    <div style="display: flex; align-items: center; padding: 15px 20px; border-bottom: 1px solid #e2e8f0;">
+                        <div style="position: relative; margin-right: 15px;">
+                            <img src="https://ui-avatars.com/api/?name=Sarah+Johnson&background=8b5cf6&color=fff&rounded=true&size=50" style="width: 50px; height: 50px; border-radius: 50%;">
+                            <div style="position: absolute; bottom: 0; right: 0; width: 14px; height: 14px; background: #22c55e; border: 2px solid #fff; border-radius: 50%;"></div>
+                        </div>
+                        <div>
+                            <div style="font-weight: 700; font-size: 15px; color: #0f172a;">Dr. Sarah Johnson</div>
+                            <div style="font-size: 13px; color: #475569;">(Oncologist)</div>
+                        </div>
+                    </div>
+
+                    <!-- Doctor Item 3 -->
+                    <div style="display: flex; align-items: center; padding: 15px 20px; border-bottom: 1px solid #e2e8f0;">
+                        <div style="position: relative; margin-right: 15px;">
+                            <img src="https://ui-avatars.com/api/?name=David+Lee&background=3b82f6&color=fff&rounded=true&size=50" style="width: 50px; height: 50px; border-radius: 50%;">
+                            <div style="position: absolute; bottom: 0; right: 0; width: 14px; height: 14px; background: #22c55e; border: 2px solid #fff; border-radius: 50%;"></div>
+                        </div>
+                        <div>
+                            <div style="font-weight: 700; font-size: 15px; color: #0f172a;">Dr. David Lee</div>
+                            <div style="font-size: 13px; color: #475569;">(Geneticist)</div>
+                        </div>
+                    </div>
+
+                    <!-- Doctor Item 4 -->
+                    <div style="display: flex; align-items: center; padding: 15px 20px; border-bottom: 1px solid #e2e8f0; background: #f1f5f9;">
+                        <div style="position: relative; margin-right: 15px;">
+                            <img src="https://ui-avatars.com/api/?name=Maria+Rodriguez&background=ec4899&color=fff&rounded=true&size=50" style="width: 50px; height: 50px; border-radius: 50%;">
+                            <div style="position: absolute; bottom: 0; right: 0; width: 14px; height: 14px; background: #22c55e; border: 2px solid #fff; border-radius: 50%;"></div>
+                        </div>
+                        <div>
+                            <div style="font-weight: 700; font-size: 15px; color: #0f172a;">Dr. Maria Rodriguez</div>
+                            <div style="font-size: 13px; color: #475569;">(Data Scientist)</div>
+                        </div>
+                    </div>
+
+                    <!-- Doctor Item 5 -->
+                    <div style="display: flex; align-items: center; padding: 15px 20px;">
+                        <div style="position: relative; margin-right: 15px;">
+                            <img src="https://ui-avatars.com/api/?name=Emily+Chen&background=f59e0b&color=fff&rounded=true&size=50" style="width: 50px; height: 50px; border-radius: 50%;">
+                            <div style="position: absolute; bottom: 0; right: 0; width: 14px; height: 14px; background: #22c55e; border: 2px solid #fff; border-radius: 50%;"></div>
+                        </div>
+                        <div>
+                            <div style="font-weight: 700; font-size: 15px; color: #0f172a;">Dr. Emily Chen</div>
+                            <div style="font-size: 13px; color: #475569;">(Cardiologist)</div>
+                            <div style="font-size: 11px; color: #64748b; margin-top: 2px;">[cite: 31]</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Chat Area -->
+                <div style="flex: 2; display: flex; flex-direction: column; background: #eff6ff;">
+                    
+                    <!-- Chat Header -->
+                    <div style="display: flex; justify-content: space-between; align-items: center; background: #64748b; color: white; padding: 12px 15px; font-weight: 600;">
+                        <span style="font-size: 16px;">Chat</span>
+                        <div style="display: flex; gap: 15px; font-size: 14px;">
+                            <span style="cursor: pointer; font-size: 18px; line-height:1;">&minus;</span>
+                            <span style="cursor: pointer; font-size: 18px; line-height:1;">&#8942;</span>
+                        </div>
+                    </div>
+
+                    <!-- Chat Messages -->
+                    <div style="flex: 1; padding: 20px; overflow-y: auto; display: flex; flex-direction: column; gap: 20px;">
+                        
+                        <!-- Message 1 (Dr. Rodriguez) -->
+                        <div style="display: flex; gap: 10px;">
+                            <img src="https://ui-avatars.com/api/?name=Maria+Rodriguez&background=ec4899&color=fff&rounded=true&size=36" style="width: 36px; height: 36px; border-radius: 50%;">
+                            <div style="background: #dbeafe; padding: 15px; border-radius: 12px; border-top-left-radius: 0; max-width: 85%; color: #0f172a; font-size: 14px; box-shadow: 0 1px 2px rgba(0,0,0,0.05); line-height: 1.4;">
+                                <span style="font-weight: 700;">Dr. Rodriguez 👱‍♀️</span> lifts for <strong>{{Age&gt;60, Diabetes, Hypertension}}</strong> are consistent across both algorithms [cite: 83].
+                                
+                                <!-- Mini Demographic Table inside Chat -->
+                                <div style="margin: 10px 0; background: #ffffff; border-radius: 8px; border: 1px solid #cbd5e1; overflow: hidden; font-size: 10px;">
+                                    <table style="width: 100%; border-collapse: collapse;">
+                                        <tr style="background: #f1f5f9; color: #475569; font-weight: 600;">
+                                            <th style="padding: 6px; text-align: left;">Rule</th>
+                                            <th style="padding: 6px; text-align: left;">Meaning</th>
+                                            <th style="padding: 6px; text-align: left;">Lift</th>
+                                        </tr>
+                                        <tr style="border-top: 1px solid #e2e8f0;">
+                                            <td style="padding: 6px; color: #0f172a;">🩸 Blood Type A+ &rarr; Hypertension</td>
+                                            <td style="padding: 6px; color: #475569;">Seniors with Type A+ are higher risk</td>
+                                            <td style="padding: 6px; color: #475569;">Lift: 1.62</td>
+                                        </tr>
+                                        <tr style="border-top: 1px solid #e2e8f0;">
+                                            <td style="padding: 6px; color: #0f172a;">👴 Weight &gt; 90kg &rarr; Diabetes</td>
+                                            <td style="padding: 6px; color: #475569;">Weight is a key progression indicator</td>
+                                            <td style="padding: 6px; color: #475569;">Lift: 1.45</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                
+                                Is this strong enough for clinic?
+                            </div>
+                        </div>
+
+                        <!-- Message 2 (Dr. Chen) -->
+                        <div style="display: flex; gap: 10px;">
+                            <img src="https://ui-avatars.com/api/?name=Emily+Chen&background=f59e0b&color=fff&rounded=true&size=36" style="width: 36px; height: 36px; border-radius: 50%;">
+                            <div style="background: #e2e8f0; padding: 15px; border-radius: 12px; border-top-left-radius: 0; max-width: 85%; color: #0f172a; font-size: 14px; box-shadow: 0 1px 2px rgba(0,0,0,0.05); line-height: 1.4;">
+                                <div style="font-weight: 700; margin-bottom: 5px;">Dr. Chen 👩🏻‍⚕️</div>
+                                
+                                <!-- Mini Heatmap inside Chat -->
+                                <div style="margin: 10px 0; background: #ffffff; border-radius: 8px; border: 1px solid #cbd5e1; padding: 5px; display: inline-block;">
+                                    <div style="display: grid; grid-template-columns: repeat(7, 18px); gap: 2px;">
+                                        <div style="background: #ef4444; height: 18px;"></div><div style="background: #f87171; height: 18px;"></div><div style="background: #fca5a5; height: 18px;"></div><div style="background: #fee2e2; height: 18px;"></div><div style="background: #dbeafe; height: 18px;"></div><div style="background: #bfdbfe; height: 18px;"></div><div style="background: #93c5fd; height: 18px;"></div>
+                                        <div style="background: #dc2626; height: 18px;"></div><div style="background: #ef4444; height: 18px;"></div><div style="background: #fecaca; height: 18px;"></div><div style="background: #eff6ff; height: 18px;"></div><div style="background: #60a5fa; height: 18px;"></div><div style="background: #93c5fd; height: 18px;"></div><div style="background: #bfdbfe; height: 18px;"></div>
+                                    </div>
+                                </div>
+                                
+                                <div>Yes, Lift 1.37 [cite: 161] indicates a strong co-occurrence. Consult required [cite: 182].</div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Input Area -->
+                    <div style="background: #f8fafc; padding: 15px 20px; border-top: 1px solid #e2e8f0;">
+                        <div style="display: flex; gap: 20px; align-items: center; margin-bottom: 12px; color: #475569; font-size: 14px; font-weight: 600;">
+                            <span style="cursor: pointer;">📎 Add Attachment</span>
+                            <span style="cursor: pointer;">😀 Emoji</span>
+                        </div>
+                        <div style="display: flex; gap: 10px; margin-bottom: 15px;">
+                            <input type="text" placeholder="Type a message..." style="flex: 1; padding: 12px 18px; border-radius: 20px; border: 1px solid #cbd5e1; outline: none; font-family: 'Inter', sans-serif; font-size: 14px;">
+                            <button style="background: transparent; color: #94a3b8; border: none; font-size: 24px; cursor: pointer;">➤</button>
+                        </div>
+                        <button id="closeAdvisoryBtn" style="width: 100%; background: #0f172a; color: white; border: none; padding: 14px; border-radius: 25px; font-weight: 700; font-family: 'Inter', sans-serif; font-size: 15px; cursor: pointer; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">Start a new consult</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
     """)
     
     components.html("""
@@ -334,37 +499,50 @@ with col1:
             const parentDoc = window.parent.document;
             
             function bindEvents() {
-                const btn = parentDoc.getElementById('demoBtn');
-                const modal = parentDoc.getElementById('demoModal');
-                const closeBtn = parentDoc.getElementById('closeDemoModalBtn');
+                const demoBtn = parentDoc.getElementById('demoBtn');
+                const demoModal = parentDoc.getElementById('demoModal');
+                const closeDemoBtn = parentDoc.getElementById('closeDemoModalBtn');
                 
-                if (btn && modal && !btn.dataset.bound) {
-                    btn.dataset.bound = 'true';
+                const advBtn = parentDoc.getElementById('advisoryBtn');
+                const advModal = parentDoc.getElementById('advisoryModal');
+                const closeAdvBtn = parentDoc.getElementById('closeAdvisoryBtn');
+                const closeAdvTopBtn = parentDoc.getElementById('closeAdvisoryTopBtn');
+                
+                if (demoBtn && advBtn && !demoBtn.dataset.bound) {
+                    demoBtn.dataset.bound = 'true';
                     
-                    btn.addEventListener('mouseenter', function() {
+                    // Demo Button
+                    demoBtn.addEventListener('mouseenter', function() {
                         this.style.transform = 'scale(1.03) translateY(-5px)';
                         this.style.boxShadow = '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)';
                     });
-                    
-                    btn.addEventListener('mouseleave', function() {
+                    demoBtn.addEventListener('mouseleave', function() {
                         this.style.transform = 'scale(1) translateY(0)';
                         this.style.boxShadow = '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)';
                     });
+                    demoBtn.addEventListener('click', function() { demoModal.style.display = 'flex'; });
                     
-                    btn.addEventListener('click', function() {
-                        modal.style.display = 'flex';
+                    // Demo Modal Close
+                    demoModal.addEventListener('click', function() { demoModal.style.display = 'none'; });
+                    if (closeDemoBtn) closeDemoBtn.addEventListener('click', function() { demoModal.style.display = 'none'; });
+                    
+                    // Advisory Button
+                    advBtn.addEventListener('mouseenter', function() {
+                        this.style.transform = 'scale(1.03) translateY(-5px)';
+                        this.style.boxShadow = '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)';
                     });
-                    
-                    modal.addEventListener('click', function() {
-                        modal.style.display = 'none';
+                    advBtn.addEventListener('mouseleave', function() {
+                        this.style.transform = 'scale(1) translateY(0)';
+                        this.style.boxShadow = '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)';
                     });
+                    advBtn.addEventListener('click', function() { advModal.style.display = 'flex'; });
                     
-                    if (closeBtn) {
-                        closeBtn.addEventListener('click', function(e) {
-                            modal.style.display = 'none';
-                        });
-                    }
-                } else if (!btn || !modal) {
+                    // Advisory Modal Close
+                    advModal.addEventListener('click', function() { advModal.style.display = 'none'; });
+                    if (closeAdvBtn) closeAdvBtn.addEventListener('click', function() { advModal.style.display = 'none'; });
+                    if (closeAdvTopBtn) closeAdvTopBtn.addEventListener('click', function() { advModal.style.display = 'none'; });
+                    
+                } else if (!demoBtn || !advBtn) {
                     setTimeout(bindEvents, 500);
                 }
             }
@@ -630,163 +808,4 @@ with col3:
         else:
             st.info("No matching rules found.")
 
-# === ADVISORY PANEL (BOTTOM) ===
-st.markdown("<br><br>", unsafe_allow_html=True)
-advisory_html = """
-<div style="width:100%; max-width: 1100px; margin: 0 auto 40px auto; background: #ffffff; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1), 0 8px 10px -6px rgba(0,0,0,0.1); border: 1px solid #e2e8f0; font-family: 'Inter', sans-serif;">
-    <!-- Header -->
-    <div style="background: #1e293b; color: white; padding: 15px 20px; font-size: 18px; font-weight: 700; border-top-left-radius: 12px; border-top-right-radius: 12px;">
-        Private Multi-Disciplinary Consult
-    </div>
-    
-    <!-- 2 Column Layout -->
-    <div style="display: flex; height: 550px;">
-        
-        <!-- Left: Doctors List -->
-        <div style="flex: 1; border-right: 1px solid #e2e8f0; background: #f8fafc; overflow-y: auto;">
-            <!-- Doctor Item 1 -->
-            <div style="display: flex; align-items: center; padding: 15px 20px; border-bottom: 1px solid #e2e8f0;">
-                <div style="position: relative; margin-right: 15px;">
-                    <img src="https://ui-avatars.com/api/?name=Ben+Carter&background=64748b&color=fff&rounded=true&size=50" style="width: 50px; height: 50px; border-radius: 50%;">
-                    <div style="position: absolute; bottom: 0; right: 0; width: 14px; height: 14px; background: #22c55e; border: 2px solid #fff; border-radius: 50%;"></div>
-                </div>
-                <div>
-                    <div style="font-weight: 700; font-size: 15px; color: #0f172a;">Dr. Ben Carter</div>
-                    <div style="font-size: 13px; color: #475569;">(Endocrinologist)</div>
-                </div>
-            </div>
-            
-            <!-- Doctor Item 2 -->
-            <div style="display: flex; align-items: center; padding: 15px 20px; border-bottom: 1px solid #e2e8f0;">
-                <div style="position: relative; margin-right: 15px;">
-                    <img src="https://ui-avatars.com/api/?name=Sarah+Johnson&background=8b5cf6&color=fff&rounded=true&size=50" style="width: 50px; height: 50px; border-radius: 50%;">
-                    <div style="position: absolute; bottom: 0; right: 0; width: 14px; height: 14px; background: #22c55e; border: 2px solid #fff; border-radius: 50%;"></div>
-                </div>
-                <div>
-                    <div style="font-weight: 700; font-size: 15px; color: #0f172a;">Dr. Sarah Johnson</div>
-                    <div style="font-size: 13px; color: #475569;">(Oncologist)</div>
-                </div>
-            </div>
 
-            <!-- Doctor Item 3 -->
-            <div style="display: flex; align-items: center; padding: 15px 20px; border-bottom: 1px solid #e2e8f0;">
-                <div style="position: relative; margin-right: 15px;">
-                    <img src="https://ui-avatars.com/api/?name=David+Lee&background=3b82f6&color=fff&rounded=true&size=50" style="width: 50px; height: 50px; border-radius: 50%;">
-                    <div style="position: absolute; bottom: 0; right: 0; width: 14px; height: 14px; background: #22c55e; border: 2px solid #fff; border-radius: 50%;"></div>
-                </div>
-                <div>
-                    <div style="font-weight: 700; font-size: 15px; color: #0f172a;">Dr. David Lee</div>
-                    <div style="font-size: 13px; color: #475569;">(Geneticist)</div>
-                </div>
-            </div>
-
-            <!-- Doctor Item 4 -->
-            <div style="display: flex; align-items: center; padding: 15px 20px; border-bottom: 1px solid #e2e8f0; background: #f1f5f9;">
-                <div style="position: relative; margin-right: 15px;">
-                    <img src="https://ui-avatars.com/api/?name=Maria+Rodriguez&background=ec4899&color=fff&rounded=true&size=50" style="width: 50px; height: 50px; border-radius: 50%;">
-                    <div style="position: absolute; bottom: 0; right: 0; width: 14px; height: 14px; background: #22c55e; border: 2px solid #fff; border-radius: 50%;"></div>
-                </div>
-                <div>
-                    <div style="font-weight: 700; font-size: 15px; color: #0f172a;">Dr. Maria Rodriguez</div>
-                    <div style="font-size: 13px; color: #475569;">(Data Scientist)</div>
-                </div>
-            </div>
-
-            <!-- Doctor Item 5 -->
-            <div style="display: flex; align-items: center; padding: 15px 20px;">
-                <div style="position: relative; margin-right: 15px;">
-                    <img src="https://ui-avatars.com/api/?name=Emily+Chen&background=f59e0b&color=fff&rounded=true&size=50" style="width: 50px; height: 50px; border-radius: 50%;">
-                    <div style="position: absolute; bottom: 0; right: 0; width: 14px; height: 14px; background: #22c55e; border: 2px solid #fff; border-radius: 50%;"></div>
-                </div>
-                <div>
-                    <div style="font-weight: 700; font-size: 15px; color: #0f172a;">Dr. Emily Chen</div>
-                    <div style="font-size: 13px; color: #475569;">(Cardiologist)</div>
-                    <div style="font-size: 11px; color: #64748b; margin-top: 2px;">[cite: 31]</div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Right: Chat Area -->
-        <div style="flex: 2; display: flex; flex-direction: column; background: #eff6ff;">
-            
-            <!-- Chat Header -->
-            <div style="display: flex; justify-content: space-between; align-items: center; background: #64748b; color: white; padding: 12px 15px; font-weight: 600;">
-                <span style="font-size: 16px;">Chat</span>
-                <div style="display: flex; gap: 15px; font-size: 14px;">
-                    <span style="cursor: pointer; font-size: 18px; line-height:1;">&minus;</span>
-                    <span style="cursor: pointer; font-size: 18px; line-height:1;">&#8942;</span>
-                </div>
-            </div>
-
-            <!-- Chat Messages -->
-            <div style="flex: 1; padding: 20px; overflow-y: auto; display: flex; flex-direction: column; gap: 20px;">
-                
-                <!-- Message 1 (Dr. Rodriguez) -->
-                <div style="display: flex; gap: 10px;">
-                    <img src="https://ui-avatars.com/api/?name=Maria+Rodriguez&background=ec4899&color=fff&rounded=true&size=36" style="width: 36px; height: 36px; border-radius: 50%;">
-                    <div style="background: #dbeafe; padding: 15px; border-radius: 12px; border-top-left-radius: 0; max-width: 85%; color: #0f172a; font-size: 14px; box-shadow: 0 1px 2px rgba(0,0,0,0.05); line-height: 1.4;">
-                        <span style="font-weight: 700;">Dr. Rodriguez 👱‍♀️</span> lifts for <strong>{{Age&gt;60, Diabetes, Hypertension}}</strong> are consistent across both algorithms [cite: 83].
-                        
-                        <!-- Mini Demographic Table inside Chat -->
-                        <div style="margin: 10px 0; background: #ffffff; border-radius: 8px; border: 1px solid #cbd5e1; overflow: hidden; font-size: 10px;">
-                            <table style="width: 100%; border-collapse: collapse;">
-                                <tr style="background: #f1f5f9; color: #475569; font-weight: 600;">
-                                    <th style="padding: 6px; text-align: left;">Rule</th>
-                                    <th style="padding: 6px; text-align: left;">Meaning</th>
-                                    <th style="padding: 6px; text-align: left;">Lift</th>
-                                </tr>
-                                <tr style="border-top: 1px solid #e2e8f0;">
-                                    <td style="padding: 6px; color: #0f172a;">🩸 Blood Type A+ &rarr; Hypertension</td>
-                                    <td style="padding: 6px; color: #475569;">Seniors with Type A+ are higher risk</td>
-                                    <td style="padding: 6px; color: #475569;">Lift: 1.62</td>
-                                </tr>
-                                <tr style="border-top: 1px solid #e2e8f0;">
-                                    <td style="padding: 6px; color: #0f172a;">👴 Weight &gt; 90kg &rarr; Diabetes</td>
-                                    <td style="padding: 6px; color: #475569;">Weight is a key progression indicator</td>
-                                    <td style="padding: 6px; color: #475569;">Lift: 1.45</td>
-                                </tr>
-                            </table>
-                        </div>
-                        
-                        Is this strong enough for clinic?
-                    </div>
-                </div>
-
-                <!-- Message 2 (Dr. Chen) -->
-                <div style="display: flex; gap: 10px;">
-                    <img src="https://ui-avatars.com/api/?name=Emily+Chen&background=f59e0b&color=fff&rounded=true&size=36" style="width: 36px; height: 36px; border-radius: 50%;">
-                    <div style="background: #e2e8f0; padding: 15px; border-radius: 12px; border-top-left-radius: 0; max-width: 85%; color: #0f172a; font-size: 14px; box-shadow: 0 1px 2px rgba(0,0,0,0.05); line-height: 1.4;">
-                        <div style="font-weight: 700; margin-bottom: 5px;">Dr. Chen 👩🏻‍⚕️</div>
-                        
-                        <!-- Mini Heatmap inside Chat -->
-                        <div style="margin: 10px 0; background: #ffffff; border-radius: 8px; border: 1px solid #cbd5e1; padding: 5px; display: inline-block;">
-                            <div style="display: grid; grid-template-columns: repeat(7, 18px); gap: 2px;">
-                                <div style="background: #ef4444; height: 18px;"></div><div style="background: #f87171; height: 18px;"></div><div style="background: #fca5a5; height: 18px;"></div><div style="background: #fee2e2; height: 18px;"></div><div style="background: #dbeafe; height: 18px;"></div><div style="background: #bfdbfe; height: 18px;"></div><div style="background: #93c5fd; height: 18px;"></div>
-                                <div style="background: #dc2626; height: 18px;"></div><div style="background: #ef4444; height: 18px;"></div><div style="background: #fecaca; height: 18px;"></div><div style="background: #eff6ff; height: 18px;"></div><div style="background: #60a5fa; height: 18px;"></div><div style="background: #93c5fd; height: 18px;"></div><div style="background: #bfdbfe; height: 18px;"></div>
-                            </div>
-                        </div>
-                        
-                        <div>Yes, Lift 1.37 [cite: 161] indicates a strong co-occurrence. Consult required [cite: 182].</div>
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- Input Area -->
-            <div style="background: #f8fafc; padding: 15px 20px; border-top: 1px solid #e2e8f0;">
-                <div style="display: flex; gap: 20px; align-items: center; margin-bottom: 12px; color: #475569; font-size: 14px; font-weight: 600;">
-                    <span style="cursor: pointer;">📎 Add Attachment</span>
-                    <span style="cursor: pointer;">😀 Emoji</span>
-                </div>
-                <div style="display: flex; gap: 10px; margin-bottom: 15px;">
-                    <input type="text" placeholder="Type a message..." style="flex: 1; padding: 12px 18px; border-radius: 20px; border: 1px solid #cbd5e1; outline: none; font-family: 'Inter', sans-serif; font-size: 14px;">
-                    <button style="background: transparent; color: #94a3b8; border: none; font-size: 24px; cursor: pointer;">➤</button>
-                </div>
-                <button style="width: 100%; background: #0f172a; color: white; border: none; padding: 14px; border-radius: 25px; font-weight: 700; font-family: 'Inter', sans-serif; font-size: 15px; cursor: pointer; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">Start a new consult</button>
-            </div>
-
-        </div>
-    </div>
-</div>
-"""
-st_html(advisory_html)
