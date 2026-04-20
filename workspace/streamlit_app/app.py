@@ -240,11 +240,11 @@ with col1:
     """)
     
     import base64
-    modal_img_path = os.path.join(base_path, "visualizations", "demographic_patterns.png")
+    modal_img_path = os.path.join(base_path, "visualizations", "demographic_patterns.jpg")
     try:
         with open(modal_img_path, "rb") as img_file:
             encoded_modal_img = base64.b64encode(img_file.read()).decode("utf-8")
-        modal_img_src = f"data:image/png;base64,{encoded_modal_img}"
+        modal_img_src = f"data:image/jpeg;base64,{encoded_modal_img}"
     except FileNotFoundError:
         modal_img_src = ""
 
