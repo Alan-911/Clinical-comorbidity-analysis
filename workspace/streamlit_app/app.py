@@ -48,7 +48,7 @@ except Exception:
     bg_style = ""
     bg_html = ""
 
-# --- CSS Styling (Cloud Design & Animations) ---
+# --- CSS Styling ---
 st.markdown(f"""
     <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
@@ -58,7 +58,7 @@ st.markdown(f"""
     header {{visibility: hidden;}}
     .block-container {{ padding: 1rem; max-width: 100%; position: relative; z-index: 1; }}
     
-    html, body, [class*="css"] {{ font-family: 'Inter', sans-serif; color: #1f2937; }}
+    html, body, [class*="css"] {{ font-family: 'Inter', sans-serif; color: #0f172a; }}
     
     .stApp {{
         background-color: #f8fafc;
@@ -79,16 +79,16 @@ st.markdown(f"""
     .nav-btn.active {{ background: #0f172a; color: white; }}
 
     .glass-card {{
-        background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.5);
-        border-radius: 20px; padding: 20px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); margin-bottom: 20px; position: relative; z-index: 2;
+        background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.8);
+        border-radius: 15px; padding: 20px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); margin-bottom: 20px; position: relative; z-index: 2;
     }}
     
-    h3 {{ font-size: 18px; font-weight: 600; color: #0f172a; margin-bottom: 15px; margin-top: 0; }}
+    h3 {{ font-size: 16px; font-weight: 600; color: #0f172a; margin-bottom: 15px; margin-top: 0; }}
     
     /* Vitals & Animations */
     .vitals-row {{ display: flex; gap: 10px; margin-bottom: 20px; }}
     .vital-card {{ flex: 1; padding: 15px; border-radius: 15px; background: #fff; box-shadow: 0 4px 15px rgba(0,0,0,0.05); position: relative; overflow: hidden; }}
-    .vital-label {{ font-size: 12px; color: #64748b; font-weight: 600; }}
+    .vital-label {{ font-size: 12px; color: #64748b; font-weight: 600; margin-bottom: 2px; }}
     .vital-value {{ font-size: 24px; font-weight: 700; color: #0f172a; }}
     
     @keyframes heartbeat {{ 0% {{ transform: scale(1); }} 20% {{ transform: scale(1.25); }} 40% {{ transform: scale(1); }} 60% {{ transform: scale(1.15); }} 80% {{ transform: scale(1); }} 100% {{ transform: scale(1); }} }}
@@ -97,34 +97,27 @@ st.markdown(f"""
     @keyframes brainwave {{ 0% {{ opacity: 0.5; }} 50% {{ opacity: 1; text-shadow: 0 0 10px #eab308; }} 100% {{ opacity: 0.5; }} }}
     .brain-icon {{ animation: brainwave 2s infinite; display: inline-block; color: #eab308; }}
     
-    /* EKG Line Animation */
-    @keyframes moveEKG {{ 0% {{ background-position: 0 0; }} 100% {{ background-position: -100px 0; }} }}
     .ekg-line {{
         height: 30px; width: 100%; margin-top: 10px;
         background: linear-gradient(90deg, transparent 0%, #ef4444 50%, transparent 100%);
-        background-size: 100px 100%;
-        animation: moveEKG 1s linear infinite;
-        opacity: 0.5;
+        background-size: 100px 100%; animation: moveEKG 1s linear infinite; opacity: 0.5;
     }}
-    .brain-line {{
-        height: 30px; width: 100%; margin-top: 10px;
-        background: repeating-linear-gradient(45deg, transparent, transparent 5px, #eab308 5px, #eab308 10px);
-        animation: moveEKG 2s linear infinite;
-        opacity: 0.5;
-    }}
+    @keyframes moveEKG {{ 0% {{ background-position: 0 0; }} 100% {{ background-position: -100px 0; }} }}
     
+    /* Timeline */
     .timeline-item {{ margin-bottom: 15px; padding-left: 15px; border-left: 2px solid #e2e8f0; position: relative; }}
     .timeline-item::before {{ content: ''; position: absolute; left: -6px; top: 0; width: 10px; height: 10px; border-radius: 50%; background: #3b82f6; }}
+    .timeline-time {{ font-size: 12px; color: #94a3b8; font-weight: 600; }}
+    .timeline-title {{ font-size: 14px; font-weight: 600; color: #0f172a; margin: 2px 0; }}
+    .timeline-desc {{ font-size: 12px; color: #64748b; }}
     
-    /* Dark Theme Metrics Card */
-    .dark-metric-card {{
-        background: #0f172a; color: white; border-radius: 15px; padding: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-    }}
-    .dark-metric-block {{ text-align: center; }}
-    .dark-metric-block .val {{ font-size: 28px; font-weight: 700; color: #38bdf8; }}
-    .dark-metric-block .lbl {{ font-size: 12px; color: #94a3b8; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }}
+    /* Form overrides for Pattern Selection */
+    div[data-testid="stForm"] {{ border: none; padding: 0; background: transparent; }}
+    div[data-baseweb="select"] {{ border-radius: 8px !important; background: white !important; border: 1px solid #cbd5e1 !important; }}
+    button[data-testid="baseButton-primary"] {{ background-color: #0f172a !important; color: white !important; width: 100% !important; border-radius: 8px !important; padding: 10px !important; font-weight: 600 !important; border: none !important; margin-top: 10px !important; }}
     
-    div[data-baseweb="select"] {{ border-radius: 10px !important; background: white !important; border: 1px solid #cbd5e1 !important; }}
+    /* Custom spacing adjustments */
+    .block-container {{ gap: 0rem; }}
     </style>
 """, unsafe_allow_html=True)
 
@@ -135,7 +128,7 @@ if bg_html:
 st.markdown("""
 <div class="navbar">
     <div class="navbar-brand">
-        <span style="font-size: 24px;">⚕️</span> Carelink <span style="color:#94a3b8; font-weight:400;">• Comorbidity & Treatment</span>
+        <span style="font-size: 24px;">⚕️</span> Carelink <span style="color:#94a3b8; font-weight:400; font-size:16px; margin-left:5px;">• Comorbidity & Treatment Patterns</span>
     </div>
     <div class="navbar-links">
         <button class="nav-btn active">Dashboard</button>
@@ -200,11 +193,14 @@ if df_encoded is not None:
         items = str(antecedents).replace("frozenset({", "").replace("})", "").replace("'", "").split(", ")
         all_items.update([i.strip() for i in items])
     all_items = sorted(list(all_items))
-    runtime_diff = time_apriori - time_fp
+    
+    apriori_patterns = len(association_rules(freq_items_apriori, metric="confidence", min_threshold=0.5))
+    fp_patterns = len(rules_df)
 else:
     rules_df = None
     all_items = []
-    time_apriori, time_fp, runtime_diff = 0, 0, 0
+    time_apriori, time_fp = 0, 0
+    apriori_patterns, fp_patterns = 0, 0
 
 # --- 3 Column Layout ---
 col1, col2, col3 = st.columns([1, 1.2, 1.5], gap="large")
@@ -213,15 +209,15 @@ col1, col2, col3 = st.columns([1, 1.2, 1.5], gap="large")
 with col1:
     st.markdown("""
     <div class="glass-card">
-        <div style="display:flex; justify-content:space-between; align-items:center;">
-            <h3>Care Schedule</h3>
-            <span style="font-size:12px; color:#64748b; background:#f1f5f9; padding:5px 10px; border-radius:20px;">September 2025 ⌄</span>
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 20px;">
+            <h3 style="margin:0;">Care Schedule</h3>
+            <span style="font-size:12px; color:#0f172a; font-weight:600; background:#f1f5f9; padding:6px 12px; border-radius:20px; border:1px solid #e2e8f0;">September 2025 ⌄</span>
         </div>
-        <div style="margin-top:20px;">
+        <div>
             <div class="timeline-item">
                 <div class="timeline-time">13:00</div>
                 <div class="timeline-title">Blood Pressure Check</div>
-                <div class="timeline-desc">Measure BP at rest if > 140/90 mmHg.</div>
+                <div class="timeline-desc">Measure BP at rest if > 140/90 mmHg.<br><span style="color:#ef4444;">❤ 💊</span></div>
             </div>
             <div class="timeline-item">
                 <div class="timeline-time">15:30</div>
@@ -239,48 +235,23 @@ with col1:
     
     st.markdown("""
     <div class="glass-card">
-        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 10px;">
-            <h3 style="margin-bottom:0;">Data Visualization</h3>
-            <div style="width: 40%; height: 6px; background: #e2e8f0; border-radius: 3px; overflow: hidden;">
-                <div style="width: 75%; height: 100%; background: #3b82f6;"></div>
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 15px;">
+            <h3 style="margin:0;">Data Exploration & Visualization</h3>
+            <span style="font-size:12px; color:#0f172a; font-weight:600; background:#f8fafc; padding:4px 10px; border-radius:15px; border:1px solid #e2e8f0; cursor:pointer;">View All</span>
+        </div>
+        <div style="display:flex; gap:10px; overflow-x:auto;">
+            <div style="flex:1; text-align:center; background:#fff; padding:15px 5px; border-radius:15px; box-shadow:0 2px 10px rgba(0,0,0,0.05); border:1px solid #f1f5f9;">
+                <div style="font-size:32px; margin-bottom:5px;">👨‍⚕️</div>
+                <div style="font-size:12px; font-weight:700; color:#0f172a;">Dr. Daniel Lewis</div>
+                <div style="font-size:10px; color:#64748b;">Oncologist</div>
+                <div style="font-size:9px; font-weight:600; color:#0f172a; margin-top:5px; background:#f1f5f9; border-radius:10px; display:inline-block; padding:2px 6px;">Exp. 25 yrs</div>
             </div>
-        </div>
-        <div style="display:flex; justify-content:space-between; align-items:center; margin-top: 15px;">
-            <h3>Doctors On Call</h3>
-            <span style="font-size:12px; color:#0f172a; font-weight:600; cursor:pointer;">View All</span>
-        </div>
-        <div style="display:flex; gap:10px; margin-top:10px; overflow-x:auto;">
-            <div style="flex:1; text-align:center; background:#fff; padding:15px 5px; border-radius:15px; box-shadow:0 2px 10px rgba(0,0,0,0.05);">
-                <div style="font-size:28px; margin-bottom:5px;">👨‍⚕️</div>
-                <div style="font-size:11px; font-weight:700;">Doctor 1</div>
-                <div style="font-size:9px; color:#64748b;">Oncologist</div>
+            <div style="flex:1; text-align:center; background:#fff; padding:15px 5px; border-radius:15px; box-shadow:0 2px 10px rgba(0,0,0,0.05); border:1px solid #f1f5f9;">
+                <div style="font-size:32px; margin-bottom:5px;">👩‍⚕️</div>
+                <div style="font-size:12px; font-weight:700; color:#0f172a;">Dr. Grace Walker</div>
+                <div style="font-size:10px; color:#64748b;">Cardiologist</div>
+                <div style="font-size:9px; font-weight:600; color:#0f172a; margin-top:5px; background:#f1f5f9; border-radius:10px; display:inline-block; padding:2px 6px;">Exp. 5 yrs</div>
             </div>
-            <div style="flex:1; text-align:center; background:#fff; padding:15px 5px; border-radius:15px; box-shadow:0 2px 10px rgba(0,0,0,0.05);">
-                <div style="font-size:28px; margin-bottom:5px;">👩‍⚕️</div>
-                <div style="font-size:11px; font-weight:700;">Doctor 2</div>
-                <div style="font-size:9px; color:#64748b;">Cardiologist</div>
-            </div>
-            <div style="flex:1; text-align:center; background:#fff; padding:15px 5px; border-radius:15px; box-shadow:0 2px 10px rgba(0,0,0,0.05);">
-                <div style="font-size:28px; margin-bottom:5px;">👨‍⚕️</div>
-                <div style="font-size:11px; font-weight:700;">Doctor 3</div>
-                <div style="font-size:9px; color:#64748b;">Neurologist</div>
-            </div>
-        </div>
-    </div>
-    """, unsafe_allow_html=True)
-    
-    # Legend & Metadata Card
-    st.markdown("""
-    <div class="glass-card" style="background: rgba(255, 255, 255, 0.95); border-left: 4px solid #3b82f6;">
-        <h3>System Legend</h3>
-        <div style="font-size: 12px; color: #475569; margin-bottom: 8px;">
-            <strong style="color: #0f172a;">Support:</strong> Frequency of the pattern in the total dataset.
-        </div>
-        <div style="font-size: 12px; color: #475569; margin-bottom: 8px;">
-            <strong style="color: #0f172a;">Confidence:</strong> Probability that the consequent event occurs given the antecedent.
-        </div>
-        <div style="font-size: 12px; color: #475569;">
-            <strong style="color: #0f172a;">Lift:</strong> Strength of association. Lift > 1 implies a strong, non-random clinical correlation.
         </div>
     </div>
     """, unsafe_allow_html=True)
@@ -292,10 +263,9 @@ with col2:
 # === RIGHT COLUMN: AI Analytics ===
 with col3:
     # 1. Animated Vitals Component & Temperature Logic
-    # Generate random temp or static for demo. Let's make it 38.5 to show Red, or user can toggle. We'll use 38.5.
     temp_val = 38.5
-    temp_color = "#ef4444" if temp_val > 38 else "#22c55e" # Red if > 38, else Green
-    temp_bg = "rgba(239, 68, 68, 0.1)" if temp_val > 38 else "rgba(34, 197, 94, 0.1)"
+    temp_color = "#ef4444" if temp_val > 38 else "#22c55e" 
+    temp_bg = "rgba(239, 68, 68, 0.05)" if temp_val > 38 else "rgba(34, 197, 94, 0.05)"
     
     st.markdown(f"""
     <div class="vitals-row">
@@ -303,9 +273,9 @@ with col3:
             <div style="display:flex; justify-content:space-between;">
                 <div>
                     <div class="vital-label">Heart rate</div>
-                    <div class="vital-value">80-90 <span style="font-size:14px; color:#64748b;">bpm</span></div>
+                    <div class="vital-value">80-90 <span style="font-size:12px; font-weight:600; color:#64748b;">bpm</span></div>
                 </div>
-                <div class="heart-icon">❤️</div>
+                <div class="heart-icon" style="font-size:18px;">❤</div>
             </div>
             <div class="ekg-line"></div>
         </div>
@@ -314,97 +284,157 @@ with col3:
             <div style="display:flex; justify-content:space-between;">
                 <div>
                     <div class="vital-label">Brain activity</div>
-                    <div class="vital-value">90-150 <span style="font-size:14px; color:#64748b;">Hz</span></div>
+                    <div class="vital-value">90-150 <span style="font-size:12px; font-weight:600; color:#64748b;">Hz</span></div>
                 </div>
-                <div class="brain-icon">🧠</div>
+                <div class="brain-icon" style="font-size:18px;">🧠</div>
             </div>
-            <div class="brain-line"></div>
+            <div style="height:30px; width:100%; margin-top:10px; background: repeating-linear-gradient(45deg, transparent, transparent 5px, rgba(234, 179, 8, 0.2) 5px, rgba(234, 179, 8, 0.2) 10px);"></div>
         </div>
         
-        <div class="vital-card" style="border-left: 4px solid {temp_color}; background: {temp_bg};">
+        <div class="vital-card" style="background: {temp_bg}; border: 1px solid rgba(239, 68, 68, 0.1);">
             <div style="display:flex; justify-content:space-between;">
                 <div>
-                    <div class="vital-label" style="color: {temp_color};">Temperature (T)</div>
-                    <div class="vital-value" style="color: {temp_color};">{temp_val}° <span style="font-size:14px; color: {temp_color};">C</span></div>
+                    <div class="vital-label" style="color: {temp_color};">Temperature</div>
+                    <div class="vital-value" style="color: {temp_color};">{temp_val}°<span style="font-size:12px; font-weight:600; color: {temp_color};">C</span></div>
                 </div>
-                <div style="color: {temp_color}; font-size:20px;">🌡️</div>
+                <div style="color: {temp_color}; font-size:18px;">🌡</div>
             </div>
-            <div style="height:30px; width:100%; border-bottom:2px solid {temp_color}; margin-top:10px;"></div>
+            <div style="height:30px; width:100%; margin-top:10px; display:flex; flex-direction:column; justify-content:center;">
+                 <div style="width:100%; height:8px; background:rgba(239, 68, 68, 0.2); border-radius:4px; overflow:hidden;">
+                     <div style="width:85%; height:100%; background:{temp_color};"></div>
+                 </div>
+            </div>
         </div>
     </div>
     """, unsafe_allow_html=True)
     
-    # 2. Association Rule Visualization
-    st.markdown('<div class="glass-card" style="padding: 10px;">', unsafe_allow_html=True)
-    st.markdown('<h3 style="padding-left:10px; padding-top:10px;">Diagnosis & Treatment Rule Network</h3>', unsafe_allow_html=True)
+    # Placeholder for the Network Graph so it renders structurally ABOVE the filters, 
+    # but functionally uses the states defined BELOW it.
+    graph_placeholder = st.empty()
     
-    # Render Pattern Selection inputs directly in Streamlit before rendering graph
-    st.markdown("<div style='padding: 0 10px;'><h4 style='font-size:14px; color:#64748b; margin-bottom:5px;'>Pattern Selection</h4></div>", unsafe_allow_html=True)
-    sel_col1, sel_col2 = st.columns(2)
-    with sel_col1:
-        primary_diagnosis = st.selectbox("Primary Diagnosis", ["All"] + all_items, key="p_diag")
-    with sel_col2:
-        target_medication = st.selectbox("Target Medication", ["All"] + all_items, key="t_med")
-
-    # Filter Rules based on selection
-    filtered_rules = rules_df.copy() if rules_df is not None else None
-    if filtered_rules is not None:
-        if primary_diagnosis != "All":
-            filtered_rules = filtered_rules[filtered_rules['antecedents'].str.contains(primary_diagnosis)]
-        if target_medication != "All":
-            filtered_rules = filtered_rules[filtered_rules['consequents'].str.contains(target_medication)]
-
-    # Draw Network Graph
-    if filtered_rules is not None and len(filtered_rules) > 0:
-        net = Network(height="300px", width="100%", bgcolor="white", font_color="#1f2937", directed=True)
-        net.force_atlas_2based()
+    # 3. Bottom Row: Pattern Selection & Algorithm Comparison
+    bottom_col1, bottom_col2 = st.columns([1, 1.4], gap="small")
+    
+    with bottom_col1:
+        st.markdown('<div class="glass-card" style="height: 100%; display:flex; flex-direction:column; padding: 20px;">', unsafe_allow_html=True)
+        st.markdown('<h3 style="margin-bottom: 15px; font-size: 16px;">Pattern Selection</h3>', unsafe_allow_html=True)
         
-        top_rules = filtered_rules.nlargest(15, 'lift')
-        
-        for _, row in top_rules.iterrows():
-            ant_str = str(row['antecedents']).replace("frozenset({", "").replace("})", "").replace("'", "")
-            con_str = str(row['consequents']).replace("frozenset({", "").replace("})", "").replace("'", "")
-            ants = [a.strip() for a in ant_str.split(',')]
-            cons = [c.strip() for c in con_str.split(',')]
+        with st.form("pattern_form"):
+            st.markdown("<div style='font-size:12px; font-weight:600; color:#0f172a; margin-bottom:5px;'>Primary Diagnosis</div>", unsafe_allow_html=True)
+            primary_diag = st.selectbox("Primary Diagnosis", ["All"] + all_items, label_visibility="collapsed")
             
-            for a in ants:
-                a_color = "#0f172a" if "Disease" in a or a in ["Diabetes", "Hypertension", "Asthma"] else "#3b82f6"
-                net.add_node(a, a, title=a, color=a_color, shape="dot", size=15)
-                for c in cons:
-                    c_color = "#0f172a" if "Disease" in c or c in ["Diabetes", "Hypertension", "Asthma"] else "#3b82f6"
-                    net.add_node(c, c, title=c, color=c_color, shape="dot", size=15)
-                    # Edge representing Medical Events -> Lift
-                    net.add_edge(a, c, title=f"Support: {row['support']:.2f}\\nConf: {row['confidence']:.2f}\\nLift: {row['lift']:.2f}", value=row['lift'], color="#94a3b8")
-        
-        net_path = os.path.join(base_path, "visualizations", "pyvis_graph.html")
-        net.save_graph(net_path)
-        with open(net_path, 'r', encoding='utf-8') as f:
-            html_data = f.read()
-        components.html(html_data, height=310)
-    else:
-        st.info("No matching medical events found for this selection.")
-        
-    st.markdown('</div>', unsafe_allow_html=True)
-    
-    # 3. Benchmarking Module (Dark Theme Metric Cards)
-    st.markdown('<div class="dark-metric-card">', unsafe_allow_html=True)
-    st.markdown('<h3 style="color:white;">Live Algorithm Benchmarking</h3>', unsafe_allow_html=True)
-    
-    st.markdown(f"""
-    <div style="display:flex; justify-content:space-around; margin-top:20px;">
-        <div class="dark-metric-block">
-            <div class="lbl">Apriori Runtime</div>
-            <div class="val">{time_apriori:.4f}s</div>
-        </div>
-        <div class="dark-metric-block">
-            <div class="lbl">FP-Growth Runtime</div>
-            <div class="val">{time_fp:.4f}s</div>
-        </div>
-        <div class="dark-metric-block" style="border-left: 2px solid #334155; padding-left: 20px;">
-            <div class="lbl" style="color: #22c55e;">Runtime Diff ($T_{{Apriori}} - T_{{FP}}$)</div>
-            <div class="val" style="color: #22c55e;">{runtime_diff:.4f}s</div>
-        </div>
-    </div>
-    """, unsafe_allow_html=True)
-    st.markdown('</div>', unsafe_allow_html=True)
+            st.markdown("<div style='font-size:12px; font-weight:600; color:#0f172a; margin-top:10px; margin-bottom:5px;'>Secondary Condition</div>", unsafe_allow_html=True)
+            secondary_diag = st.selectbox("Secondary Condition", ["All"] + all_items, label_visibility="collapsed")
+            
+            submitted = st.form_submit_button("Done", type="primary")
+            
+        st.markdown('</div>', unsafe_allow_html=True)
 
+    with bottom_col2:
+        # Recreate the exact UI from the right side of the image for Algorithm Comparison
+        st.markdown(f"""
+        <div class="glass-card" style="height: 100%; display: flex; flex-direction: column; padding: 20px;">
+            <h3 style="margin-bottom: 15px; font-size: 16px; display: flex; align-items: center; gap: 8px;">
+                <span style="font-size:16px;">≑</span> Algorithm Comparison
+            </h3>
+            <div style="display: flex; justify-content: space-between; flex: 1;">
+                <!-- Left Side (Apriori) -->
+                <div style="flex: 1; padding-right: 15px; display: flex; flex-direction: column; justify-content: space-between;">
+                    <div>
+                        <div style="font-size: 12px; font-weight: 600; color: #0f172a; margin-bottom: 2px;">Apriori Runtime</div>
+                        <div style="font-size: 26px; font-weight: 700; color: #0f172a; margin-bottom: 10px;">{time_apriori:.1f}s</div>
+                        <div style="font-size: 11px; color: #64748b; font-weight: 600; line-height: 1.3;">Number of Patterns<br>Discovered</div>
+                    </div>
+                    <button style="width: 100%; padding: 8px; background: white; color: #0f172a; border: 1px solid #cbd5e1; border-radius: 8px; font-weight: 600; font-size: 12px; cursor: pointer; margin-top: 15px;">
+                        View Details
+                    </button>
+                </div>
+                <!-- Right Side (FP-Growth) -->
+                <div style="flex: 1; padding-left: 15px; display: flex; flex-direction: column; justify-content: space-between; border-left: 1px solid #e2e8f0;">
+                    <div>
+                        <div style="font-size: 12px; font-weight: 600; color: #0f172a; margin-bottom: 2px;">FP-Growth Runtime</div>
+                        <div style="font-size: 26px; font-weight: 700; color: #0f172a; margin-bottom: 10px;">{time_fp:.1f}s</div>
+                        
+                        <!-- CSS Bar Chart -->
+                        <div style="display: flex; align-items: flex-end; justify-content: space-around; height: 50px; margin-top: 5px;">
+                            <div style="display: flex; flex-direction: column; align-items: center; gap: 4px;">
+                                <span style="font-size: 10px; font-weight: 600; color: #0f172a;">{apriori_patterns}</span>
+                                <div style="width: 20px; height: 15px; background: #93c5fd; border-radius: 4px 4px 0 0;"></div>
+                                <span style="font-size: 9px; color: #64748b; font-weight: 600;">Apriori</span>
+                            </div>
+                            <div style="display: flex; flex-direction: column; align-items: center; gap: 4px;">
+                                <span style="font-size: 10px; font-weight: 600; color: #0f172a;">{fp_patterns}</span>
+                                <div style="width: 20px; height: 40px; background: #3b82f6; border-radius: 4px 4px 0 0;"></div>
+                                <span style="font-size: 9px; color: #64748b; font-weight: 600;">FP-Growth</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button style="width: 100%; padding: 8px; background: #0f172a; color: white; border: none; border-radius: 8px; font-weight: 600; font-size: 12px; cursor: pointer; margin-top: 15px;">
+                        View Details
+                    </button>
+                </div>
+            </div>
+        </div>
+        """, unsafe_allow_html=True)
+
+    # Now that we have the pattern selections, render the graph into the placeholder ABOVE
+    with graph_placeholder.container():
+        st.markdown('<div class="glass-card" style="padding: 15px; margin-bottom: 20px;">', unsafe_allow_html=True)
+        
+        # Header inside the graph card mimicking the image
+        st.markdown("""
+            <div style="display:flex; justify-content:space-between; align-items:flex-start;">
+                <div style="flex:1;">
+                    <h3 style="margin-bottom:5px;">Diagnosis & Treatment Rule Network</h3>
+                </div>
+            </div>
+        """, unsafe_allow_html=True)
+        
+        # Legend embedded directly inside the graph container (like the image)
+        st.markdown("""
+        <div style="display:flex; justify-content:space-between; align-items:center; border-top: 1px solid #e2e8f0; padding-top:10px; margin-top:5px;">
+            <div style="font-size: 10px; color: #0f172a; font-weight: 600;">Edge Color → Strength (Lift) <br><span style="color:#64748b; font-weight:400;">Thickness</span></div>
+            <div style="font-size: 10px; color: #0f172a; font-weight: 600; text-align:right;">Node Color → Event Type <br><span style="color:#64748b; font-weight:400;">(Diagnosis, Medication)</span></div>
+        </div>
+        """, unsafe_allow_html=True)
+
+        filtered_rules = rules_df.copy() if rules_df is not None else None
+        if filtered_rules is not None:
+            if primary_diag != "All":
+                filtered_rules = filtered_rules[filtered_rules['antecedents'].str.contains(primary_diag)]
+            if secondary_diag != "All":
+                filtered_rules = filtered_rules[filtered_rules['consequents'].str.contains(secondary_diag)]
+
+        if filtered_rules is not None and len(filtered_rules) > 0:
+            net = Network(height="260px", width="100%", bgcolor="transparent", font_color="#0f172a", directed=True)
+            net.force_atlas_2based(spring_length=80, spring_strength=0.08, overlap=0)
+            
+            top_rules = filtered_rules.nlargest(15, 'lift')
+            
+            for _, row in top_rules.iterrows():
+                ant_str = str(row['antecedents']).replace("frozenset({", "").replace("})", "").replace("'", "")
+                con_str = str(row['consequents']).replace("frozenset({", "").replace("})", "").replace("'", "")
+                ants = [a.strip() for a in ant_str.split(',')]
+                cons = [c.strip() for c in con_str.split(',')]
+                
+                for a in ants:
+                    a_color = "#0f172a" if "Disease" in a or a in ["Diabetes", "Hypertension", "Asthma"] else "#3b82f6"
+                    net.add_node(a, a, title=a, color=a_color, shape="ellipse", size=20, font={"color": "white", "size":12, "face":"Inter", "strokeWidth":0})
+                    for c in cons:
+                        c_color = "#0f172a" if "Disease" in c or c in ["Diabetes", "Hypertension", "Asthma"] else "#3b82f6"
+                        net.add_node(c, c, title=c, color=c_color, shape="ellipse", size=20, font={"color": "white", "size":12, "face":"Inter", "strokeWidth":0})
+                        
+                        edge_label = f"Support: {row['support']:.2f}\nConfidence: {row['confidence']:.2f}\nLift: {row['lift']:.2f}"
+                        net.add_edge(a, c, title=edge_label, value=row['lift'], color="#64748b", font={"size":8, "align":"middle"})
+            
+            net_path = os.path.join(base_path, "visualizations", "pyvis_graph.html")
+            net.save_graph(net_path)
+            with open(net_path, 'r', encoding='utf-8') as f:
+                html_data = f.read()
+            # Wrap pyvis output to make it transparent
+            html_data = html_data.replace('background-color: transparent;', 'background-color: transparent;')
+            components.html(html_data, height=270)
+        else:
+            st.info("No matching rules found. Please adjust the Pattern Selection.")
+            
+        st.markdown('</div>', unsafe_allow_html=True)
