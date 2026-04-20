@@ -8,6 +8,7 @@ import os
 import base64
 from mlxtend.preprocessing import TransactionEncoder
 from mlxtend.frequent_patterns import apriori, fpgrowth, association_rules
+import textwrap
 
 st.set_page_config(
     page_title="Carelink • Comorbidity Dashboard",
@@ -27,105 +28,105 @@ img_path = os.path.join(base_path, "visualizations", "anatomical_model.png")
 try:
     bg_img_b64 = get_base64_of_bin_file(img_path)
     bg_style = f"""
-    @keyframes spin3D {{
-        from {{ transform: translate(-50%, -50%) rotateY(0deg); }}
-        to {{ transform: translate(-50%, -50%) rotateY(360deg); }}
-    }}
-    .bg-image {{
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        height: 90vh;
-        z-index: 0;
-        opacity: 0.9;
-        pointer-events: none;
-        animation: spin3D 20s linear infinite;
-        transform-style: preserve-3d;
-    }}
-    """
+@keyframes spin3D {{
+    from {{ transform: translate(-50%, -50%) rotateY(0deg); }}
+    to {{ transform: translate(-50%, -50%) rotateY(360deg); }}
+}}
+.bg-image {{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    height: 90vh;
+    z-index: 0;
+    opacity: 0.9;
+    pointer-events: none;
+    animation: spin3D 20s linear infinite;
+    transform-style: preserve-3d;
+}}
+"""
     bg_html = f'<img src="data:image/png;base64,{bg_img_b64}" class="bg-image">'
 except Exception:
     bg_style = ""
     bg_html = ""
 
 # --- CSS Styling ---
-st.markdown(f"""
-    <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
-    
-    #MainMenu {{visibility: hidden;}}
-    footer {{visibility: hidden;}}
-    header {{visibility: hidden;}}
-    .block-container {{ padding: 1rem; max-width: 100%; position: relative; z-index: 1; }}
-    
-    html, body, [class*="css"] {{ font-family: 'Inter', sans-serif; color: #0f172a; }}
-    
-    .stApp {{
-        background-color: #f8fafc;
-        background-image: linear-gradient(to right, #e2e8f0 1px, transparent 1px), linear-gradient(to bottom, #e2e8f0 1px, transparent 1px);
-        background-size: 40px 40px;
-    }}
-    
-    {bg_style}
+st.markdown(textwrap.dedent(f"""
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
 
-    .navbar {{
-        display: flex; align-items: center; justify-content: space-between; padding: 10px 40px;
-        background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(15px); border-radius: 100px;
-        box-shadow: 0 4px 20px rgba(0,0,0,0.05); margin-bottom: 20px; position: relative; z-index: 10;
-    }}
-    .navbar-brand {{ font-size: 20px; font-weight: 700; display: flex; align-items: center; gap: 10px; }}
-    .navbar-links {{ display: flex; gap: 15px; }}
-    .nav-btn {{ padding: 10px 20px; border-radius: 50px; font-weight: 600; font-size: 14px; background: transparent; color: #475569; border: none; }}
-    .nav-btn.active {{ background: #0f172a; color: white; }}
+#MainMenu {{visibility: hidden;}}
+footer {{visibility: hidden;}}
+header {{visibility: hidden;}}
+.block-container {{ padding: 1rem; max-width: 100%; position: relative; z-index: 1; }}
 
-    .glass-card {{
-        background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.8);
-        border-radius: 15px; padding: 20px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); margin-bottom: 20px; position: relative; z-index: 2;
-    }}
-    
-    h3 {{ font-size: 16px; font-weight: 600; color: #0f172a; margin-bottom: 15px; margin-top: 0; }}
-    
-    /* Vitals & Animations */
-    .vitals-row {{ display: flex; gap: 10px; margin-bottom: 20px; }}
-    .vital-card {{ flex: 1; padding: 15px; border-radius: 15px; background: #fff; box-shadow: 0 4px 15px rgba(0,0,0,0.05); position: relative; overflow: hidden; }}
-    .vital-label {{ font-size: 12px; color: #64748b; font-weight: 600; margin-bottom: 2px; }}
-    .vital-value {{ font-size: 24px; font-weight: 700; color: #0f172a; }}
-    
-    @keyframes heartbeat {{ 0% {{ transform: scale(1); }} 20% {{ transform: scale(1.25); }} 40% {{ transform: scale(1); }} 60% {{ transform: scale(1.15); }} 80% {{ transform: scale(1); }} 100% {{ transform: scale(1); }} }}
-    .heart-icon {{ animation: heartbeat 1.5s infinite; display: inline-block; color: #ef4444; }}
-    
-    @keyframes brainwave {{ 0% {{ opacity: 0.5; }} 50% {{ opacity: 1; text-shadow: 0 0 10px #eab308; }} 100% {{ opacity: 0.5; }} }}
-    .brain-icon {{ animation: brainwave 2s infinite; display: inline-block; color: #eab308; }}
-    
-    .ekg-line {{
-        height: 30px; width: 100%; margin-top: 10px;
-        background: linear-gradient(90deg, transparent 0%, #ef4444 50%, transparent 100%);
-        background-size: 100px 100%; animation: moveEKG 1s linear infinite; opacity: 0.5;
-    }}
-    @keyframes moveEKG {{ 0% {{ background-position: 0 0; }} 100% {{ background-position: -100px 0; }} }}
-    
-    /* Timeline */
-    .timeline-item {{ margin-bottom: 15px; padding-left: 15px; border-left: 2px solid #e2e8f0; position: relative; }}
-    .timeline-item::before {{ content: ''; position: absolute; left: -6px; top: 0; width: 10px; height: 10px; border-radius: 50%; background: #3b82f6; }}
-    .timeline-time {{ font-size: 12px; color: #94a3b8; font-weight: 600; }}
-    .timeline-title {{ font-size: 14px; font-weight: 600; color: #0f172a; margin: 2px 0; }}
-    .timeline-desc {{ font-size: 12px; color: #64748b; }}
-    
-    /* Form overrides for Pattern Selection */
-    div[data-testid="stForm"] {{ border: none; padding: 0; background: transparent; }}
-    div[data-baseweb="select"] {{ border-radius: 8px !important; background: white !important; border: 1px solid #cbd5e1 !important; }}
-    button[data-testid="baseButton-primary"] {{ background-color: #0f172a !important; color: white !important; width: 100% !important; border-radius: 8px !important; padding: 10px !important; font-weight: 600 !important; border: none !important; margin-top: 10px !important; }}
-    
-    /* Custom spacing adjustments */
-    .block-container {{ gap: 0rem; }}
-    </style>
-""", unsafe_allow_html=True)
+html, body, [class*="css"] {{ font-family: 'Inter', sans-serif; color: #0f172a; }}
+
+.stApp {{
+    background-color: #f8fafc;
+    background-image: linear-gradient(to right, #e2e8f0 1px, transparent 1px), linear-gradient(to bottom, #e2e8f0 1px, transparent 1px);
+    background-size: 40px 40px;
+}}
+
+{bg_style}
+
+.navbar {{
+    display: flex; align-items: center; justify-content: space-between; padding: 10px 40px;
+    background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(15px); border-radius: 100px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05); margin-bottom: 20px; position: relative; z-index: 10;
+}}
+.navbar-brand {{ font-size: 20px; font-weight: 700; display: flex; align-items: center; gap: 10px; }}
+.navbar-links {{ display: flex; gap: 15px; }}
+.nav-btn {{ padding: 10px 20px; border-radius: 50px; font-weight: 600; font-size: 14px; background: transparent; color: #475569; border: none; }}
+.nav-btn.active {{ background: #0f172a; color: white; }}
+
+.glass-card {{
+    background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 15px; padding: 20px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); margin-bottom: 20px; position: relative; z-index: 2;
+}}
+
+h3 {{ font-size: 16px; font-weight: 600; color: #0f172a; margin-bottom: 15px; margin-top: 0; }}
+
+/* Vitals & Animations */
+.vitals-row {{ display: flex; gap: 10px; margin-bottom: 20px; }}
+.vital-card {{ flex: 1; padding: 15px; border-radius: 15px; background: #fff; box-shadow: 0 4px 15px rgba(0,0,0,0.05); position: relative; overflow: hidden; }}
+.vital-label {{ font-size: 12px; color: #64748b; font-weight: 600; margin-bottom: 2px; }}
+.vital-value {{ font-size: 24px; font-weight: 700; color: #0f172a; }}
+
+@keyframes heartbeat {{ 0% {{ transform: scale(1); }} 20% {{ transform: scale(1.25); }} 40% {{ transform: scale(1); }} 60% {{ transform: scale(1.15); }} 80% {{ transform: scale(1); }} 100% {{ transform: scale(1); }} }}
+.heart-icon {{ animation: heartbeat 1.5s infinite; display: inline-block; color: #ef4444; }}
+
+@keyframes brainwave {{ 0% {{ opacity: 0.5; }} 50% {{ opacity: 1; text-shadow: 0 0 10px #eab308; }} 100% {{ opacity: 0.5; }} }}
+.brain-icon {{ animation: brainwave 2s infinite; display: inline-block; color: #eab308; }}
+
+.ekg-line {{
+    height: 30px; width: 100%; margin-top: 10px;
+    background: linear-gradient(90deg, transparent 0%, #ef4444 50%, transparent 100%);
+    background-size: 100px 100%; animation: moveEKG 1s linear infinite; opacity: 0.5;
+}}
+@keyframes moveEKG {{ 0% {{ background-position: 0 0; }} 100% {{ background-position: -100px 0; }} }}
+
+/* Timeline */
+.timeline-item {{ margin-bottom: 15px; padding-left: 15px; border-left: 2px solid #e2e8f0; position: relative; }}
+.timeline-item::before {{ content: ''; position: absolute; left: -6px; top: 0; width: 10px; height: 10px; border-radius: 50%; background: #3b82f6; }}
+.timeline-time {{ font-size: 12px; color: #94a3b8; font-weight: 600; }}
+.timeline-title {{ font-size: 14px; font-weight: 600; color: #0f172a; margin: 2px 0; }}
+.timeline-desc {{ font-size: 12px; color: #64748b; }}
+
+/* Form overrides for Pattern Selection */
+div[data-testid="stForm"] {{ border: none; padding: 0; background: transparent; }}
+div[data-baseweb="select"] {{ border-radius: 8px !important; background: white !important; border: 1px solid #cbd5e1 !important; }}
+button[data-testid="baseButton-primary"] {{ background-color: #0f172a !important; color: white !important; width: 100% !important; border-radius: 8px !important; padding: 10px !important; font-weight: 600 !important; border: none !important; margin-top: 10px !important; }}
+
+/* Custom spacing adjustments */
+.block-container {{ gap: 0rem; }}
+</style>
+"""), unsafe_allow_html=True)
 
 if bg_html:
     st.markdown(bg_html, unsafe_allow_html=True)
 
 # --- Top Navigation ---
-st.markdown("""
+st.markdown(textwrap.dedent("""
 <div class="navbar">
     <div class="navbar-brand">
         <span style="font-size: 24px;">⚕️</span> Carelink <span style="color:#94a3b8; font-weight:400; font-size:16px; margin-left:5px;">• Comorbidity & Treatment Patterns</span>
@@ -141,7 +142,7 @@ st.markdown("""
         <span style="font-size: 10px; font-weight: 700; color: #475569;">Patient's Profile</span>
     </div>
 </div>
-""", unsafe_allow_html=True)
+"""), unsafe_allow_html=True)
 
 # --- Live Data Mining & Timers ---
 def apriori_timer(func):
@@ -207,7 +208,7 @@ col1, col2, col3 = st.columns([1, 1.2, 1.5], gap="large")
 
 # === LEFT COLUMN: Context ===
 with col1:
-    st.markdown("""
+    st.markdown(textwrap.dedent("""
     <div class="glass-card">
         <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 20px;">
             <h3 style="margin:0;">Care Schedule</h3>
@@ -231,9 +232,9 @@ with col1:
             </div>
         </div>
     </div>
-    """, unsafe_allow_html=True)
+    """), unsafe_allow_html=True)
     
-    st.markdown("""
+    st.markdown(textwrap.dedent("""
     <div class="glass-card">
         <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 15px;">
             <h3 style="margin:0;">Data Exploration & Visualization</h3>
@@ -254,7 +255,7 @@ with col1:
             </div>
         </div>
     </div>
-    """, unsafe_allow_html=True)
+    """), unsafe_allow_html=True)
 
 # === MIDDLE COLUMN: Transparent buffer ===
 with col2:
@@ -267,7 +268,7 @@ with col3:
     temp_color = "#ef4444" if temp_val > 38 else "#22c55e" 
     temp_bg = "rgba(239, 68, 68, 0.05)" if temp_val > 38 else "rgba(34, 197, 94, 0.05)"
     
-    st.markdown(f"""
+    st.markdown(textwrap.dedent(f"""
     <div class="vitals-row">
         <div class="vital-card">
             <div style="display:flex; justify-content:space-between;">
@@ -306,7 +307,7 @@ with col3:
             </div>
         </div>
     </div>
-    """, unsafe_allow_html=True)
+    """), unsafe_allow_html=True)
     
     # Placeholder for the Network Graph so it renders structurally ABOVE the filters, 
     # but functionally uses the states defined BELOW it.
@@ -316,8 +317,10 @@ with col3:
     bottom_col1, bottom_col2 = st.columns([1, 1.4], gap="small")
     
     with bottom_col1:
-        st.markdown('<div class="glass-card" style="height: 100%; display:flex; flex-direction:column; padding: 20px;">', unsafe_allow_html=True)
-        st.markdown('<h3 style="margin-bottom: 15px; font-size: 16px;">Pattern Selection</h3>', unsafe_allow_html=True)
+        st.markdown(textwrap.dedent("""
+        <div class="glass-card" style="height: 100%; display:flex; flex-direction:column; padding: 20px;">
+            <h3 style="margin-bottom: 15px; font-size: 16px;">Pattern Selection</h3>
+        """), unsafe_allow_html=True)
         
         with st.form("pattern_form"):
             st.markdown("<div style='font-size:12px; font-weight:600; color:#0f172a; margin-bottom:5px;'>Primary Diagnosis</div>", unsafe_allow_html=True)
@@ -332,7 +335,7 @@ with col3:
 
     with bottom_col2:
         # Recreate the exact UI from the right side of the image for Algorithm Comparison
-        st.markdown(f"""
+        st.markdown(textwrap.dedent(f"""
         <div class="glass-card" style="height: 100%; display: flex; flex-direction: column; padding: 20px;">
             <h3 style="margin-bottom: 15px; font-size: 16px; display: flex; align-items: center; gap: 8px;">
                 <span style="font-size:16px;">≑</span> Algorithm Comparison
@@ -375,28 +378,23 @@ with col3:
                 </div>
             </div>
         </div>
-        """, unsafe_allow_html=True)
+        """), unsafe_allow_html=True)
 
     # Now that we have the pattern selections, render the graph into the placeholder ABOVE
     with graph_placeholder.container():
-        st.markdown('<div class="glass-card" style="padding: 15px; margin-bottom: 20px;">', unsafe_allow_html=True)
-        
-        # Header inside the graph card mimicking the image
-        st.markdown("""
+        st.markdown(textwrap.dedent("""
+        <div class="glass-card" style="padding: 15px; margin-bottom: 20px;">
             <div style="display:flex; justify-content:space-between; align-items:flex-start;">
                 <div style="flex:1;">
                     <h3 style="margin-bottom:5px;">Diagnosis & Treatment Rule Network</h3>
                 </div>
             </div>
-        """, unsafe_allow_html=True)
-        
-        # Legend embedded directly inside the graph container (like the image)
-        st.markdown("""
-        <div style="display:flex; justify-content:space-between; align-items:center; border-top: 1px solid #e2e8f0; padding-top:10px; margin-top:5px;">
-            <div style="font-size: 10px; color: #0f172a; font-weight: 600;">Edge Color → Strength (Lift) <br><span style="color:#64748b; font-weight:400;">Thickness</span></div>
-            <div style="font-size: 10px; color: #0f172a; font-weight: 600; text-align:right;">Node Color → Event Type <br><span style="color:#64748b; font-weight:400;">(Diagnosis, Medication)</span></div>
-        </div>
-        """, unsafe_allow_html=True)
+            
+            <div style="display:flex; justify-content:space-between; align-items:center; border-top: 1px solid #e2e8f0; padding-top:10px; margin-top:5px;">
+                <div style="font-size: 10px; color: #0f172a; font-weight: 600;">Edge Color → Strength (Lift) <br><span style="color:#64748b; font-weight:400;">Thickness</span></div>
+                <div style="font-size: 10px; color: #0f172a; font-weight: 600; text-align:right;">Node Color → Event Type <br><span style="color:#64748b; font-weight:400;">(Diagnosis, Medication)</span></div>
+            </div>
+        """), unsafe_allow_html=True)
 
         filtered_rules = rules_df.copy() if rules_df is not None else None
         if filtered_rules is not None:
@@ -431,7 +429,6 @@ with col3:
             net.save_graph(net_path)
             with open(net_path, 'r', encoding='utf-8') as f:
                 html_data = f.read()
-            # Wrap pyvis output to make it transparent
             html_data = html_data.replace('background-color: transparent;', 'background-color: transparent;')
             components.html(html_data, height=270)
         else:
