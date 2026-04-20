@@ -407,24 +407,17 @@ with col3:
                 ants = [a.strip() for a in ant_str.split(',')]
                 cons = [c.strip() for c in con_str.split(',')]
                 
-                for a in ants:
-                    a_color = "#ef4444" if "Disease" in a or a in ["Diabetes", "Hypertension", "Asthma", "Diagnosis"] else "#f97316" if a in ["Statin", "Lisinopril", "Metformin", "Beta Blocker", "Treatment"] else "#3b82f6"
-                    net.add_node(a, a, title=a, color=a_color, shape="ellipse", size=20, font={"color": "white", "size":12, "face":"Inter", "strokeWidth":0})
-                    for c in cons:
-                        c_color = "#ef4444" if "Disease" in c or c in ["Diabetes", "Hypertension", "Asthma", "Diagnosis"] else "#f97316" if c in ["Statin", "Lisinopril", "Metformin", "Beta Blocker", "Treatment"] else "#3b82f6"
-                        net.add_node(c, c, title=c, color=c_color, shape="ellipse", size=20, font={"color": "white", "size":12, "face":"Inter", "strokeWidth":0})
-                        
-                        edge_label = f"Support: {row['support']:.2f}\\nConfidence: {row['confidence']:.2f}\\nLift: {row['lift']:.2f}"
-                        net.add_edge(a, c, title=edge_label, value=row['lift'], color="#1e293b", font={"size":8, "align":"middle"})
+                pass
             
-            net_path = os.path.join(base_path, "visualizations", "pyvis_graph.html")
-            net.save_graph(net_path)
-            with open(net_path, 'r', encoding='utf-8') as f:
-                html_data = f.read()
-            html_data = html_data.replace('background-color: transparent;', 'background-color: transparent;')
-            
-            import html
-            srcdoc_content = html.escape(html_data)
+            # --- 1. Static Flowchart Graph ---
+            import base64
+            img_path = os.path.join(base_path, "visualizations", "static_flowchart.png")
+            try:
+                with open(img_path, "rb") as img_file:
+                    encoded_img = base64.b64encode(img_file.read()).decode("utf-8")
+                img_src = f"data:image/png;base64,{encoded_img}"
+            except FileNotFoundError:
+                img_src = ""
 
             # --- 2. Metric Matrix ---
             top_matrix_rules = filtered_rules.nlargest(5, 'lift').copy()
@@ -469,16 +462,8 @@ with col3:
                     
                     <!-- Left Column -->
                     <div style="flex: 1;">
-                        <div style="position:relative; width:100%; height:220px; border-radius:8px; overflow:hidden; border:1px solid #e2e8f0;" onclick="this.querySelector('iframe').style.pointerEvents='auto'; this.querySelector('.overlay').style.display='none';">
-                            <div class="overlay" style="position:absolute; top:0; left:0; width:100%; height:100%; z-index:10; background:rgba(255,255,255,0.01); cursor:pointer; display:flex; align-items:center; justify-content:center;">
-                                <div style="background:rgba(15,23,42,0.7); color:white; padding:6px 12px; border-radius:20px; font-size:11px; font-weight:600; box-shadow:0 4px 6px rgba(0,0,0,0.1);">Click to Interact</div>
-                            </div>
-                            <iframe srcdoc="{srcdoc_content}" style="width:100%; height:100%; border:none; pointer-events:none;"></iframe>
-                        </div>
-                        <div style="display:flex; flex-direction:column; gap:6px; margin-top: 10px;">
-                            <div style="display:flex; align-items:center; gap:8px;"><div style="width:14px; height:14px; border-radius:50%; background:#3b82f6;"></div><span style="font-size:12px; font-weight:600; color:#0f172a;">Legend</span></div>
-                            <div style="display:flex; align-items:center; gap:8px;"><div style="width:14px; height:14px; border-radius:50%; background:#f97316;"></div><span style="font-size:12px; font-weight:600; color:#475569;">Treatment</span></div>
-                            <div style="display:flex; align-items:center; gap:8px;"><div style="width:14px; height:14px; border-radius:50%; background:#ef4444;"></div><span style="font-size:12px; font-weight:600; color:#475569;">Diagnosis</span></div>
+                        <div style="width:100%; height:220px; display:flex; align-items:center; justify-content:center; background:#ffffff; border-radius:8px; border:1px solid #e2e8f0; overflow:hidden;">
+                            <img src="{img_src}" style="width:100%; height:100%; object-fit:contain; mix-blend-mode: multiply;" alt="Diagnosis & Treatment Rule Network">
                         </div>
                     </div>
                     
