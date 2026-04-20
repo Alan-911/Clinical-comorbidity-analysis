@@ -23,15 +23,20 @@ img_path = os.path.join(base_path, "visualizations", "anatomical_model.png")
 try:
     bg_img_b64 = get_base64_of_bin_file(img_path)
     bg_style = f"""
+    @keyframes spin3D {{
+        from {{ transform: translate(-50%, -50%) rotateY(0deg); }}
+        to {{ transform: translate(-50%, -50%) rotateY(360deg); }}
+    }}
     .bg-image {{
         position: fixed;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%);
         height: 90vh;
         z-index: 0;
         opacity: 0.9;
         pointer-events: none;
+        animation: spin3D 20s linear infinite;
+        transform-style: preserve-3d;
     }}
     """
     bg_html = f'<img src="data:image/png;base64,{bg_img_b64}" class="bg-image">'
@@ -159,10 +164,10 @@ st.markdown(f"""
     .metric-block .lbl {{ font-size: 12px; color: #64748b; font-weight: 600; }}
     
     /* Selectbox styling override */
-    .stSelectbox > div > div {{
-        background-color: white;
-        border-radius: 12px;
-        border: 1px solid #cbd5e1;
+    div[data-baseweb="select"] {{
+        border-radius: 10px !important;
+        background: white !important;
+        border: 1px solid #cbd5e1 !important;
     }}
     </style>
 """, unsafe_allow_html=True)
@@ -183,8 +188,9 @@ st.markdown("""
         <button class="nav-btn">Schedule</button>
         <button class="nav-btn">Labs Results</button>
     </div>
-    <div style="display:flex; align-items:center; gap:10px;">
-        <div style="width:35px; height:35px; border-radius:50%; background:#e2e8f0; display:flex; align-items:center; justify-content:center;">👤</div>
+    <div style="display:flex; flex-direction:column; align-items:center; justify-content:center;">
+        <div style="width:35px; height:35px; border-radius:50%; background:#e2e8f0; display:flex; align-items:center; justify-content:center; margin-bottom:2px;">👤</div>
+        <span style="font-size: 10px; font-weight: 700; color: #475569;">Patient's Profile</span>
     </div>
 </div>
 """, unsafe_allow_html=True)
@@ -199,6 +205,15 @@ def load_data():
         return None
 
 rules_df = load_data()
+
+# Process unique items for the dropdown
+all_items = []
+if rules_df is not None:
+    items_set = set()
+    for antecedents in rules_df['antecedents']:
+        items = str(antecedents).replace("frozenset({", "").replace("})", "").replace("'", "").split(", ")
+        items_set.update([i.strip() for i in items])
+    all_items = sorted(list(items_set))
 
 # --- 3 Column Layout ---
 col1, col2, col3 = st.columns([1, 1.2, 1.2], gap="large")
@@ -235,20 +250,31 @@ with col1:
     # Data Exploration Widget
     st.markdown("""
     <div class="glass-card">
-        <div style="display:flex; justify-content:space-between; align-items:center;">
-            <h3>Data Exploration & Visualization</h3>
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom: 10px;">
+            <h3 style="margin-bottom:0;">Data Visualization</h3>
+            <div style="width: 40%; height: 6px; background: #e2e8f0; border-radius: 3px; overflow: hidden;">
+                <div style="width: 75%; height: 100%; background: #3b82f6;"></div>
+            </div>
+        </div>
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-top: 15px;">
+            <h3>Doctors On Call</h3>
             <span style="font-size:12px; color:#0f172a; font-weight:600; cursor:pointer;">View All</span>
         </div>
-        <div style="display:flex; gap:10px; margin-top:15px; overflow-x:auto;">
-            <div style="min-width:120px; text-align:center; background:#fff; padding:15px; border-radius:15px; box-shadow:0 2px 10px rgba(0,0,0,0.05);">
-                <div style="font-size:30px; margin-bottom:5px;">👨‍⚕️</div>
-                <div style="font-size:12px; font-weight:700;">Dr. Daniel Lewis</div>
-                <div style="font-size:10px; color:#64748b;">Oncologist</div>
+        <div style="display:flex; gap:10px; margin-top:10px; overflow-x:auto;">
+            <div style="flex:1; text-align:center; background:#fff; padding:15px 5px; border-radius:15px; box-shadow:0 2px 10px rgba(0,0,0,0.05);">
+                <div style="font-size:28px; margin-bottom:5px;">👨‍⚕️</div>
+                <div style="font-size:11px; font-weight:700;">Doctor 1</div>
+                <div style="font-size:9px; color:#64748b;">Oncologist</div>
             </div>
-            <div style="min-width:120px; text-align:center; background:#fff; padding:15px; border-radius:15px; box-shadow:0 2px 10px rgba(0,0,0,0.05);">
-                <div style="font-size:30px; margin-bottom:5px;">👩‍⚕️</div>
-                <div style="font-size:12px; font-weight:700;">Dr. Grace Walker</div>
-                <div style="font-size:10px; color:#64748b;">Cardiologist</div>
+            <div style="flex:1; text-align:center; background:#fff; padding:15px 5px; border-radius:15px; box-shadow:0 2px 10px rgba(0,0,0,0.05);">
+                <div style="font-size:28px; margin-bottom:5px;">👩‍⚕️</div>
+                <div style="font-size:11px; font-weight:700;">Doctor 2</div>
+                <div style="font-size:9px; color:#64748b;">Cardiologist</div>
+            </div>
+            <div style="flex:1; text-align:center; background:#fff; padding:15px 5px; border-radius:15px; box-shadow:0 2px 10px rgba(0,0,0,0.05);">
+                <div style="font-size:28px; margin-bottom:5px;">👨‍⚕️</div>
+                <div style="font-size:11px; font-weight:700;">Doctor 3</div>
+                <div style="font-size:9px; color:#64748b;">Neurologist</div>
             </div>
         </div>
     </div>
@@ -285,25 +311,62 @@ with col3:
         </div>
     </div>
     """, unsafe_allow_html=True)
+    
+    # Bottom Row: Pattern Selection & Algorithm Comparison
+    # We place Pattern Selection ABOVE the graph in the execution flow so it actually filters the graph!
+    pat_col1, pat_col2 = st.columns(2)
+    
+    with pat_col1:
+        st.markdown('<div class="glass-card" style="height:210px; padding-bottom:10px;">', unsafe_allow_html=True)
+        st.markdown("<h3>Pattern Selection</h3>", unsafe_allow_html=True)
+        selected_primary = st.selectbox("Primary Diagnosis", ["All"] + all_items, label_visibility="collapsed")
+        
+        # Apply filter to rules_df
+        filtered_rules = rules_df.copy() if rules_df is not None else None
+        if filtered_rules is not None and selected_primary != "All":
+            filtered_rules = filtered_rules[filtered_rules['antecedents'].str.contains(selected_primary)]
+            
+        st.markdown("""
+            <div style="margin-top:10px;">
+            <button style="width:100%; padding:10px; background:#0f172a; color:white; border:none; border-radius:10px; font-weight:600; cursor:pointer;">
+                Done
+            </button>
+            </div>
+        """, unsafe_allow_html=True)
+        st.markdown('</div>', unsafe_allow_html=True)
+        
+    with pat_col2:
+        st.markdown('<div class="glass-card" style="height:210px;">', unsafe_allow_html=True)
+        st.markdown("""
+        <div style="display:flex; justify-content:space-between; align-items:center;">
+            <h3>Algorithm Comparison</h3>
+        </div>
+        <div style="display:flex; justify-content:space-between; margin-top:0px;">
+            <div class="metric-block">
+                <div class="lbl">Apriori Time</div>
+                <div class="val">0.008s</div>
+            </div>
+            <div class="metric-block">
+                <div class="lbl">FP-Growth</div>
+                <div class="val">0.010s</div>
+            </div>
+        </div>
+        <div style="margin-top:5px; border-top:1px solid #e2e8f0; padding-top:5px; text-align:center;">
+            <div class="lbl">Patterns Discovered</div>
+            <div class="val" style="color:#3b82f6;">144</div>
+        </div>
+        """, unsafe_allow_html=True)
+        st.markdown('</div>', unsafe_allow_html=True)
 
-    # Interactive Network Graph via PyVis
+    # Interactive Network Graph via PyVis (Now uses filtered_rules)
     st.markdown('<div class="glass-card" style="padding: 10px;">', unsafe_allow_html=True)
     st.markdown('<h3 style="padding-left:10px; padding-top:10px;">Diagnosis & Treatment Rule Network</h3>', unsafe_allow_html=True)
     
-    if rules_df is not None:
-        # Extract unique for dropdowns
-        all_items = set()
-        for antecedents in rules_df['antecedents']:
-            items = str(antecedents).replace("frozenset({", "").replace("})", "").replace("'", "").split(", ")
-            all_items.update([i.strip() for i in items])
-        all_items = sorted(list(all_items))
-        
-        # We will render the graph in HTML
+    if filtered_rules is not None and len(filtered_rules) > 0:
         net = Network(height="300px", width="100%", bgcolor="white", font_color="#1f2937", directed=True)
-        # Use physics to make it look like the reference
         net.force_atlas_2based()
         
-        top_rules = rules_df.nlargest(15, 'lift')
+        top_rules = filtered_rules.nlargest(15, 'lift')
         
         for _, row in top_rules.iterrows():
             ant_str = str(row['antecedents']).replace("frozenset({", "").replace("})", "").replace("'", "")
@@ -312,67 +375,20 @@ with col3:
             cons = [c.strip() for c in con_str.split(',')]
             
             for a in ants:
-                # Add node logic: dark blue for conditions, lighter blue for treatments (simplified)
                 a_color = "#0f172a" if "Disease" in a or a in ["Diabetes", "Hypertension", "Asthma"] else "#3b82f6"
                 net.add_node(a, a, title=a, color=a_color, shape="dot", size=15)
                 for c in cons:
                     c_color = "#0f172a" if "Disease" in c or c in ["Diabetes", "Hypertension", "Asthma"] else "#3b82f6"
                     net.add_node(c, c, title=c, color=c_color, shape="dot", size=15)
-                    # Edge color based on lift
-                    net.add_edge(a, c, title=f"Support: {row['support']:.2f}\nConf: {row['confidence']:.2f}\nLift: {row['lift']:.2f}", value=row['lift'], color="#94a3b8")
+                    net.add_edge(a, c, title=f"Support: {row['support']:.2f}\\nConf: {row['confidence']:.2f}\\nLift: {row['lift']:.2f}", value=row['lift'], color="#94a3b8")
         
-        # Save and read pyvis html
         net_path = os.path.join(base_path, "visualizations", "pyvis_graph.html")
         net.save_graph(net_path)
         with open(net_path, 'r', encoding='utf-8') as f:
             html_data = f.read()
         components.html(html_data, height=310)
     else:
-        st.error("No rule data available.")
-        all_items = []
+        st.info("No rule data available for this selection.")
         
-    st.markdown('</div>', unsafe_allow_html=True)
-    
-    # Bottom Row: Pattern Selection & Algorithm Comparison
-    st.markdown('<div style="display:flex; gap:15px;">', unsafe_allow_html=True)
-    
-    # Pattern Selection
-    st.markdown('<div class="glass-card" style="flex:1;">', unsafe_allow_html=True)
-    st.markdown("<h3>Pattern Selection</h3>", unsafe_allow_html=True)
-    selected_primary = st.selectbox("Primary Diagnosis", ["(e.g., Asthma)"] + all_items)
-    selected_secondary = st.selectbox("Secondary Condition", ["(e.g., Hypertension)"] + all_items)
-    st.markdown("""
-        <button style="width:100%; padding:10px; background:#0f172a; color:white; border:none; border-radius:10px; font-weight:600; margin-top:10px; cursor:pointer;">
-            Done
-        </button>
-    """, unsafe_allow_html=True)
-    st.markdown('</div>', unsafe_allow_html=True)
-    
-    # Algorithm Comparison
-    st.markdown('<div class="glass-card" style="flex:1;">', unsafe_allow_html=True)
-    st.markdown("""
-    <div style="display:flex; justify-content:space-between; align-items:center;">
-        <h3>Algorithm Comparison</h3>
-    </div>
-    <div style="display:flex; justify-content:space-between; margin-top:10px;">
-        <div class="metric-block">
-            <div class="lbl">Apriori Runtime</div>
-            <div class="val">0.008s</div>
-        </div>
-        <div class="metric-block">
-            <div class="lbl">FP-Growth Runtime</div>
-            <div class="val">0.010s</div>
-        </div>
-    </div>
-    <div style="margin-top:15px; border-top:1px solid #e2e8f0; padding-top:10px; text-align:center;">
-        <div class="lbl">Number of Patterns Discovered</div>
-        <div class="val" style="color:#3b82f6;">144</div>
-    </div>
-    <button style="width:100%; padding:10px; background:white; color:#0f172a; border:1px solid #cbd5e1; border-radius:10px; font-weight:600; margin-top:15px; cursor:pointer;">
-        View Details
-    </button>
-    """, unsafe_allow_html=True)
-    st.markdown('</div>', unsafe_allow_html=True)
-    
     st.markdown('</div>', unsafe_allow_html=True)
 
